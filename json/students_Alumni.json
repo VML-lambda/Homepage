@@ -1,0 +1,111 @@
+{"degree":"Alumni",
+"list":{
+   "최창균":
+   {
+      "engName":"Changkyun Choi",
+      "position":"M.S",
+      "department":"Computer Science and Engineering",
+      "email":"ckchoice@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"profile.png",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   }
+   ,
+   "반현민":
+   {
+      "engName":"Hyunmin Ban",
+      "position":"M.S",
+      "department":"Computer Science and Engineering",
+      "email":"hmban1996@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"Hyunmin.jpg",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   }
+   ,
+   "박민정":
+   {
+      "engName":"Minjeong Park",
+      "position":"Intern",
+      "department":"Computer Science and Engineering",
+      "email":"mjminjeongpark@gmail.com",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"profile.png",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   }
+   ,
+   "김영민":
+   {
+      "engName":"Youngmin Kim",
+      "position":"Intern",
+      "department":"",
+      "email":"electron@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"profile.png",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   }
+   ,
+   "구희연":
+   {
+      "engName":"",
+      "position":"Intern",
+      "department":"Computer Science and Engineering",
+      "email":"rndus0819@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"profile.png",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   }
+   ,
+   "윤규리":
+   {
+      "engName":"Curie Yoon",
+      "position":"Intern",
+      "department":"Computer Science and Engineering",
+      "email":"curieyoon@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"profile.png",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   }
+}
+}

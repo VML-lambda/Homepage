@@ -1,0 +1,64 @@
+{"degree":"PhD",
+"list":{
+   "김영웅":
+   {
+      "engName":"Yeongwoong Kim",
+      "position":"LVC PL",
+      "department":"Computer Science and Engineering",
+      "email":"duddnd7575@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"Yeongwoong.jpg",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   }
+   ,
+   "정혜원":
+   {
+      "engName":"Hyewon Jeong",
+      "position":"FCM PL",
+      "department":"Computer Science and Engineering",
+      "email":"woni980911@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"profile.png",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   }
+   ,
+   "최승미":
+   {
+      "engName":"Seungmi Choi",
+      "position":"Hologram PL",
+      "department":"Computer Science and Engineering",
+      "email":"2018102242@khu.ac.kr",
+      "researchInterests":[
+         "Signal processing",
+         "Hologram",
+         "Compression"
+      ],
+      "education":[
+         "경희대학교 컴퓨터공학과 (박사)",
+         "경희대학교 컴퓨터공학과 (석사)",
+         "경희대학교 컴퓨터공학과 (학사)",
+         "대전동신과학고등학교"
+      ],
+      "image":"Seungmi.jpg",
+      "twitter":"",
+      "github":"https://github.com/choiseungmi",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   }
+}
+}
