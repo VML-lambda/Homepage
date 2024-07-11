@@ -86,6 +86,8 @@
   var portfolioIsotope = $(".portfolio-container").isotope({
     itemSelector: ".portfolio-item",
     layoutMode: "fitRows",
+    // layoutMode: 'masonry', // Use masonry layout mode
+
   });
   $("#portfolio-flters li").on("click", function () {
     $("#portfolio-flters li").removeClass("active");
@@ -93,6 +95,11 @@
 
     portfolioIsotope.isotope({ filter: $(this).data("filter") });
   });
+
+    // Trigger layout after each image loads to avoid overlap
+    $('.portfolio-container').imagesLoaded().progress(function() {
+      portfolioIsotope.isotope('layout');
+    });
 })(jQuery);
 
 $(document).ready(function () {
