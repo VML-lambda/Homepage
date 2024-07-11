@@ -6,6 +6,10 @@
   --dark: #1a2a36;
 }
 
+.soft-shadow {
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
 .fw-medium {
   font-weight: 500 !important;
 }
@@ -243,6 +247,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url(../img/KHU_crop.jpg) center center no-repeat;
   background-size: cover;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
