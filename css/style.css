@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-  --primary: #148ab1;
+  --primary: #0f607b;
   /* --primary: #32c36c; */
   --light: #ffffff;
   --dark: #1a2a36;
@@ -595,6 +595,16 @@
   --bs-accordion-border-radius: 0px;
 }
 
+.href-black{
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.href-black:hover{
+  color: rgb(4, 9, 98);
+}
+
 .accordion-header {
   margin-bottom: 0;
   border-top: 1px solid var(--accent-color);
@@ -603,7 +613,9 @@
 .accordion-button {
   font-family: var(--heading-font);
   font-weight: var(--heading-font-weight);
-  color: var(--heading-color);
+  /* color: var(--heading-color); */
+  color: rgb(1, 46, 67);
+  background-color: rgba(236, 238, 244, 0.587);
   line-height: var(--heading-line-height);
   letter-spacing: 0.065rem;
   text-transform: uppercase;
@@ -615,8 +627,10 @@
 }
 
 .accordion-button:not(.collapsed) {
-  color: var(--heading-color);
-  background-color: var(--bs-light);
+  /* color: var(--heading-color); */
+  /* background-color: var(--bs-light); */
+  color:  rgba(0, 0, 0, 0.08);
+  background-color:  rgba(236, 238, 244, 0.587);
   box-shadow: none;
 }
 
