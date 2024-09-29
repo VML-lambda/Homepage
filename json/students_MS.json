@@ -88,6 +88,40 @@
       "linkedin":"",
       "instagram":"",
       "facebook":""
+   },
+   "이태화":
+   {
+      "engName":"TaeHwa Lee",
+      "position":"Hologram",
+      "department":"Computer Science and Engineering",
+      "email":"worrospeed@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"profile.png",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   },
+      "조수현":
+   {
+      "engName":"Suhyun Jo",
+      "position":"Hologram",
+      "department":"Computer Science and Engineering",
+      "email":"bloodtype0@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"profile.png",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
    }
 }
 }
