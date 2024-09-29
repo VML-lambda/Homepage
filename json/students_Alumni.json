@@ -3,7 +3,7 @@
    "최창균":
    {
       "engName":"Changkyun Choi",
-      "position":"M.S",
+      "position":"M.S/FCM",
       "department":"Computer Science and Engineering",
       "email":"ckchoice@khu.ac.kr",
       "researchInterests":[
@@ -21,7 +21,7 @@
    "반현민":
    {
       "engName":"Hyunmin Ban",
-      "position":"M.S",
+      "position":"M.S/Hologram",
       "department":"Computer Science and Engineering",
       "email":"hmban1996@khu.ac.kr",
       "researchInterests":[
@@ -39,7 +39,7 @@
    "박민정":
    {
       "engName":"Minjeong Park",
-      "position":"Intern",
+      "position":"Intern/NNVC",
       "department":"Computer Science and Engineering",
       "email":"mjminjeongpark@gmail.com",
       "researchInterests":[
@@ -57,7 +57,7 @@
    "김영민":
    {
       "engName":"Youngmin Kim",
-      "position":"Intern",
+      "position":"Intern/Hologram",
       "department":"",
       "email":"electron@khu.ac.kr",
       "researchInterests":[
@@ -93,7 +93,7 @@
    "윤규리":
    {
       "engName":"Curie Yoon",
-      "position":"Intern",
+      "position":"Intern/FCM",
       "department":"Computer Science and Engineering",
       "email":"curieyoon@khu.ac.kr",
       "researchInterests":[
@@ -101,6 +101,23 @@
       "education":[
       ],
       "image":"profile.png",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   },
+   "장승환":
+   {
+      "engName":"Seunghwan Jang",
+      "position":"Intern/FCM",
+      "department":"Computer Science and Engineering",
+      "email":"jsh991124@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"Seunghwan.jpg",
       "twitter":"",
       "github":"",
       "linkedin":"",
