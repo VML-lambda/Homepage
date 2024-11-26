@@ -1,23 +1,5 @@
 {"degree":"Intern",
 "list":{
-   "장승환":
-   {
-      "engName":"Seunghwan Jang",
-      "position":"FCM",
-      "department":"Computer Science and Engineering",
-      "email":"jsh991124@khu.ac.kr",
-      "researchInterests":[
-      ],
-      "education":[
-      ],
-      "image":"Seunghwan.jpg",
-      "twitter":"",
-      "github":"",
-      "linkedin":"",
-      "instagram":"",
-      "facebook":""
-   }
-   ,
    "임달홍":
    {
       "engName":"Dalhong Lim",
@@ -35,25 +17,7 @@
       "instagram":"",
       "facebook":""
    }
-   ,
-   "이태화":
-   {
-      "engName":"TaeHwa Lee",
-      "position":"Hologram",
-      "department":"Computer Science and Engineering",
-      "email":"worrospeed@khu.ac.kr",
-      "researchInterests":[
-      ],
-      "education":[
-      ],
-      "image":"profile.png",
-      "twitter":"",
-      "github":"",
-      "linkedin":"",
-      "instagram":"",
-      "facebook":""
-   }
-   ,
+   , 
    "김종욱":
    {
       "engName":"Kim Jong Wook",
