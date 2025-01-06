@@ -3,7 +3,7 @@
    "차준영":
    {
       "engName":"Jun Yeong Cha",
-      "position":"Lab leader",
+      "position":"Hologram",
       "department":"Computer Science and Engineering",
       "email":"cjy8922@khu.ac.kr",
       "researchInterests":[
@@ -21,7 +21,7 @@
    "유장현":
    {
       "engName":"Janghyun Yu",
-      "position":"LVC VPL(FCM)",
+      "position":"FCM",
       "department":"Computer Science and Engineering",
       "email":"wkdgus1120@khu.ac.kr",
       "researchInterests":[
@@ -39,7 +39,7 @@
    "박수용":
    {
       "engName":"Suyong Bahk",
-      "position":"NNVC PL",
+      "position":"NNVC(PL)/UVC",
       "department":"Computer Science and Engineering",
       "email":"clapd10@khu.ac.kr",
       "researchInterests":[
@@ -57,7 +57,7 @@
    "조현동":
    {
       "engName":"HyunDong Cho",
-      "position":"NNVC VPL",
+      "position":"NNVC",
       "department":"Computer Science and Engineering",
       "email":"gusehd1113@khu.ac.kr",
       "researchInterests":[
@@ -75,7 +75,7 @@
    "최지현":
    {
       "engName":"Ji Hyoun Choi",
-      "position":"NNVC VPL",
+      "position":"UVC",
       "department":"Computer Science and Engineering",
       "email":"jihyoun0403@khu.ac.kr",
       "researchInterests":[
@@ -112,6 +112,23 @@
       "position":"Hologram",
       "department":"Computer Science and Engineering",
       "email":"bloodtype0@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"profile.png",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   },
+   "임달홍":
+   {
+      "engName":"Dalhong Lim",
+      "position":"FCM",
+      "department":"Software Engineering",
+      "email":"bio7215@khu.ac.kr",
       "researchInterests":[
       ],
       "education":[
