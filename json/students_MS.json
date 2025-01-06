@@ -18,42 +18,6 @@
       "facebook":""
    }
    ,
-   "유장현":
-   {
-      "engName":"Janghyun Yu",
-      "position":"FCM",
-      "department":"Computer Science and Engineering",
-      "email":"wkdgus1120@khu.ac.kr",
-      "researchInterests":[
-      ],
-      "education":[
-      ],
-      "image":"Janghyun.jpg",
-      "twitter":"",
-      "github":"",
-      "linkedin":"",
-      "instagram":"",
-      "facebook":""
-   }
-   ,
-   "박수용":
-   {
-      "engName":"Suyong Bahk",
-      "position":"NNVC(PL)/UVC",
-      "department":"Computer Science and Engineering",
-      "email":"clapd10@khu.ac.kr",
-      "researchInterests":[
-      ],
-      "education":[
-      ],
-      "image":"profile.png",
-      "twitter":"",
-      "github":"",
-      "linkedin":"",
-      "instagram":"",
-      "facebook":""
-   }
-   ,
    "조현동":
    {
       "engName":"HyunDong Cho",
