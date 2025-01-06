@@ -1,23 +1,6 @@
 {"degree":"Intern",
 "list":{
-   "임달홍":
-   {
-      "engName":"Dalhong Lim",
-      "position":"FCM",
-      "department":"Software Engineering",
-      "email":"bio7215@khu.ac.kr",
-      "researchInterests":[
-      ],
-      "education":[
-      ],
-      "image":"profile.png",
-      "twitter":"",
-      "github":"",
-      "linkedin":"",
-      "instagram":"",
-      "facebook":""
-   }
-   , 
+   
    "김종욱":
    {
       "engName":"Kim Jong Wook",
