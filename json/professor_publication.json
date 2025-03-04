@@ -1,6 +1,47 @@
-{"international":[
-      ""
-      ,""
-      ,""
-      ]
+{"type":"publication",
+"list":{"A. International Journal (Last 7 years)":["1. 2023 (SCI) Rate-Rendering Distortion Optimized Preprocessing for Texture Map Compression of 3D Reconstructed Scenes, IEEE Transactions on Circuits and Systems for Video Technology (Early Access), Soowoong Kim, Jihoon Do, Jungwon Kang, Hui Yong Kim",
+"2. 2023 (SCI) End-to-End Learnable Multi-Scale Feature Compression for VCM, IEEE Transactions on Circuits and Systems for Video Technology (Early Access), Yeongwoong Kim, Hyewon Jeong, Janghyun Yu, Younhee Kim, Jooyoung Lee, Se Yoon Jeong, Hui Yong Kim",
+"3. 2023 (SCI) A Super-Resolution-based Feature Map Compression for Machine-oriented Video Coding, IEEE Access (Vol. 11 pp.34198-34209),  J. H. Kang, M. S. Ali, H. W. Jeong, C. K. Choi, Hui Yong Kim, and Sung-Ho Bae ",
+"4. 2023 (SCI) Visual Quality Assessment of Point Clouds compared to Natural Reference Images, Journal of Web Engineering (Vol. 22, Iss. 3),  Aram Baek, Minseop Kim, Sohee Son, Sangwoo Ahn, Jeongil Seo, Hui Yong Kim, and HaeChul Choi ",
+"5. 2023 (SCI) HEVC extension for phase hologram compression, Optics Express (Vol. 31, Issue 6, pp.9146-9164), Kwan-Jung Oh, Hyunmin Ban, Seungmi Choi, Hyunsuk Ko, and Hui Yong Kim",
+"6. 2022 (SCI) Modeling Surround-aware Contrast Sensitivity for HDR Displays, Computer Graphics Forum (Vol. 41, No. 1, pp.350-363), Shinyoung Yi; Daniel S. Jeon; Ana Serrano; Se-Yoon Jeong; Hui-Yong Kim; Diego Gutierrez; Min H. Kim ",
+"7. 2022 (SCI) A new objective quality metric for phase hologram processing, ETRI Journal (Volume 44, Issue 8, pp.94-104), Kwan-Jung Oh; Jinwoong Kim; Hui Yong Kim",
+"8. 2021 (SCI), Tiny drone tracking framework using multiple trackers and Kalman-based predictor, Journal of Web Engineering (Volume 20, Issue: 8, pp.2391-2412), Sohee Son, Jeongin Kwon, Hui-Yong Kim; Haechul Choi ",
+"9. 2021 (SCI) , Deep learning-based compression for phase-only hologram, IEEE Access (Volume 9, pp.79735-79751), Hyunsuk Ko; Hui Yong Kim",
+"10. 2021 (SCI) Adaptive block tree structure for video coding, ETRI Journal (Volume: 43, Issue: 2), Aram Baek;  Daehyeok Gwon;  Sohee Son;  Jinho Lee;  Jung‐Won Kang;  Hui Yong Kim;  Haechul Choi",
+"11. 2020 (SCI) Edge-preserving Reference Sample Filtering and Mode-dependent Interpolation for Intra Prediction, IEEE Transactions on Circuits and Systems for Video Technology (Volume: 30, Issue: 1, pp.205-216) Hyunsuk Ko ; Jinho Lee ; Jungwon Kang ; Hui Yong Kim",
+"12. 2019 (SCI) Transform with residual rearrangement for HEVC intra coding, Signal Processing: Image Communication (2019) 78 pp.322-330 Nam-Uk Kim, Sung-Chang Lim, Jungwon Kang, Hui Yong Kim, Yung-Lyul Lee ",
+"13. 2019 (SCI) A New No-Reference Method for Judder Artifact Assessment, IEEE Transactions on Circuits and Systems for Video Technology (Volume: 29, Issue: 10, pp.2888-2898) Se Ri Oh ; Seyoon Jeong ; Pyeong Gang Heo ; Dongchan Kim ; Hui Yong Kim ; Hyun Wook Park",
+"14. 2018(SCI) Understanding and removal of false contour in HEVC compressed images, IEEE Transactions on Circuits and Systems for Video Technology (Volume: 28 , Issue: 2, pp.378 - 391) Qin Huang ; Hui Yong Kim ; Wen-Jiin Tsai ; Se Yoon Jeong ; Jin Soo Choi ; C.-C. Jay Kuo",
+"15. 2018 (SCIE) Low Complexity Based Ultra-high Quality Video Compression Method for Multimedia-centric Internet of Things (IoT) Services, Multimedia Tools and Applications, v.77 no.4, pp.4661-4675 Dongsan Jun, Hui Yong Kim",
+"16. 2018 (SCI) GPU-based Real-Time Super-Resolution System for High-Quality UHD Video Up-Conversion, Journal of Supercomputing, v.74 no.1, pp.456-484 Dae Yeol Lee, Jooyoung Lee, Hui Yong Kim, Jin Soo Choi, Ji-hoon Choi, Jong-Ok Kim",
+"17. 2018 (SCOPUS) Multi-Sever based Distributed Coding based on HEVC/H.265 for Studio Quality Video Editing, Journal of Multimedia Information System, Volume 5, No 3, pp.201-208 Jongho Kim, Sung-Chang Lim, Se-Yoon Jeong, Hui-Yong Kim",
+"18. 2017 (SCI) Shuffled Discrete Sine Transform in Inter-Prediction Coding, ETRI Journal, v.39 no.5, pp.672-682 Jun-woo Choi, Nam-Uk Kim, Sung-Chang Lim, Jungwon Kang, Hui Yong Kim, and Yung-Lyul Lee",
+"19. 2017 (SCI) Development of an Ultra-HD HEVC Encoder using SIMD Implementation and Fast Encoding Schemes for Smart Surveillance System, Journal of Supercomputing, v.73 no.3, pp.940-960 Dongsan Jun · Sung-Chang Lim · Jinho Lee · Hahyun Lee · Jongho Kim · Jungwon Kang · Jinwook Seok · Younhee Kim · Soon-heung Jung · Hui-Yong Kim · Jin Soo Choi",
+"20. 2016 (SCI) Fast Prediction Mode Decision in HEVC Using a Pseudo Rate-Distortion Based on Separated Encoding Structure, ETRI Journal, v.38 no.5, pp.807-817 Jinwuk Seok, Younhee Kim, Myungseok Ki, Hui Yong Kim, and Jin Soo Choi",
+"21. 2016 (SCI) Color Noise Reduction Method in Non-constant Luminance Signal for High Dynamic Range Video Service, ETRI Journal, v.38 no.5, pp.858-867 Jinho Lee, Dongsan Jun, Jungwon Kang, Hyunsuk Ko, Hui Yong Kim, and Jin Soo Choi",
+"22. 2016 (SCI) Perceptual Quality Driven Frame-Rate Selection (PQD-FRS) for High-Frame-Rate Video, IEEE Transactions on Broadcasting, v.62 no.3, pp.640-653 Qin Huang, Se Yoon Jeong, Shanglin Yang, Dichen Zhang, Sudeng Hu, Hui Yong Kim, Jin Soo Choi, and C.-C. Jay Kuo",
+"23. 2016 (SCIE) Fast Search of a Similar Patch for Self-Similarity Based Image Super Resolution, IEICE Transactions on Information and Systems, Vol.E99-D No.8 pp.2194-2198 Jun-Sang YOO Ji-Hoon CHOI Kang-Sun CHOI Dae-Yeol LEE Hui-Yong KIM Jong-Ok KIM"
+],
+"B. International Conference (Last 7 years)":
+["1. 2023 Towards Efficient Image Compression Without Autoregressive Models, Neural Image Processing Systems (NeurIPS) 2023, Muhammad Salman Ali, Yeongwoong Kim, Maryam Qamar, Sung-Chang Lim, Donghyun Kim, Chaoning Zhang, Sung-Ho Bae, Hui Yong Kim ",
+"2. 2021 Modeling Surround-aware Contrast Sensitivity, Eurographics Symposium on Rendering (EGSR) 2021 (DL-only Track), Shinyoung Yi, Daniel S. Jeon, Ana Serrano, Se-Yoon Jeong, Hui-Yong Kim, Diego Gutierrez, Min H. Kim ",
+"3. 2019 Extended End-to-End optimized Image Compression Method based on a Context-Adaptive Entropy Model, The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, 2019, Jooyoung Lee, Seunghyun Cho, Se Yoon Jeong, Hyoungjin Kwon, Hyunsuk Ko, Hui Yong Kim, Jin Soo Choi",
+"4. 2017 Measure and Prediction of HEVC Perceptually Lossy/Lossless Boundary QP Values, Data Compression Conference (DCC) 2017, pp.1-10 Qin Huang, Haiqiang Wang, Sung Chang Lim, Hui Yong Kim, Se Yoon Jeong and C.-C. Jay Kuo",
+"5. 2017 ROUTE/DASH Server System Development for Realtime UHD Broadcasting, International Conference on Advanced Communication Technology (ICACT) 2017, pp.796-799 Myungseok Ki, Jinwuk Seok, Hui Yong Kim",
+"6. 2017 A Study of MXF Extension of Mapping HEVC Stream for UHD Broadcasting Contents Production, International Conference on Advanced Communication Technology (ICACT) 2017, pp.282-284 Se Yoon Jeong, Jooyoung Lee, Jae-hyoun Yoo, Hui Yong Kim",
+"7. 2017 Efficient Video Coding Structure Design Based on HEVC/H.265 for the Studio Video Editing, International Workshop on Advanced Image Technology (IWAIT) 2017, pp.1-4 Jongho Kim, Sung-Chang Lim, Se-Yoon Jeong and Hui-Yong Kim",
+"8. 2017 High Quality HD-to-UHD Conversion Method for Interlaced Broadcast Videos, International Workshop on Advanced Image Technology (IWAIT) 2017, pp.1-4 Dae Yeol Lee, Jooyoung Lee, Seyoon Jeong, Hui Yong Kim",
+"9. 2016 A Study on Band-Efficient System Design and Video Coding for Fixed &Mobile Hybrid UHD 3DTV System using Scalable HEVC, International Display Workshops in conjunction with Asia Display (IDW/AD) 2016, pp.809-811 Sung-Hoon Kim, Hui Yong Kim, Kyeong-Hoon Jung ",
+"10. 2016 Channel Equalizer Performance Analysis for Hybrid 3DTV in ATSC 3.0 Standard, International Conference on Ubiquitous and Future Networks (ICUFN) 2016, pp.554-556 Sol Lim, Dae Jin Kim, Sung-Hoon Kim, Hui Yong Kim",
+"11. 2016 Wide-Color-Gamut and High-Dynamic-Range Color-Image Encoding Scheme based on CIECAM02, Society for Information Display (SID) International Symposium 2016, pp.719-722 Youngshin Kwak, Yeseul Baek, Jungwon Kang, Hui Yong Kim",
+"12. 2016 A Sample Adaptive Offset Early Termination Method for HEVC Parallel Encoding, International Symposium on Electronic Imaging (EI) 2016, pp.1-6 Younhe Kim, Jinwuk Seok, Myeong-Seok Gi, Huiyong Kim, and Jin Soo Choi",
+"13. 2016 High Speed UHD Video Editing System on Cloud Platform, International Workshop on Advanced Image Technology (IWAIT) 2016, pp.1-3 Se Yoon Jeong, Jongho Kim, Sung-Chang Lim, Jooyung Lee, Dae-Yeol Lee, Suk-Hee Cho, Hui Yong Kim and Jin Soo Choi",
+"14. 2016 Implementation of Accelerated 4K HEVC Encoder using SIMD Optimization and Data-Level Parallelism, International Workshop on Advanced Image Technology (IWAIT) 2016, pp.1-4 Dongsan Jun, Sung-Chang Lim, Jinho Le, Hahyun Le, Jongho Kim, Jungwon Kang, Jinwok Seok, Younhe Kim, Sonheung Jung, Hui-Yong Kim, and Jin So Choi ",
+"15. 2016 A Dynamic Resource Management Method for the Cloud-based UHD Media Production System, International Workshop on Advanced Image Technology (IWAIT) 2016, pp.1-3 Joyoung Le, Dae Yeol Le, Se Yon Jeong, Suk-He Cho, Hui Yong Kim",
+"16. 2016 SATD based Intra Mode Decision Algorithm in HEVC/H.265, International Conference on Consumer Electronics (ICCE) 2016, pp.570-571 Jongho Kim, Sung-Chang Lim, Sukhee Cho, Hui-Yong Kim and Jin Soo Choi",
+"17. 2016 Fast Motion Estimation Method in HEVC using Search Box based on SIMD for compression of Ultra High-Definition Video, International Workshop on Advanced Image Technology (IWAIT) 2016, pp.1-4 Jinwuk Seok, Younhee Kim, MyungSeok Ki, Hui Yong Kim",
+"18. 2016 Implementation of Fast Self-Similarity based Super Resolution, International Workshop on Advanced Image Technology (IWAIT) 2016, pp.1-4 Dae Yeol Lee, Jooyoung Lee, Sukhee Cho, Seyoon Jeong, Hui Yong Kim"
+]
+}
 }
