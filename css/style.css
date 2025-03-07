@@ -450,7 +450,7 @@
   /* background-color: #fff; */
   border-radius: 10px; /* 모서리를 둥글게 */
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
-  padding: 15px; /* 내부 여백 추가 */
+  padding: 10px; /* 내부 여백 추가 */
 }
 
 .d-flex {
