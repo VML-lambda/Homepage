@@ -129,3 +129,25 @@ $(document).ready(function () {
     console.log("Cannot find matching ID");
   }
 });
+
+function fixOwlCarouselHeight() {
+  let maxHeight = 0;
+  $(".owl-carousel .owl-carousel-item").each(function () {
+      let thisHeight = $(this).height();
+      if (thisHeight > maxHeight) {
+          maxHeight = thisHeight;
+      }
+  });
+
+  $(".owl-carousel .owl-carousel-item").height(maxHeight);
+}
+
+// 페이지 로드 후 실행
+$(document).ready(function () {
+  fixOwlCarouselHeight();
+});
+
+// 윈도우 크기 조정 시 다시 실행
+$(window).resize(function () {
+  fixOwlCarouselHeight();
+});

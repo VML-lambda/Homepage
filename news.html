@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>Visual Media Lab</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -14,18 +15,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet" />
     <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet" />
@@ -37,82 +31,99 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style2.css" />
+
+    <style>
+        body {
+            font-family: 'Noto Sans KR', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 30px;
+            color: #222;
+        }
+
+        h2 {
+            color: #005baa;
+            margin-top: 30px;
+        }
+
+        ol {
+            margin-left: 10px;
+        }
+
+        ul {
+            margin-left: 10px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #d35400;
+        }
+
+        .section {
+            margin-top: 30px;
+        }
+    </style>
 
     <!-- <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> -->
-  </head>
+</head>
 
-  <body>
-      <!-- Spinner Start -->
-      <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-          <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-              <span class="sr-only">Loading...</span>
-          </div>
-      </div>
-      <!-- Spinner End -->
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
 
-      <!-- Navbar Start -->
-      <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a
-          href="index.html"
-          class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5"
-        >
-          <img src="img/logo.png" class="logo" alt="" />
-      
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+            <img src="img/logo.png" class="logo" alt="" />
         </a>
-        <button
-          type="button"
-          class="navbar-toggler me-4"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-        >
-          <span class="navbar-toggler-icon"></span>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <!-- <a href="project.html" class="nav-item nav-link" id="nav-research"
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <!-- <a href="project.html" class="nav-item nav-link" id="nav-research"
               >Research</a
             > -->
-            <div class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                id="nav-people"
-                >People</a
-              >
-              <div class="dropdown-menu bg-light m-0">
-                <a href="professor.html" class="dropdown-item" id="nav-professor"
-                  >Professor</a
-                >
-                <a href="students.html" class="dropdown-item" id="nav-students"
-                  >Students</a
-                >
-              </div>
-            </div>
-            <!-- <a href="lecture.html" class="nav-item nav-link" id="nav-research"
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="nav-people">People</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <a href="professor.html" class="dropdown-item" id="nav-professor">Professor</a>
+                        <a href="students.html" class="dropdown-item" id="nav-students">Students</a>
+                    </div>
+                </div>
+                <!-- <a href="lecture.html" class="nav-item nav-link" id="nav-research"
               >Lecture</a
             > -->
-            <a href="publication.html" class="nav-item nav-link" id="nav-publication"
-              >Publication</a
-            >
-            <a href="news.html" class="nav-item nav-link" id="nav-news">News</a>
-            <a href="contact.html" class="nav-item nav-link" id="nav-contact"
-              >Contact</a
-            >
-          </div>
+                <a href="publication.html" class="nav-item nav-link" id="nav-publication">Publication</a>
+                <a href="news.html" class="nav-item nav-link" id="nav-news">News</a>
+                <a href="contact.html" class="nav-item nav-link" id="nav-contact">Contact</a>
+            </div>
         </div>
-      </nav>
-      <!-- Navbar End -->
-      
+    </nav>
+    <!-- Navbar End -->
+
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5">
         <div class="container py-5">
             <h1 class="display-3 text-white mb-3 animated slideInDown">News</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">News</li>
+                    <li class="breadcrumb-item">
+                        <a class="text-white" href="#">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">
+                        News
+                    </li>
                 </ol>
             </nav>
         </div>
@@ -122,271 +133,446 @@
         <!-- Notices Start -->
         <div class="container-xxl py-5">
             <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
                     <!-- <h6 class="text-primary">News</h6> -->
                     <h1 class="mb-4">Notices</h1>
                 </div>
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <div class="accordion" id="accordionPanelsStayOpenExample">
-
                         <div class="accordion-item mt-3">
                             <h5 class="accordion-header border-0" id="panelsStayOpen-heading0">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse0" aria-expanded="true" aria-controls="panelsStayOpen-collapse0">
-                                    <span style="color:red">[Hot!] </span> &nbsp; 2024년 겨울방학 ~ 2024년 상반기 학부연구생 모집 (지원기간: ~2024/12/31)
+                                <button class="accordion-button text-primary fs-5" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse0"
+                                    aria-expanded="true" aria-controls="panelsStayOpen-collapse0">
+                                    <span style="color: red">[Hot!] </span> &nbsp; [2025
+                                    학부연구생 모집] 신청서 접수기간: 3/21(금)~3/31(월)
                                 </button>
                             </h5>
                             <div id="panelsStayOpen-collapse0" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
-                                    <div class="tyJCtd mGzaTb Depvyb baZpAe"><p dir="ltr" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; margin-right: 0.0pt; padding-left: 0.0pt; text-align: left; text-indent: 0.0pt;"><span class="C9DxTc " style="font-family: Roboto, Arial; font-weight: 700;">24년 1월부터&nbsp; 우리연구실에 join할 학부 연구생을 1+명 모집합니다.</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-weight: 700;"><br></span><span class="C9DxTc " style="font-family: Roboto, Arial; font-weight: 700;">아래 지원 자격/방법 확인하셔서 </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-weight: 700; text-decoration: underline;">기한</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-variant: normal; font-weight: 700; text-decoration: underline;">내</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-weight: 700; text-decoration: underline;">(~11/10 금)에 상담 및 지원</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-weight: 700;"> 부탁드립니다. (결과 발표: 11/30 이전에 개별 통보)</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-weight: 700;"><br></span><span class="C9DxTc " style="font-family: Roboto, Arial; font-weight: 700;"><br></span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 13.0pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline;">지원 자격</span></p><ul class="n8H08c UVNKR " style="list-style-type: square; margin-left: 0; margin-right: 0; padding: 0;"><li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 30.0pt;"><p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; margin-right: 0.0pt; padding-left: 0.0pt; text-align: left; text-indent: 0.0pt;"><span class="C9DxTc " style="font-size: 12.0pt; font-variant: normal; vertical-align: baseline;">우리 연구실 </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">대학원 진학에 관심있는 </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-weight: 700; vertical-align: baseline;">2학년 이상 </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">학생으로서,</span></p></li><li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 30.0pt;"><p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; margin-right: 0.0pt; padding-left: 0.0pt; text-align: left; text-indent: 0.0pt;"><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">(</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline;">Self-motivated</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">) 스스로 배우고 해결하려는 열정으로 가득하고,</span></p></li><li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 30.0pt;"><p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; margin-right: 0.0pt; padding-left: 0.0pt; text-align: left; text-indent: 0.0pt;"><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">(</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline;">Open-minded</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">) </span><span class="C9DxTc " style="font-size: 12.0pt; font-variant: normal; vertical-align: baseline;">원활한 소통과 </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">협력을 통해 더 큰 결과를 만들 </span><span class="C9DxTc " style="font-size: 12.0pt; vertical-align: baseline;">수 있는</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;"> 학생&nbsp;</span></p></li></ul><p dir="ltr" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; margin-right: 0.0pt; padding-left: 0.0pt; text-align: left; text-indent: 0.0pt;"><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 13.0pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline;">혜택</span></p><ul class="n8H08c UVNKR " style="list-style-type: square; margin-left: 0; margin-right: 0; padding: 0;"><li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 30.0pt;"><p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; margin-right: 0.0pt; padding-left: 0.0pt; text-align: left; text-indent: 0.0pt;"><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">연구실 좌석 및 장비(PC/</span><span class="C9DxTc " style="font-size: 12.0pt; vertical-align: baseline;">모니터)</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;"> 지급</span></p></li><li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 30.0pt;"><p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; margin-right: 0.0pt; padding-left: 0.0pt; text-align: left; text-indent: 0.0pt;"><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">과제 참여시 매월 소정의 연구비 및 </span><span class="C9DxTc " style="font-size: 12.0pt; vertical-align: baseline;">성과에 따른 연말 인센티브 지급</span></p></li><li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 30.0pt;"><p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; margin-right: 0.0pt; padding-left: 0.0pt; text-align: left; text-indent: 0.0pt;"><span class="C9DxTc " style="font-size: 12.0pt; vertical-align: baseline;">지도교수의 연구지도 + 연구실 자체 교육 프로그램 및 </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">외부 교육</span><span class="C9DxTc " style="font-size: 12.0pt; vertical-align: baseline;">/</span><span class="C9DxTc " style="font-size: 12.0pt; font-variant: normal; vertical-align: baseline;">학술대회 참석 기회</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;"> 제공</span></p></li></ul><p dir="ltr" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; margin-right: 0.0pt; padding-left: 0.0pt; text-align: left; text-indent: 0.0pt;"><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 13.0pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline;">지원 방법</span></p><ul class="n8H08c UVNKR " style="list-style-type: square; margin-left: 0; margin-right: 0; padding: 0;"><li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 30.0pt;"><p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; margin-right: 0.0pt; padding-left: 0.0pt; text-align: left; text-indent: 0.0pt;"><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-weight: 700; vertical-align: baseline;">[상담] </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-variant: normal; font-weight: 700; vertical-align: baseline;">지원</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-weight: 700; vertical-align: baseline;">하기</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-variant: normal; font-weight: 700; vertical-align: baseline;"> 전에 미리 상담을 통해 궁금한 점이나 진로 </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-weight: 700; vertical-align: baseline;">논의</span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-variant: normal; font-weight: 700; vertical-align: baseline;">. (email로 </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-weight: 700; vertical-align: baseline;">학부연구생 </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-variant: normal; font-weight: 700; vertical-align: baseline;">상담 신청)</span></p></li><li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 30.0pt;"><p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; padding-left: 0.0pt; text-align: left; text-indent: 0.0pt;"><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-weight: 700; vertical-align: baseline;">[지원] </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-variant: normal; font-weight: 700; vertical-align: baseline;">자기소개서(지원동기 포함)와 성적표를 첨부하여 </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 700; text-decoration: none; vertical-align: baseline;">Email로 학부연구생 지원.</span></p></li><li dir="ltr" class="zfr3Q TYR86d eD0Rn " style="margin-left: 30.0pt;"><p dir="ltr" role="presentation" class="zfr3Q CDt4Ke " style="margin-left: 0.0pt; padding-left: 0.0pt; text-align: left; text-indent: 0.0pt;"><span class="C9DxTc " style="font-size: 12.0pt; vertical-align: baseline;">email: </span><a class="XqQF9c" href="mailto:hykim.v@khu.ac.kr" target="_blank" style="color: inherit; text-decoration: none;"><span class="C9DxTc aw5Odc " style="font-size: 12.0pt; text-decoration: underline; vertical-align: baseline;">hykim.v@khu.ac.kr</span></a><span class="C9DxTc " style="font-size: 12.0pt; vertical-align: baseline;"> </span><span class="C9DxTc " style="font-family: Roboto, Arial; font-size: 12.0pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline;">&nbsp;</span></p></li></ul></div>
+                                    <h3>2025학년도 VML 학부연구생 모집 안내</h3>
+
+                                    <p>작년에는 연구실 여석 부족으로 학부연구생을 모집하지 못했지만, <span class="highlight">올해는 1~3명을 학부연구생으로
+                                            모집</span>하고자 합니다.</p>
+
+                                    <p>우리 연구실의 연구 분야는 크게 보아 <strong>영상처리 및 컴퓨터비전</strong>분야 이며, 특히 <strong>딥러닝 기술을 기반으로
+                                            data-efficient</strong>하게 해당 작업을 수행하기 위한 기술 연구 및 연구 결과의
+                                        <strong>국제표준화</strong>를 중점적으로 진행하고 있습니다.
+                                    </p>
+
+                                    <div class="section">
+                                        <p>현재의 <strong>research focus</strong>는 대략 아래와 같습니다.</p>
+                                        <strong><ul>
+                                            <li>Neural Image & Video Coding</li>
+                                            <li>Generative Video Coding</li>
+                                            <li>Deep Visual Feature Compression</li>
+                                            <li>Digital Hologram & 3D Gaussian Splat Coding</li>
+                                        </ul></strong>
+                                    </div>
+                                    <p>아래 지원 자격/절차 확인하셔서 기한내(~3/31 월)까지 상담 및 지원 부탁드립니다.! :)
+                                    </p>
+
+                                    <div class="section">
+                                        <h4>📅 지원 일정</h4>
+                                        <ul>
+                                            <li><strong>지원 마감:</strong> 3월 31일 (월)</li>
+                                            <li><strong>결과 통보:</strong> 개별 연락 예정 (상담: 3/25 ~ 4/11 중)</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="section">
+                                        <h4>✅ 지원 자격</h4>
+                                        <ul>
+                                            <li>우리 연구실 대학원 진학에 관심있는 <strong>3학년 이상</strong> 학생으로서,</li>
+                                            <li><strong>(Self-motivated)</strong> 스스로 배우고 해결하려는 열정으로 가득하고,</li>
+                                            <li><strong>(Open-minded)</strong> 원활한 소통과 협력을 통해 더 큰 결과를 만들 수 있는 학생</li>
+                                            <li><strong>요구 능력:</strong> 기초 수학/프로그래밍 능력, 기계학습 등 관련 교과 성취도</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="section">
+                                        <h4>📝 지원 절차</h4>
+                                        <ol>
+                                            <li><strong>신청서 접수: Email로 신청서 제출</strong> (마감: 3/31 월)</li>
+
+                                            <ul>
+                                                <li><strong>제목:</strong> [VML] 2025 학부연구생 지원</li>
+                                                <li><strong>내용:</strong> 학과, 학번, 학년/학기, 이름, 지원 동기 및 궁금한 점 기재, 성적표 첨부
+                                                </li>
+                                                <li><strong>메일 송부 주소:</strong> <a
+                                                        href="mailto:hykim.v@khu.ac.kr">hykim.v@khu.ac.kr</a> (김휘용 교수)
+                                                </li>
+                                            </ul>
+                                            <li><strong>서류 심사 결과 회신 및 상담 (개별 연락)</strong></li>
+                                            <ul>
+                                                <li><strong>서류심사 통과자에 대해 상담 진행</strong> (지원자가 많을 경우 서류심사 탈락자가 발생할 수 있음.
+                                                    개별 안내 예정)</li>
+                                                <li>상담 기간: 3/25화 ~ 4/11금 기간 중으로 상담 일정 개별 협의</li>
+                                            </ul>
+                                            <li><strong>역량 검증 (세부 사항은 상담시 안내)</strong></li>
+                                            <ul>
+                                                <li><strong>발표 검증</strong>: 간단한 주제(예: CNN 등)에 대해 발표 및 질의 응답(문맥 파악 및 소통)에
+                                                    문제 없는 지 정도만 체크</li>
+                                                <li><strong>코딩 검증</strong>: 간단한 코딩 문제 몇 개 풀어 보며 기본 코딩 능력 있는 지 정도만 체크
+                                                </li>
+                                            </ul>
+                                        </ol>
+                                    </div>
+                                    <div class="section">
+                                        <h4>⭐ 혜택</h4>
+                                        <ul>
+                                            <li>연구실 좌석 및 장비(PC/모니터) 지급</li>
+                                            <li>과제 참여시 매월 인건비 및 성과에 따른 연말 인센티브 지급
+                                            </li>
+                                            <li>연구실 자체 교육 프로그램 및 외부 교육/학술대회 참석 기회 제공
+                                            </li>
+                                            <li>지도교수의 연구지도 및 진로/수강 지도 등
+                                            </li>
+
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-        </div>
-        <!-- Notices End -->
+            <!-- Notices End -->
 
-        <!-- Congratulations Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-4">Congratulations</h1>
-                </div>
-                <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="accordion" id="accordionPanelsStayOpenExample">
-
-                        <div class="accordion-item mt-3">
-                            <h5 class="accordion-header border-0" id="panelsStayOpen-headingOne">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                    [축!] 임달홍 학부연구생이 1저자로 참여한 인공신경망 특징맵 압축기술이 "ISO/IEC 23888-4 MPEG-AI Feature Coding for Machine" 국제표준안에 채택 (2025.01.21, 149차MPEG회의, Geneva) </button>
-                            </h5>
-                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <p>
-                                        <li>학생저자: 임달홍, 정혜원</li>
-                                    </p>
-                                    <img class="img-fluid" src="img/project/LightFCTM.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item mt-3">
-                            <h5 class="accordion-header border-0" id="panelsStayOpen-headingOne">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                    [축!] 2024년 한국방송미디어공학회 학생 우수논문상 수상 (2024.06.28)                               </button>
-                            </h5>
-                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <p>
-                                        <li>박수용 외, "JPEG-AI의 패치 기반 처리 방법 및 블로킹 아태팩트 방지 조건에 대한 고찰"</li>
-                                    </p>
-                                    <img class="img-fluid" src="img/project/SY_20240628.jpg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item mt-3">
-                            <h5 class="accordion-header border-0" id="panelsStayOpen-heading2">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse2" aria-expanded="true" aria-controls="panelsStayOpen-collapse2">
-                                    [축!] 2024년 한국방송미디어공학회 학부생논문경진대회 우수상(1등) 수상 (2024.06.28)                                 </button>
-                            </h5>
-                            <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <p>
-                                        <li>이태화 외, "VVC 기반의 위상 홀로그램 압축"</li>
-                                    </p>
-                                    <img class="img-fluid" src="img/project/TH_20240628.jpg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="accordion-item mt-3">
-                            <h5 class="accordion-header border-0" id="panelsStayOpen-heading3">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3" aria-expanded="true" aria-controls="panelsStayOpen-collapse3">
-                                    [축!] IEEE VR 2024 (BK 우수국제학술대회) 3편 Accept (2024.01.30)                                </button>
-                            </h5>
-                            <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <p>
-                                        <li>논문1: NHVC: Nerual Holographic Video Compression with Scalable Architecture (Oral, 반현민 외)</li>
-
-                                        <li>논문2: Distribution-Shifting: Improved Phase Hologram Processing with Novel Phase Distortion Metric (Poster, 최승미 외)</li>
-
-                                        <li>논문3: Propagation as Data (PaD): Neural Phase-only Hologram Generation with Variable Distance Support (Poster, 차준영 외) </li>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item mt-3">
-                            <h5 class="accordion-header border-0" id="panelsStayOpen-heading4">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="true" aria-controls="panelsStayOpen-collapse4">
-                                    [축!] 인공신경망 Feature 압축 기술 국제표준안 채택 (2024.01.27)                                </button>
-                            </h5>
-                            <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <p>
-                                        <li>표준화 단체: ISO/IEC JTC 1/SC 29/WG4 (MPEG Video)</li>
-
-                                        <li>표준(안) 명칭: MPEG-AI "Feature Coding for Machine"</li>
-
-                                        <li>기고서 명칭: [FCM] CE 1.1.8. L-MSFC-v2 with Fine-tuning </li>
-
-                                        <li>기고서 저자: 정혜원,  장승환, 임달홍, 김휘용, 이주영, 정세윤, 김연희</li>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item mt-3">
-                            <h5 class="accordion-header border-0" id="panelsStayOpen-heading5">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="true" aria-controls="panelsStayOpen-collapse5">
-                                    [축!] 박사과정 Salman 학생 인공지능 Top 학회 논문 Accept! (2023.09.23)
-                                </button>
-                            </h5>
-                            <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <p>
-                                        <li>학회: NeurIPS 2023 (Neural Information Processing Systems)</li>
-
-                                        <li>논문제목: Towards Efficient Image Compression Without Autoregressive Models</li>
-
-                                        <li>학생저자: Muhammad Salman Ali, 김영웅, Maryam Qamar <br/>
-                                        (배성호교수님 연구실과 공동연구) </li>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item mt-3">
-                            <h5 class="accordion-header border-0" id="panelsStayOpen-heading6">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse6" aria-expanded="true" aria-controls="panelsStayOpen-collapse6">
-                                    [축!] 학부연구생 윤규리 학생, 영상처리 국제학회 논문 Accept! (2023.09.23)
-                                </button>
-                            </h5>
-                            <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <p>
-                                        <li>학회: IEEE VCIP (International Conference on Visual Communications and Image Processing)</li>
-
-                                        <li>논문제목: MEDO: Minimizing Effective Distortions Only for Machine-Oriented Visual Feature Compression</li>
-
-                                        <li>학생저자: 윤규리, 임달홍, 김영웅, 정혜원</li>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mt-3">
-                            <h5 class="accordion-header border-0" id="panelsStayOpen-heading7">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse7" aria-expanded="true" aria-controls="panelsStayOpen-collapse7">
-                                    [축!] 석사과정 김영웅 학생, Top 저널 Accept! (2023.07.24)
-                                </button>
-                            </h5>
-                            <div id="panelsStayOpen-collapse7" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <p>
-                                        <li>저널: IEEE TCSVT (Transactions on Circuit and Systems for Video Technoloty) - JCR IF Rank 8.9%</li>
-
-                                        <li>논문제목:<a href="https://ieeexplore.ieee.org/document/10210338"> End-to-End Learnable Multi-Scale Feature Compression for VCM</a></li>
-
-                                        <li>학생저자: 김영웅, 정혜원, 유장현</li>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item mt-3">
-                            <h5 class="accordion-header border-0" id="panelsStayOpen-heading8">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse8" aria-expanded="true" aria-controls="panelsStayOpen-collapse8">
-                                    [축!] 2023년 한국방송미디어공학회 학부생논문경진대회 우수상(1등) 수상 (2023.06.30) 
-                                </button>
-                            </h5>
-                            <div id="panelsStayOpen-collapse8" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <img class="img-fluid" src="img/project/HD_20230630.jpg" alt="" />
-
-                                    <p>
-                                        <li>조현동 외, "크기조정을 활용한 신경망 기반의 이미지 압축" </li>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item mt-3">
-                            <h5 class="accordion-header border-0" id="panelsStayOpen-heading9">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse9" aria-expanded="true" aria-controls="panelsStayOpen-collapse9">
-                                    [축!] 2023년 삼성 글로벌테크놀러지심포지움(GTS) SHARE Award 수상 (2023.04.21) 
-                                </button>
-                            </h5>
-                            <div id="panelsStayOpen-collapse9" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <img class="img-fluid" src="img/project/HM_GTS_ShareAward_20230421.jpg" alt="" />
-                                    <p>
-                                        <li>반현민, "Neural Holographic Video Compression with Scalable Architecture"
-                                        </li>
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item mt-3">
-                            <h5 class="accordion-header border-0" id="panelsStayOpen-heading10">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse10" aria-expanded="true" aria-controls="panelsStayOpen-collapse10">
-                                    [축!] 한국방송미디어공학회 학부생논문경진대회 최우수상 및 장려상 수상! (2022.06.22)                                     </button>
-                            </h5>
-                            <div id="panelsStayOpen-collapse10" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <p>
-                                        <li>최우수상 : 윤규리 (경희대학교) </li>
-                                        블록 기반 특징맵 크기 조정을 이용한 DNN 특징맵 압축 <br/>
-                                        윤규리, 정혜원, 김영웅, *김연희, *정세윤, 김휘용 (경희대학교, *ETRI)
-                                        
-                                    </p>
-                                    <p>
-                                        <li>장려상 : 최승미 (경희대학교) </li>
-                                        복소 홀로그램 표현방식에 따른 압축 성능 분석 <br/>
-                                        최승미, 반현민, *오관정, *임용준, 김휘용 (경희대학교,*ETRI)
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item mt-3">
-                            <h5 class="accordion-header border-0" id="panelsStayOpen-heading11">
-                                <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse11" aria-expanded="true" aria-controls="panelsStayOpen-collapse11">
-                                    [ 축 ! ] ‘삼성미래기술육성사업’ 선정('22.05) - 딥러닝 기반 위상 홀로그램 압축 기술                                    </button>
-                            </h5>
-                            <div id="panelsStayOpen-collapse11" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <p>
-                                        컴퓨터공학과 김휘용 교수 연구팀이 ‘삼성미래기술육성사업’에 선정됐다. 삼성미래기술육성사업은 대한민국 기초과학 발전, 세계적인 과학기술인 육성을 목표로 혁신적인 연구과제와 연구자를 발굴해 지원하는 공익 목적의 연구지원 사업이다. 김휘용 교수 연구팀은 ‘순환 표현 및 무작위성 규제에 기반한 위상 홀로그램(Phase hologram) 압축 부호화’를 주제로 삼성전자미래기술육성센터의 지원을 받아 연구한다.
-                                    </p>
-                                    <p>
-                                        상세기사:
-
-                                        <li><a href="https://news.mt.co.kr/mtview.php?no=2022050311297431126">머니투데이('22.05.03)</a></li>
-                                        <li><a href="www.khu.ac.kr/kor/focus/detail.do?seq=2160128&page=1&pageSize=5">경희미디어 Focus('22.05.12)</a></li>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
+            <!-- Congratulations Start -->
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+                        <h1 class="mb-4">Congratulations</h1>
                     </div>
+                    <div class="wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="accordion" id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item mt-3">
+                                <h5 class="accordion-header border-0" id="panelsStayOpen-headingOne">
+                                    <button class="accordion-button text-primary fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                        aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                        [축!] 임달홍 학부연구생이 1저자로 참여한 인공신경망 특징맵
+                                        압축기술이 "ISO/IEC 23888-4 MPEG-AI Feature Coding for
+                                        Machine" 국제표준안에 채택 (2025.01.21, 149차MPEG회의,
+                                        Geneva)
+                                    </button>
+                                </h5>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <li>학생저자: 임달홍, 정혜원</li>
+                                        </p>
+                                        <img class="img-fluid" src="img/project/LightFCTM.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="accordion-item mt-3">
+                                <h5 class="accordion-header border-0" id="panelsStayOpen-headingOne">
+                                    <button class="accordion-button text-primary fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                        aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                        [축!] 2024년 한국방송미디어공학회 학생 우수논문상 수상
+                                        (2024.06.28)
+                                    </button>
+                                </h5>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <li>
+                                                박수용 외, "JPEG-AI의 패치 기반 처리 방법 및 블로킹
+                                                아태팩트 방지 조건에 대한 고찰"
+                                            </li>
+                                        </p>
+                                        <img class="img-fluid" src="img/project/SY_20240628.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mt-3">
+                                <h5 class="accordion-header border-0" id="panelsStayOpen-heading2">
+                                    <button class="accordion-button text-primary fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse2"
+                                        aria-expanded="true" aria-controls="panelsStayOpen-collapse2">
+                                        [축!] 2024년 한국방송미디어공학회 학부생논문경진대회
+                                        우수상(1등) 수상 (2024.06.28)
+                                    </button>
+                                </h5>
+                                <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <li>이태화 외, "VVC 기반의 위상 홀로그램 압축"</li>
+                                        </p>
+                                        <img class="img-fluid" src="img/project/TH_20240628.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mt-3">
+                                <h5 class="accordion-header border-0" id="panelsStayOpen-heading3">
+                                    <button class="accordion-button text-primary fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse3"
+                                        aria-expanded="true" aria-controls="panelsStayOpen-collapse3">
+                                        [축!] IEEE VR 2024 (BK 우수국제학술대회) 3편 Accept
+                                        (2024.01.30)
+                                    </button>
+                                </h5>
+                                <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <li>
+                                                논문1: NHVC: Nerual Holographic Video Compression with
+                                                Scalable Architecture (Oral, 반현민 외)
+                                            </li>
+
+                                            <li>
+                                                논문2: Distribution-Shifting: Improved Phase Hologram
+                                                Processing with Novel Phase Distortion Metric (Poster,
+                                                최승미 외)
+                                            </li>
+
+                                            <li>
+                                                논문3: Propagation as Data (PaD): Neural Phase-only
+                                                Hologram Generation with Variable Distance Support
+                                                (Poster, 차준영 외)
+                                            </li>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mt-3">
+                                <h5 class="accordion-header border-0" id="panelsStayOpen-heading4">
+                                    <button class="accordion-button text-primary fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4"
+                                        aria-expanded="true" aria-controls="panelsStayOpen-collapse4">
+                                        [축!] 인공신경망 Feature 압축 기술 국제표준안 채택
+                                        (2024.01.27)
+                                    </button>
+                                </h5>
+                                <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <li>표준화 단체: ISO/IEC JTC 1/SC 29/WG4 (MPEG Video)</li>
+
+                                            <li>
+                                                표준(안) 명칭: MPEG-AI "Feature Coding for Machine"
+                                            </li>
+
+                                            <li>
+                                                기고서 명칭: [FCM] CE 1.1.8. L-MSFC-v2 with Fine-tuning
+                                            </li>
+
+                                            <li>
+                                                기고서 저자: 정혜원, 장승환, 임달홍, 김휘용, 이주영,
+                                                정세윤, 김연희
+                                            </li>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mt-3">
+                                <h5 class="accordion-header border-0" id="panelsStayOpen-heading5">
+                                    <button class="accordion-button text-primary fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5"
+                                        aria-expanded="true" aria-controls="panelsStayOpen-collapse5">
+                                        [축!] 박사과정 Salman 학생 인공지능 Top 학회 논문 Accept!
+                                        (2023.09.23)
+                                    </button>
+                                </h5>
+                                <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <li>
+                                                학회: NeurIPS 2023 (Neural Information Processing
+                                                Systems)
+                                            </li>
+
+                                            <li>
+                                                논문제목: Towards Efficient Image Compression Without
+                                                Autoregressive Models
+                                            </li>
+
+                                            <li>
+                                                학생저자: Muhammad Salman Ali, 김영웅, Maryam Qamar
+                                                <br />
+                                                (배성호교수님 연구실과 공동연구)
+                                            </li>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mt-3">
+                                <h5 class="accordion-header border-0" id="panelsStayOpen-heading6">
+                                    <button class="accordion-button text-primary fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse6"
+                                        aria-expanded="true" aria-controls="panelsStayOpen-collapse6">
+                                        [축!] 학부연구생 윤규리 학생, 영상처리 국제학회 논문 Accept!
+                                        (2023.09.23)
+                                    </button>
+                                </h5>
+                                <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <li>
+                                                학회: IEEE VCIP (International Conference on Visual
+                                                Communications and Image Processing)
+                                            </li>
+
+                                            <li>
+                                                논문제목: MEDO: Minimizing Effective Distortions Only
+                                                for Machine-Oriented Visual Feature Compression
+                                            </li>
+
+                                            <li>학생저자: 윤규리, 임달홍, 김영웅, 정혜원</li>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mt-3">
+                                <h5 class="accordion-header border-0" id="panelsStayOpen-heading7">
+                                    <button class="accordion-button text-primary fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse7"
+                                        aria-expanded="true" aria-controls="panelsStayOpen-collapse7">
+                                        [축!] 석사과정 김영웅 학생, Top 저널 Accept! (2023.07.24)
+                                    </button>
+                                </h5>
+                                <div id="panelsStayOpen-collapse7" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <li>
+                                                저널: IEEE TCSVT (Transactions on Circuit and Systems
+                                                for Video Technoloty) - JCR IF Rank 8.9%
+                                            </li>
+
+                                            <li>
+                                                논문제목:<a href="https://ieeexplore.ieee.org/document/10210338">
+                                                    End-to-End Learnable Multi-Scale Feature Compression
+                                                    for VCM</a>
+                                            </li>
+
+                                            <li>학생저자: 김영웅, 정혜원, 유장현</li>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mt-3">
+                                <h5 class="accordion-header border-0" id="panelsStayOpen-heading8">
+                                    <button class="accordion-button text-primary fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse8"
+                                        aria-expanded="true" aria-controls="panelsStayOpen-collapse8">
+                                        [축!] 2023년 한국방송미디어공학회 학부생논문경진대회
+                                        우수상(1등) 수상 (2023.06.30)
+                                    </button>
+                                </h5>
+                                <div id="panelsStayOpen-collapse8" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <img class="img-fluid" src="img/project/HD_20230630.jpg" alt="" />
+
+                                        <p>
+                                            <li>
+                                                조현동 외, "크기조정을 활용한 신경망 기반의 이미지 압축"
+                                            </li>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mt-3">
+                                <h5 class="accordion-header border-0" id="panelsStayOpen-heading9">
+                                    <button class="accordion-button text-primary fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse9"
+                                        aria-expanded="true" aria-controls="panelsStayOpen-collapse9">
+                                        [축!] 2023년 삼성 글로벌테크놀러지심포지움(GTS) SHARE Award
+                                        수상 (2023.04.21)
+                                    </button>
+                                </h5>
+                                <div id="panelsStayOpen-collapse9" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <img class="img-fluid" src="img/project/HM_GTS_ShareAward_20230421.jpg"
+                                            alt="" />
+                                        <p>
+                                            <li>
+                                                반현민, "Neural Holographic Video Compression with
+                                                Scalable Architecture"
+                                            </li>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mt-3">
+                                <h5 class="accordion-header border-0" id="panelsStayOpen-heading10">
+                                    <button class="accordion-button text-primary fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse10"
+                                        aria-expanded="true" aria-controls="panelsStayOpen-collapse10">
+                                        [축!] 한국방송미디어공학회 학부생논문경진대회 최우수상 및
+                                        장려상 수상! (2022.06.22)
+                                    </button>
+                                </h5>
+                                <div id="panelsStayOpen-collapse10" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p>
+                                            <li>최우수상 : 윤규리 (경희대학교)</li>
+                                            블록 기반 특징맵 크기 조정을 이용한 DNN 특징맵 압축 <br />
+                                            윤규리, 정혜원, 김영웅, *김연희, *정세윤, 김휘용
+                                            (경희대학교, *ETRI)
+                                        </p>
+                                        <p>
+                                            <li>장려상 : 최승미 (경희대학교)</li>
+                                            복소 홀로그램 표현방식에 따른 압축 성능 분석 <br />
+                                            최승미, 반현민, *오관정, *임용준, 김휘용
+                                            (경희대학교,*ETRI)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item mt-3">
+                                <h5 class="accordion-header border-0" id="panelsStayOpen-heading11">
+                                    <button class="accordion-button text-primary fs-5" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse11"
+                                        aria-expanded="true" aria-controls="panelsStayOpen-collapse11">
+                                        [ 축 ! ] ‘삼성미래기술육성사업’ 선정('22.05) - 딥러닝 기반
+                                        위상 홀로그램 압축 기술
+                                    </button>
+                                </h5>
+                                <div id="panelsStayOpen-collapse11" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p>
+                                            컴퓨터공학과 김휘용 교수 연구팀이 ‘삼성미래기술육성사업’에
+                                            선정됐다. 삼성미래기술육성사업은 대한민국 기초과학 발전,
+                                            세계적인 과학기술인 육성을 목표로 혁신적인 연구과제와
+                                            연구자를 발굴해 지원하는 공익 목적의 연구지원 사업이다.
+                                            김휘용 교수 연구팀은 ‘순환 표현 및 무작위성 규제에 기반한
+                                            위상 홀로그램(Phase hologram) 압축 부호화’를 주제로
+                                            삼성전자미래기술육성센터의 지원을 받아 연구한다.
+                                        </p>
+                                        <p>
+                                            상세기사:
+
+                                            <li>
+                                                <a
+                                                    href="https://news.mt.co.kr/mtview.php?no=2022050311297431126">머니투데이('22.05.03)</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="www.khu.ac.kr/kor/focus/detail.do?seq=2160128&page=1&pageSize=5">경희미디어
+                                                    Focus('22.05.12)</a>
+                                            </li>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Congratulations End -->
+            <!-- Congratulations End -->
     </section>
 
     <!-- Footer Start -->
@@ -395,30 +581,39 @@
             <div class="row g-5">
                 <div class="col-lg-8 col-md-6">
                     <h5 class="text-white mb-4">Address</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Deogyeong-daero, Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea, 17104.</p>
+                    <p class="mb-2">
+                        <i class="fa fa-map-marker-alt me-3"></i>Deogyeong-daero,
+                        Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea, 17104.
+                    </p>
                     <!-- <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>010-6405-5430</p> -->
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>hykim.v@khu.ac.kr</p>
+                    <p class="mb-2">
+                        <i class="fa fa-envelope me-3"></i>hykim.v@khu.ac.kr
+                    </p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-light btn-social" href="https://github.com/VML-lambda"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href="https://github.com/VML-lambda"><i
+                                class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h5 class="text-white mb-4">Project Gallery</h5>
                     <div class="row g-2">
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/project/HD_20230630.jpg" alt="">
+                            <img class="img-fluid rounded" src="img/project/HD_20230630.jpg" alt="" />
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/project/HM_GTS_ShareAward_20230421.jpg" alt="">
+                            <img class="img-fluid rounded" src="img/project/HM_GTS_ShareAward_20230421.jpg" alt="" />
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/project/HW_MPEG_2023.07.15_crop.png" alt="">
+                            <img class="img-fluid rounded" src="img/project/HW_MPEG_2023.07.15_crop.png" alt="" />
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/project/JH_MPEG_2023.07.15.jpg" alt="">
+                            <img class="img-fluid rounded" src="img/project/JH_MPEG_2023.07.15.jpg" alt="" />
                         </div>
                         <!-- <div class="col-4">
                             <img class="img-fluid rounded" src="img/project/TCSVT_L-MSFC.png" alt="">
@@ -439,7 +634,8 @@
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                        <br />Distributed By:
+                        <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
                     </div>
                 </div>
             </div>
@@ -447,10 +643,9 @@
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
