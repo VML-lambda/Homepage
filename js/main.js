@@ -104,30 +104,39 @@
 
 $(document).ready(function () {
   var path = window.location.pathname;
-  var filename = path.match(/.*\/([^/]+)\.([^?]+)/i)[1];
+  // var filename = path.match(/.*\/([^/]+)\.([^?]+)/i)[1];
+  var match = path.match(/.*\/([^/]+)\.([^?]+)/i);
 
-  // loading time
-  $(window).on('load', function () {
-    $("#loading").fadeOut(500);
-  });
+  // 에러 방지를 위해 null 체크 추가
+  if (match && match[1]) {
+    var filename = match[1];
 
-  if (filename == "research") {
-    $("#nav-research").addClass("active");
-  } else if (filename == "professor") {
-    $("#nav-professor").addClass("active");
-    $("#nav-people").addClass("active");
-  } else if (filename == "students") {
-    $("#nav-students").addClass("active");
-    $("#nav-people").addClass("active");
-  } else if (filename == "publication") {
-    $("#nav-publication").addClass("active");
-  } else if (filename == "news") {
-    $("#nav-news").addClass("active");
-  } else if (filename == "contact") {
-    $("#nav-contact").addClass("active");
+    // loading time
+    $(window).on('load', function () {
+      $("#loading").fadeOut(500);
+    });
+
+    if (filename == "research") {
+      $("#nav-research").addClass("active");
+    } else if (filename == "professor") {
+      $("#nav-professor").addClass("active");
+      $("#nav-people").addClass("active");
+    } else if (filename == "students") {
+      $("#nav-students").addClass("active");
+      $("#nav-people").addClass("active");
+    } else if (filename == "publication") {
+      $("#nav-publication").addClass("active");
+    } else if (filename == "news") {
+      $("#nav-news").addClass("active");
+    } else if (filename == "contact") {
+      $("#nav-contact").addClass("active");
+    } else {
+      console.log("Cannot find matching ID");
+    }
   } else {
     console.log("Cannot find matching ID");
   }
+
 });
 
 function fixOwlCarouselHeight() {
