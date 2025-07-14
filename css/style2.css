@@ -57,6 +57,9 @@
     animation: object_four 1.5s infinite;
 }
 
+[id^="panelsStayOpen-heading"] {
+  scroll-margin-top: 100px; /* 메뉴 높이만큼 맞춰서 조정 */
+}
 
 @-webkit-keyframes loading-center-absolute {
     100% { -webkit-transform: rotate(-45deg); }
