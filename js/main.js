@@ -126,6 +126,8 @@ $(document).ready(function () {
       $("#nav-people").addClass("active");
     } else if (filename == "publication") {
       $("#nav-publication").addClass("active");
+    } else if (filename == "grant") {
+      $("#nav-grant").addClass("active");
     } else if (filename == "news") {
       $("#nav-news").addClass("active");
     } else if (filename == "contact") {

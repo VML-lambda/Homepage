@@ -63,35 +63,17 @@
   </div>
   <!-- Spinner End -->
 
-  <!-- Spinner End -->
-  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-    <a href="/" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-      <img src="img/logo.png" class="logo" aria-hidden="true" />
-
-    </a>
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav ms-auto p-4 p-lg-0">
-        <!-- <a href="project.html" class="nav-item nav-link" id="nav-research"
-            >Research</a
-          > -->
-        <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="nav-people">People</a>
-          <div class="dropdown-menu bg-light m-0">
-            <a href="professor.html" class="dropdown-item" id="nav-professor">Professor</a>
-            <a href="students.html" class="dropdown-item" id="nav-students">Students</a>
-          </div>
-        </div>
-        <!-- <a href="lecture.html" class="nav-item nav-link" id="nav-research"
-              >Lecture</a> -->
-        <a href="publication.html" class="nav-item nav-link" id="nav-publication">Publication</a>
-        <a href="news.html" class="nav-item nav-link" id="nav-news">News</a>
-        <a href="contact.html" class="nav-item nav-link" id="nav-contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <!-- Navbar Start -->
+  <div id="navbar"></div>
+  
+  <script>
+    fetch('/navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+  <!-- Navbar End -->
 
   <!-- Carousel Start -->
   <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.5s">
@@ -268,14 +250,14 @@
         <div class="col-12 text-center">
           <ul class="list-inline mb-5" id="portfolio-flters">
             <li class="mx-2 active" data-filter="*">All</li>
-            <li class="mx-2" data-filter=".first"><i class="fa fa-award text-primary me-1"></i>Awards</li>
-            <li class="mx-2" data-filter=".second"><i class="fa fa-thumbs-up text-primary me-1"></i>Accepts</li>
-            <li class="mx-2" data-filter=".third"><i class="fa fa-check-square text-primary me-1"></i>Grant</li>
+            <li class="mx-2" data-filter=".award"><i class="fa fa-award text-primary me-1"></i>Awards</li>
+            <li class="mx-2" data-filter=".accept"><i class="fa fa-thumbs-up text-primary me-1"></i>Acceptances</li>
+            <li class="mx-2" data-filter=".grant"><i class="fa fa-check-square text-primary me-1"></i>Grants</li>
           </ul>
         </div>
       </div>
       <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
-        <div class="col-lg-4 col-md-6 portfolio-item third">
+        <div class="col-lg-4 col-md-6 portfolio-item grant">
           <div class="portfolio-img rounded overflow-hidden">
             <img class="img-fluid" src="img/project/BRL_figure.png" aria-hidden="true" />
             <div class="portfolio-btn">
@@ -291,10 +273,11 @@
             <h5 class="lh-base">
               [축!] 김휘용 교수 연구팀, "2025 글로벌 기초연구실 지원사업" 선정! (지원규모: 2025년 6월부터 3년, 15억)
             </h5>
+            <a class="text-muted small" href="news.html#panelsStayOpen-heading16">더보기 ></small>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item second">
+        <div class="col-lg-4 col-md-6 portfolio-item accept">
           <div class="portfolio-img rounded overflow-hidden">
             <img class="img-fluid" src="img/project/2507_jvet.png" aria-hidden="true" />
             <div class="portfolio-btn">
@@ -310,10 +293,11 @@
             <h5 class="lh-base">
               [축!] 석사과정 조현동 학생, "ISO/IEC WG5 JVET NNVC" EE1 채택! (2025.07.04)
             </h5>
+            <a class="text-muted small" href="news.html#panelsStayOpen-heading15">더보기 ></small>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item second">
+        <div class="col-lg-4 col-md-6 portfolio-item accept">
           <div class="portfolio-img rounded overflow-hidden">
             <img class="img-fluid" src="img/project/2506_hyewon.png" aria-hidden="true" />
             <div class="portfolio-btn">
@@ -329,10 +313,11 @@
             <h5 class="lh-base">
               [축!] 박사과정 정혜원 학생, "ISO/IEC 23888-4 MPEG-AI Feature Coding for Machine" 국제표준안 2건 채택! (2025.06)
             </h5>
+            <a class="text-muted small" href="news.html#panelsStayOpen-heading14">더보기 ></small>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item second">
+        <div class="col-lg-4 col-md-6 portfolio-item accept">
           <div class="portfolio-img rounded overflow-hidden">
             <img class="img-fluid" src="img/project/2503_m72291.png" aria-hidden="true" />
             <div class="portfolio-btn">
@@ -348,10 +333,11 @@
             <h5 class="lh-base">
               [축!] 박사과정 정혜원 학생, "ISO/IEC 23888-4 MPEG-AI Feature Coding for Machine" 국제표준안 채택! (2025.03)
             </h5>
+            <a class="text-muted small" href="news.html#panelsStayOpen-heading13">더보기 ></small>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item second">
+        <div class="col-lg-4 col-md-6 portfolio-item accept">
           <div class="portfolio-img rounded overflow-hidden">
             <img class="img-fluid" src="img/project/LightFCTM.png" aria-hidden="true" />
             <div class="portfolio-btn">
@@ -367,10 +353,11 @@
             <h5 class="lh-base">
               [축!] 임달홍 학부연구생 "ISO/IEC 23888-4 MPEG-AI Feature Coding for Machine" 국제표준안 채택! (2025.01.21)
             </h5>
+            <a class="text-muted small" href="news.html#panelsStayOpen-heading12">더보기 ></small>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item first">
+        <div class="col-lg-4 col-md-6 portfolio-item award">
           <div class="portfolio-img rounded overflow-hidden">
             <img class="img-fluid" src="img/project/SY_20240628.jpg" aria-hidden="true" />
             <div class="portfolio-btn">
@@ -386,10 +373,11 @@
             <h5 class="lh-base">
               [축!] 박수용 학생, 학부생논문경진대회 학생우수논문상 수상! (2024.06.28)<br />
             </h5>
+            <a class="text-muted small" href="news.html#panelsStayOpen-heading11">더보기 ></small>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item first">
+        <div class="col-lg-4 col-md-6 portfolio-item award">
           <div class="portfolio-img rounded overflow-hidden">
             <img class="img-fluid" src="img/project/TH_20240628.jpg" aria-hidden="true" />
             <div class="portfolio-btn">
@@ -405,10 +393,11 @@
             <h5 class="lh-base">
               [축!] 이태화 학생, 학부생논문경진대회 우수상(1등) 수상! (2024.06.28)<br />
             </h5>
+            <a class="text-muted small" href="news.html#panelsStayOpen-heading10">더보기 ></small>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item second">
+        <div class="col-lg-4 col-md-6 portfolio-item accept">
           <div class="portfolio-img rounded overflow-hidden">
             <img class="img-fluid" src="img/project/IEEEVR_2024_LogoBanner.png" aria-hidden="true" />
             <div class="portfolio-btn">
@@ -424,12 +413,13 @@
             <h5 class="lh-base">
               [축!] IEEE VR 2024 (BK 우수국제학술대회) 3편 ACCEPT (2024.01.30)
             </h5>
+            <a class="text-muted small" href="news.html#panelsStayOpen-heading9">더보기 ></small>
           </div>
         </div>
 
 
 
-        <div class="col-lg-4 col-md-6 portfolio-item second">
+        <div class="col-lg-4 col-md-6 portfolio-item accept">
           <div class="portfolio-img rounded overflow-hidden">
             <img class="img-fluid" src="img/project/TCSVT_L-MSFC.png" aria-hidden="true" />
             <div class="portfolio-btn">
@@ -445,10 +435,11 @@
             <h5 class="lh-base">
               [축!] 김영웅 학생, Top 저널 Accept! (2023.07.24)
             </h5>
+            <a class="text-muted small" href="news.html#panelsStayOpen-heading5">더보기 ></small>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item first">
+        <div class="col-lg-4 col-md-6 portfolio-item award">
           <div class="portfolio-img rounded overflow-hidden">
             <img class="img-fluid" src="img/project/HD_20230630.jpg" aria-hidden="true" />
             <div class="portfolio-btn">
@@ -464,9 +455,10 @@
             <h5 class="lh-base">
               [축!] 조현동 학생, 학부생논문경진대회 우수상(1등) 수상! (2023.06.30)<br />
             </h5>
+            <a class="text-muted small" href="news.html#panelsStayOpen-heading4">더보기 ></small>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 portfolio-item first">
+        <div class="col-lg-4 col-md-6 portfolio-item award">
           <div class="portfolio-img rounded overflow-hidden">
             <img class="img-fluid" src="img/project/HM_GTS_ShareAward_20230421.jpg" aria-hidden="true" />
             <div class="portfolio-btn">
@@ -483,6 +475,7 @@
             <h5 class="lh-base">
               [축!] 반현민 학생, SHARE Award 수상 (2023.04.21) <br />
             </h5>
+            <a class="text-muted small" href="news.html#panelsStayOpen-heading3">더보기 ></small>
           </div>
         </div>
 
@@ -816,63 +809,15 @@
 
 
   <!-- Footer Start -->
-  <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-lg-8 col-md-6">
-          <h5 class="text-white mb-4">Address</h5>
-          <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Deogyeong-daero, Giheung-gu, Yongin-si, Gyeonggi-do,
-            Republic of Korea, 17104.</p>
-          <!-- <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>010-6405-5430</p> -->
-          <p class="mb-2"><i class="fa fa-envelope me-3"></i>hykim.v@khu.ac.kr</p>
-          <div class="d-flex pt-2">
-            <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-            <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-            <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-            <a class="btn btn-square btn-outline-light btn-social" href="https://github.com/VML-lambda"><i
-                class="fab fa-github"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <h5 class="text-white mb-4">Project Gallery</h5>
-          <div class="row g-2">
-            <div class="col-4">
-              <img class="img-fluid rounded" src="img/project/HD_20230630.jpg" aria-hidden="true">
-            </div>
-            <div class="col-4">
-              <img class="img-fluid rounded" src="img/project/HM_GTS_ShareAward_20230421.jpg" aria-hidden="true">
-            </div>
-            <div class="col-4">
-              <img class="img-fluid rounded" src="img/project/HW_MPEG_2023.07.15_crop.png" aria-hidden="true">
-            </div>
-            <div class="col-4">
-              <img class="img-fluid rounded" src="img/project/JH_MPEG_2023.07.15.jpg" aria-hidden="true">
-            </div>
-            <!-- <div class="col-4">
-                          <img class="img-fluid rounded" src="img/project/TCSVT_L-MSFC.png" aria-hidden="true">
-                      </div> -->
-            <!-- <div class="col-4">
-                          <img class="img-fluid rounded" src="img/gallery-6.jpg" aria-hidden="true">
-                      </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="copyright">
-        <div class="row">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            &copy; <a href="#">Your Site Name</a>, All Right Reserved.
-          </div>
-          <div class="col-md-6 text-center text-md-end">
-            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-            <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div id="footer"></div>
+  
+  <script>
+    fetch('/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
   <!-- Footer End -->
 
   <!-- Back to Top -->

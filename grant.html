@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Visual Media Lab</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet" />
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style2.css" />
+
+    <!-- <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> -->
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div id="navbar"></div>
+    
+    <script>
+        fetch('/navbar.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+    </script>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Grant</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a class="text-white" href="#">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">
+                        Grant
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+    <section id="faq">
+        <!-- Ongoing Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+                    <!-- <h6 class="text-primary">News</h6> -->
+                    <h1 class="mb-4">Ongoing</h1>
+                </div>
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <!-- Cards Start -->
+                    <div class="card mb-3" style="width: 97%">
+                        <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
+                            <img src="img/other-logos/NRF.png" alt="NRF Logo" width="120" style="margin-top: 1em; margin-bottom: 1em; flex-shrink: 0;" />
+                            <div>
+                                <h6 class="card-title mb-2">
+                                    Multi-Purpose Visual Information Coding for Human and Machine Vision
+                                    <br />
+                                    <small class="text-muted">(인간과 기계 시각을 동시에 지원하는 다목적 시각정보 압축 연구)</small>
+                                </h6>
+                                <p class="card-subtitle text-muted mb-1 small">
+                                    한국연구재단 글로벌 기초연구실 지원사업(BRL)
+                                </p>
+                                <p class="card-text text-muted mb-0 small">
+                                    <strong>Jun. 2025 - May 2028</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="width: 97%">
+                        <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
+                            <img src="img/other-logos/KHU.png" alt="KHU Logo" width="120" style="margin-top: 1em; margin-bottom: 1em; flex-shrink: 0;" />
+                            <div>
+                                <h6 class="card-title mb-2">
+                                    홀로그래픽 실감콘텐츠 생성/재현 교육 플랫폼 고도화 (시각화, 3D, 활용사례를 중심으로)
+                                    <br />
+                                    <small class="text-muted"></small>
+                                </h6>
+                                <p class="card-subtitle text-muted mb-1 small">
+                                    경희대학교 산학협력단(교원연구지원과제)
+                                </p>
+                                <p class="card-text text-muted mb-0 small">
+                                    <strong>May. 2025 - Nov. 2025</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="width: 97%">
+                        <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
+                            <img src="img/other-logos/IITP.png" alt="IITP Logo" width="120" style="margin-top: 1em; margin-bottom: 1em; flex-shrink: 0;" />
+                            <div>
+                                <h6 class="card-title mb-2">
+                                    Video Coding for Machine
+                                    <br />
+                                    <small class="text-muted">((전문연구실) 기계를 위한 영상 부호화 기술)</small>
+                                </h6>
+                                <p class="card-subtitle text-muted mb-1 small">
+                                    정보통신기획평가원(IITP)
+                                </p>
+                                <p class="card-text text-muted mb-0 small">
+                                    <strong>Jan. 2020 - Dec. 2026</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="width: 97%">
+                        <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
+                            <img src="img/other-logos/IITP.png" alt="IITP Logo" width="120" style="margin-top: 1em; margin-bottom: 1em; flex-shrink: 0;" />
+                            <div>
+                                <h6 class="card-title mb-2">
+                                    Development of Audio/Video Coding and Light Field Media Fundamental Technologies for Ultra Realistic Tera-media
+                                    <br />
+                                    <small class="text-muted">(초실감 테라미디어를 위한 AV부호화 및 LF미디어 원천기술개발)</small>
+                                </h6>
+                                <p class="card-subtitle text-muted mb-1 small">
+                                    정보통신기획평가원(IITP)
+                                </p>
+                                <p class="card-text text-muted mb-0 small">
+                                    <strong>Jan. 2017 - Dec. 2028</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cards End -->
+                </div>
+            </div>
+            <!-- Ongoing End -->
+
+            <!-- Completed Start -->
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+                        <h1 class="mb-4">Completed</h1>
+                    </div>
+                    <div class="wow fadeInUp" data-wow-delay="0.1s">
+                        <!-- Cards Start -->
+                        <div class="card mb-3" style="width: 97%">
+                            <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
+                                <img src="img/other-logos/samsung-mirae.png" alt="Samsung Logo" width="120" style="margin-top: 1em; margin-bottom: 1em; flex-shrink: 0;" />
+                                <div>
+                                    <h6 class="card-title mb-2">
+                                        Phase Hologram Compression based on Circular Representation and Randomness Regularization
+                                        <br />
+                                        <small class="text-muted">(순환 표현 및 무작위성 규제에 기반한 위상 홀로그램 압축 부호화)</small>
+                                    </h6>
+                                    <p class="card-subtitle text-muted mb-1 small">
+                                        Samsung (삼성미래기술육성사업)
+                                    </p>
+                                    <p class="card-text text-muted mb-0 small">
+                                        <strong>Jun. 2022 - May. 2025</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3" style="width: 97%">
+                            <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
+                                <img src="img/other-logos/samsung-sait.png" alt="Samsung Logo" width="120" style="margin-top: 1em; margin-bottom: 1em; flex-shrink: 0;" />
+                                <div>
+                                    <h6 class="card-title mb-2">
+                                        Study on Neural Feature Coding for Machine Vision
+                                        <br />
+                                        <small class="text-muted">(기계 시각을 위한 신경망 기반 특징맵 압축)</small>
+                                    </h6>
+                                    <p class="card-subtitle text-muted mb-1 small">
+                                        Samsung (SAIT)
+                                    </p>
+                                    <p class="card-text text-muted mb-0 small">
+                                        <strong>Jun. 2024 - Jun. 2025</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3" style="width: 97%">
+                            <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
+                                <img src="img/other-logos/KHU.png" alt="KHU Logo" width="120" style="margin-top: 1em; margin-bottom: 1em; flex-shrink: 0;" />
+                                <div>
+                                    <h6 class="card-title mb-2">
+                                        홀로그래픽 실감콘텐츠 생성/재현 교육 플랫폼 개발
+                                        <br />
+                                        <small class="text-muted"></small>
+                                    </h6>
+                                    <p class="card-subtitle text-muted mb-1 small">
+                                        경희대학교 산학협력단(교원연구지원과제)
+                                    </p>
+                                    <p class="card-text text-muted mb-0 small">
+                                        <strong>May. 2024 - Nov. 2024</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3" style="width: 97%">
+                            <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
+                                <img src="img/other-logos/ETRI.png" alt="ETRI Logo" width="120" style="margin-top: 1em; margin-bottom: 1em; flex-shrink: 0;" />
+                                <div>
+                                    <h6 class="card-title mb-2">
+                                        Development of Digital Holographic Metrology Technology for Phase Retrieval
+                                        <br />
+                                        <small class="text-muted">(메트롤로지 데이터 압축 및 복원)</small>
+                                    </h6>
+                                    <p class="card-subtitle text-muted mb-1 small">
+                                        한국전자통신연구원(ETRI) 학술연구용역사업 R&D
+                                    </p>
+                                    <p class="card-text text-muted mb-0 small">
+                                        <strong>May. 2022 - Nov. 2022 / May. 2023 - Dec. 2023</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3" style="width: 97%">
+                            <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
+                                <img src="img/other-logos/samsung-sait.png" alt="Samsung Logo" width="120" style="margin-top: 1em; margin-bottom: 1em; flex-shrink: 0;" />
+                                <div>
+                                    <h6 class="card-title mb-2">
+                                        Study on ME/MC for Neural Video Compression
+                                        <br />
+                                        <small class="text-muted">(신경망 비디오 압축을 위한 움직임 예측/보상 연구)</small>
+                                    </h6>
+                                    <p class="card-subtitle text-muted mb-1 small">
+                                        Samsung (SAIT)
+                                    </p>
+                                    <p class="card-text text-muted mb-0 small">
+                                        <strong>Oct. 2022 - Sep. 2023</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3" style="width: 97%">
+                            <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
+                                <img src="img/other-logos/ETRI.png" alt="ETRI Logo" width="120" style="margin-top: 1em; margin-bottom: 1em; flex-shrink: 0;" />
+                                <div>
+                                    <h6 class="card-title mb-2">
+                                        Development of a video hologram compression codec for bitrate-distortion optimization
+                                        <br />
+                                        <small class="text-muted">(비트율-왜곡 최적화 동영상 홀로그램 압축 코덱 제작)</small>
+                                    </h6>
+                                    <p class="card-subtitle text-muted mb-1 small">
+                                        한국전자통신연구원(ETRI) 학술연구용역사업 R&D
+                                    </p>
+                                    <p class="card-text text-muted mb-0 small">
+                                        <strong>May. 2020 - Feb. 2021</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cards End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Completed End -->
+    </section>
+
+    <!-- Footer Start -->
+    <div id="footer"></div>
+    
+    <script>
+        fetch('/footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+    </script>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Isotope JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <!-- imagesLoaded JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
