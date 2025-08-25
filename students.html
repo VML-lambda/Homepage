@@ -253,6 +253,7 @@
                                             <p><b>Email</b> ${person.email}<br/></p>
                                             <p><b>Research Interests</b><br/>${person.researchInterests}</p>
                                             <p><b>Education</b><br/>${education}</p>
+                                            ${!!person.current ? `<p><b>Current</b> ${person.current}</p>` : ``}
                                             <div class="team-social">
                                                 <a class="btn btn-square btn-outline-primary rounded-circle ms-auto" href=""><i class="fab fa-facebook-f"></i></a>
                                                 <a class="btn btn-square btn-outline-primary rounded-circle" href=""><i class="fab fa-github"></i></a>

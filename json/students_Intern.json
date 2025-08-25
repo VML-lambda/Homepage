@@ -1,17 +1,50 @@
 {"degree":"Intern",
 "list":{
-   
    "김종욱":
    {
       "engName":"Kim Jong Wook",
       "position":"",
       "department":"Computer Science and Engineering",
-      "email":"Jong1334@khu.ac.kr",
+      "email":"jong1334@khu.ac.kr",
       "researchInterests":[
       ],
       "education":[
       ],
       "image":"Jongwook.jpg",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   },
+   "김민권":
+   {
+      "engName":"Kim Min Kwon",
+      "position":"",
+      "department":"Computer Science and Engineering",
+      "email":"knk9812@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"profile.png",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   },
+   "박태권":
+   {
+      "engName":"Park Tae Gwon",
+      "position":"",
+      "department":"Computer Science and Engineering",
+      "email":"clue9986@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"profile.png",
       "twitter":"",
       "github":"",
       "linkedin":"",

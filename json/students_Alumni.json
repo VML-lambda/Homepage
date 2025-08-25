@@ -15,7 +15,8 @@
       "github":"",
       "linkedin":"",
       "instagram":"",
-      "facebook":""
+      "facebook":"",
+      "current":"미래에셋증권 AI플랫폼개발"
    }
    ,
    "반현민":
@@ -122,7 +123,26 @@
       "github":"",
       "linkedin":"",
       "instagram":"",
-      "facebook":""
+      "facebook":"",
+      "current":"카이스트 ACSS 연구실 진학"
+   },
+   "차준영":
+   {
+      "engName":"Jun Yeong Cha",
+      "position":"M.S/Hologram",
+      "department":"Computer Science and Engineering",
+      "email":"cjy8922@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"Junyeong.jpg",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":"",
+      "current":"LIG넥스원 광정보융합연구소"
    }
 }
 }

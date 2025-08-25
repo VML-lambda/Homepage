@@ -1,58 +1,5 @@
 {"degree":"MS",
 "list":{
-   "차준영":
-   {
-      "engName":"Jun Yeong Cha",
-      "position":"Hologram",
-      "department":"Computer Science and Engineering",
-      "email":"cjy8922@khu.ac.kr",
-      "researchInterests":[
-      ],
-      "education":[
-      ],
-      "image":"Junyeong.jpg",
-      "twitter":"",
-      "github":"",
-      "linkedin":"",
-      "instagram":"",
-      "facebook":""
-   }
-   ,
-   "조현동":
-   {
-      "engName":"HyunDong Cho",
-      "position":"NNVC",
-      "department":"Computer Science and Engineering",
-      "email":"gusehd1113@khu.ac.kr",
-      "researchInterests":[
-      ],
-      "education":[
-      ],
-      "image":"profile.png",
-      "twitter":"",
-      "github":"",
-      "linkedin":"",
-      "instagram":"",
-      "facebook":""
-   }
-   ,
-   "최지현":
-   {
-      "engName":"Ji Hyoun Choi",
-      "position":"UVC",
-      "department":"Computer Science and Engineering",
-      "email":"jihyoun0403@khu.ac.kr",
-      "researchInterests":[
-      ],
-      "education":[
-      ],
-      "image":"Jihyoun.jpg",
-      "twitter":"",
-      "github":"",
-      "linkedin":"",
-      "instagram":"",
-      "facebook":""
-   },
    "이태화":
    {
       "engName":"TaeHwa Lee",
