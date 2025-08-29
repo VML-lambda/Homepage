@@ -1,26 +1,9 @@
 {"degree":"PhD",
 "list":{
-   "김영웅":
-   {
-      "engName":"Yeongwoong Kim",
-      "position":"Lab Leader/UVC(PL)",
-      "department":"Computer Science and Engineering",
-      "email":"duddnd7575@khu.ac.kr",
-      "researchInterests":[
-      ],
-      "education":[
-      ],
-      "image":"Yeongwoong.jpg",
-      "twitter":"",
-      "github":"",
-      "linkedin":"",
-      "instagram":"",
-      "facebook":""
-   },
    "정혜원":
    {
       "engName":"Hyewon Jeong",
-      "position":"FCM(PL)",
+      "position":"Lab Leader/FCM(PL)",
       "department":"Computer Science and Engineering",
       "email":"woni980911@khu.ac.kr",
       "researchInterests":[
@@ -28,6 +11,23 @@
       "education":[
       ],
       "image":"profile.png",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":""
+   },
+   "김영웅":
+   {
+      "engName":"Yeongwoong Kim",
+      "position":"UVC(PL)",
+      "department":"Computer Science and Engineering",
+      "email":"duddnd7575@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"Yeongwoong.jpg",
       "twitter":"",
       "github":"",
       "linkedin":"",

@@ -61,35 +61,23 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Students</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Alumni</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">People</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Students</li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Alumni</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
 
-
-    <!-- Ph.D Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="text-primary">Member</h6>
-                <h1 class="mb-4">Ph.D Students</h1>
-            </div>
-            <div id="PhD"></div>
-        </div>
-    </div>
-    <!-- Ph.D End -->
     <!-- M.S Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="mb-4">M.S Students</h1>
+                <h1 class="mb-4">M.S</h1>
             </div>
 
             <div id="MS"></div>
@@ -145,7 +133,7 @@
     <script src="js/main.js"></script>
 
     <script type="text/javascript">
-        const jsonFiles = ["json/students_PhD.json", "json/students_MS.json", "json/students_Intern.json", "json/students_Alumni.json"];
+        const jsonFile = "json/students_Alumni.json";
         const dataByDegree = {};
 
         // XMLHttpRequest를 이용하여 각 JSON 파일을 비동기적으로 요청
@@ -170,16 +158,10 @@
         // 각 JSON 파일을 요청하고 데이터를 적절한 학위별 배열에 추가
         async function fetchAndProcessData() {
             try {
-                for (const file of jsonFiles) {
-                    const jsonText = await fetchData(file);
-                    const jsonData = JSON.parse(jsonText);
-                    // console.log(jsonData)
-
-                    dataByDegree[jsonData.degree] = jsonData.list;
-
-                }
-                // 데이터 처리 함수 호출
-                processData(dataByDegree);
+                const jsonText = await fetchData(jsonFile);
+                const jsonData = JSON.parse(jsonText);
+                // console.log(jsonData)
+                processData(jsonData);
             } catch (error) {
                 console.error(error);
             }
@@ -191,8 +173,7 @@
             // console.log("MS:", dataByDegree.MS);
             // console.log("Intern:", dataByDegree.Intern);
 
-            degreeList = { PhD: "", MS: "", Intern: "" };
-            degreeName = { PhD: "Ph.D", MS: "M.S", Intern: "Intern"};
+            degreeList = {MS:"", Intern: "" };
 
             Object.keys(degreeList).forEach(function (degree) {
                 degreeList[degree] += `
@@ -241,7 +222,6 @@
                 </div>
                 `
             });
-            $('#PhD').html(degreeList["PhD"]);
             $('#MS').html(degreeList["MS"]);
             $('#Intern').html(degreeList["Intern"]);
 

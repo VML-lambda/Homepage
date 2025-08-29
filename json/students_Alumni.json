@@ -1,5 +1,4 @@
-{"degree":"Alumni",
-"list":{
+{"MS":{
    "최창균":
    {
       "engName":"Changkyun Choi",
@@ -24,7 +23,7 @@
       "engName":"Hyunmin Ban",
       "position":"M.S/Hologram",
       "department":"Computer Science and Engineering",
-      "email":"hmban1996@khu.ac.kr",
+      "email":"hmban@connect.hku.hk",
       "researchInterests":[
       ],
       "education":[
@@ -34,9 +33,29 @@
       "github":"",
       "linkedin":"",
       "instagram":"",
-      "facebook":""
+      "facebook":"",
+      "current": "The University of Hong Kong PhD students"
+   },
+   "차준영":
+   {
+      "engName":"Jun Yeong Cha",
+      "position":"M.S/Hologram",
+      "department":"Computer Science and Engineering",
+      "email":"cjy8922@khu.ac.kr",
+      "researchInterests":[
+      ],
+      "education":[
+      ],
+      "image":"Junyeong.jpg",
+      "twitter":"",
+      "github":"",
+      "linkedin":"",
+      "instagram":"",
+      "facebook":"",
+      "current":"LIG넥스원 광정보융합연구소"
    }
-   ,
+},
+   "Intern":{
    "박민정":
    {
       "engName":"Minjeong Park",
@@ -125,24 +144,6 @@
       "instagram":"",
       "facebook":"",
       "current":"카이스트 ACSS 연구실 진학"
-   },
-   "차준영":
-   {
-      "engName":"Jun Yeong Cha",
-      "position":"M.S/Hologram",
-      "department":"Computer Science and Engineering",
-      "email":"cjy8922@khu.ac.kr",
-      "researchInterests":[
-      ],
-      "education":[
-      ],
-      "image":"Junyeong.jpg",
-      "twitter":"",
-      "github":"",
-      "linkedin":"",
-      "instagram":"",
-      "facebook":"",
-      "current":"LIG넥스원 광정보융합연구소"
    }
 }
 }
