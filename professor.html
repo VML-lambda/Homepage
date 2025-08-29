@@ -562,7 +562,6 @@
         for (const file of jsonFiles) {
           const jsonText = await fetchData(file);
           const jsonData = JSON.parse(jsonText);
-          // console.log(jsonData)
 
           dataByType[jsonData.type] = jsonData.list;
 
@@ -576,9 +575,6 @@
 
     // 데이터 처리 함수
     function processData(dataByType) {
-      // console.log("publication:", dataByType.standard);
-      // console.log("MS:", dataByDegree.MS);
-      // console.log("Intern:", dataByDegree.Intern);
 
       // HTML에 리스트 추가
       degreeList = { publication: "", patents_international: "", patents_domestic: "", standard: "" };

@@ -1,0 +1,86 @@
+{
+  "Ongoing": {
+    "1": {
+      "img_url": "NRF.png",
+      "alt": "NRF Logo",
+      "title": "Multi-Purpose Visual Information Coding for Human and Machine Vision",
+      "title_small": "(인간과 기계 시각을 동시에 지원하는 다목적 시각정보 압축 연구)",
+      "subtitle": "한국연구재단 글로벌 기초연구실 지원사업(BRL)",
+      "date": "Jun. 2025 - May 2028"
+    },
+    "2": {
+      "img_url": "KHU.png",
+      "alt": "KHU Logo",
+      "title": "홀로그래픽 실감콘텐츠 생성/재현 교육 플랫폼 고도화 (시각화, 3D, 활용사례를 중심으로)",
+      "title_small": "",
+      "subtitle": "경희대학교 산학협력단(교원연구지원과제)",
+      "date": "May. 2025 - Nov. 2025"
+    },
+    "3": {
+      "img_url": "IITP.png",
+      "alt": "IITP Logo",
+      "title": "Video Coding for Machine",
+      "title_small": "((전문연구실) 기계를 위한 영상 부호화 기술)",
+      "subtitle": "정보통신기획평가원(IITP)",
+      "date": "Jan. 2020 - Dec. 2026"
+    },
+    "4": {
+      "img_url": "IITP.png",
+      "alt": "IITP Logo",
+      "title": "Development of Audio/Video Coding and Light Field Media Fundamental Technologies for Ultra Realistic Tera-media",
+      "title_small": "(초실감 테라미디어를 위한 AV부호화 및 LF미디어 원천기술개발)",
+      "subtitle": "정보통신기획평가원(IITP)",
+      "date": "Jan. 2017 - Dec. 2028"
+    }
+  },
+  "Completed": {
+    "1": {
+      "img_url": "samsung-mirae.png",
+      "alt": "Samsung Logo",
+      "title": "Phase Hologram Compression based on Circular Representation and Randomness Regularization",
+      "title_small": "(순환 표현 및 무작위성 규제에 기반한 위상 홀로그램 압축 부호화)",
+      "subtitle": "Samsung (삼성미래기술육성사업)",
+      "date": "Jun. 2022 - May. 2025"
+    },
+    "2": {
+      "img_url": "samsung-sait.png",
+      "alt": "Samsung Logo",
+      "title": "Study on Neural Feature Coding for Machine Vision",
+      "title_small": "(기계 시각을 위한 신경망 기반 특징맵 압축)",
+      "subtitle": "Samsung (SAIT)",
+      "date": "Jun. 2024 - Jun. 2025"
+    },
+    "3": {
+      "img_url": "KHU.png",
+      "alt": "KHU Logo",
+      "title": "홀로그래픽 실감콘텐츠 생성/재현 교육 플랫폼 개발",
+      "title_small": "",
+      "subtitle": "경희대학교 산학협력단(교원연구지원과제)",
+      "date": "May. 2024 - Nov. 2024"
+    },
+    "4": {
+      "img_url": "ETRI.png",
+      "alt": "ETRI Logo",
+      "title": "Development of Digital Holographic Metrology Technology for Phase Retrieval",
+      "title_small": "(메트롤로지 데이터 압축 및 복원)",
+      "subtitle": "한국전자통신연구원(ETRI) 학술연구용역사업 R&D",
+      "date": "May. 2022 - Nov. 2022 / May. 2023 - Dec. 2023"
+    },
+    "5": {
+      "img_url": "samsung-sait.png",
+      "alt": "Samsung Logo",
+      "title": "Study on ME/MC for Neural Video Compression",
+      "title_small": "(신경망 비디오 압축을 위한 움직임 예측/보상 연구)",
+      "subtitle": "Samsung (SAIT)",
+      "date": "Oct. 2022 - Sep. 2023"
+    },
+    "6": {
+      "img_url": "ETRI.png",
+      "alt": "ETRI Logo",
+      "title": "Development of a video hologram compression codec for bitrate-distortion optimization",
+      "title_small": "(비트율-왜곡 최적화 동영상 홀로그램 압축 코덱 제작)",
+      "subtitle": "한국전자통신연구원(ETRI) 학술연구용역사업 R&D",
+      "date": "May. 2020 - Feb. 2021"
+    }
+  }
+}
