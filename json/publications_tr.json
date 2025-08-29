@@ -1,219 +1,218 @@
 [
- {
-    "이름": "[VCM Track 1] Crosscheck report on m60799",
-    "연도": 2023.0,
-    "주저자": "정혜원",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[VCM track 1] [Crosscheck] Crosscheck report on m59576",
-    "연도": 2023.0,
-    "주저자": "정혜원",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCVCM] Response to FCVCM Call for Proposal from Kyung Hee University and ETRI",
-    "연도": 2023.0,
-    "주저자": "김영웅",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCVCM] Pareto-fronting with Multiple Inter-Layer Feature Resizing Modes",
-    "연도": 2023.0,
-    "주저자": "정혜원",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCVCM] L-MSFC: End-to-End Learnable Multi-Scale Feature Compression",
-    "연도": 2023.0,
-    "주저자": "유장현",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCVCM] Inter-Layer Feature Resizing for FCVCM",
-    "연도": 2023.0,
-    "주저자": "정혜원",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCVCM] Hybrid codec approach : Combination of L-MSFC-v2 Intra (m65200) with VVC",
-    "연도": 2023.0,
-    "주저자": "정혜원",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCVCM] E2E approach : Extension of L-MSFC-v2 Intra (m65200) for inter frame coding",
-    "연도": 2023.0,
-    "주저자": "유장현",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCM] KMAC/pixel calculation for FCTM",
-    "연도": 2024.0,
-    "주저자": "",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCM] FE3: Summary report",
-    "연도": 2024.0,
-    "주저자": "",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCM] Crosscheck of m70057 (CE4 related: Non-linear feature transform)",
-    "연도": 2024.0,
-    "주저자": "김영웅",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCM] Crosscheck of m69985 (CE 3.2: Machine Saliency Compression Based on Temporal Single Input for Multiple Output Architecture)",
-    "연도": 2024.0,
-    "주저자": "유장현",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCM] CE3 summary report",
-    "연도": 2024.0,
-    "주저자": "김영웅",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCM] CE 3.2.2 L-MSFC-v2",
-    "연도": 2024.0,
-    "주저자": "정혜원",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCM] CE 3.1: Results on L-MSFC-v2 extension for inter coding",
-    "연도": 2024.0,
-    "주저자": "유장현",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
-    "이름": "[FCM] CE 1.1.8. L-MSFC-v2 with fine-tuning",
-    "연도": 2024.0,
-    "주저자": "정혜원",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
-    "DOI": ""
-  },
-  {
+    {
     "이름": "[Container][FCM] Training Description",
-    "연도": 2024.0,
+    "연도": 2024,
     "주저자": "정혜원",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
     "DOI": ""
   },
   {
     "이름": "[Container][FCM] PWD for FCM",
-    "연도": 2024.0,
+    "연도": 2024,
     "주저자": "김휘용",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
     "DOI": ""
   },
   {
     "이름": "[Container][FCM] FE2 description",
-    "연도": 2024.0,
+    "연도": 2024,
     "주저자": "정혜원",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
     "DOI": ""
   },
   {
     "이름": "[Container][FCM] FE1 description",
-    "연도": 2024.0,
+    "연도": 2024,
     "주저자": "정혜원",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
     "DOI": ""
   },
   {
     "이름": "[Container][FCM] Description on FE3",
-    "연도": 2024.0,
+    "연도": 2024,
     "주저자": "",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
     "DOI": ""
   },
   {
     "이름": "[Container][FCM] CE4 description",
-    "연도": 2024.0,
+    "연도": 2024,
     "주저자": "정혜원",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
     "DOI": ""
   },
   {
     "이름": "[Container] [FCM] FCTM Algorithm Description",
-    "연도": 2024.0,
+    "연도": 2024,
     "주저자": "",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
     "DOI": ""
   },
   {
     "이름": "[Container] [FCM] Description on CE 3",
-    "연도": 2024.0,
+    "연도": 2024,
     "주저자": "김영웅",
-    "공동저자명": "",
-    "학술대회명": "",
-    "학술지명": "",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCM] KMAC/pixel calculation for FCTM",
+    "연도": 2024,
+    "주저자": "",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCM] FE3: Summary report",
+    "연도": 2024,
+    "주저자": "",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCM] Crosscheck of m70057 (CE4 related: Non-linear feature transform)",
+    "연도": 2024,
+    "주저자": "김영웅",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCM] Crosscheck of m69985 (CE 3.2: Machine Saliency Compression Based on Temporal Single Input for Multiple Output Architecture)",
+    "연도": 2024,
+    "주저자": "유장현",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCM] CE3 summary report",
+    "연도": 2024,
+    "주저자": "김영웅",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCM] CE 3.1: Results on L-MSFC-v2 extension for inter coding",
+    "연도": 2024,
+    "주저자": "유장현",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCM] CE 3.2.2 L-MSFC-v2",
+    "연도": 2024,
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "145th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "14th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCM] CE 1.1.8. L-MSFC-v2 with fine-tuning",
+    "연도": 2024,
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "145th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "14th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCVCM] Hybrid codec approach : Combination of L-MSFC-v2 Intra (m65200) with VVC",
+    "연도": 2023,
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "144th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "13th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 144)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCVCM] E2E approach : Extension of L-MSFC-v2 Intra (m65200) for inter frame coding",
+    "연도": 2023,
+    "주저자": "유장현",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "144th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "13th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 144)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCVCM] Response to FCVCM Call for Proposal from Kyung Hee University and ETRI",
+    "연도": 2023,
+    "주저자": "김영웅",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "144th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "13th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 144)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCVCM] Pareto-fronting with Multiple Inter-Layer Feature Resizing Modes",
+    "연도": 2023,
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "143th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "12th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 143)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCVCM] L-MSFC: End-to-End Learnable Multi-Scale Feature Compression",
+    "연도": 2023,
+    "주저자": "유장현",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "143th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "12th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 143)",
+    "DOI": ""
+  },
+  {
+    "이름": "[FCVCM] Inter-Layer Feature Resizing for FCVCM",
+    "연도": 2023,
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "143th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "12th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 143)",
+    "DOI": ""
+  },
+  {
+    "이름": "[VCM track 1] [Crosscheck] Crosscheck report on m59576",
+    "연도": 2023,
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "140th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "9th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 140)",
+    "DOI": ""
+  },
+ {
+    "이름": "[VCM Track 1] Crosscheck report on m60799",
+    "연도": 2023,
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "138th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "7th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 138)",
     "DOI": ""
   }
-
 ]
