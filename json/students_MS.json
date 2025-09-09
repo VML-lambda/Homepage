@@ -1,5 +1,27 @@
 {"degree":"MS",
 "list":{
+   "최지현":
+   {
+      "engName":"Ji Hyoun Choi",
+      "position":"UVC/3DV",
+      "department":"Artifical Intelligence",
+      "email":"jihyoun0403@khu.ac.kr",
+      "researchInterests":[
+         "Neural Video Coding",
+         "Generative Video Coding",
+         "3D Gaussian Splatting"
+      ],
+      "education":[
+         "경희대학교 인공지능학과 (석박통합)",
+         "경희대학교 소프트웨어융합학과 (학사)"
+      ],
+      "image":"Jihyoun.jpg",
+      "twitter":"",
+      "github":"https://github.com/jihyounchoi",
+      "linkedin":"https://www.linkedin.com/in/ji-hyoun-choi-113115292/",
+      "instagram":"",
+      "facebook":""
+   },
    "이태화":
    {
       "engName":"TaeHwa Lee",
@@ -20,17 +42,22 @@
       "조수현":
    {
       "engName":"Suhyun Jo",
-      "position":"Hologram",
-      "department":"Computer Science and Engineering",
+      "position":"Hologram/3DV",
+      "department":"Artifical Intelligence",
       "email":"bloodtype0@khu.ac.kr",
       "researchInterests":[
+         "Video Coding (HEVC, VVC, ...)",
+         "3D Gaussian Splatting"
       ],
       "education":[
+         "경희대학교 인공지능학과 (석사)",
+         "경희대학교 소프트웨어융합학과 (학사)",
+         "대전동신과학고등학교"
       ],
-      "image":"profile.png",
+      "image":"Suhyun.jpg",
       "twitter":"",
-      "github":"",
-      "linkedin":"",
+      "github":"https://github.com/rollingman1",
+      "linkedin":"https://www.linkedin.com/in/suhyun-jo-1b2097172/",
       "instagram":"",
       "facebook":""
    },

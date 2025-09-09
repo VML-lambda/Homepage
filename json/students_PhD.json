@@ -24,8 +24,14 @@
       "department":"Computer Science and Engineering",
       "email":"duddnd7575@khu.ac.kr",
       "researchInterests":[
+         "Neural Video Coding",
+         "Generative Models",
+         "Feature Coding for Machines"
       ],
       "education":[
+         "경희대학교 컴퓨터공학과 (박사)",
+         "경희대학교 컴퓨터공학과 (석사)",
+         "경희대학교 응용수학과 (학사)"
       ],
       "image":"Yeongwoong.jpg",
       "twitter":"",
@@ -37,7 +43,7 @@
    "최승미":
    {
       "engName":"Seungmi Choi",
-      "position":"Hologram(PL)",
+      "position":"Hologram(PL)/3DV",
       "department":"Computer Science and Engineering",
       "email":"2018102242@khu.ac.kr",
       "researchInterests":[
@@ -99,27 +105,16 @@
       "department":"Computer Science and Engineering",
       "email":"gusehd1113@khu.ac.kr",
       "researchInterests":[
+         "Neural Video Coding",
+         "Conventional Video Coding"
       ],
       "education":[
+         "경희대학교 컴퓨터공학과 (박사)",
+         "경희대학교 컴퓨터공학과 (석사)",
+         "경희대학교 컴퓨터공학과 (학사)",
+         "과천외국어고등학교"
       ],
       "image":"profile.png",
-      "twitter":"",
-      "github":"",
-      "linkedin":"",
-      "instagram":"",
-      "facebook":""
-   },
-   "최지현":
-   {
-      "engName":"Ji Hyoun Choi",
-      "position":"UVC",
-      "department":"Computer Science and Engineering",
-      "email":"jihyoun0403@khu.ac.kr",
-      "researchInterests":[
-      ],
-      "education":[
-      ],
-      "image":"Jihyoun.jpg",
       "twitter":"",
       "github":"",
       "linkedin":"",
