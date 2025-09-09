@@ -218,14 +218,15 @@
                                             <b> &nbsp; ${person.position}</b></p>
                                             <p><b>${person.department}</b></p>
                                             <p><b>Email</b> ${person.email}<br/></p>
-                                            <p><b>Research Interests</b><br/>${person.researchInterests}</p>
+                                            <p><b>Research Interests</b><br/>${person.researchInterests.join(", ")}</p>
                                             <p><b>Education</b><br/>${education}</p>
                                             ${!!person.current ? `<p><b>Current</b> ${person.current}</p>` : ``}
-                                            <div class="team-social">
-                                                <a class="btn btn-square btn-outline-primary rounded-circle ms-auto" href=""><i class="fab fa-facebook-f"></i></a>
-                                                <a class="btn btn-square btn-outline-primary rounded-circle" href=""><i class="fab fa-github"></i></a>
-                                                <a class="btn btn-square btn-outline-primary rounded-circle" href=""><i class="fab fa-linkedin"></i></a>
-                                                <a class="btn btn-square btn-outline-primary rounded-circle" href=""><i class="fab fa-instagram"></i></a>
+                                            <div class="team-social d-flex justify-content-end gap-1">
+                                                ${person.facebook ? `<a class="btn btn-square btn-outline-primary rounded-circle ms-auto" href="${person.facebook}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>` : ``}
+                                                ${person.github ? `<a class="btn btn-square btn-outline-primary rounded-circle" href="${person.github}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>` : ``}
+                                                ${person.linkedin ? `<a class="btn btn-square btn-outline-primary rounded-circle" href="${person.linkedin}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>` : ``}
+                                                ${person.instagram ? `<a class="btn btn-square btn-outline-primary rounded-circle" href="${person.instagram}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>` : ``}
+                                                ${person.twitter ? `<a class="btn btn-square btn-outline-primary rounded-circle" href="${person.twitter}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>` : ``}
                                             </div>
                                         </div>
                                     </div>
