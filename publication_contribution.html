@@ -123,43 +123,92 @@
             const response = await fetch("json/publications_tr.json");
             const jsonData = await response.json();
 
+            // 연도별 그룹핑 함수
+            function groupByYear(data) {
+              return data.reduce((acc, entry) => {
+                const year = entry.연도;
+                if (!acc[year]) acc[year] = [];
+                acc[year].push(entry);
+                return acc;
+              }, {});
+            }
+
+            // 카드 HTML 생성 함수
+            function generateCards(groupedData) {
+              let content = "";
+              const years = Object.keys(groupedData).sort((a, b) => b - a); // 최신 연도 우선
+              years.forEach(year => {
+                content += `<h3 class="mt-4 mb-3">${year}</h3>`;
+                groupedData[year].forEach(entry => {
+                  content += `
+                                <div class="card mb-3" style="width: 97%">
+                                        <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
+                                            <div>
+                                                <h6 class="card-title mb-2">
+                                                    ${entry.이름}
+                                                    <br />
+                                                    <small class="text-muted">${entry.표준화기구}</small>
+                                                    <br />
+                                                    <small class="text-muted">${entry.표준화기구명}</small>
+                                                    <br />
+                                                    <small class="text-muted">${entry.표준화회의명}</small>
+                                                </h6>
+                                                <p class="card-subtitle text-muted mb-1 small">주저자: ${entry.주저자}</p>
+                                                <p class="card-text text-muted mb-0 small"><strong>${entry.연도}</strong></p>
+                                            </div>
+                                        </div>
+                                  </div>
+                            `;
+                });
+              });
+              return content;
+            }
+
+            // Tap 필터링
+            const mpegData = jsonData.filter(e => e.type === "MPEG");
+            const jvetData = jsonData.filter(e => e.type === "JVET");
+            const jpegData = jsonData.filter(e => e.type === "JPEG");
+
+            // HTML 구성
             let htmlContent = `
-                <div class="container-xxl py-5">
-                    <div class="container">
-                        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
-                            <h1 class="mb-4">Standard Contributions</h1>
-                        </div>
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-            `;
+                  <div class="container-xxl py-5">
+                      <div class="container">
+                          <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+                              <h1 class="mb-4">Papers</h1>
 
-            jsonData.forEach(entry => {
-                htmlContent += `
-                    <div class="card mb-3" style="width: 97%">
-                            <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
-                                <div>
-                                    <h6 class="card-title mb-2">
-                                        ${entry.이름}
-                                        <br />
-                                        <small class="text-muted">${entry.표준화기구}</small>
-                                        <br />
-                                        <small class="text-muted">${entry.표준화기구명}</small>
-                                        <br />
-                                        <small class="text-muted">${entry.표준화회의명}</small>
-                                    </h6>
-                                    <p class="card-subtitle text-muted mb-1 small">주저자: ${entry.주저자}</p>
-                                    <p class="card-text text-muted mb-0 small"><strong>${entry.연도}</strong></p>
-                                </div>
-                            </div>
+                              <!-- 탭 버튼 -->
+                              <ul class="nav nav-tabs justify-content-center" id="pubTabs" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                      <button class="nav-link active" id="mpeg-tab" data-bs-toggle="tab" 
+                                          data-bs-target="#mpeg" type="button" role="tab">MPEG</button>
+                                  </li>
+                                  <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="jvet-tab" data-bs-toggle="tab" 
+                                          data-bs-target="#jvet" type="button" role="tab">JVET</button>
+                                  </li>
+                                  <li class="nav-item" role="presentation">
+                                      <button class="nav-link" id="jpeg-tab" data-bs-toggle="tab"
+                                          data-bs-target="#jpeg" type="button" role="tab">JPEG</button>
+                                  </li>
+                              </ul>
+                          </div>
+
+                          <!-- 탭 컨텐츠 -->
+                          <div class="tab-content wow fadeInUp" data-wow-delay="0.1s">
+                              <div class="tab-pane fade show active" id="mpeg" role="tabpanel">
+                                  ${generateCards(groupByYear(mpegData))}
+                              </div>
+                              <div class="tab-pane fade" id="jvet" role="tabpanel">
+                                  ${generateCards(groupByYear(jvetData))}
+                              </div>
+                              <div class="tab-pane fade" id="jpeg" role="tabpanel">
+                                  ${generateCards(groupByYear(jpegData))}
+                              </div>
+                          </div>
                       </div>
-                `;
-            });
-
-            htmlContent += `
-                        </div>
-                    </div>
-                </div>
-            `;
-
+                  </div>
+              `;
+            
             document.getElementById("ConvertedClearSection").innerHTML = htmlContent;
         } catch (err) {
             console.error("Error loading converted_clear.json:", err);
