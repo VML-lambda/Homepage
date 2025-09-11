@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
   --primary: #0f607b;
-  /* --primary: #32c36c; */
+  --secondary: #6c757d;
   --light: #ffffff;
   --dark: #1a2a36;
 }
@@ -847,4 +847,50 @@ li {
 
 .section {
   margin-top: 30px;
+}
+
+/* Publications Tabs (scoped) */
+.pub-tabs {
+  --pub-text: #555;
+  --pub-text-active: #fff;
+}
+
+.pub-tabs .nav-link {
+  font-size: 1.25rem;         /* 크고 */
+  font-weight: 700;           /* 굵게 */
+  color: var(--pub-text);
+  padding: 0.75rem 1.5rem;
+  border: none;               /* 기본 탭 보더 제거 */
+  background: transparent;
+  transition: background-color .2s ease, color .2s ease, transform .1s ease;
+  border-radius: .5rem;       /* pill 느낌 */
+  outline: none;
+}
+
+.pub-tabs .nav-link:hover {
+  color: #000;
+}
+
+.pub-tabs .nav-link.active {
+  color: var(--pub-text-active);
+  background-color: var(--secondary); /* 확실한 highlight */
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.pub-tabs .nav-link:focus-visible {
+  outline: 2px solid rgba(13,110,253,.4); /* 접근성 포커스 링 */
+  outline-offset: 2px;
+}
+
+/* 탭 하단 기본 보더 라인 제거(원하면 유지 가능) */
+.pub-tabs {
+  border-bottom: none;
+}
+
+/* 모바일 간격 조정 */
+@media (max-width: 576px) {
+  .pub-tabs .nav-link {
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+  }
 }
