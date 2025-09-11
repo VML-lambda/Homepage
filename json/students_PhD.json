@@ -20,7 +20,7 @@
    "김영웅":
    {
       "engName":"Yeongwoong Kim",
-      "position":"UVC(PL)",
+      "position":"GVC(PL)",
       "department":"Computer Science and Engineering",
       "email":"duddnd7575@khu.ac.kr",
       "researchInterests":[
@@ -29,9 +29,12 @@
          "Feature Coding for Machines"
       ],
       "education":[
-         "경희대학교 컴퓨터공학과 (박사)",
-         "경희대학교 컴퓨터공학과 (석사)",
-         "경희대학교 응용수학과 (학사)"
+         "Ph.D:",
+         "Computer Science and Engineering, Kyung Hee University (2024 - Present)",
+         "Master:",
+         "Computer Science and Engineering, Kyung Hee University (2022 - 2024)",
+         "Bachelor:",
+         "Applied Mathematics, Kyung Hee University (2016 - 2022)"
       ],
       "image":"Yeongwoong.jpg",
       "twitter":"",
