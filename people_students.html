@@ -215,12 +215,17 @@
                                     <div class="text-box box-slide position-absolute">
                                         <div class="text-content p-3 bg-white" style="font-size: small;">
                                             <h5 style="display:inline;" class="text-team">${key}</h5> 
-                                            <b> &nbsp; ${person.position}</b></p>
-                                            <p><b>${person.department}</b></p>
-                                            <p><b>Email</b> ${person.email}<br/></p>
-                                            <p><b>Research Interests</b><br/>${person.researchInterests.join(", ")}</p>
-                                            <p><b>Education</b><br/>${education}</p>
-                                            ${!!person.current ? `<p><b>Current</b> ${person.current}</p>` : ``}
+                                            <b>&nbsp; <span class="small-text">${person.position}</span></b></p>
+                                            <p><b>Email</b> <span class="small-text">${person.email}</span><br/></p>
+                                            <p><b>Research Interests</b><br/>
+                                                <span class="small-text">${person.researchInterests.join(", ")}</span>
+                                            </p>
+                                            <p><b>Education</b><br/>
+                                                <span class="small-text">${education}</span>
+                                            </p>
+
+                                            ${!!person.current ? `<p><b>Current</b> <span class="small-text">${person.current}</span></p>` : ``}
+
                                             <div class="team-social d-flex justify-content-end gap-1">
                                                 ${person.facebook ? `<a class="btn btn-square btn-outline-primary rounded-circle ms-auto" href="${person.facebook}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>` : ``}
                                                 ${person.github ? `<a class="btn btn-square btn-outline-primary rounded-circle" href="${person.github}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>` : ``}
@@ -251,10 +256,11 @@
         fetchAndProcessData();
     </script>
 </body>
-<!-- <style>
-    #Degree {
-        white-space: pre-wrap; /* 공백과 줄바꿈을 유지합니다 */
+
+<style>
+    .text-content .small-text  {
+        font-size: 85%;   /* b 태그 아닌 모든 요소는 50% */
     }
-</style> -->
+</style>
 
 </html>
