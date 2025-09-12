@@ -65,8 +65,8 @@
       <h1 class="display-3 text-white mb-3 animated slideInDown">Papers</h1>
       <nav aria-label="breadcrumb animated slideInDown">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-          <li class="breadcrumb-item"><a class="text-white" href="#">Publications</a></li>
+          <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
+          <li class="breadcrumb-item"><a class="text-white" href="publications.html">Publications</a></li>
           <li class="breadcrumb-item text-white active" aria-current="page">Papers</li>
         </ol>
       </nav>
@@ -122,16 +122,6 @@
       try {
         const response = await fetch("json/publications_paper.json");
         const jsonData = await response.json();
-
-        // 연도별 그룹핑 함수
-        // function groupByYear(data) {
-        //   return data.reduce((acc, entry) => {
-        //     const year = entry.연도;
-        //     if (!acc[year]) acc[year] = [];
-        //     acc[year].push(entry);
-        //     return acc;
-        //   }, {});
-        // }
 
         // 연도별 그룹핑 함수
         function extractYear(val) {
@@ -227,7 +217,7 @@
                               <h1 class="mb-4">Papers</h1>
 
                               <!-- 탭 버튼 -->
-                              <ul class="nav nav-tabs justify-content-center" id="pubTabs" role="tablist">
+                              <ul class="nav nav-tabs pub-tabs justify-content-center" id="pubTabs" role="tablist">
                                   <li class="nav-item" role="presentation">
                                       <button class="nav-link active" id="international-tab" data-bs-toggle="tab" 
                                           data-bs-target="#international" type="button" role="tab">International</button>

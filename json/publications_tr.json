@@ -6,7 +6,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[Container][FCM] PWD for FCM",
@@ -15,7 +16,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[Container][FCM] FE2 description",
@@ -24,7 +26,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[Container][FCM] FE1 description",
@@ -33,7 +36,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[Container][FCM] Description on FE3",
@@ -42,7 +46,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[Container][FCM] CE4 description",
@@ -51,7 +56,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[Container] [FCM] FCTM Algorithm Description",
@@ -60,7 +66,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[Container] [FCM] Description on CE 3",
@@ -69,7 +76,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCM] KMAC/pixel calculation for FCTM",
@@ -78,7 +86,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCM] FE3: Summary report",
@@ -87,7 +96,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCM] Crosscheck of m70057 (CE4 related: Non-linear feature transform)",
@@ -96,7 +106,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCM] Crosscheck of m69985 (CE 3.2: Machine Saliency Compression Based on Temporal Single Input for Multiple Output Architecture)",
@@ -105,7 +116,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCM] CE3 summary report",
@@ -114,7 +126,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCM] CE 3.1: Results on L-MSFC-v2 extension for inter coding",
@@ -123,7 +136,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCM] CE 3.2.2 L-MSFC-v2",
@@ -132,7 +146,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "145th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "14th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCM] CE 1.1.8. L-MSFC-v2 with fine-tuning",
@@ -141,7 +156,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "145th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "14th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCVCM] Hybrid codec approach : Combination of L-MSFC-v2 Intra (m65200) with VVC",
@@ -150,7 +166,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "144th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "13th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 144)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCVCM] E2E approach : Extension of L-MSFC-v2 Intra (m65200) for inter frame coding",
@@ -159,7 +176,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "144th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "13th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 144)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCVCM] Response to FCVCM Call for Proposal from Kyung Hee University and ETRI",
@@ -168,7 +186,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "144th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "13th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 144)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCVCM] Pareto-fronting with Multiple Inter-Layer Feature Resizing Modes",
@@ -177,7 +196,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "143th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "12th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 143)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCVCM] L-MSFC: End-to-End Learnable Multi-Scale Feature Compression",
@@ -186,7 +206,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "143th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "12th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 143)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[FCVCM] Inter-Layer Feature Resizing for FCVCM",
@@ -195,7 +216,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "143th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "12th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 143)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
   {
     "이름": "[VCM track 1] [Crosscheck] Crosscheck report on m59576",
@@ -204,7 +226,8 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "140th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "9th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 140)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   },
  {
     "이름": "[VCM Track 1] Crosscheck report on m60799",
@@ -213,6 +236,7 @@
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "138th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "7th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 138)",
-    "DOI": ""
+    "DOI": "",
+    "type": "MPEG"
   }
 ]
