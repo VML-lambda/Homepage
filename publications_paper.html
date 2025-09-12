@@ -123,16 +123,57 @@
         const response = await fetch("json/publications_paper.json");
         const jsonData = await response.json();
 
-        // 연도별 그룹핑 함수
-        function extractYear(val) {
-          if (val == null) return "Unknown";
-          if (typeof val === "number") return String(Math.trunc(val)); // 2025.06 → 2025
-          const s = String(val).trim();
-          const m = s.match(/(\d{4})/); // 문자열 어딘가의 4자리 연도 추출
-          return m ? m[1] : "Unknown";
+        const responsePrev = await fetch("json/professor_publication.json");
+        const jsonDataPrev = await responsePrev.json();
+
+        // ===== 공통 카드 템플릿 =====
+        function cardHTML(entry) {
+          return `
+            <div class="card mb-3" style="width:97%">
+              <div class="card-body d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3">
+                <div class="paper-thumb flex-shrink-0"
+                    style="width:320px; height:185px; overflow:hidden; background:white; margin:0;">
+                  <img src="img/paper/${entry.image}" alt=""
+                      style="width:100%; height:100%; object-fit:contain; object-position:center; display:block;">
+                </div>
+                <div class="flex-grow-1 d-flex flex-column justify-content-center" style="min-width:0;">
+                  <h6 class="card-title mb-2">
+                    ${entry.이름}
+                    ${entry.학술대회명 ? `<br><small class="text-muted">${entry.학술대회명}</small>` : ""}
+                    ${entry.학술지명 ? `<br><small class="text-muted">${entry.학술지명}</small>` : ""}
+                  </h6>
+                  <p class="card-subtitle text-muted mb-1 small">
+                    <strong>${entry.주저자}</strong>${entry.공동저자명 ? `, ${entry.공동저자명}` : ""}
+                  </p>
+                  <p class="card-text text-muted mb-0 small"><strong>${entry.연도}</strong></p>
+                  ${entry.DOI ? `
+                    <a href="${entry.DOI}" class="href-black card-text text-muted mb-0 small"
+                      style="word-break:break-word; overflow-wrap:anywhere; white-space:normal;">
+                      ${entry.DOI}
+                    </a>` : ``}
+                </div>
+              </div>
+            </div>
+          `;
         }
 
-        // ⬇️ 이걸로 교체
+        // ===== 연도 그룹핑 & 정렬 =====
+        function extractYear(val) {
+          if (val == null) return "Unknown";
+          if (typeof val === "number") return String(Math.trunc(val));
+          const s = String(val).trim();
+          const m = s.match(/(\d{4})/);
+          return m ? m[1] : "Unknown";
+        }
+        function toYearMonthKey(val) {
+          if (val == null) return -Infinity;
+          const s = String(val).trim();
+          const m = s.match(/^(\d{4})(?:\D?(\d{1,2}))?/);
+          if (!m) return -Infinity;
+          const y = Number(m[1]);
+          const mm = m[2] ? Number(m[2]) : 0;
+          return y * 100 + mm;
+        }
         function groupByYear(data) {
           return data.reduce((acc, entry) => {
             const year = extractYear(entry.연도);
@@ -140,118 +181,100 @@
             return acc;
           }, {});
         }
-
-        function toYearMonthKey(val) {
-          if (val == null) return -Infinity;
-          const s = String(val).trim();
-          const m = s.match(/^(\d{4})(?:\D?(\d{1,2}))?/); // 연도 + (선택)월
-          if (!m) return -Infinity;
-          const y = Number(m[1]);
-          const mm = m[2] ? Number(m[2]) : 0; // 월 없으면 0
-          return y * 100 + mm; // 예: 2025.06 → 202506
-        }
-
-        // 카드 HTML 생성 함수
         function generateCards(groupedData) {
           let content = "";
-
-          // ✅ 연도만 내림차순 정렬 (월 고려 X)
           const years = Object.keys(groupedData).sort((a, b) => {
             if (a === "Unknown") return 1;
             if (b === "Unknown") return -1;
             return Number(b) - Number(a);
           });
-
           years.forEach(year => {
             content += `<h3 class="mt-4 mb-3">${year}</h3>`;
-            
-            // ✅ 각 연도 그룹 내부를 월까지 고려해 내림차순 정렬
             const list = [...groupedData[year]].sort(
               (e1, e2) => toYearMonthKey(e2.연도) - toYearMonthKey(e1.연도)
             );
-
-            list.forEach(entry => {
-              content += `
-                    <div class="card mb-3" style="width:97%">
-                      <!-- md 이상에서 세로 가운데 정렬 -->
-                      <div class="card-body d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3">
-                        <!-- 이미지 박스: 고정 크기, 여백 제거 -->
-                        <div class="paper-thumb flex-shrink-0"
-                            style="width:320px; height:185px; overflow:hidden; background:white; margin:0;">
-                          <img src="img/paper/${entry.image}" alt=""
-                              style="width:100%; height:100%; object-fit:contain; object-position:center; display:block;">
-                        </div>
-
-                        <!-- 텍스트 영역: 줄바꿈/가운데 정렬 보정 -->
-                        <div class="flex-grow-1 d-flex flex-column justify-content-center" style="min-width:0;">
-                          <h6 class="card-title mb-2">
-                            ${entry.이름}
-                            ${entry.학술대회명 ? `<br><small class="text-muted">${entry.학술대회명}</small>` : ""}
-                            ${entry.학술지명 ? `<br><small class="text-muted">${entry.학술지명}</small>` : ""}
-                          </h6>
-                          <p class="card-subtitle text-muted mb-1 small"><strong>${entry.주저자}</strong>, ${entry.공동저자명}</p>
-                          <p class="card-text text-muted mb-0 small"><strong>${entry.연도}</strong></p>
-                          <a href="${entry.DOI}" class="href-black card-text text-muted mb-0 small"
-                            style="word-break:break-word; overflow-wrap:anywhere; white-space:normal;">
-                            ${entry.DOI}
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-              `;
-            });
+            list.forEach(entry => { content += cardHTML(entry); });
           });
-
           return content;
         }
 
-        // International & Domestic 필터링
+        // ===== 토글 섹션 컴포넌트 =====
+        function renderPrevDetails(title, items, open = false) {
+              if (!Array.isArray(items) || items.length === 0) return "";
+              return `
+          <details class="mt-4" ${open ? "open" : ""}>
+            <summary class="prev-summary h4 mb-2">${title}</summary>
+            ${items.map(cardHTML).join("")}
+          </details>
+        `;
+        }
+        // ===== 데이터 분리 =====
         const internationalData = jsonData.filter(e => e.type === "International");
         const domesticData = jsonData.filter(e => e.type === "Domestic");
 
-        // HTML 구성
-        let htmlContent = `
-                  <div class="container-xxl py-5">
-                      <div class="container">
-                          <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
-                              <h1 class="mb-4">Papers</h1>
+        const prevInternational = Array.isArray(jsonDataPrev?.cards)
+          ? jsonDataPrev.cards.filter(e => e.type === "International")
+          : [];
+        // Domestic의 이전 목록이 있다면 같은 방식으로 prevDomestic 준비
 
-                              <!-- 탭 버튼 -->
-                              <ul class="nav nav-tabs pub-tabs justify-content-center" id="pubTabs" role="tablist">
-                                  <li class="nav-item" role="presentation">
-                                      <button class="nav-link active" id="international-tab" data-bs-toggle="tab" 
-                                          data-bs-target="#international" type="button" role="tab">International</button>
-                                  </li>
-                                  <li class="nav-item" role="presentation">
-                                      <button class="nav-link" id="domestic-tab" data-bs-toggle="tab" 
-                                          data-bs-target="#domestic" type="button" role="tab">Domestic</button>
-                                  </li>
-                              </ul>
-                          </div>
+        // ===== HTML 조립 =====
+        const htmlContent = `
+          <div class="container-xxl py-5">
+            <div class="container">
+              <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+                <h1 class="mb-4">Papers</h1>
+                <ul class="nav nav-tabs pub-tabs justify-content-center" id="pubTabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="international-tab" data-bs-toggle="tab"
+                      data-bs-target="#international" type="button" role="tab">International</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="domestic-tab" data-bs-toggle="tab"
+                      data-bs-target="#domestic" type="button" role="tab">Domestic</button>
+                  </li>
+                </ul>
+              </div>
 
-                          <!-- 탭 컨텐츠 -->
-                          <div class="tab-content wow fadeInUp" data-wow-delay="0.1s">
-                              <div class="tab-pane fade show active" id="international" role="tabpanel">
-                                  ${generateCards(groupByYear(internationalData))}
-                              </div>
-                              <div class="tab-pane fade" id="domestic" role="tabpanel">
-                                  ${generateCards(groupByYear(domesticData))}
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              `;
+              <div class="tab-content wow fadeInUp" data-wow-delay="0.1s">
+                <div class="tab-pane fade show active" id="international" role="tabpanel">
+                  ${generateCards(groupByYear(internationalData))}
+                  ${renderPrevDetails("Prior to 2022", prevInternational, true)}
+                </div>
+                <div class="tab-pane fade" id="domestic" role="tabpanel">
+                  ${generateCards(groupByYear(domesticData))}
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
 
         document.getElementById("ConvertedClearSection").innerHTML = htmlContent;
 
       } catch (err) {
-        console.error("Error loading converted_clear.json:", err);
+        console.error("Error loading publications:", err);
       }
     }
 
     loadConvertedClearJson();
   </script>
 
+  <style>
+    /* summary 기본 마커 숨기고 커스텀 화살표 적용 */
+    .prev-summary { cursor: pointer; list-style: none; }
+    .prev-summary::-webkit-details-marker { display: none; }
+    details > .prev-summary::before {
+      content: "▶";
+      display: inline-block;
+      margin-right: .5rem;
+      transition: transform .2s ease;
+      font-size: .9em;
+    }
+    details[open] > .prev-summary::before {
+      transform: rotate(90deg);
+    }
+    /* h4 스타일 유지 보정 */
+    .prev-summary.h4 { display: inline-block; margin: 0 0 .5rem 0; }
+</style>
 
 
 

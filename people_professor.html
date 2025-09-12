@@ -431,12 +431,12 @@
               <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="true"
                 aria-controls="panelsStayOpen-collapseEight">
-                International Publication (국제논문)(Last 7 years)
+                International Publication (국제논문)(prior to 2022)
               </button>
             </h5>
             <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse show">
               <div class="accordion-body">
-
+                <p>최근 논문 목록은 <a href="publications_paper.html">Publications</a>에 있습니다</p>
                 <div id="publication"></div>
 
               </div>
@@ -448,12 +448,12 @@
               <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="true"
                 aria-controls="panelsStayOpen-collapseNine">
-                International Standard Contributions (국제표준기고서)(Last 5 years)
+                International Standard Contributions (국제표준기고서)(prior to 2022)
               </button>
             </h5>
             <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse show">
               <div class="accordion-body">
-
+                <p>최근 기고 목록은 <a href="publications_contribution.html">Publications</a>에 있습니다</p>
                 <div id="standard"></div>
 
               </div>
@@ -587,9 +587,9 @@
           degreeList[degree] += `<b>${key}</b>`
           let person = dataByType[degree][key];
           // let education = '';
-          person.forEach(function (interest) {
+          person.forEach(function (interest, idx) {
             degreeList[degree] +=
-              ` <p>${interest}</p>
+              ` <p>${idx+1}. ${interest}</p>
                               `;
           });
 
