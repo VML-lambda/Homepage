@@ -720,17 +720,17 @@
     "type": "MPEG"
   },
   {
-    "이름": "[NNVC] AhG11: Training NNSR using Reparameterization and Progressive Activation",
+    "이름": "[NNVC] AhG11: NNSR with new backbone block based on Spatial-Channel Mixing (SCM)",
     "연도": 2025,
     "주저자": "조현동",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "38th ISO/IEC JTC 1/SC 29 JVET",
-    "표준화회의명": "38th JVET of ITU-T SG21 WP3/21 and ISO/IEC JTC 1/SC 29",
+    "표준화기구명": "39th ISO/IEC JTC 1/SC 29 JVET",
+    "표준화회의명": "39th JVET of ITU-T SG21 WP3/21 and ISO/IEC JTC 1/SC 29",
     "DOI": "",
     "type": "JVET"
   },
   {
-    "이름": "[NNVC] AhG11: NNSR with new backbone block based on Spatial-Channel Mixing (SCM)",
+    "이름": "[NNVC] AhG11: Training NNSR using Reparameterization and Progressive Activation",
     "연도": 2025,
     "주저자": "조현동",
     "표준화기구": "ISO/IEC JTC 1",
