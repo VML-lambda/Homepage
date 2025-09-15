@@ -436,7 +436,7 @@
             </h5>
             <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse show">
               <div class="accordion-body">
-                <p>최근 논문 목록은 <a href="publications_paper.html">Publications</a>에 있습니다</p>
+                <p>최근 논문 목록은 <a href="publications_paper.html">Publications</a>에 있습니다.</p>
                 <div id="publication"></div>
 
               </div>
@@ -453,7 +453,7 @@
             </h5>
             <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse show">
               <div class="accordion-body">
-                <p>최근 기고 목록은 <a href="publications_contribution.html">Publications</a>에 있습니다</p>
+                <p>최근 기고 목록은 <a href="publications_contribution.html">Publications</a>에 있습니다.</p>
                 <div id="standard"></div>
 
               </div>
@@ -465,13 +465,18 @@
               <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="true"
                 aria-controls="panelsStayOpen-collapseTen">
-                International Patents (국제특허)(Latest 100 only)
+                International Patents (국제특허)
               </button>
             </h5>
             <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse show">
               <div class="accordion-body">
 
-                <div id="patents_international"></div>
+                <div id="patents_international">
+                <p>
+                  국제 특허 목록은 아래의 링크 참고 바랍니다. <br />
+                  <a href="https://patents.google.com/?inventor=Hui+Yong+KIM&sort=new">Google Patents - International</a>
+                </p>
+                </div>
 
               </div>
             </div>
@@ -482,13 +487,18 @@
               <button class="accordion-button text-primary fs-5" type="button" data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseEleven" aria-expanded="true"
                 aria-controls="panelsStayOpen-collapseEleven">
-                Domestic Patents (국내특허)(Latest 100 only)
+                Domestic Patents (국내특허)
               </button>
             </h5>
             <div id="panelsStayOpen-collapseEleven" class="accordion-collapse collapse show">
               <div class="accordion-body">
 
-                <div id="patents_domestic"></div>
+                <div id="patents_domestic">
+                <p>
+                  국내 특허 목록은 아래의 링크 참고 바랍니다. <br />
+                  <a href="https://patents.google.com/?inventor=%EA%B9%80%ED%9C%98%EC%9A%A9&sort=new">Google Patents - Domestic</a>
+                </p>
+                </div>
 
               </div>
             </div>
@@ -536,7 +546,7 @@
   <script src="js/main.js"></script>
 
   <script type="text/javascript">
-    const jsonFiles = ["json/professor_standard.json", "json/professor_patents_international.json", "json/professor_patents_domestic.json", "json/professor_publication.json"];
+    const jsonFiles = ["json/professor_standard.json", "json/professor_publication.json"];
     const dataByType = {};
 
     // XMLHttpRequest를 이용하여 각 JSON 파일을 비동기적으로 요청
@@ -579,7 +589,7 @@
     function processData(dataByType) {
 
       // HTML에 리스트 추가
-      degreeList = { publication: "", patents_international: "", patents_domestic: "", standard: "" };
+      degreeList = { publication: "", standard: "" };
 
       Object.keys(degreeList).forEach(function (degree) {
         degreeList[degree] += `<p>`
@@ -600,8 +610,6 @@
                 `
       });
       $('#publication').html(degreeList["publication"]);
-      $('#patents_international').html(degreeList["patents_international"]);
-      $('#patents_domestic').html(degreeList["patents_domestic"]);
       $('#standard').html(degreeList["standard"]);
 
     }
