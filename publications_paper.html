@@ -181,23 +181,31 @@
             return acc;
           }, {});
         }
-        function generateCards(groupedData) {
+        function renderYearGroupsWithToggle(groupedData, open = true) {
           let content = "";
           const years = Object.keys(groupedData).sort((a, b) => {
             if (a === "Unknown") return 1;
             if (b === "Unknown") return -1;
             return Number(b) - Number(a);
           });
-          years.forEach(year => {
-            content += `<h3 class="mt-4 mb-3">${year}</h3>`;
+
+          years.forEach((year, idx) => {
+            // 연도 내 항목 최신순(YYYYMM) 정렬
             const list = [...groupedData[year]].sort(
               (e1, e2) => toYearMonthKey(e2.연도) - toYearMonthKey(e1.연도)
             );
-            list.forEach(entry => { content += cardHTML(entry); });
+
+            const summaryTitle = `${year}`;
+            content += `
+              <details class="mt-3" ${open ? "open" : ""}>
+                <summary class="prev-summary h4 mb-2">${summaryTitle}</summary>
+                ${list.map(cardHTML).join("")}
+              </details>
+            `;
           });
           return content;
         }
-
+        
         // ===== 토글 섹션 컴포넌트 =====
         function renderPrevDetails(title, items, open = false) {
               if (!Array.isArray(items) || items.length === 0) return "";
@@ -237,11 +245,11 @@
 
               <div class="tab-content wow fadeInUp" data-wow-delay="0.1s">
                 <div class="tab-pane fade show active" id="international" role="tabpanel">
-                  ${generateCards(groupByYear(internationalData))}
+                  ${renderYearGroupsWithToggle(groupByYear(internationalData))}
                   ${renderPrevDetails("Prior to 2022", prevInternational, true)}
                 </div>
                 <div class="tab-pane fade" id="domestic" role="tabpanel">
-                  ${generateCards(groupByYear(domesticData))}
+                  ${renderYearGroupsWithToggle(groupByYear(domesticData))}
                 </div>
               </div>
             </div>
@@ -257,11 +265,49 @@
 
     loadConvertedClearJson();
   </script>
+  <script>
+    // tab-content 상단으로 스크롤
+    function scrollToTabTop() {
+      const tabContent = document.querySelector('#ConvertedClearSection');
+      if (!tabContent) return;
+      const offset = getStickyTop() + 8; // 네비 높이 고려
+      const top = tabContent.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
 
+    // --sticky-top 계산 함수 (앞에서 정의한 게 있으면 그대로 사용)
+    function getStickyTop() {
+      const v = getComputedStyle(document.documentElement)
+        .getPropertyValue('--sticky-top');
+      const n = parseInt(v, 10);
+      return Number.isFinite(n) ? n : 76; // fallback
+    }
+
+    // details 토글 이벤트
+    document.addEventListener('toggle', (e) => {
+      if (e.target.tagName === 'DETAILS' && !e.target.open) {
+        requestAnimationFrame(scrollToTabTop);
+      }
+    }, true);
+  </script>
+  
+  
   <style>
     /* summary 기본 마커 숨기고 커스텀 화살표 적용 */
-    .prev-summary { cursor: pointer; list-style: none; }
-    .prev-summary::-webkit-details-marker { display: none; }
+    .prev-summary {
+      cursor: pointer;
+      list-style: none;
+      width: 100%;
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 1;
+      padding: 5px;
+    }
+    .prev-summary::-webkit-details-marker { 
+      display: none;
+    }
+
     details > .prev-summary::before {
       content: "▶";
       display: inline-block;
@@ -269,11 +315,16 @@
       transition: transform .2s ease;
       font-size: .9em;
     }
+
     details[open] > .prev-summary::before {
       transform: rotate(90deg);
     }
+
     /* h4 스타일 유지 보정 */
-    .prev-summary.h4 { display: inline-block; margin: 0 0 .5rem 0; }
+    .prev-summary.h4 { 
+      display: inline-block; 
+      margin: 0 0 .5rem 0; 
+    }
 </style>
 
 
