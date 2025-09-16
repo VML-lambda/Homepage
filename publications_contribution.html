@@ -131,17 +131,26 @@
 
         // 연도 파싱 유틸 (문자/숫자 모두 안전 처리)
         function extractYear(val) {
-          if (val == null) return NaN;
-          const m = String(val).match(/(\d{4})/);
-          return m ? Number(m[1]) : NaN;
+          if (val == null) return "Unknown";
+          if (typeof val === "number") return String(Math.trunc(val));
+          const s = String(val).trim();
+          const m = s.match(/(\d{4})/);
+          return m ? m[1] : "Unknown";
         }
-
+        function toYearMonthKey(val) {
+          if (val == null) return -Infinity;
+          const s = String(val).trim();
+          const m = s.match(/^(\d{4})(?:\D?(\d{1,2}))?/);
+          if (!m) return -Infinity;
+          const y = Number(m[1]);
+          const mm = m[2] ? Number(m[2]) : 0;
+          return y * 100 + mm;
+        }
         // 연도별 그룹핑
         function groupByYear(data) {
           return data.reduce((acc, entry) => {
-            const y = extractYear(entry.연도);
-            const key = Number.isFinite(y) ? String(y) : "Unknown";
-            (acc[key] ||= []).push(entry);
+            const year = extractYear(entry.연도);
+            (acc[year] ||= []).push(entry);
             return acc;
           }, {});
         }
@@ -177,9 +186,10 @@
           });
           years.forEach(year => {
             content += `<h3 class="mt-4 mb-3">${year}</h3>`;
-            groupedData[year].forEach(entry => {
-              content += cardHTML(entry);
-            });
+            const list = [...groupedData[year]].sort(
+              (e1, e2) => toYearMonthKey(e2.연도) - toYearMonthKey(e1.연도)
+            );
+            list.forEach(entry => { content += cardHTML(entry); });
           });
           return content;
         }

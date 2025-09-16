@@ -1,7 +1,7 @@
 [
   {
     "이름": "[Container][FCM] Training Description",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -11,7 +11,7 @@
   },
   {
     "이름": "[Container][FCM] PWD for FCM",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "김휘용",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -21,7 +21,7 @@
   },
   {
     "이름": "[Container][FCM] FE2 description",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -31,7 +31,7 @@
   },
   {
     "이름": "[Container][FCM] FE1 description",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -41,7 +41,7 @@
   },
   {
     "이름": "[Container][FCM] Description on FE3",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -51,7 +51,7 @@
   },
   {
     "이름": "[Container][FCM] CE4 description",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -61,7 +61,7 @@
   },
   {
     "이름": "[Container] [FCM] FCTM Algorithm Description",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -71,7 +71,7 @@
   },
   {
     "이름": "[Container] [FCM] Description on CE 3",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "김영웅",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -81,7 +81,7 @@
   },
   {
     "이름": "[FCM] KMAC/pixel calculation for FCTM",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -91,7 +91,7 @@
   },
   {
     "이름": "[FCM] FE3: Summary report",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -101,7 +101,7 @@
   },
   {
     "이름": "[FCM] Crosscheck of m70057 (CE4 related: Non-linear feature transform)",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "김영웅",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -111,7 +111,7 @@
   },
   {
     "이름": "[FCM] Crosscheck of m69985 (CE 3.2: Machine Saliency Compression Based on Temporal Single Input for Multiple Output Architecture)",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "유장현",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -121,7 +121,7 @@
   },
   {
     "이름": "[FCM] CE3 summary report",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "김영웅",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -131,7 +131,7 @@
   },
   {
     "이름": "[FCM] CE 3.1: Results on L-MSFC-v2 extension for inter coding",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "유장현",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "148th ISO/IEC JTC 1/SC 29 MPEG",
@@ -141,7 +141,7 @@
   },
   {
     "이름": "[FCM] CE 3.2.2 L-MSFC-v2",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "145th ISO/IEC JTC 1/SC 29 MPEG",
@@ -151,7 +151,7 @@
   },
   {
     "이름": "[FCM] CE 1.1.8. L-MSFC-v2 with fine-tuning",
-    "연도": 2024,
+    "연도": "2024",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "145th ISO/IEC JTC 1/SC 29 MPEG",
@@ -161,7 +161,7 @@
   },
   {
     "이름": "[FCVCM] Hybrid codec approach : Combination of L-MSFC-v2 Intra (m65200) with VVC",
-    "연도": 2023,
+    "연도": "2023",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "144th ISO/IEC JTC 1/SC 29 MPEG",
@@ -171,7 +171,7 @@
   },
   {
     "이름": "[FCVCM] E2E approach : Extension of L-MSFC-v2 Intra (m65200) for inter frame coding",
-    "연도": 2023,
+    "연도": "2023",
     "주저자": "유장현",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "144th ISO/IEC JTC 1/SC 29 MPEG",
@@ -181,7 +181,7 @@
   },
   {
     "이름": "[FCVCM] Response to FCVCM Call for Proposal from Kyung Hee University and ETRI",
-    "연도": 2023,
+    "연도": "2023",
     "주저자": "김영웅",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "144th ISO/IEC JTC 1/SC 29 MPEG",
@@ -191,7 +191,7 @@
   },
   {
     "이름": "[FCVCM] Pareto-fronting with Multiple Inter-Layer Feature Resizing Modes",
-    "연도": 2023,
+    "연도": "2023",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "143th ISO/IEC JTC 1/SC 29 MPEG",
@@ -201,7 +201,7 @@
   },
   {
     "이름": "[FCVCM] L-MSFC: End-to-End Learnable Multi-Scale Feature Compression",
-    "연도": 2023,
+    "연도": "2023",
     "주저자": "유장현",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "143th ISO/IEC JTC 1/SC 29 MPEG",
@@ -211,7 +211,7 @@
   },
   {
     "이름": "[FCVCM] Inter-Layer Feature Resizing for FCVCM",
-    "연도": 2023,
+    "연도": "2023",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "143th ISO/IEC JTC 1/SC 29 MPEG",
@@ -221,7 +221,7 @@
   },
   {
     "이름": "[VCM track 1] [Crosscheck] Crosscheck report on m59576",
-    "연도": 2023,
+    "연도": "2023",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "140th ISO/IEC JTC 1/SC 29 MPEG",
@@ -229,9 +229,9 @@
     "DOI": "",
     "type": "MPEG"
   },
- {
+  {
     "이름": "[VCM Track 1] Crosscheck report on m60799",
-    "연도": 2023,
+    "연도": "2023",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "138th ISO/IEC JTC 1/SC 29 MPEG",
@@ -240,88 +240,8 @@
     "type": "MPEG"
   },
   {
-    "이름": "[FCM][FE2] Preliminary Anchor Results for FE2 Study 1 and 2",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM] CE1.1.4: LightFCTM",
-    "연도": 2025,
-    "주저자": "임달홍",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM][FE1] Performance Evaluation of FCTMv5 Trained with the FE1.1 Training Code",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM] Crosscheck Result for CE 1.1.3",
-    "연도": 2025,
-    "주저자": "임달홍",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM] Crosscheck Result for m71200",
-    "연도": 2025,
-    "주저자": "임달홍",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM] FE1 summary report",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM] FE2 summary report",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM] CE4 summary report",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM] FCTM anchor candidate experiment",
-    "연도": 2025,
+    "이름": "[FCM] Clarifications on the feature unpacking process in both PWD and reference software",
+    "연도": "2025.01",
     "주저자": "",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
@@ -330,78 +250,8 @@
     "type": "MPEG"
   },
   {
-    "이름": "[FCM] Clarifications regarding the current PWD",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[Container] [FCM] FCTM Algorithm Description",
-    "연도": 2025,
-    "주저자": "",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[Container] CE4 description",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[Container] Training Description",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[Container] FE2 description",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[Container] Preliminary WD for FCM",
-    "연도": 2025,
-    "주저자": "김휘용",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[Container] FE1 description",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM] CE 3.1: Results on L-MSFC-v2 extension for inter coding",
-    "연도": 2025,
+    "이름": "[Container] [FCM] Description on CE 3",
+    "연도": "2025.01",
     "주저자": "유장현",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
@@ -411,7 +261,7 @@
   },
   {
     "이름": "[FCM] Proposal on CTTC and Anchor for NN-based Coding Mode",
-    "연도": 2025,
+    "연도": "2025.01",
     "주저자": "유장현",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
@@ -420,8 +270,8 @@
     "type": "MPEG"
   },
   {
-    "이름": "[Container] [FCM] Description on CE 3",
-    "연도": 2025,
+    "이름": "[FCM] CE 3.1: Results on L-MSFC-v2 extension for inter coding",
+    "연도": "2025.01",
     "주저자": "유장현",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
@@ -430,8 +280,58 @@
     "type": "MPEG"
   },
   {
-    "이름": "[FCM] Clarifications on the feature unpacking process in both PWD and reference software",
-    "연도": 2025,
+    "이름": "[Container] FE1 description",
+    "연도": "2025.01",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[Container] Preliminary WD for FCM",
+    "연도": "2025.01",
+    "주저자": "김휘용",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[Container] FE2 description",
+    "연도": "2025.01",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[Container] Training Description",
+    "연도": "2025.01",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[Container] CE4 description",
+    "연도": "2025.01",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[Container] [FCM] FCTM Algorithm Description",
+    "연도": "2025.01",
     "주저자": "",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
@@ -440,118 +340,108 @@
     "type": "MPEG"
   },
   {
-    "이름": "[FCM][CE4] Summary report",
-    "연도": 2025,
+    "이름": "[FCM] Clarifications regarding the current PWD",
+    "연도": "2025.01",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM][FE1] Summary report",
-    "연도": 2025,
-    "주저자": "정혜원",
+    "이름": "[FCM] FCTM anchor candidate experiment",
+    "연도": "2025.01",
+    "주저자": "",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM][FE2] Summary report",
-    "연도": 2025,
+    "이름": "[FCM] CE4 summary report",
+    "연도": "2025.01",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM][FE2] Crosscheck for FE2 Study3 m72212",
-    "연도": 2025,
+    "이름": "[FCM] FE2 summary report",
+    "연도": "2025.01",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM] FE1 summary report",
+    "연도": "2025.01",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM] Crosscheck Result for m71200",
+    "연도": "2025.01",
     "주저자": "임달홍",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM][PWD] Removing restoration bypass flag and improving description for default topology",
-    "연도": 2025,
+    "이름": "[FCM] Crosscheck Result for CE 1.1.3",
+    "연도": "2025.01",
+    "주저자": "임달홍",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM][FE1] Performance Evaluation of FCTMv5 Trained with the FE1.1 Training Code",
+    "연도": "2025.01",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM] CE 3.1: Anchor Generation",
-    "연도": 2025,
-    "주저자": "유장현",
+    "이름": "[FCM] CE1.1.4: LightFCTM",
+    "연도": "2025.01",
+    "주저자": "임달홍",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM] CE3 summary report",
-    "연도": 2025,
-    "주저자": "유장현",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM] Editorial comments on preliminary WD",
-    "연도": 2025,
+    "이름": "[FCM][FE2] Preliminary Anchor Results for FE2 Study 1 and 2",
+    "연도": "2025.01",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
+    "표준화기구명": "149th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM][PWD]Signalling improvement and bug fix for reduced feature inverse normalization",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM][PWD] Issues and solutions for signalling of refinement and channel removal parameters",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[Container][FCM] FE1 description",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[Container][FCM] Training Description",
-    "연도": 2025,
+    "이름": "[Container][FCM] CE4 description",
+    "연도": "2025.04",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
@@ -561,7 +451,7 @@
   },
   {
     "이름": "[Container][FCM] FE2 description",
-    "연도": 2025,
+    "연도": "2025.04",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
@@ -570,9 +460,59 @@
     "type": "MPEG"
   },
   {
-    "이름": "[Container][FCM] CE4 description",
-    "연도": 2025,
+    "이름": "[Container][FCM] Training Description",
+    "연도": "2025.04",
     "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[Container][FCM] FE1 description",
+    "연도": "2025.04",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM][PWD] Issues and solutions for signalling of refinement and channel removal parameters",
+    "연도": "2025.04",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM][PWD]Signalling improvement and bug fix for reduced feature inverse normalization",
+    "연도": "2025.04",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM] Editorial comments on preliminary WD",
+    "연도": "2025.04",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM] CE3 summary report",
+    "연도": "2025.04",
+    "주저자": "유장현",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
     "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
@@ -581,117 +521,67 @@
   },
   {
     "이름": "[FCM] CE 3.1: Anchor Generation",
-    "연도": 2025,
+    "연도": "2025.04",
     "주저자": "유장현",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM] CE3 summary report",
-    "연도": 2025,
-    "주저자": "유장현",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM][PWD] Software implementation and BD-rate results for m72608 (Signalling improvement and bug fix for reduced feature inverse normalization)",
-    "연도": 2025,
+    "이름": "[FCM][PWD] Removing restoration bypass flag and improving description for default topology",
+    "연도": "2025.04",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM] Applying update-flag (m73365) on CE4.3 TCFC (m73580)",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM][PWD] Software implementation for automatic composition for default topology",
-    "연도": 2025,
-    "주저자": "정혜원",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM][FE1] Results for training reproducibility experiment from KHU",
-    "연도": 2025,
+    "이름": "[FCM][FE2] Crosscheck for FE2 Study3 m72212",
+    "연도": "2025.04",
     "주저자": "임달홍",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM][FE2] Partial results for Study1 split-inference anchor for YOLOX-DarkNet53 with L13 and L37 split point",
-    "연도": 2025,
-    "주저자": "임달홍",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM][CTTC/FE2] Removing Kimono and Cactus sequence as mandatory test conditions",
-    "연도": 2025,
-    "주저자": "임달홍",
-    "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
-    "DOI": "",
-    "type": "MPEG"
-  },
-  {
-    "이름": "[FCM][FE2] Crosscheck result for Study1 remote inference",
-    "연도": 2025,
+    "이름": "[FCM][FE2] Summary report",
+    "연도": "2025.04",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM][FE2] Crosscheck result for Study2 remote and split inference",
-    "연도": 2025,
+    "이름": "[FCM][FE1] Summary report",
+    "연도": "2025.04",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM] CE4 summary report",
-    "연도": 2025,
+    "이름": "[FCM][CE4] Summary report",
+    "연도": "2025.04",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
-    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
-    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "표준화기구명": "150th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)",
     "DOI": "",
     "type": "MPEG"
   },
   {
-    "이름": "[FCM] FE2 summary report",
-    "연도": 2025,
+    "이름": "[Container][FCM] Training Description",
+    "연도": "2025.07",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
@@ -701,7 +591,7 @@
   },
   {
     "이름": "[Container] [FCM] FCTM Algorithm Description",
-    "연도": 2025,
+    "연도": "2025.07",
     "주저자": "",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
@@ -710,8 +600,8 @@
     "type": "MPEG"
   },
   {
-    "이름": "[Container][FCM] Training Description",
-    "연도": 2025,
+    "이름": "[FCM] FE2 summary report",
+    "연도": "2025.07",
     "주저자": "정혜원",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
@@ -720,8 +610,118 @@
     "type": "MPEG"
   },
   {
+    "이름": "[FCM] CE4 summary report",
+    "연도": "2025.07",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM][FE2] Crosscheck result for Study2 remote and split inference",
+    "연도": "2025.07",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM][FE2] Crosscheck result for Study1 remote inference",
+    "연도": "2025.07",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM][CTTC/FE2] Removing Kimono and Cactus sequence as mandatory test conditions",
+    "연도": "2025.07",
+    "주저자": "임달홍",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM][FE2] Partial results for Study1 split-inference anchor for YOLOX-DarkNet53 with L13 and L37 split point",
+    "연도": "2025.07",
+    "주저자": "임달홍",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM][FE1] Results for training reproducibility experiment from KHU",
+    "연도": "2025.07",
+    "주저자": "임달홍",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM][PWD] Software implementation for automatic composition for default topology",
+    "연도": "2025.07",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM] Applying update-flag (m73365) on CE4.3 TCFC (m73580)",
+    "연도": "2025.07",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM][PWD] Software implementation and BD-rate results for m72608 (Signalling improvement and bug fix for reduced feature inverse normalization)",
+    "연도": "2025.07",
+    "주저자": "정혜원",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM] CE3 summary report",
+    "연도": "2025.07",
+    "주저자": "유장현",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
+    "이름": "[FCM] CE 3.1: Anchor Generation",
+    "연도": "2025.07",
+    "주저자": "유장현",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "151th ISO/IEC JTC 1/SC 29 MPEG",
+    "표준화회의명": "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)",
+    "DOI": "",
+    "type": "MPEG"
+  },
+  {
     "이름": "[NNVC] AhG11: NNSR with new backbone block based on Spatial-Channel Mixing (SCM)",
-    "연도": 2025,
+    "연도": "2025.07",
     "주저자": "조현동",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "39th ISO/IEC JTC 1/SC 29 JVET",
@@ -731,7 +731,7 @@
   },
   {
     "이름": "[NNVC] AhG11: Training NNSR using Reparameterization and Progressive Activation",
-    "연도": 2025,
+    "연도": "2025.03",
     "주저자": "조현동",
     "표준화기구": "ISO/IEC JTC 1",
     "표준화기구명": "38th ISO/IEC JTC 1/SC 29 JVET",
