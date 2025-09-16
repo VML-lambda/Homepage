@@ -49,7 +49,7 @@
     "학술대회명": "",
     "학술지명": "Computer Graphics Forum (Vol. 41, No. 1, pp.350-363)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "CGf.png",
     "type": "International"
   },
   {
@@ -60,7 +60,7 @@
     "학술대회명": "",
     "학술지명": "ETRI Journal (Vol. 44, Issue 8, pp.94-104)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "ETRI-journal.png",
     "type": "International"
   },
   {
@@ -71,7 +71,7 @@
     "학술대회명": "",
     "학술지명": "Journal of Web Engineering (Vol. 20, Issue 8, pp.2391-2412)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "river-publish.png",
     "type": "International"
   },
   {
@@ -82,7 +82,7 @@
     "학술대회명": "",
     "학술지명": "IEEE Access (Vol. 9, pp.79735-79751)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "ieee-access.png",
     "type": "International"
   },
   {
@@ -93,7 +93,7 @@
     "학술대회명": "",
     "학술지명": "ETRI Journal (Vol. 43, Issue 2)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "ETRI-journal.png",
     "type": "International"
   },
   {
@@ -104,7 +104,7 @@
     "학술대회명": "",
     "학술지명": "IEEE Transactions on Circuits and Systems for Video Technology (Vol. 30, Issue 1, pp.205-216)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "ieee-cass.png",
     "type": "International"
   },
   {
@@ -115,7 +115,7 @@
     "학술대회명": "",
     "학술지명": "Signal Processing: Image Communication (Vol. 78, pp.322-330)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "EURASIP.png",
     "type": "International"
   },
   {
@@ -126,7 +126,7 @@
     "학술대회명": "",
     "학술지명": "IEEE Transactions on Circuits and Systems for Video Technology (Vol. 29, Issue 10, pp.2888-2898)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "ieee-cass.png",
     "type": "International"
   },
   {
@@ -137,7 +137,7 @@
     "학술대회명": "",
     "학술지명": "IEEE Transactions on Circuits and Systems for Video Technology (Vol. 28, Issue 2, pp.378-391)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "ieee-cass.png",
     "type": "International"
   },
   {
@@ -148,7 +148,7 @@
     "학술대회명": "",
     "학술지명": "Multimedia Tools and Applications (Vol. 77, No. 4, pp.4661-4675)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "Springer.png",
     "type": "International"
   },
   {
@@ -159,7 +159,7 @@
     "학술대회명": "",
     "학술지명": "Journal of Supercomputing (Vol. 74, No. 1, pp.456-484)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "Springer.png",
     "type": "International"
   },
   {
@@ -170,7 +170,7 @@
     "학술대회명": "",
     "학술지명": "Journal of Multimedia Information System (Vol. 5, No. 3, pp.201-208)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "JMIS.png",
     "type": "International"
   },
   {
@@ -181,7 +181,7 @@
     "학술대회명": "",
     "학술지명": "ETRI Journal (Vol. 39, No. 5, pp.672-682)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "ETRI-journal.png",
     "type": "International"
   },
   {
@@ -192,7 +192,7 @@
     "학술대회명": "",
     "학술지명": "Journal of Supercomputing (Vol. 73, No. 3, pp.940-960)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "Springer.png",
     "type": "International"
   },
   {
@@ -203,7 +203,7 @@
     "학술대회명": "",
     "학술지명": "ETRI Journal (Vol. 38, No. 5, pp.807-817)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "ETRI-journal.png",
     "type": "International"
   },
   {
@@ -214,7 +214,7 @@
     "학술대회명": "",
     "학술지명": "ETRI Journal (Vol. 38, No. 5, pp.858-867)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "ETRI-journal.png",
     "type": "International"
   },
   {
@@ -225,7 +225,7 @@
     "학술대회명": "",
     "학술지명": "IEEE Transactions on Broadcasting (Vol. 62, No. 3, pp.640-653)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "ieee-BTS.png",
     "type": "International"
   },
   {
@@ -236,7 +236,7 @@
     "학술대회명": "",
     "학술지명": "IEICE Transactions on Information and Systems (Vol. E99-D No.8, pp.2194-2198)",
     "DOI": "",
-    "image": "no_teaser_white.png",
+    "image": "IEICE-information-systems.png",
     "type": "International"
   }
 ]
