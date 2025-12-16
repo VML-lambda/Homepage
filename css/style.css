@@ -375,6 +375,9 @@
   background: var(--dark);
   transition: 0.5s;
 }
+.mainimg {
+  text-align: center;
+}
 
 .portfolio-img::before {
   left: 50%;

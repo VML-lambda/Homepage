@@ -162,12 +162,8 @@
     // 3) 카드 HTML 빌더 (필요 시 headline/title 폴백)
     const card = (it) => `
         <div class="col-lg-4 col-md-6 portfolio-item accept">
-        <div class="portfolio-img rounded overflow-hidden">
+        <div class="img rounded overflow-hidden">
             <img class="img-fluid" src="img/gallery/${it.thumb}" alt="${(it.headline||it.title||'').replace(/"/g,'&quot;')}" />
-            <div class="portfolio-btn">
-            <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1"
-                href="img/gallery/${it.thumb}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-            </div>
         </div>
         <div class="pt-3">
             <p class="text-primary mb-0">${it.date ? `<span>${it.date}</span>` : ''}</p>
