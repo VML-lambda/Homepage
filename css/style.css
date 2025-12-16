@@ -894,3 +894,42 @@ li {
     padding: 0.6rem 1rem;
   }
 }
+
+/* Research Card Styling & Interaction */
+.research-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #eee;
+  height: 100%;
+  padding: 30px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.research-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(13, 110, 253, 0.15);
+  /* Primary Color Shadow */
+  border-color: #0d6efd;
+}
+
+/* Image Wrapper Styling */
+.img-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+  /* box-shadow: 0 10px 30px rgba(0,0,0,0.1); */
+  /* 그림자는 필요에 따라 제거/추가 */
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Section 1 Image Adjustment */
+.intro-img-container img {
+  max-height: 300px;
+  /* 너무 커지지 않도록 제한 */
+  width: auto;
+  max-width: 100%;
+}

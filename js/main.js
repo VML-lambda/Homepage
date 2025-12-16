@@ -130,8 +130,10 @@ $(document).ready(function () {
       $("#nav-grant").addClass("active");
     } else if (filename == "news") {
       $("#nav-news").addClass("active");
-    } else if (filename == "contact") {
-      $("#nav-contact").addClass("active");
+    } else if (filename == "gallery") {
+      $("#nav-gallery").addClass("active");
+    } else if (filename == "about") {
+      $("#nav-about").addClass("active");
     } else {
       console.log("Cannot find matching ID");
     }
