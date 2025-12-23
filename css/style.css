@@ -936,3 +936,39 @@ li {
   width: auto;
   max-width: 100%;
 }
+
+#recruit-fab {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 45px;
+  z-index: 9999;
+  border-radius: 999px;
+  padding: 14px 22px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  text-align: center;
+  min-width: 320px;
+  white-space: normal;
+}
+
+#recruit-fab .fab-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+#recruit-fab .fab-sub {
+  font-size: 13px;
+  line-height: 1.1;
+  opacity: 0.75;
+}
+
+#recruit-fab:hover {
+  opacity: 0.10;
+  /* hover 시 투명 */
+}
