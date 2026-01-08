@@ -10,13 +10,13 @@
       "date": "Jun. 2025 - May 2028"
     },
     "2": {
-      "img_url": "KHU.png",
-      "alt": "KHU Logo",
-      "organization": "KHU",
-      "title": "홀로그래픽 실감콘텐츠 생성/재현 교육 플랫폼 고도화 (시각화, 3D, 활용사례를 중심으로)",
-      "title_small": "",
-      "subtitle": "경희대학교 산학협력단(교원연구지원과제)",
-      "date": "May. 2025 - Nov. 2025"
+      "img_url": "ETRI.png",
+      "alt": "ETRI Logo",
+      "organization": "ETRI",
+      "title": "차세대 미디어 부호화 및 전송 표준 원천기술 개발",
+      "title_small": "(초저비트율 비디오 부호화 환경에서의 원본충실도-맥락보존성 최적화 방안 연구)",
+      "subtitle": "한국전자통신연구원(ETRI) 국가연구개발사업 공동연구",
+      "date": "Apr. 2024 - Dec. 2026"
     },
     "3": {
       "img_url": "IITP.png",
@@ -39,6 +39,15 @@
   },
   "Completed": {
     "1": {
+      "img_url": "KHU.png",
+      "alt": "KHU Logo",
+      "organization": "KHU",
+      "title": "홀로그래픽 실감콘텐츠 생성/재현 교육 플랫폼 고도화 (시각화, 3D, 활용사례를 중심으로)",
+      "title_small": "",
+      "subtitle": "경희대학교 산학협력단(교원연구지원과제)",
+      "date": "May. 2025 - Nov. 2025"
+    },
+    "2": {
       "img_url": "samsung-mirae.png",
       "alt": "Samsung Logo",
       "organization": "Samsung (Future Technology)",
@@ -47,7 +56,7 @@
       "subtitle": "Samsung (삼성미래기술육성사업)",
       "date": "Jun. 2022 - May. 2025"
     },
-    "2": {
+    "3": {
       "img_url": "samsung-sait.png",
       "alt": "Samsung Logo",
       "organization": "Samsung (SAIT)",
@@ -56,7 +65,7 @@
       "subtitle": "Samsung (SAIT)",
       "date": "Jun. 2024 - Jun. 2025"
     },
-    "3": {
+    "4": {
       "img_url": "KHU.png",
       "alt": "KHU Logo",
       "organization": "KHU",
@@ -65,7 +74,7 @@
       "subtitle": "경희대학교 산학협력단(교원연구지원과제)",
       "date": "May. 2024 - Nov. 2024"
     },
-    "4": {
+    "5": {
       "img_url": "ETRI.png",
       "alt": "ETRI Logo",
       "organization": "ETRI",
@@ -74,7 +83,7 @@
       "subtitle": "한국전자통신연구원(ETRI) 학술연구용역사업 R&D",
       "date": "May. 2022 - Nov. 2022 / May. 2023 - Dec. 2023"
     },
-    "5": {
+    "6": {
       "img_url": "samsung-sait.png",
       "organization": "Samsung (SAIT)",
       "alt": "Samsung Logo",
@@ -83,7 +92,7 @@
       "subtitle": "Samsung (SAIT)",
       "date": "Oct. 2022 - Sep. 2023"
     },
-    "6": {
+    "7": {
       "img_url": "ETRI.png",
       "alt": "ETRI Logo",
       "organization": "ETRI",
