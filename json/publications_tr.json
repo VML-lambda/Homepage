@@ -768,5 +768,35 @@
     "표준화회의명": "40th JVET of ITU-T SG21 WP3/21 and ISO/IEC JTC 1/SC 29",
     "DOI": "",
     "type": "JVET"
+  },
+  {
+    "이름": "EE1-2.1: VLOP4 with new backbone block based on Spatial-Channel Mixing (SCM)",
+    "연도": "2026.01",
+    "주저자": "조현동",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "41th JVET of ITU-T SG21 WP3/21 and ISO/IEC JTC 1/SC 29",
+    "표준화회의명": "41th JVET of ITU-T SG21 WP3/21 and ISO/IEC JTC 1/SC 29",
+    "DOI": "",
+    "type": "JVET"
+  },
+  {
+    "이름": "EE1-5.1: NNSR with new backbone block based on Spatial-Channel Mixing (SCM)",
+    "연도": "2026.01",
+    "주저자": "조현동",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "41th JVET of ITU-T SG21 WP3/21 and ISO/IEC JTC 1/SC 29",
+    "표준화회의명": "41th JVET of ITU-T SG21 WP3/21 and ISO/IEC JTC 1/SC 29",
+    "DOI": "",
+    "type": "JVET"
+  },
+  {
+    "이름": "AHG11/AHG14: Improving Training Reproducibility in NNVC",
+    "연도": "2026.01",
+    "주저자": "조현동",
+    "표준화기구": "ISO/IEC JTC 1",
+    "표준화기구명": "41th JVET of ITU-T SG21 WP3/21 and ISO/IEC JTC 1/SC 29",
+    "표준화회의명": "41th JVET of ITU-T SG21 WP3/21 and ISO/IEC JTC 1/SC 29",
+    "DOI": "",
+    "type": "JVET"
   }
 ]
