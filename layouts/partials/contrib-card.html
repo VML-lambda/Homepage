@@ -1,0 +1,15 @@
+<div class="card mb-3" style="width: 97%">
+  <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
+    <div>
+      <h6 class="card-title mb-2">
+        {{ index . "이름" }}
+        <br />
+        {{ with index . "표준화기구" }}{{ if ne . "" }}<small class="text-muted">{{ . }}</small><br />{{ end }}{{ end }}
+        {{ with index . "표준화기구명" }}{{ if ne . "" }}<small class="text-muted">{{ . }}</small><br />{{ end }}{{ end }}
+        {{ with index . "표준화회의명" }}{{ if ne . "" }}<small class="text-muted">{{ . }}</small>{{ end }}{{ end }}
+      </h6>
+      {{ with index . "주저자" }}{{ if ne . "" }}<p class="card-subtitle text-muted mb-1 small">{{ . }}</p>{{ end }}{{ end }}
+      <p class="card-text text-muted mb-0 small"><strong>{{ index . "연도" }}</strong></p>
+    </div>
+  </div>
+</div>
