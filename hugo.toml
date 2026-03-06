@@ -1,0 +1,16 @@
+baseURL = "/"
+languageCode = "ko-kr"
+title = "Visual Media Lab"
+enableRobotsTXT = true
+relativeURLs = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  labName    = "Visual Media Lab"
+  university = "Kyung Hee University"
+  email      = "hykim.v@khu.ac.kr"
+  github     = "https://github.com/VML-lambda"
+  address    = "Deogyeong-daero, Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea, 17104."
+
+[markup.goldmark.renderer]
+  unsafe = true

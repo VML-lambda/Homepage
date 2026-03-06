@@ -1,0 +1,154 @@
+{{ define "main" }}
+
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-5 mb-5">
+    <div class="container py-5">
+      <h1 class="display-3 text-white mb-3 animated slideInDown">Papers</h1>
+      <nav aria-label="breadcrumb animated slideInDown">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
+          <li class="breadcrumb-item"><a class="text-white" href="/publications/">Publications</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Papers</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Page Header End -->
+
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+        <h1 class="mb-4">Papers</h1>
+        <ul class="nav nav-tabs pub-tabs justify-content-center" id="pubTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="international-tab" data-bs-toggle="tab"
+              data-bs-target="#international" type="button" role="tab">International</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="domestic-tab" data-bs-toggle="tab"
+              data-bs-target="#domestic" type="button" role="tab">Domestic</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content wow fadeInUp" data-wow-delay="0.1s">
+
+        <!-- International Tab -->
+        <div class="tab-pane fade show active" id="international" role="tabpanel">
+          {{ $intl := where .Pages "Params.type" "International" }}
+          {{ $scratch := newScratch }}
+          {{ range $intl }}
+            {{ $y := string .Params.year }}
+            {{ $scratch.Add "intlYears" (slice $y) }}
+          {{ end }}
+          {{ $years := sort ($scratch.Get "intlYears" | uniq) "value" "desc" }}
+          {{ range $years }}
+            {{ $year := . }}
+          <details class="mt-3" open>
+            <summary class="prev-summary h4 mb-2">{{ $year }}</summary>
+            {{ range sort (where $intl "Params.year" (int $year)) "Params.yearMonth" "desc" }}
+            {{ partial "pub-card.html" . }}
+            {{ end }}
+          </details>
+          {{ end }}
+
+          <!-- Prior to 2022 (from professor data) -->
+          {{ with site.Data.professor_publication.cards }}
+          {{ $prevIntl := where . "type" "International" }}
+          {{ if $prevIntl }}
+          <details class="mt-3" open>
+            <summary class="prev-summary h4 mb-2">Prior to 2022</summary>
+            {{ range $prevIntl }}
+            <div class="card mb-3" style="width:97%">
+              <div class="card-body d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3">
+                {{ if .image }}
+                <div class="paper-thumb flex-shrink-0"
+                     style="width:320px; height:185px; overflow:hidden; background:white; margin:0;">
+                  <img src="/img/paper/{{ .image }}" alt=""
+                       style="width:100%; height:100%; object-fit:contain; object-position:center; display:block;"
+                       onerror="this.parentElement.style.display='none'">
+                </div>
+                {{ end }}
+                <div class="flex-grow-1 d-flex flex-column justify-content-center" style="min-width:0;">
+                  <h6 class="card-title mb-2">
+                    {{ index . "이름" }}
+                    {{ with index . "학술지명" }}{{ if ne . "" }}<br><small class="text-muted">{{ . }}</small>{{ end }}{{ end }}
+                    {{ with index . "학술대회명" }}{{ if ne . "" }}<br><small class="text-muted">{{ . }}</small>{{ end }}{{ end }}
+                  </h6>
+                  <p class="card-subtitle text-muted mb-1 small">
+                    <strong>{{ index . "주저자" }}</strong>{{ with index . "공동저자명" }}, {{ . }}{{ end }}
+                  </p>
+                  <p class="card-text text-muted mb-0 small"><strong>{{ index . "연도" }}</strong></p>
+                  {{ with .DOI }}
+                  {{ if ne . "" }}
+                  <a href="{{ . }}" class="href-black card-text text-muted mb-0 small"
+                     style="word-break:break-word; overflow-wrap:anywhere; white-space:normal;"
+                     target="_blank">{{ . }}</a>
+                  {{ end }}
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+            {{ end }}
+          </details>
+          {{ end }}
+          {{ end }}
+        </div>
+
+        <!-- Domestic Tab -->
+        <div class="tab-pane fade" id="domestic" role="tabpanel">
+          {{ $dom := where .Pages "Params.type" "Domestic" }}
+          {{ $scratchD := newScratch }}
+          {{ range $dom }}
+            {{ $y := string .Params.year }}
+            {{ $scratchD.Add "domYears" (slice $y) }}
+          {{ end }}
+          {{ $domYears := sort ($scratchD.Get "domYears" | uniq) "value" "desc" }}
+          {{ range $domYears }}
+            {{ $year := . }}
+          <details class="mt-3" open>
+            <summary class="prev-summary h4 mb-2">{{ $year }}</summary>
+            {{ range sort (where $dom "Params.year" (int $year)) "Params.yearMonth" "desc" }}
+            {{ partial "pub-card.html" . }}
+            {{ end }}
+          </details>
+          {{ end }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{{ end }}
+
+{{ define "scripts" }}
+<style>
+  .prev-summary {
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1;
+    padding: 5px;
+  }
+  .prev-summary::-webkit-details-marker {
+    display: none;
+  }
+  details > .prev-summary::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: .5rem;
+    transition: transform .2s ease;
+    font-size: .9em;
+  }
+  details[open] > .prev-summary::before {
+    transform: rotate(90deg);
+  }
+  .prev-summary.h4 {
+    display: inline-block;
+    margin: 0 0 .5rem 0;
+  }
+</style>
+{{ end }}

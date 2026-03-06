@@ -1,0 +1,21 @@
+<div class="col-lg-3 col-md-4 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+  <div class="team-item rounded overflow-hidden text-center p-4">
+    <img class="img-fluid rounded-circle mb-3"
+         src="/img/people/{{ .Params.image | default "profile.png" }}"
+         alt="{{ .Title }}"
+         style="width:120px;height:120px;object-fit:cover;"
+         onerror="this.src='/img/people/profile.png'">
+    <h5>{{ .Title }}</h5>
+    <p class="text-primary mb-1">{{ .Params.engName }}</p>
+    <p class="text-muted small mb-2">{{ .Params.position }}</p>
+    {{ if .Params.email }}
+    <a href="mailto:{{ .Params.email }}" class="btn btn-sm btn-outline-primary me-1"><i class="fa fa-envelope"></i></a>
+    {{ end }}
+    {{ if .Params.github }}
+    <a href="{{ .Params.github }}" target="_blank" class="btn btn-sm btn-outline-dark me-1"><i class="fab fa-github"></i></a>
+    {{ end }}
+    {{ if .Params.linkedin }}
+    <a href="{{ .Params.linkedin }}" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fab fa-linkedin-in"></i></a>
+    {{ end }}
+  </div>
+</div>

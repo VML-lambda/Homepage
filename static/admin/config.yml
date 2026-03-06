@@ -1,0 +1,171 @@
+backend:
+  name: github
+  repo: VML-lambda/Homepage
+  branch: cms-draft
+  auth_type: pkce
+  app_id: "Ov23li1965VSLTenPCm1"
+
+media_folder: "static/img"
+public_folder: "/img"
+media_library:
+  name: ""
+  folder_support: true
+
+collections:
+
+  # ========== Papers ==========
+  - name: "publications"
+    label: "Papers"
+    label_singular: "Papers"
+    folder: "content/publications/papers"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    summary: "[{{type}}] {{title}} ({{yearMonth}})"
+    media_folder: "/static/img/paper"
+    public_folder: "/img/paper"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Author", name: "firstAuthor", widget: "string" }
+      - { label: "Co-authors", name: "coauthors", widget: "string", required: false, hint: "Comma separated. Use <sup>†</sup> for corresponding author." }
+      - { label: "Venue", name: "venue", widget: "string" }
+      - { label: "Year", name: "year", widget: "number", value_type: "int" }
+      - { label: "Year.Month", name: "yearMonth", widget: "string", hint: "e.g. 2025.03" }
+      - { label: "Type", name: "type", widget: "select", options: ["International", "Domestic"] }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "DOI", name: "doi", widget: "string", required: false }
+
+  # ========== Standard Contributions ==========
+  - name: "contributions"
+    label: "Standard Contributions"
+    label_singular: "Standard Contributions"
+    folder: "content/publications/contributions"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    summary: "[{{type}}] {{title}} ({{yearMonth}})"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Author", name: "firstAuthor", widget: "string", required: false }
+      - { label: "Organization", name: "organization", widget: "string", default: "ISO/IEC JTC 1" }
+      - { label: "Org Name", name: "orgName", widget: "string" }
+      - { label: "Meeting Name", name: "meetingName", widget: "string" }
+      - { label: "Year", name: "year", widget: "number", value_type: "int" }
+      - { label: "Year.Month", name: "yearMonth", widget: "string", hint: "e.g. 2024" }
+      - { label: "DOI", name: "doi", widget: "string", required: false }
+      - { label: "Type", name: "type", widget: "select", options: ["MPEG", "JVET", "JPEG"] }
+
+  # ========== Notices ==========
+  - name: "notices"
+    label: "Notices"
+    label_singular: "Notices"
+    folder: "content/notices"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} ({{date}})"
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "예: [Hot!] [2026 학부연구생 모집] 접수기간: ~25/12/31" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ========== News ==========
+  - name: "news"
+    label: "News"
+    label_singular: "News"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} ({{date}})"
+    media_folder: "/static/img/project"
+    public_folder: "/img/project"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Category", name: "category", widget: "select", options: ["accept", "award", "event", "notice"], required: false }
+      - { label: "Label", name: "label", widget: "string", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Image Style", name: "image_style", widget: "string", required: false, default: "height:200px" }
+      - { label: "Show on Home", name: "showhome", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  # ========== Students ==========
+  - name: "members-students"
+    label: "Students"
+    label_singular: "Students"
+    folder: "content/members/students"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} ({{degree}})"
+    media_folder: "/static/img/people"
+    public_folder: "/img/people"
+    fields:
+      - { label: "Name (Korean)", name: "title", widget: "string" }
+      - { label: "Name (English)", name: "engName", widget: "string", required: false }
+      - { label: "Degree", name: "degree", widget: "select", options: ["PhD", "MS", "Intern"] }
+      - { label: "Position", name: "position", widget: "string", hint: "e.g. Lab Leader / FCM (PL)" }
+      - { label: "Department", name: "department", widget: "string", default: "Computer Science and Engineering", required: false }
+      - { label: "Email", name: "email", widget: "string" }
+      - { label: "Photo", name: "image", widget: "image", default: "profile.png" }
+      - { label: "Display Order", name: "weight", widget: "number", value_type: "int" }
+      - { label: "Research Interests", name: "researchInterests", widget: "list", required: false }
+      - { label: "Education", name: "education", widget: "list", required: false }
+      - { label: "GitHub", name: "github", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+
+  # ========== Alumni ==========
+  - name: "members-alumni"
+    label: "Alumni"
+    label_singular: "Alumni"
+    folder: "content/members/alumni"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} ({{degree}})"
+    media_folder: "/static/img/people"
+    public_folder: "/img/people"
+    fields:
+      - { label: "Name (Korean)", name: "title", widget: "string" }
+      - { label: "Name (English)", name: "engName", widget: "string", required: false }
+      - { label: "Degree", name: "degree", widget: "select", options: ["MS", "Intern"] }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Department", name: "department", widget: "string", default: "Computer Science and Engineering", required: false }
+      - { label: "Email", name: "email", widget: "string" }
+      - { label: "Photo", name: "image", widget: "image", default: "profile.png" }
+      - { label: "Display Order", name: "weight", widget: "number", value_type: "int" }
+      - { label: "Current (present job/school)", name: "current", widget: "string", required: false }
+
+  # ========== Gallery ==========
+  - name: "gallery"
+    label: "Gallery"
+    label_singular: "Gallery"
+    folder: "content/gallery"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} ({{date}})"
+    media_folder: "/static/img/gallery"
+    public_folder: "/img/gallery"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date (시작일)", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Date End (종료일, 기간인 경우만)", name: "date_end", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        field: { label: "Image", name: "image", widget: "image" }
+
+  # ========== Grants ==========
+  - name: "grants"
+    label: "Grants"
+    label_singular: "Grants"
+    folder: "content/grants"
+    create: true
+    slug: "{{slug}}"
+    summary: "[{{status}}] {{title}}"
+    media_folder: "/static/img/other-logos"
+    public_folder: "/img/other-logos"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Title (Korean)", name: "title_small", widget: "string", required: false }
+      - { label: "Organization", name: "organization", widget: "string" }
+      - { label: "Logo Image", name: "img_url", widget: "image", required: false }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Date Range", name: "date_range", widget: "string", hint: "e.g. Jun. 2025 - May 2028" }
+      - { label: "Status", name: "status", widget: "select", options: ["Ongoing", "Completed"] }
+      - { label: "Display Order", name: "weight", widget: "number", value_type: "int" }

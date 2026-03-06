@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VML Content Manager</title>
+</head>
+<body>
+  <div id="nc-root"></div>
+  <script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>
+  <script src="/admin/preview.js"></script>
+  <style>
+    #cms-toolbar { position: fixed; bottom: 20px; right: 20px; display: flex; gap: 8px; z-index: 9999; }
+    #cms-toolbar a { background: #24292e; color: #fff; text-decoration: none; padding: 10px 16px; border-radius: 8px; font-size: 13px; font-family: -apple-system, sans-serif; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    #cms-toolbar a:hover { background: #0366d6; }
+  </style>
+  <div id="cms-toolbar">
+    <a href="/admin/media.html">🖼 Media Manager</a>
+    <a href="/admin/guide.html">📖 이용 가이드</a>
+  </div>
+</body>
+</html>
