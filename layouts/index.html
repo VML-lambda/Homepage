@@ -1,0 +1,162 @@
+{{ define "main" }}
+
+  <!-- Carousel Start -->
+  <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.5s">
+    <div class="overlay">
+      <h2 class="display-4 text-white soft-shadow">
+        Welcome to the Visual Media Lab, <br />
+        Kyung Hee University
+      </h2>
+    </div>
+    <div class="owl-carousel header-carousel position-relative">
+      {{ range .Params.carousel }}
+      <div class="owl-carousel-item position-relative" data-dot="<img src='{{ . }}'>">
+        <img class="img-fluid" src="{{ . }}" aria-hidden="true" />
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  <!-- Carousel End -->
+
+  {{/* <!-- News Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+        <h6 class="text-primary">Laboratory News</h6>
+        <h1 class="mb-4">
+          Recent Notice <a href="/news/"><i class="fa fa-arrow-right text-primary"></i></a>
+        </h1>
+      </div>
+
+      <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-12 text-center">
+          <ul class="list-inline mb-5" id="portfolio-flters">
+            <li class="mx-2 active" data-filter="*">All</li>
+            <li class="mx-2" data-filter=".award"><i class="fa fa-award text-primary me-1"></i>Awards</li>
+            <li class="mx-2" data-filter=".accept"><i class="fa fa-thumbs-up text-primary me-1"></i>Acceptances</li>
+            <li class="mx-2" data-filter=".grant"><i class="fa fa-check-square text-primary me-1"></i>Grants</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+        {{ $news := where (where site.RegularPages "Type" "news") "Params.showhome" true }}
+        {{ range $news.ByDate.Reverse }}
+        <div class="col-lg-4 col-md-6 portfolio-item {{ .Params.category }}">
+          <div class="mainimg rounded overflow-hidden">
+            {{ if .Params.image }}
+            <img class="img-fluid" src="/img/project/{{ .Params.image }}" aria-hidden="true" style="{{ if .Params.image_style }}{{ .Params.image_style }}{{ end }}" />
+            {{ end }}
+          </div>
+          <div class="pt-3">
+            <p class="text-primary mb-0">{{ .Params.label }}</p>
+            <hr class="text-primary w-25 my-2" />
+            <h5 class="lh-base">{{ .Title }}</h5>
+            <a class="text-muted small" href="/news/#{{ .File.ContentBaseName }}">더보기 ></a>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <!-- News End -->
+
+  <!-- About Start -->
+  <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" data-wow-delay="0.3s">
+    <div class="container about px-lg-0">
+      <div class="row g-0 mx-lg-0">
+        <div class="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px">
+          <div class="position-relative h-100">
+            <img class="position-absolute img-fluid w-100 h-100" src="/img/main_VML_Area.png" style="object-fit: contain" aria-hidden="true" />
+          </div>
+        </div>
+        <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+          <div class="p-lg-5 pe-lg-0" style="font-size:large;">
+            {{ .Params.about | safeHTML }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About End -->
+
+  <!-- Ongoing Projects Start -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+        <h6 class="text-primary">Our Projects</h6>
+        <h1 class="mb-4">Ongoing Project</h1>
+      </div>
+      <div class="row g-5 justify-content-center">
+        <div class="col-md-5 col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+          <h5 class="mb-3"><i class="fa fa-th-list text-primary me-2"></i>Research Project (연구 과제)</h5>
+          <ul class="ps-3 mb-0">
+            {{ $grants := where (where site.RegularPages "Type" "grants") "Params.status" "Ongoing" }}
+            {{ range $grants.ByParam "weight" }}
+            <li>{{ .Params.organization }}: {{ .Title }} {{ if .Params.title_small }}<small>{{ .Params.title_small }}</small>{{ end }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        <div class="col-md-5 col-lg-5 wow fadeIn" data-wow-delay="0.3s">
+          <h5 class="mb-3"><i class="fa fa-th-list text-primary me-2"></i>HR Development Project (대학원 인재양성 사업)</h5>
+          {{ .Params.hr_projects | safeHTML }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Ongoing Projects End -->
+
+  <!-- Visual Media Section Start -->
+  <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container feature px-lg-0">
+      <div class="row g-0 mx-lg-0">
+        <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
+          {{ .Params.visual_media | safeHTML }}
+        </div>
+        <div class="col-lg-6 p-lg-5 ps-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px">
+          <div class="position-relative h-100">
+            <img class="position-absolute img-fluid w-100 h-100" src="/img/main_realistic_media.png" style="object-fit: contain" aria-hidden="true" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Visual Media Section End -->
+
+  <!-- FAQ Start -->
+  <div class="container-fluid overflow-hidden my-5 px-lg-0">
+    <section id="faq">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h6 class="text-primary">FAQ</h6>
+            <h1 class="mb-4">자주 묻는 질문</h1>
+          </div>
+          <div class="wow fadeInUp" data-wow-delay="0.1s">
+            <div class="accordion" id="accordionFAQ">
+              {{ range $i, $faq := .Params.faq }}
+              <div class="accordion-item mt-3">
+                <h5 class="accordion-header border-0" id="faq-heading-{{ $i }}">
+                  <button class="accordion-button text-primary fs-5{{ if gt $i 0 }} collapsed{{ end }}" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#faq-collapse-{{ $i }}"
+                    aria-expanded="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
+                    aria-controls="faq-collapse-{{ $i }}">
+                    {{ $faq.question }}
+                  </button>
+                </h5>
+                <div id="faq-collapse-{{ $i }}" class="accordion-collapse collapse{{ if eq $i 0 }} show{{ end }}">
+                  <div class="accordion-body">
+                    {{ $faq.answer | safeHTML }}
+                  </div>
+                </div>
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- FAQ End --> */}}
+
+{{ end }}

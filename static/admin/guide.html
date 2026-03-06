@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VML 홈페이지 이용 가이드</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif; background: #f8f9fa; color: #24292e; line-height: 1.7; }
+
+    .header { background: #24292e; color: #fff; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; }
+    .header h1 { font-size: 18px; font-weight: 600; }
+    .header a { color: #79b8ff; text-decoration: none; font-size: 14px; }
+
+    .nav-tabs { background: #fff; border-bottom: 1px solid #e1e4e8; display: flex; padding: 0 32px; gap: 0; position: sticky; top: 0; z-index: 10; }
+    .nav-tabs button { padding: 14px 20px; border: none; border-bottom: 3px solid transparent; background: none; cursor: pointer; font-size: 14px; font-weight: 500; color: #586069; }
+    .nav-tabs button.active { color: #0366d6; border-bottom-color: #0366d6; }
+
+    .content { max-width: 860px; margin: 0 auto; padding: 40px 24px 80px; }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+
+    h2 { font-size: 22px; font-weight: 700; margin: 40px 0 12px; padding-bottom: 8px; border-bottom: 1px solid #e1e4e8; }
+    h2:first-child { margin-top: 0; }
+    h3 { font-size: 16px; font-weight: 600; margin: 24px 0 8px; color: #24292e; }
+    p { margin-bottom: 12px; color: #444d56; }
+    ul, ol { margin: 8px 0 16px 20px; color: #444d56; }
+    li { margin-bottom: 6px; }
+
+    .step { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 20px 24px; margin-bottom: 16px; }
+    .step-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #0366d6; color: #fff; border-radius: 50%; font-size: 13px; font-weight: 700; margin-right: 10px; flex-shrink: 0; }
+    .step-title { font-weight: 600; font-size: 15px; display: flex; align-items: center; margin-bottom: 10px; }
+    .step-body { color: #444d56; font-size: 14px; }
+
+    .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-left: 6px; }
+    .badge-blue { background: #dbeafe; color: #1d4ed8; }
+    .badge-green { background: #d1fae5; color: #065f46; }
+    .badge-orange { background: #ffedd5; color: #c2410c; }
+    .badge-red { background: #fee2e2; color: #b91c1c; }
+
+    .code { background: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 6px; padding: 12px 16px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 13px; margin: 8px 0 16px; white-space: pre-wrap; color: #24292e; }
+
+    .callout { border-left: 4px solid; border-radius: 0 6px 6px 0; padding: 12px 16px; margin: 16px 0; font-size: 14px; }
+    .callout-blue { border-color: #0366d6; background: #f1f8ff; color: #032f62; }
+    .callout-yellow { border-color: #f9c513; background: #fffbdd; color: #735c0f; }
+    .callout-red { border-color: #d73a49; background: #ffeef0; color: #86181d; }
+
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 14px; }
+    th { background: #f6f8fa; text-align: left; padding: 10px 14px; border: 1px solid #e1e4e8; font-weight: 600; }
+    td { padding: 10px 14px; border: 1px solid #e1e4e8; color: #444d56; }
+    tr:hover td { background: #f6f8fa; }
+
+    .flow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+    .flow-item { background: #fff; border: 1px solid #e1e4e8; border-radius: 6px; padding: 8px 16px; font-size: 13px; font-weight: 500; }
+    .flow-arrow { color: #959da5; font-size: 18px; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>VML 홈페이지 이용 가이드</h1>
+  <a href="/admin/">← 관리 페이지로</a>
+</div>
+
+<div class="nav-tabs">
+  <button class="active" onclick="showTab('user')">일반 사용자 가이드</button>
+  <button onclick="showTab('admin')">관리자 가이드</button>
+</div>
+
+<div class="content">
+
+  <!-- ========== 일반 사용자 가이드 ========== -->
+  <div id="tab-user" class="tab-pane active">
+
+    <h2>콘텐츠 수정 방법</h2>
+    <p>연구실 구성원은 GitHub 계정이 있으면 홈페이지 콘텐츠를 직접 수정할 수 있습니다. 별도 설치 없이 웹 브라우저에서만 작업합니다.</p>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">1</span>관리 페이지 접속 및 로그인</div>
+      <div class="step-body">
+        <p><strong>/admin/</strong> 페이지에 접속한 뒤 <strong>Login with GitHub</strong> 버튼을 클릭합니다.</p>
+        <p>GitHub 계정으로 로그인하면 자동으로 권한이 확인됩니다. repo에 write 권한이 있어야 편집이 가능합니다.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">2</span>수정할 항목 선택</div>
+      <div class="step-body">
+        <p>왼쪽 사이드바에서 카테고리를 선택합니다.</p>
+        <table>
+          <tr><th>카테고리</th><th>내용</th></tr>
+          <tr><td>Papers</td><td>논문 목록 (국제/국내 학술지·학술대회)</td></tr>
+          <tr><td>Standard Contributions</td><td>MPEG·JVET·JPEG 표준 기여 목록</td></tr>
+          <tr><td>News</td><td>연구실 소식 (논문 accept, 수상, 행사 등)</td></tr>
+          <tr><td>Students</td><td>재학생 정보</td></tr>
+          <tr><td>Alumni</td><td>졸업생 정보</td></tr>
+          <tr><td>Grants</td><td>연구과제(지원금) 목록</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">3</span>항목 수정 또는 추가</div>
+      <div class="step-body">
+        <p>기존 항목을 클릭하면 편집 화면이 열립니다. 새 항목은 우측 상단 <strong>New [항목명]</strong> 버튼을 클릭합니다.</p>
+        <p>모든 필드를 작성한 뒤 우측 상단 <strong>Save</strong>를 누릅니다.</p>
+        <div class="callout callout-blue">
+          이미지 업로드: Image 필드에서 <strong>Choose an image</strong>를 클릭하면 미디어 라이브러리가 열립니다. 기존 이미지를 선택하거나 새 파일을 업로드할 수 있습니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">4</span>저장 후 배포 요청</div>
+      <div class="step-body">
+        <p>Save하면 변경사항이 GitHub의 <code>cms-draft</code> 브랜치에 저장됩니다. <strong>홈페이지에 바로 반영되지 않습니다.</strong></p>
+        <div class="flow">
+          <div class="flow-item">CMS에서 수정 후 Publish</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item">cms-draft 브랜치에 자동 커밋</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item">관리자에게 배포 요청</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item">PR 머지 → 자동 배포</div>
+        </div>
+        <p>여러 항목을 수정한 뒤 한 번에 관리자에게 배포를 요청하는 것을 권장합니다.</p>
+      </div>
+    </div>
+
+    <h2>각 항목 작성 요령</h2>
+
+    <h3>Papers (논문)</h3>
+    <ul>
+      <li><strong>Year.Month</strong>: <code>2025.03</code> 형식으로 입력 (점 구분)</li>
+      <li><strong>Type</strong>: International (국제) / Domestic (국내) 중 선택</li>
+      <li><strong>Co-authors</strong>: 쉼표로 구분, 교신저자는 이름 뒤에 <code>†</code> 표시</li>
+      <li><strong>Image</strong>: 논문 대표 이미지 (없어도 무방)</li>
+    </ul>
+
+    <h3>Standard Contributions (표준 기여)</h3>
+    <ul>
+      <li><strong>Organization</strong>: 기본값 <code>ISO/IEC JTC 1</code></li>
+      <li><strong>Org Name</strong>: 예) <code>SC29/WG4 (MPEG)</code></li>
+      <li><strong>Meeting Name</strong>: 예) <code>MPEG 149th Meeting</code></li>
+      <li><strong>Type</strong>: MPEG / JVET / JPEG 중 선택</li>
+    </ul>
+
+    <h3>News (소식)</h3>
+    <ul>
+      <li><strong>Category</strong>: accept / award / event / notice 중 선택</li>
+      <li><strong>Show on Home</strong>: 체크 시 메인 페이지에도 표시됨</li>
+      <li><strong>Body</strong>: 마크다운 형식으로 상세 내용 작성 가능</li>
+    </ul>
+
+    <h3>Students / Alumni (구성원)</h3>
+    <ul>
+      <li><strong>Display Order</strong>: 숫자가 작을수록 먼저 표시</li>
+      <li><strong>Photo</strong>: 파일명만 입력 (예: <code>Suhyun.jpg</code>). 이미지는 <code>img/people/</code> 폴더에 있어야 함</li>
+    </ul>
+
+    <div class="callout callout-yellow">
+      <strong>주의:</strong> 이미지 파일은 먼저 <a href="/admin/media.html">Media Manager</a>에서 업로드한 뒤 파일명을 입력하기를 권장.
+    </div>
+
+  </div>
+
+  <!-- ========== 관리자 가이드 ========== -->
+  <div id="tab-admin" class="tab-pane">
+
+    <h2>배포 파이프라인 구조</h2>
+
+    <div class="flow" style="flex-direction: column; align-items: flex-start; gap: 12px;">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <div class="flow-item">구성원이 CMS 수정</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item"><code>cms-draft</code> 브랜치에 자동 커밋</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; margin-left: 20px;">
+        <div class="flow-arrow">↓</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <div class="flow-item">GitHub에서 PR 생성 <span class="badge badge-blue">관리자 작업</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item">내용 검토 후 Merge <span class="badge badge-blue">관리자 작업</span></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; margin-left: 20px;">
+        <div class="flow-arrow">↓</div>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <div class="flow-item">GitHub Actions 자동 실행</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item">Hugo 빌드 + GitHub Pages 배포</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item"><code>cms-draft</code> 자동 동기화</div>
+      </div>
+    </div>
+
+    <h2>초기 설정 (최초 1회)</h2>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">1</span>GitHub OAuth App 생성</div>
+      <div class="step-body">
+        <ol>
+          <li>GitHub → <strong>Settings → Developer settings → OAuth Apps → New OAuth App</strong></li>
+          <li>다음과 같이 입력:<br>
+            <div class="code">Application name: VML CMS
+Homepage URL: https://vmlab.khu.ac.kr
+Authorization callback URL: https://vmlab.khu.ac.kr/admin/</div>
+          </li>
+          <li>생성 후 <strong>Client ID</strong> 복사</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">2</span>config.yml에 Client ID 입력</div>
+      <div class="step-body">
+        <p><code>static/admin/config.yml</code>의 <code>app_id</code> 값을 수정합니다.</p>
+        <div class="code">backend:
+  name: github
+  repo: VML-lambda/Homepage
+  branch: cms-draft
+  auth_type: pkce
+  app_id: "여기에_Client_ID_입력"</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">3</span>local_backend 제거 후 배포</div>
+      <div class="step-body">
+        <p><code>config.yml</code> 첫 줄의 <code>local_backend: true</code>를 삭제합니다. (로컬 테스트용으로만 사용)</p>
+        <p>이후 master 브랜치에 push하면 GitHub Actions가 자동으로 배포하고 <code>cms-draft</code> 브랜치를 생성합니다.</p>
+        <div class="callout callout-red">
+          <strong>반드시 local_backend를 제거한 후 배포하세요.</strong> 남겨두면 운영 환경에서 CMS가 로컬 서버에 연결하려 해서 로그인이 불가합니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">4</span>구성원에게 repo 쓰기 권한 부여</div>
+      <div class="step-body">
+        <p>GitHub → Repository → <strong>Settings → Collaborators → Add people</strong><br>
+        편집 권한이 필요한 구성원을 <strong>Write</strong> 권한으로 초대합니다.</p>
+      </div>
+    </div>
+
+    <h2>PR 머지 절차 (배포 시)</h2>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">1</span>PR 생성</div>
+      <div class="step-body">
+        <p>GitHub repository에서 <strong>cms-draft → master</strong> PR을 생성합니다.</p>
+        <div class="code">GitHub → Pull requests → New pull request
+base: master ← compare: cms-draft</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">2</span>내용 검토 후 Merge</div>
+      <div class="step-body">
+        <p>Files changed 탭에서 변경 내용을 확인합니다. 이상 없으면 <strong>Merge pull request</strong>를 클릭합니다.</p>
+        <p>머지하면 GitHub Actions가 자동으로:</p>
+        <ol>
+          <li>Hugo 빌드 실행</li>
+          <li>GitHub Pages에 배포 (약 1~2분 소요)</li>
+          <li><code>cms-draft</code>를 master와 동기화</li>
+        </ol>
+      </div>
+    </div>
+
+    <h2>로컬 개발 환경</h2>
+
+    <h3>Hugo 서버 실행</h3>
+    <div class="code">hugo server -D</div>
+    <p>브라우저에서 <code>http://localhost:1313/</code> 접속</p>
+
+    <h3>CMS 로컬 테스트</h3>
+    <div class="code"># 터미널 1 - Hugo 서버
+hugo server -D
+
+# 터미널 2 - Decap CMS 로컬 백엔드
+npx decap-server</div>
+    <p>브라우저에서 <code>http://localhost:1313/admin/</code> 접속 (config.yml에 <code>local_backend: true</code> 필요)</p>
+
+    <h2>디렉토리 구조</h2>
+    <table>
+      <tr><th>경로</th><th>설명</th></tr>
+      <tr><td><code>content/</code></td><td>모든 콘텐츠 마크다운 파일</td></tr>
+      <tr><td><code>layouts/</code></td><td>Hugo 템플릿 (HTML 구조)</td></tr>
+      <tr><td><code>static/</code></td><td>정적 파일 (이미지, CSS, JS)</td></tr>
+      <tr><td><code>static/admin/</code></td><td>Decap CMS 파일</td></tr>
+      <tr><td><code>static/img/</code></td><td>모든 이미지 파일</td></tr>
+      <tr><td><code>data/</code></td><td>JSON 데이터 (Prior to 2022 논문 등)</td></tr>
+      <tr><td><code>.github/workflows/</code></td><td>GitHub Actions 배포 워크플로우</td></tr>
+      <tr><td><code>public/</code></td><td>빌드 산출물 (gitignore됨, 수정 불필요)</td></tr>
+    </table>
+
+    <h2>주요 파일 위치</h2>
+    <table>
+      <tr><th>파일</th><th>역할</th></tr>
+      <tr><td><code>static/admin/config.yml</code></td><td>CMS 설정 (컬렉션, 필드, 인증)</td></tr>
+      <tr><td><code>hugo.toml</code></td><td>사이트 전역 설정</td></tr>
+      <tr><td><code>.github/workflows/gh-pages.yml</code></td><td>자동 배포 워크플로우</td></tr>
+      <tr><td><code>layouts/_default/baseof.html</code></td><td>모든 페이지 공통 레이아웃</td></tr>
+      <tr><td><code>layouts/partials/navbar.html</code></td><td>네비게이션 바</td></tr>
+    </table>
+
+    <h2>자주 있는 상황</h2>
+
+    <h3>새 구성원 사진 추가</h3>
+    <ol>
+      <li><a href="/admin/media.html">Media Manager</a> → <code>img/people/</code> 폴더에 사진 업로드</li>
+      <li>CMS → Students에서 해당 구성원 편집 → Photo 필드에 파일명 입력</li>
+    </ol>
+
+    <h3>사이트 레이아웃/디자인 수정</h3>
+    <p><code>layouts/</code> 폴더의 HTML 파일을 직접 수정한 뒤 master에 push합니다. CMS를 거치지 않고 git으로 직접 작업합니다.</p>
+
+    <h2>UI / 디자인 수정 가이드</h2>
+    <p>페이지별로 수정해야 할 파일이 다릅니다.</p>
+
+    <table>
+      <tr><th>수정 내용</th><th>파일 경로</th></tr>
+      <tr><td>네비게이션 바 (메뉴 추가/삭제)</td><td><code>layouts/partials/navbar.html</code></td></tr>
+      <tr><td>푸터</td><td><code>layouts/partials/footer.html</code></td></tr>
+      <tr><td>전체 페이지 공통 구조 (head, spinner 등)</td><td><code>layouts/_default/baseof.html</code></td></tr>
+      <tr><td>메인(홈) 페이지</td><td><code>layouts/index.html</code></td></tr>
+      <tr><td>About 페이지</td><td><code>layouts/about/list.html</code></td></tr>
+      <tr><td>News 목록 페이지</td><td><code>layouts/news/list.html</code></td></tr>
+      <tr><td>Papers 목록 페이지</td><td><code>layouts/publications/papers/list.html</code></td></tr>
+      <tr><td>Standard Contributions 페이지</td><td><code>layouts/publications/contributions/list.html</code></td></tr>
+      <tr><td>Professor 페이지</td><td><code>layouts/members/professor/list.html</code></td></tr>
+      <tr><td>Students 페이지</td><td><code>layouts/members/students/list.html</code></td></tr>
+      <tr><td>Alumni 페이지</td><td><code>layouts/members/alumni/list.html</code></td></tr>
+      <tr><td>Grants 페이지</td><td><code>layouts/grants/list.html</code></td></tr>
+      <tr><td>Gallery 페이지</td><td><code>layouts/gallery/list.html</code></td></tr>
+      <tr><td>논문 카드 디자인</td><td><code>layouts/partials/pub-card.html</code></td></tr>
+      <tr><td>구성원 카드 디자인</td><td><code>layouts/partials/member-card-overlay.html</code></td></tr>
+      <tr><td>표준 기여 카드 디자인</td><td><code>layouts/partials/contrib-card-page.html</code></td></tr>
+    </table>
+
+    <h3>CSS / 스타일 수정</h3>
+    <table>
+      <tr><th>파일</th><th>설명</th></tr>
+      <tr><td><code>static/css/style.css</code></td><td>메인 커스텀 스타일</td></tr>
+      <tr><td><code>static/css/style2.css</code></td><td>추가 커스텀 스타일</td></tr>
+      <tr><td><code>static/css/bootstrap.min.css</code></td><td>Bootstrap (직접 수정 비권장)</td></tr>
+    </table>
+
+    <h3>수정 후 반영 방법</h3>
+    <div class="callout callout-blue">
+      로컬에서 <code>hugo server</code>로 미리보기 확인 후, git commit → master push하면 GitHub Actions가 자동으로 배포합니다. <code>cms-draft</code> 브랜치도 자동 동기화됩니다.
+    </div>
+    <div class="code">git add layouts/ static/css/
+git commit -m "feat: UI 수정 내용 요약"
+git push origin master</div>
+
+    <h3>Hugo 빌드 에러 발생 시</h3>
+    <div class="callout callout-yellow">
+      로컬에서 <code>hugo --minify</code>를 실행해 에러 메시지를 먼저 확인합니다. 대부분 마크다운 파일의 front matter(---로 감싸진 헤더) 형식 오류입니다.
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function showTab(name) {
+    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-tabs button').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

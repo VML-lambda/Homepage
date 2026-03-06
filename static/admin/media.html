@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VML Media Manager</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; }
+    .header { background: #fff; border-bottom: 1px solid #ddd; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
+    .header h1 { font-size: 18px; font-weight: 600; }
+    .header a { color: #0366d6; text-decoration: none; font-size: 14px; }
+    .breadcrumb { background: #fff; padding: 10px 24px; border-bottom: 1px solid #eee; font-size: 14px; }
+    .breadcrumb span { cursor: pointer; color: #0366d6; }
+    .breadcrumb span:hover { text-decoration: underline; }
+    .breadcrumb .sep { color: #999; margin: 0 6px; cursor: default; }
+    .breadcrumb .current { color: #333; cursor: default; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px 24px; }
+    .toolbar { display: flex; gap: 10px; margin-bottom: 16px; align-items: center; }
+    .toolbar input[type="file"] { display: none; }
+    .btn { padding: 8px 16px; border: 1px solid #ddd; border-radius: 6px; background: #fff; cursor: pointer; font-size: 13px; }
+    .btn:hover { background: #f0f0f0; }
+    .btn-primary { background: #0366d6; color: #fff; border-color: #0366d6; }
+    .btn-primary:hover { background: #0255b3; }
+    .btn-danger { background: #d73a49; color: #fff; border-color: #d73a49; }
+    .btn-danger:hover { background: #b52d3a; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+    .item { background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; cursor: pointer; transition: box-shadow 0.2s; position: relative; }
+    .item:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+    .item.selected { border-color: #0366d6; box-shadow: 0 0 0 2px rgba(3,102,214,0.3); }
+    .item-preview { width: 100%; height: 120px; display: flex; align-items: center; justify-content: center; background: #fafafa; overflow: hidden; }
+    .item-preview img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .item-preview .folder-icon { font-size: 48px; color: #e8a838; }
+    .item-name { padding: 8px 10px; font-size: 12px; word-break: break-all; border-top: 1px solid #eee; text-align: center; }
+    .loading { text-align: center; padding: 60px; color: #999; }
+    .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 100; }
+    .modal { background: #fff; border-radius: 10px; padding: 24px; max-width: 500px; width: 90%; }
+    .modal h3 { margin-bottom: 16px; }
+    .modal input[type="text"] { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; margin-bottom: 12px; }
+    .modal .actions { display: flex; gap: 8px; justify-content: flex-end; }
+    .preview-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 100; cursor: pointer; }
+    .preview-overlay img { max-width: 90%; max-height: 90%; object-fit: contain; }
+    .toast { position: fixed; bottom: 20px; right: 20px; background: #333; color: #fff; padding: 12px 20px; border-radius: 8px; font-size: 14px; z-index: 200; animation: fadeIn 0.3s; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .empty { text-align: center; padding: 60px; color: #999; }
+    .status { font-size: 13px; color: #666; margin-left: auto; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Media Manager</h1>
+  <a href="/admin/">Back to CMS</a>
+</div>
+<div class="breadcrumb" id="breadcrumb"></div>
+<div class="container">
+  <div class="toolbar">
+    <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">Upload</button>
+    <button class="btn" onclick="showNewFolderModal()">New Folder</button>
+    <button class="btn btn-danger" id="deleteBtn" style="display:none" onclick="deleteSelected()">Delete</button>
+    <input type="file" id="fileInput" multiple onchange="uploadFiles(this.files)" />
+    <div class="status" id="status"></div>
+  </div>
+  <div id="content"><div class="loading">Loading...</div></div>
+</div>
+
+<script>
+const REPO = 'VML-lambda/Homepage';
+const BRANCH = 'cms-draft';
+const BASE_PATH = 'static/img';
+
+let currentPath = BASE_PATH;
+let items = [];
+let selected = new Set();
+let token = '';
+
+function init() {
+  // Try to get token from Decap CMS localStorage
+  try {
+    const stored = localStorage.getItem('netlify-cms-user');
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      token = parsed.token || '';
+    }
+  } catch(e) {}
+
+  if (!token) {
+    // Try alternative key
+    try {
+      const stored = localStorage.getItem('decap-cms-user');
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        token = parsed.token || '';
+      }
+    } catch(e) {}
+  }
+
+  if (!token) {
+    token = prompt('GitHub Personal Access Token (repo scope):');
+    if (!token) {
+      document.getElementById('content').innerHTML = '<div class="empty">Token required to access GitHub API.</div>';
+      return;
+    }
+  }
+
+  loadPath(BASE_PATH);
+}
+
+async function apiGet(url) {
+  const res = await fetch(url, { headers: { Authorization: 'token ' + token, Accept: 'application/vnd.github.v3+json' } });
+  if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+  return res.json();
+}
+
+async function loadPath(path) {
+  currentPath = path;
+  selected.clear();
+  updateDeleteBtn();
+  renderBreadcrumb();
+  document.getElementById('content').innerHTML = '<div class="loading">Loading...</div>';
+
+  try {
+    const data = await apiGet('https://api.github.com/repos/' + REPO + '/contents/' + path + '?ref=' + BRANCH);
+    items = Array.isArray(data) ? data : [];
+    // Sort: folders first, then files
+    items.sort((a, b) => {
+      if (a.type === 'dir' && b.type !== 'dir') return -1;
+      if (a.type !== 'dir' && b.type === 'dir') return 1;
+      return a.name.localeCompare(b.name);
+    });
+    renderItems();
+    document.getElementById('status').textContent = items.length + ' items';
+  } catch (e) {
+    document.getElementById('content').innerHTML = '<div class="empty">Error: ' + e.message + '</div>';
+  }
+}
+
+function renderBreadcrumb() {
+  const parts = currentPath.split('/');
+  let html = '';
+  parts.forEach((part, i) => {
+    if (i > 0) html += '<span class="sep">/</span>';
+    if (i < parts.length - 1) {
+      const p = parts.slice(0, i + 1).join('/');
+      html += '<span onclick="loadPath(\'' + p + '\')">' + part + '</span>';
+    } else {
+      html += '<span class="current">' + part + '</span>';
+    }
+  });
+  document.getElementById('breadcrumb').innerHTML = html;
+}
+
+function renderItems() {
+  if (items.length === 0) {
+    document.getElementById('content').innerHTML = '<div class="empty">Empty folder</div>';
+    return;
+  }
+
+  const grid = document.createElement('div');
+  grid.className = 'grid';
+
+  items.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'item' + (selected.has(item.path) ? ' selected' : '');
+    el.dataset.path = item.path;
+
+    if (item.type === 'dir') {
+      el.innerHTML = '<div class="item-preview"><div class="folder-icon">&#128193;</div></div><div class="item-name">' + esc(item.name) + '</div>';
+      el.ondblclick = () => loadPath(item.path);
+      el.onclick = (e) => { if (!e.detail || e.detail === 1) toggleSelect(item.path, el); };
+    } else {
+      const isImage = /\.(png|jpe?g|gif|svg|webp|ico|bmp)$/i.test(item.name);
+      if (isImage) {
+        el.innerHTML = '<div class="item-preview"><img src="' + item.download_url + '" loading="lazy" /></div><div class="item-name">' + esc(item.name) + '</div>';
+        el.ondblclick = () => previewImage(item.download_url, item.name);
+      } else {
+        el.innerHTML = '<div class="item-preview"><div style="font-size:36px;color:#999;">&#128196;</div></div><div class="item-name">' + esc(item.name) + '</div>';
+      }
+      el.onclick = (e) => { if (!e.detail || e.detail === 1) toggleSelect(item.path, el); };
+    }
+    grid.appendChild(el);
+  });
+
+  document.getElementById('content').innerHTML = '';
+  document.getElementById('content').appendChild(grid);
+}
+
+function toggleSelect(path, el) {
+  if (selected.has(path)) {
+    selected.delete(path);
+    el.classList.remove('selected');
+  } else {
+    selected.add(path);
+    el.classList.add('selected');
+  }
+  updateDeleteBtn();
+}
+
+function updateDeleteBtn() {
+  document.getElementById('deleteBtn').style.display = selected.size > 0 ? '' : 'none';
+}
+
+function previewImage(url, name) {
+  const overlay = document.createElement('div');
+  overlay.className = 'preview-overlay';
+  overlay.innerHTML = '<img src="' + url + '" alt="' + esc(name) + '" />';
+  overlay.onclick = () => overlay.remove();
+  document.body.appendChild(overlay);
+}
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+function toast(msg) {
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 3000);
+}
+
+async function uploadFiles(fileList) {
+  for (const file of fileList) {
+    const reader = new FileReader();
+    reader.onload = async () => {
+      const base64 = reader.result.split(',')[1];
+      const path = currentPath + '/' + file.name;
+      try {
+        await fetch('https://api.github.com/repos/' + REPO + '/contents/' + path, {
+          method: 'PUT',
+          headers: { Authorization: 'token ' + token, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: 'Upload ' + file.name, content: base64, branch: BRANCH })
+        });
+        toast('Uploaded: ' + file.name);
+        loadPath(currentPath);
+      } catch (e) {
+        toast('Upload failed: ' + file.name);
+      }
+    };
+    reader.readAsDataURL(file);
+  }
+  document.getElementById('fileInput').value = '';
+}
+
+function showNewFolderModal() {
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  overlay.innerHTML = '<div class="modal"><h3>New Folder</h3><input type="text" id="folderName" placeholder="Folder name" /><div class="actions"><button class="btn" onclick="this.closest(\'.modal-overlay\').remove()">Cancel</button><button class="btn btn-primary" onclick="createFolder()">Create</button></div></div>';
+  document.body.appendChild(overlay);
+  setTimeout(() => document.getElementById('folderName').focus(), 100);
+}
+
+async function createFolder() {
+  const name = document.getElementById('folderName').value.trim();
+  if (!name) return;
+  const path = currentPath + '/' + name + '/.gitkeep';
+  try {
+    await fetch('https://api.github.com/repos/' + REPO + '/contents/' + path, {
+      method: 'PUT',
+      headers: { Authorization: 'token ' + token, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: 'Create folder ' + name, content: '', branch: BRANCH })
+    });
+    toast('Created folder: ' + name);
+    document.querySelector('.modal-overlay').remove();
+    loadPath(currentPath);
+  } catch (e) {
+    toast('Failed to create folder');
+  }
+}
+
+async function deleteSelected() {
+  if (!confirm(selected.size + ' item(s) will be deleted. Continue?')) return;
+  for (const path of selected) {
+    const item = items.find(i => i.path === path);
+    if (!item) continue;
+    if (item.type === 'dir') {
+      toast('Folder deletion not supported. Delete files inside first.');
+      continue;
+    }
+    try {
+      await fetch('https://api.github.com/repos/' + REPO + '/contents/' + path, {
+        method: 'DELETE',
+        headers: { Authorization: 'token ' + token, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: 'Delete ' + item.name, sha: item.sha, branch: BRANCH })
+      });
+      toast('Deleted: ' + item.name);
+    } catch (e) {
+      toast('Delete failed: ' + item.name);
+    }
+  }
+  loadPath(currentPath);
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+{{ define "main" }}
+
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-5 mb-5">
+    <div class="container py-5">
+      <h1 class="display-3 text-white mb-3 animated slideInDown">Standard Contributions</h1>
+      <nav aria-label="breadcrumb animated slideInDown">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
+          <li class="breadcrumb-item"><a class="text-white" href="/publications/">Publications</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Standard Contributions</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Page Header End -->
+
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
+        <h1 class="mb-4">Standard Contributions</h1>
+        <ul class="nav nav-tabs pub-tabs justify-content-center" id="pubTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="mpeg-tab" data-bs-toggle="tab"
+              data-bs-target="#mpeg" type="button" role="tab">MPEG</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="jvet-tab" data-bs-toggle="tab"
+              data-bs-target="#jvet" type="button" role="tab">JVET</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="jpeg-tab" data-bs-toggle="tab"
+              data-bs-target="#jpeg" type="button" role="tab">JPEG</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content wow fadeInUp" data-wow-delay="0.1s">
+
+        <!-- MPEG Tab -->
+        <div class="tab-pane fade show active" id="mpeg" role="tabpanel">
+          {{ $mpeg := where .Pages "Params.type" "MPEG" }}
+          {{ $scratch := newScratch }}
+          {{ range $mpeg }}
+            {{ $scratch.Add "years" (slice (string .Params.year)) }}
+          {{ end }}
+          {{ with $scratch.Get "years" }}
+          {{ $years := sort (. | uniq) "value" "desc" }}
+          {{ range $years }}
+            {{ $year := . }}
+          <details class="mt-3" open>
+            <summary class="prev-summary h4 mb-2">{{ $year }}</summary>
+            {{ range sort (where $mpeg "Params.year" (int $year)) "Params.yearMonth" "desc" }}
+            {{ partial "contrib-card-page.html" . }}
+            {{ end }}
+          </details>
+          {{ end }}
+          {{ end }}
+        </div>
+
+        <!-- JVET Tab -->
+        <div class="tab-pane fade" id="jvet" role="tabpanel">
+          {{ $jvet := where .Pages "Params.type" "JVET" }}
+          {{ $scratchJ := newScratch }}
+          {{ range $jvet }}
+            {{ $scratchJ.Add "years" (slice (string .Params.year)) }}
+          {{ end }}
+          {{ with $scratchJ.Get "years" }}
+          {{ $years := sort (. | uniq) "value" "desc" }}
+          {{ range $years }}
+            {{ $year := . }}
+          <details class="mt-3" open>
+            <summary class="prev-summary h4 mb-2">{{ $year }}</summary>
+            {{ range sort (where $jvet "Params.year" (int $year)) "Params.yearMonth" "desc" }}
+            {{ partial "contrib-card-page.html" . }}
+            {{ end }}
+          </details>
+          {{ end }}
+          {{ end }}
+        </div>
+
+        <!-- JPEG Tab -->
+        <div class="tab-pane fade" id="jpeg" role="tabpanel">
+          {{ $jpeg := where .Pages "Params.type" "JPEG" }}
+          {{ $scratchP := newScratch }}
+          {{ range $jpeg }}
+            {{ $scratchP.Add "years" (slice (string .Params.year)) }}
+          {{ end }}
+          {{ with $scratchP.Get "years" }}
+          {{ $years := sort (. | uniq) "value" "desc" }}
+          {{ range $years }}
+            {{ $year := . }}
+          <details class="mt-3" open>
+            <summary class="prev-summary h4 mb-2">{{ $year }}</summary>
+            {{ range sort (where $jpeg "Params.year" (int $year)) "Params.yearMonth" "desc" }}
+            {{ partial "contrib-card-page.html" . }}
+            {{ end }}
+          </details>
+          {{ end }}
+          {{ end }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{{ end }}
+
+{{ define "scripts" }}
+<style>
+  .prev-summary {
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1;
+    padding: 5px;
+  }
+  .prev-summary::-webkit-details-marker {
+    display: none;
+  }
+  details > .prev-summary::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: .5rem;
+    transition: transform .2s ease;
+    font-size: .9em;
+  }
+  details[open] > .prev-summary::before {
+    transform: rotate(90deg);
+  }
+  .prev-summary.h4 {
+    display: inline-block;
+    margin: 0 0 .5rem 0;
+  }
+</style>
+{{ end }}

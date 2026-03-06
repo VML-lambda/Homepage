@@ -1,0 +1,87 @@
+{{ define "main" }}
+
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-5 mb-5">
+    <div class="container py-5">
+      <h1 class="display-3 text-white mb-3 animated slideInDown">News</h1>
+      <nav aria-label="breadcrumb animated slideInDown">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">News</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Page Header End -->
+
+  {{ $notices := where site.Pages "Section" "notices" }}
+  {{ $noticePages := where $notices ".IsSection" false }}
+  {{ if $noticePages }}
+  <section id="notices">
+    <div class="container-xxl py-5 pb-0">
+      <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+          <h6 class="text-primary">Announcements</h6>
+          <h1 class="mb-4">Notice</h1>
+        </div>
+        <div class="wow fadeInUp" data-wow-delay="0.1s">
+          <div class="accordion" id="accordionNotices">
+            {{ range $noticePages.ByDate.Reverse }}
+            <div class="accordion-item mt-3">
+              <h5 class="accordion-header border-0" id="notice-heading-{{ .File.ContentBaseName }}">
+                <button class="accordion-button text-primary fs-5" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#notice-collapse-{{ .File.ContentBaseName }}"
+                  aria-expanded="true" aria-controls="notice-collapse-{{ .File.ContentBaseName }}">
+                  {{ .Title }}
+                </button>
+              </h5>
+              <div id="notice-collapse-{{ .File.ContentBaseName }}" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                  {{ .Content }}
+                </div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <section id="faq">
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+          <h6 class="text-primary">Laboratory News</h6>
+          <h1 class="mb-4">Research Highlights</h1>
+        </div>
+        <div class="wow fadeInUp" data-wow-delay="0.1s">
+          <div class="accordion" id="accordionNews">
+            {{ range .Pages.ByDate.Reverse }}
+            <div class="accordion-item mt-3" id="{{ .File.ContentBaseName }}">
+              <h5 class="accordion-header border-0" id="heading-{{ .File.ContentBaseName }}">
+                <button class="accordion-button text-primary fs-5 collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapse-{{ .File.ContentBaseName }}"
+                  aria-expanded="false" aria-controls="collapse-{{ .File.ContentBaseName }}">
+                  {{ .Title }}
+                </button>
+              </h5>
+              <div id="collapse-{{ .File.ContentBaseName }}" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  {{ if .Params.image }}
+                  <img src="/img/project/{{ .Params.image }}" class="img-fluid mb-3 rounded" style="max-height:300px;" aria-hidden="true" />
+                  {{ end }}
+                  <p><strong>{{ .Params.label }}</strong></p>
+                  {{ .Content }}
+                </div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{ end }}
