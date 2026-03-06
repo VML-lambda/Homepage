@@ -16,27 +16,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  sync-cms-draft:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Create or sync cms-draft branch
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git ls-remote --heads origin cms-draft | grep cms-draft; then
-            git checkout cms-draft
-            git reset --hard origin/master
-            git push --force origin cms-draft
-          else
-            git checkout -b cms-draft
-            git push origin cms-draft
-          fi
-
   build:
     runs-on: ubuntu-latest
     steps:

@@ -1,11 +1,9 @@
-local_backend: true
-
 backend:
   name: github
   repo: VML-lambda/Homepage
   branch: cms-draft
   auth_type: pkce
-  app_id: "REPLACE_WITH_GITHUB_OAUTH_APP_CLIENT_ID"
+  app_id: "Ov23li1965VSLTenPCm1"
 
 media_folder: "static/img"
 public_folder: "/img"
@@ -54,6 +52,19 @@ collections:
       - { label: "Year.Month", name: "yearMonth", widget: "string", hint: "e.g. 2024" }
       - { label: "DOI", name: "doi", widget: "string", required: false }
       - { label: "Type", name: "type", widget: "select", options: ["MPEG", "JVET", "JPEG"] }
+
+  # ========== Notices ==========
+  - name: "notices"
+    label: "Notices"
+    label_singular: "Notices"
+    folder: "content/notices"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} ({{date}})"
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "예: [Hot!] [2026 학부연구생 모집] 접수기간: ~25/12/31" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   # ========== News ==========
   - name: "news"
