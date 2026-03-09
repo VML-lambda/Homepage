@@ -1,6 +1,6 @@
 ---
-title: "최승미"
-engName: "Seungmi Choi"
+title: "Seungmi Choi"
+korName: "최승미"
 degree: "PhD"
 position: "Hologram (PL) / 3DV"
 department: "Computer Science and Engineering"
@@ -14,7 +14,7 @@ researchInterests:
   - Hologram
   - Compression
 education:
-  - "경희대학교 컴퓨터공학과 (박사)"
-  - "경희대학교 컴퓨터공학과 (석사)"
-  - "경희대학교 컴퓨터공학과 (학사)"
+  - "<b>Ph.D.</b> Computer Science and Engineering, KHU"
+  - "<b>M.S.</b> Computer Science and Engineering, KHU"
+  - "<b>B.S.</b> Computer Science and Engineering, KHU"
 ---

@@ -1,6 +1,6 @@
 ---
-title: "윤규리"
-engName: "Curie Yoon"
+title: "Curie Yoon"
+korName: "윤규리"
 degree: "Intern"
 position: "Intern / FCM"
 department: "Computer Science and Engineering"

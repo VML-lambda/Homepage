@@ -1,6 +1,6 @@
 ---
-title: "박민정"
-engName: "Minjeong Park"
+title: "Minjeong Park"
+korName: "박민정"
 degree: "Intern"
 position: "Intern / NNVC"
 department: "Computer Science and Engineering"

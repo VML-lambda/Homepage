@@ -1,6 +1,6 @@
 ---
-title: "반현민"
-engName: "Hyunmin Ban"
+title: "Hyunmin Ban"
+korName: "반현민"
 degree: "MS"
 position: "M.S / Hologram"
 department: "Computer Science and Engineering"

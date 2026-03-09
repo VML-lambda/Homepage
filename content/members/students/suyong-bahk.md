@@ -1,6 +1,6 @@
 ---
-title: "박수용"
-engName: "Suyong Bahk"
+title: "Suyong Bahk"
+korName: "박수용"
 degree: "PhD"
 position: "NNVC (PL) / UVC"
 department: "Computer Science and Engineering"

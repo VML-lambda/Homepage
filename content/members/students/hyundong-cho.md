@@ -1,6 +1,6 @@
 ---
-title: "조현동"
-engName: "HyunDong Cho"
+title: "HyunDong Cho"
+korName: "조현동"
 degree: "PhD"
 position: "NNVC"
 department: "Computer Science and Engineering"
@@ -11,7 +11,7 @@ researchInterests:
   - Neural Video Coding
   - Conventional Video Coding
 education:
-  - "경희대학교 컴퓨터공학과 (박사)"
-  - "경희대학교 컴퓨터공학과 (석사)"
-  - "경희대학교 스페인어학과 (학사)"
+  - "<b>Ph.D.</b> Computer Science and Engineering, KHU"
+  - "<b>M.S.</b> Computer Science and Engineering, KHU"
+  - "<b>B.S.</b> Spanish Language and Literature, KHU"
 ---

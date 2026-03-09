@@ -1,6 +1,6 @@
 ---
-title: "김종욱"
-engName: "Kim Jong Wook"
+title: "Kim Jong Wook"
+korName: "김종욱"
 degree: "Intern"
 position: ""
 department: "Computer Science and Engineering"

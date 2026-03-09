@@ -1,6 +1,6 @@
 ---
-title: "유장현"
-engName: "Janghyun Yu"
+title: "Janghyun Yu"
+korName: "유장현"
 degree: "PhD"
 position: "FCM"
 department: "Computer Science and Engineering"

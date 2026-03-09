@@ -1,6 +1,6 @@
 ---
-title: "박태권"
-engName: "Park Tae Gwon"
+title: "Park Tae Gwon"
+korName: "박태권"
 degree: "Intern"
 position: ""
 department: "Computer Science and Engineering"

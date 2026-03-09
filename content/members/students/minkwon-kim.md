@@ -1,6 +1,6 @@
 ---
-title: "김민권"
-engName: "Kim Min Kwon"
+title: "Kim Min Kwon"
+korName: "김민권"
 degree: "Intern"
 position: ""
 department: "Computer Science and Engineering"

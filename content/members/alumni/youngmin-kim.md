@@ -1,6 +1,6 @@
 ---
-title: "김영민"
-engName: "Youngmin Kim"
+title: "Youngmin Kim"
+korName: "김영민"
 degree: "Intern"
 position: "Intern / Hologram"
 email: "electron@khu.ac.kr"

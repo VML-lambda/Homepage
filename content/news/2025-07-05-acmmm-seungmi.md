@@ -1,10 +1,10 @@
 ---
-title: "[축!] 박사과정 최승미 학생, ACMMM 2025 Accept! (2025.07.05)"
+title: "Seungmi Choi, Accepted to ACM MM 2025"
 date: 2025-07-05
 category: accept
-label: "Top 학술대회 Accept"
+label: "Top Conference Acceptance"
 image: "PDA.png"
 showhome: true
 ---
 
-박사과정 최승미 학생이 ACM Multimedia 2025에 논문이 Accept 되었습니다.
+Ph.D. student Seungmi Choi's paper has been accepted to ACM Multimedia 2025.

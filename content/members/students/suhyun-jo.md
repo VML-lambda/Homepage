@@ -1,6 +1,6 @@
 ---
-title: "조수현"
-engName: "Suhyun Jo"
+title: "Suhyun Jo"
+korName: "조수현"
 degree: "MS"
 position: "Hologram / 3DV"
 department: "Artificial Intelligence"
@@ -13,6 +13,6 @@ researchInterests:
   - Video Coding
   - 3D Gaussian Splatting
 education:
-  - "경희대학교 인공지능학과 (석사)"
-  - "경희대학교 소프트웨어융합학과 (학사)"
+  - "<b>M.S.</b> Artificial Intelligence, KHU"
+  - "<b>B.S.</b> Software Convergence, KHU"
 ---

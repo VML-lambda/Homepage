@@ -1,6 +1,6 @@
 ---
-title: "이태화"
-engName: "TaeHwa Lee"
+title: "TaeHwa Lee"
+korName: "이태화"
 degree: "MS"
 position: "Hologram / NNVC"
 department: "Computer Science and Engineering"
