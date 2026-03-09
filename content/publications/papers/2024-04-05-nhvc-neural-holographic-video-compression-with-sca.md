@@ -1,7 +1,7 @@
 ---
 title: "NHVC: Neural Holographic Video Compression with Scalable Architecture"
-firstAuthor: "반현민"
-coauthors: "최승미, 차준영, 김영웅, 김휘용<sup>†</sup>"
+firstAuthor: "Hyunmin Ban"
+coauthors: "Seungmi Choi, Jun Yeong Cha, Yeongwoong Kim, Hui Yong Kim<sup>†</sup>"
 venue: "2024 IEEE Conference Virtual Reality and 3D User Interfaces (VR)"
 year: 2024
 yearMonth: "2024.04"

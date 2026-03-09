@@ -1,7 +1,7 @@
 ---
 title: "Spatial-Channel Mixing Block for Neural Network-based Video Coding (NNVC) Tools"
-firstAuthor: "조현동"
-coauthors: "박수용, 김종욱, 김동현, 임성창, 김휘용<sup>†</sup>"
+firstAuthor: "HyunDong Cho"
+coauthors: "Suyong Bahk, Kim Jong Wook, Donghyun Kim, Sung-Chang Lim, Hui Yong Kim<sup>†</sup>"
 venue: "IEEE International Conference on Visual Communications and Image Processing. 2025."
 year: 2025
 yearMonth: "2025.12"

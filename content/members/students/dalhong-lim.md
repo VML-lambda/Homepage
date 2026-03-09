@@ -1,6 +1,6 @@
 ---
-title: "임달홍"
-engName: "Dalhong Lim"
+title: "Dalhong Lim"
+korName: "임달홍"
 degree: "MS"
 position: "FCM"
 department: "Software Engineering"

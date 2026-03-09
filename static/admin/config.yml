@@ -2,8 +2,7 @@ backend:
   name: github
   repo: VML-lambda/Homepage
   branch: cms-draft
-  auth_type: pkce
-  app_id: "Ov23li1965VSLTenPCm1"
+  base_url: https://sveltia-cms-auth.vml-lambda.workers.dev
 
 media_folder: "static/img"
 public_folder: "/img"
@@ -97,8 +96,8 @@ collections:
     media_folder: "/static/img/people"
     public_folder: "/img/people"
     fields:
-      - { label: "Name (Korean)", name: "title", widget: "string" }
-      - { label: "Name (English)", name: "engName", widget: "string", required: false }
+      - { label: "Name (English)", name: "title", widget: "string" }
+      - { label: "Name (Korean)", name: "korName", widget: "string", required: false }
       - { label: "Degree", name: "degree", widget: "select", options: ["PhD", "MS", "Intern"] }
       - { label: "Position", name: "position", widget: "string", hint: "e.g. Lab Leader / FCM (PL)" }
       - { label: "Department", name: "department", widget: "string", default: "Computer Science and Engineering", required: false }
@@ -121,8 +120,8 @@ collections:
     media_folder: "/static/img/people"
     public_folder: "/img/people"
     fields:
-      - { label: "Name (Korean)", name: "title", widget: "string" }
-      - { label: "Name (English)", name: "engName", widget: "string", required: false }
+      - { label: "Name (English)", name: "title", widget: "string" }
+      - { label: "Name (Korean)", name: "korName", widget: "string", required: false }
       - { label: "Degree", name: "degree", widget: "select", options: ["MS", "Intern"] }
       - { label: "Position", name: "position", widget: "string" }
       - { label: "Department", name: "department", widget: "string", default: "Computer Science and Engineering", required: false }

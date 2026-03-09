@@ -1,6 +1,6 @@
 ---
-title: "최지현"
-engName: "Ji Hyoun Choi"
+title: "Ji Hyoun Choi"
+korName: "최지현"
 degree: "MS"
 position: "UVC / 3DV"
 department: "Artificial Intelligence"
@@ -14,6 +14,6 @@ researchInterests:
   - Generative Video Coding
   - 3D Gaussian Splatting
 education:
-  - "경희대학교 인공지능학과 (석박통합)"
-  - "경희대학교 소프트웨어융합학과 (학사)"
+  - "<b>Integrated M.S./Ph.D.</b> Artificial Intelligence, KHU"
+  - "<b>B.S.</b> Software Convergence, KHU"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "HEVC extension for phase hologram compression"
-firstAuthor: "오관정"
-coauthors: "반현민, 최승미, 고현석, 김휘용<sup>†</sup>"
+firstAuthor: "Kwan-Jung Oh"
+coauthors: "Hyunmin Ban, Seungmi Choi, Hyunsuk Ko, Hui Yong Kim<sup>†</sup>"
 venue: "Optics Express"
 year: 2023
 yearMonth: "2023.02"

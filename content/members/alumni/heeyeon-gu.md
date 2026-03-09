@@ -1,5 +1,6 @@
 ---
-title: "구희연"
+title: "Heeyeon Gu"
+korName: "구희연"
 degree: "Intern"
 position: "Intern"
 department: "Computer Science and Engineering"

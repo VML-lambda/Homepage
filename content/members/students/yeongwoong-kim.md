@@ -1,6 +1,6 @@
 ---
-title: "김영웅"
-engName: "Yeongwoong Kim"
+title: "Yeongwoong Kim"
+korName: "김영웅"
 degree: "PhD"
 position: "GVC (PL)"
 department: "Computer Science and Engineering"

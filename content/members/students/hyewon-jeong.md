@@ -1,6 +1,6 @@
 ---
-title: "정혜원"
-engName: "Hyewon Jeong"
+title: "Hyewon Jeong"
+korName: "정혜원"
 degree: "PhD"
 position: "Lab Leader / FCM (PL)"
 department: "Computer Science and Engineering"
