@@ -4,6 +4,8 @@ backend:
   branch: cms-draft
   auth_type: pkce
   app_id: "Ov23li1965VSLTenPCm1"
+  base_url: https://github.com
+  auth_endpoint: login/oauth/authorize
 
 media_folder: "static/img"
 public_folder: "/img"
