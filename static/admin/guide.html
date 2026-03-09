@@ -198,46 +198,61 @@
     <h2>초기 설정 (최초 1회)</h2>
 
     <div class="step">
-      <div class="step-title"><span class="step-num">1</span>GitHub OAuth App 생성</div>
+      <div class="step-title"><span class="step-num">1</span>Cloudflare Workers에 OAuth 프록시 배포</div>
+      <div class="step-body">
+        <ol>
+          <li><a href="https://github.com/sveltia/sveltia-cms-auth" target="_blank">sveltia-cms-auth GitHub</a>에서 <strong>"Deploy to Cloudflare Workers"</strong> 버튼 클릭</li>
+          <li>Cloudflare 계정으로 로그인 (무료 계정 가능)</li>
+          <li>배포 완료 후 Worker URL 확인 (예: <code>https://sveltia-cms-auth.your-account.workers.dev</code>)</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title"><span class="step-num">2</span>GitHub OAuth App 생성</div>
       <div class="step-body">
         <ol>
           <li>GitHub → <strong>Settings → Developer settings → OAuth Apps → New OAuth App</strong></li>
           <li>다음과 같이 입력:<br>
             <div class="code">Application name: VML CMS
 Homepage URL: https://vmlab.khu.ac.kr
-Authorization callback URL: https://vmlab.khu.ac.kr/admin/</div>
+Authorization callback URL: https://your-worker.workers.dev/callback</div>
           </li>
-          <li>생성 후 <strong>Client ID</strong> 복사</li>
+          <li>생성 후 <strong>Client ID</strong>와 <strong>Client Secret</strong> 복사</li>
         </ol>
       </div>
     </div>
 
     <div class="step">
-      <div class="step-title"><span class="step-num">2</span>config.yml에 Client ID 입력</div>
+      <div class="step-title"><span class="step-num">3</span>Cloudflare Worker 환경변수 설정</div>
       <div class="step-body">
-        <p><code>static/admin/config.yml</code>의 <code>app_id</code> 값을 수정합니다.</p>
-        <div class="code">backend:
-  name: github
-  repo: VML-lambda/Homepage
-  branch: cms-draft
-  auth_type: pkce
-  app_id: "여기에_Client_ID_입력"</div>
+        <p>Cloudflare 대시보드 → Workers → sveltia-cms-auth → <strong>Settings → Variables</strong>에서 다음 값을 설정합니다.</p>
+        <table>
+          <tr><th>변수명</th><th>값</th></tr>
+          <tr><td><code>GITHUB_CLIENT_ID</code></td><td>GitHub OAuth App의 Client ID</td></tr>
+          <tr><td><code>GITHUB_CLIENT_SECRET</code></td><td>GitHub OAuth App의 Client Secret (Encrypt 권장)</td></tr>
+          <tr><td><code>ALLOWED_DOMAINS</code></td><td><code>vmlab.khu.ac.kr</code></td></tr>
+        </table>
       </div>
     </div>
 
     <div class="step">
-      <div class="step-title"><span class="step-num">3</span>local_backend 제거 후 배포</div>
+      <div class="step-title"><span class="step-num">4</span>config.yml에 Worker URL 입력</div>
       <div class="step-body">
-        <p><code>config.yml</code> 첫 줄의 <code>local_backend: true</code>를 삭제합니다. (로컬 테스트용으로만 사용)</p>
-        <p>이후 master 브랜치에 push하면 GitHub Actions가 자동으로 배포하고 <code>cms-draft</code> 브랜치를 생성합니다.</p>
-        <div class="callout callout-red">
-          <strong>반드시 local_backend를 제거한 후 배포하세요.</strong> 남겨두면 운영 환경에서 CMS가 로컬 서버에 연결하려 해서 로그인이 불가합니다.
+        <p><code>static/admin/config.yml</code>의 <code>base_url</code>을 Worker URL로 설정합니다.</p>
+        <div class="code">backend:
+  name: github
+  repo: VML-lambda/Homepage
+  branch: cms-draft
+  base_url: https://your-worker.workers.dev</div>
+        <div class="callout callout-blue">
+          <code>local_backend: true</code>는 로컬 테스트 전용입니다. 배포 시에는 반드시 제거하세요.
         </div>
       </div>
     </div>
 
     <div class="step">
-      <div class="step-title"><span class="step-num">4</span>구성원에게 repo 쓰기 권한 부여</div>
+      <div class="step-title"><span class="step-num">5</span>구성원에게 repo 쓰기 권한 부여</div>
       <div class="step-body">
         <p>GitHub → Repository → <strong>Settings → Collaborators → Add people</strong><br>
         편집 권한이 필요한 구성원을 <strong>Write</strong> 권한으로 초대합니다.</p>
@@ -278,8 +293,8 @@ base: master ← compare: cms-draft</div>
     <div class="code"># 터미널 1 - Hugo 서버
 hugo server -D
 
-# 터미널 2 - Decap CMS 로컬 백엔드
-npx decap-server</div>
+# 터미널 2 - Sveltia CMS 로컬 백엔드
+npx @sveltia/cms-proxy-server</div>
     <p>브라우저에서 <code>http://localhost:1313/admin/</code> 접속 (config.yml에 <code>local_backend: true</code> 필요)</p>
 
     <h2>디렉토리 구조</h2>
@@ -288,7 +303,7 @@ npx decap-server</div>
       <tr><td><code>content/</code></td><td>모든 콘텐츠 마크다운 파일</td></tr>
       <tr><td><code>layouts/</code></td><td>Hugo 템플릿 (HTML 구조)</td></tr>
       <tr><td><code>static/</code></td><td>정적 파일 (이미지, CSS, JS)</td></tr>
-      <tr><td><code>static/admin/</code></td><td>Decap CMS 파일</td></tr>
+      <tr><td><code>static/admin/</code></td><td>Sveltia CMS 파일</td></tr>
       <tr><td><code>static/img/</code></td><td>모든 이미지 파일</td></tr>
       <tr><td><code>data/</code></td><td>JSON 데이터 (Prior to 2022 논문 등)</td></tr>
       <tr><td><code>.github/workflows/</code></td><td>GitHub Actions 배포 워크플로우</td></tr>
