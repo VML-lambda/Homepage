@@ -40,7 +40,19 @@ jobs:
         with:
           path: ./public
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
   sync-and-pr:
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -63,22 +75,12 @@ jobs:
         run: |
           OPEN=$(gh pr list --base master --head cms-draft --state open --json number --jq length)
           if [ "$OPEN" = "0" ]; then
-            gh pr create \
+            PR_URL=$(gh pr create \
               --base master \
               --head cms-draft \
               --title "merge: CMS updates" \
               --body "CMS changes ready for review. Please merge after review. (DO NOT DELETE cms-draft branch after merge)" \
-              --reviewer rollingman1,jsk0910 \
-              --label cms-draft
+              --label cms-draft)
+            gh pr edit "$PR_URL" --add-reviewer rollingman1 || echo "Warning: could not add reviewer rollingman1"
+            gh pr edit "$PR_URL" --add-reviewer jsk0910 || echo "Warning: could not add reviewer jsk0910"
           fi
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
