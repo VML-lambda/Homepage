@@ -10,6 +10,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  pull-requests: write
 
 concurrency:
   group: "pages"
@@ -38,6 +39,37 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+
+  sync-and-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync master to cms-draft
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin
+          git checkout cms-draft
+          git merge origin/master --no-edit || true
+          git push origin cms-draft
+
+      - name: Create PR cms-draft → master if not exists
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          OPEN=$(gh pr list --base master --head cms-draft --state open --json number --jq length)
+          if [ "$OPEN" = "0" ]; then
+            gh pr create \
+              --base master \
+              --head cms-draft \
+              --title "merge: CMS updates" \
+              --body "CMS changes ready for review. Please merge after review. (DO NOT DELETE cms-draft branch after merge)" \
+              --reviewer rollingman1,jsk0910
+          fi
 
   deploy:
     needs: build
