@@ -51,7 +51,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  sync-and-pr:
+  sync-cms-draft:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
@@ -68,19 +68,3 @@ jobs:
           git checkout cms-draft
           git merge origin/master --no-edit || true
           git push origin cms-draft
-
-      - name: Create PR cms-draft → master if not exists
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          OPEN=$(gh pr list --base master --head cms-draft --state open --json number --jq length)
-          if [ "$OPEN" = "0" ]; then
-            PR_URL=$(gh pr create \
-              --base master \
-              --head cms-draft \
-              --title "merge: CMS updates" \
-              --body "CMS changes ready for review. Please merge after review. (DO NOT DELETE cms-draft branch after merge)" \
-              --label cms-draft)
-            gh pr edit "$PR_URL" --add-reviewer rollingman1 || echo "Warning: could not add reviewer rollingman1"
-            gh pr edit "$PR_URL" --add-reviewer jsk0910 || echo "Warning: could not add reviewer jsk0910"
-          fi
