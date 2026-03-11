@@ -40,7 +40,19 @@ jobs:
         with:
           path: ./public
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
   sync-and-pr:
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -71,14 +83,3 @@ jobs:
               --reviewer rollingman1,jsk0910 \
               --label cms-draft
           fi
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
