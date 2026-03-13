@@ -107,8 +107,10 @@ collections:
       - { label: "Research Interests", name: "researchInterests", widget: "list", required: false }
       - { label: "Education", name: "education", widget: "list", required: false }
       - { label: "GitHub", name: "github", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
       - { label: "Homepage", name: "homepage", widget: "string", required: false }
       - { label: "ORCID", name: "orcid", widget: "string", required: false }
+      - { label: "CV", name: "cv", widget: "string", required: false }
 
   # ========== Alumni ==========
   - name: "members-alumni"
