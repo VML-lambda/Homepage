@@ -11,7 +11,7 @@ researchInterests:
   - Computer Vision
   - Hybrid Vision
 education:
-  - <b>M.S.</b> Computer Engineering, KHU
+  - <b>M.S.</b> Computer Science and Engineering, KHU
   - <b>B.A.</b> Computer Engineering and Artificial Intelligence, DAU
 github: https://www.github.com/jsk0910
 homepage: ''
