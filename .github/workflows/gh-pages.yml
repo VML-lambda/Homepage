@@ -65,6 +65,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin
-          git checkout cms-draft
-          git merge origin/master --no-edit || true
-          git push origin cms-draft
+
+          if git ls-remote --exit-code --heads origin cms-draft; then
+            echo "cms-draft exists"
+            git checkout cms-draft
+            git merge origin/master --no-edit || true
+            git push origin cms-draft
+          else
+            echo "cms-draft does not exist, create from master"
+            git checkout -b cms-draft origin/master
+            git push -u origin cms-draft
+          fi
