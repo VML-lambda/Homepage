@@ -5,7 +5,7 @@ degree: MS
 position: Hologram (member) / NVC (member)
 department: Computer Science and Engineering
 email: worrospeed@khu.ac.kr
-image: profile.png
+image: /img/people/KakaoTalk_20260313_132512326_03.jpg
 weight: 11
 researchInterests:
   - Neural Image/Video Compression
