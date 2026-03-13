@@ -10,8 +10,8 @@ weight: 20
 researchInterests:
   - Deep Learning, Learned Image/Video Compression
 education:
-  - 경희대학교 컴퓨터공학부 학사 (2020~2026)
-  - 경희대학교 컴퓨터공학부 석사 (2026~)
+  - <b>M.S.</b> Computer Science and Engineering, KHU (2026-Present)
+  - <b>B.S.</b> Computer Science and Engineering, KHU (2020-2026)
 github: https://github.com/mx34kryce
 homepage: ''
 orcid: ''
