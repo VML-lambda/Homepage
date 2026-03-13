@@ -15,6 +15,8 @@ education:
   - <b>M.S.</b> Computer Science and Engineering, KHU
   - <b>B.S.</b> Spanish Language and Literature/Software Convergence, KHU
 github: ''
-homepage: https://www.linkedin.com/in/hyundong-cho-b50130278/
+linkedin: https://www.linkedin.com/in/hyundong-cho-b50130278/
+homepage: ''
 orcid: ''
+cv: ''
 ---
