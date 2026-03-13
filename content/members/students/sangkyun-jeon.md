@@ -11,7 +11,8 @@ researchInterests:
   - Computer Vision
   - Hybrid Vision
 education:
-  - Undergraduate, Department of Computer Engineering and Artificial Intelligence, Dong-A University
+  - <b>M.S.</b> Computer Engineering, KHU
+  - <b>B.A.</b> Computer Engineering and Artificial Intelligence, DAU
 github: https://www.github.com/jsk0910
 homepage: ''
 orcid: https://orcid.org/0009-0004-4287-6745
