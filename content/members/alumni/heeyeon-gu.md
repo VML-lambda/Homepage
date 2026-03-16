@@ -5,6 +5,6 @@ degree: "Intern"
 position: "Intern"
 department: "Computer Science and Engineering"
 email: "rndus0819@khu.ac.kr"
-image: "profile.png"
+image: "/img/people/profile.png"
 weight: 12
 ---

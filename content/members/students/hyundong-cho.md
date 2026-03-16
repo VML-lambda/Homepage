@@ -5,7 +5,7 @@ degree: PhD
 position: NNVC
 department: Computer Science and Engineering
 email: gusehd1113@khu.ac.kr
-image: HyunDong Cho.jpg
+image: /img/people/HyunDong Cho.jpg
 weight: 6
 researchInterests:
   - Neural Network-based Video Coding

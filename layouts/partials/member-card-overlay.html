@@ -3,7 +3,7 @@
     <div class="team-item rounded overflow-hidden">
       <div class="d-flex product-card">
         <div class="product-image">
-          <img src="/img/people/{{ .Params.image | default "profile.png" }}" alt="{{ .Title }}" class="img-fluid"
+          <img src="{{ .Params.image | default "/img/people/profile.png" }}" alt="{{ .Title }}" class="img-fluid"
                onerror="this.src='/img/people/profile.png'">
         </div>
         <div class="text-box box-slide position-absolute">

@@ -6,6 +6,6 @@ venue: "Neural Information Processing Systems"
 year: 2023
 yearMonth: "2023.09"
 type: "International"
-image: "Towards_salman.png"
+image: "/img/paper/Towards_salman.png"
 doi: ""
 ---

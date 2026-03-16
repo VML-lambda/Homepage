@@ -5,7 +5,7 @@ degree: Intern
 position: ''
 department: Software Convergence
 email: yejun4831@khu.ac.kr
-image: profile.png
+image: /img/people/profile.png
 weight: 24
 github: ''
 linkedin: ''

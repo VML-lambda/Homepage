@@ -6,6 +6,6 @@ venue: "방송공학회논문지"
 year: 2021
 yearMonth: "2021.12"
 type: "Domestic"
-image: "kibme.png"
+image: "/img/paper/kibme.png"
 doi: "https://doi.org/10.5909/JBE.2020.26.7.868"
 ---

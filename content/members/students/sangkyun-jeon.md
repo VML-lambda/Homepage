@@ -5,7 +5,7 @@ degree: MS
 position: FCM
 department: Computer Science and Engineering
 email: sangkyun.jeon@khu.ac.kr
-image: profile.png
+image: /img/people/profile.png
 weight: 99
 researchInterests:
   - Computer Vision

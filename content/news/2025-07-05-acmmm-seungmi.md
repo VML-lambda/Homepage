@@ -3,7 +3,7 @@ title: "Seungmi Choi, Accepted to ACM MM 2025"
 date: 2025-07-05
 category: accept
 label: "Top Conference Acceptance"
-image: "PDA.png"
+image: "/img/project/PDA.png"
 showhome: true
 ---
 

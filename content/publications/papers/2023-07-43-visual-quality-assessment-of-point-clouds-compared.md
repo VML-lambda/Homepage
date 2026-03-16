@@ -6,6 +6,6 @@ venue: "Journal of Web Engineering (Vol. 22, Iss. 3)"
 year: 2023
 yearMonth: "2023.07"
 type: "International"
-image: "river-publish.png"
+image: "/img/paper/river-publish.png"
 doi: "https://doi.org/10.13052/jwe1540-9589.2232"
 ---
