@@ -6,6 +6,6 @@ venue: The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2026
 year: 2026
 yearMonth: '2026.06'
 type: International
-image: /img/paper/blockcomp.png
+image: blockcomp.png
 doi: ''
 ---

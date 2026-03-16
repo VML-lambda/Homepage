@@ -5,7 +5,7 @@ degree: MS
 position: NVC
 department: Computer Science and Engineering
 email: jong1334@khu.ac.kr
-image: /img/people/Jongwook.png
+image: Jongwook.png
 weight: 20
 researchInterests:
   - Deep Learning, Learned Image/Video Compression

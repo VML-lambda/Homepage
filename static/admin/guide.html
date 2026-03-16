@@ -133,7 +133,7 @@
     <ul>
       <li><strong>Year.Month</strong>: <code>2025.03</code> 형식으로 입력 (점 구분)</li>
       <li><strong>Type</strong>: International (국제) / Domestic (국내) 중 선택</li>
-      <li><strong>Co-authors</strong>: 쉼표로 구분, 교신저자는 이름 뒤에 <code>†</code> 표시</li>
+      <li><strong>Co-authors</strong>: 쉼표로 구분, 교신저자는 이름 뒤에 <code>&lt;sup&gt;†&lt;/sup&gt;</code>로 위첨자 십자 표시</li>
       <li><strong>Image</strong>: 논문 대표 이미지 (없어도 무방)</li>
     </ul>
 
@@ -155,12 +155,8 @@
     <h3>Students / Alumni (구성원)</h3>
     <ul>
       <li><strong>Display Order</strong>: 숫자가 작을수록 먼저 표시</li>
-      <li><strong>Photo</strong>: 파일명만 입력 (예: <code>Suhyun.jpg</code>). 이미지는 <code>img/people/</code> 폴더에 있어야 함</li>
+      <li><strong>Photo</strong>: Image 필드에서 <strong>Choose an image</strong>를 클릭하여 기존 이미지를 선택하거나 새 파일을 업로드합니다.</li>
     </ul>
-
-    <div class="callout callout-yellow">
-      <strong>주의:</strong> 이미지 파일은 먼저 <a href="/admin/media.html">Media Manager</a>에서 업로드한 뒤 파일명을 입력하기를 권장.
-    </div>
 
   </div>
 
@@ -324,8 +320,8 @@ npx @sveltia/cms-proxy-server</div>
 
     <h3>새 구성원 사진 추가</h3>
     <ol>
-      <li><a href="/admin/media.html">Media Manager</a> → <code>img/people/</code> 폴더에 사진 업로드</li>
-      <li>CMS → Students에서 해당 구성원 편집 → Photo 필드에 파일명 입력</li>
+      <li>CMS → Students에서 해당 구성원 편집</li>
+      <li>Photo 필드에서 <strong>Choose an image</strong> 클릭 → 이미지 업로드 또는 기존 이미지 선택</li>
     </ol>
 
     <h3>사이트 레이아웃/디자인 수정</h3>
