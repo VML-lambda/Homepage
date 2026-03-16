@@ -21,7 +21,7 @@ collections:
     slug: "{{year}}-{{month}}-{{slug}}"
     summary: "[{{type}}] {{title}} ({{yearMonth}})"
     media_folder: "/static/img/paper"
-    public_folder: ""
+    public_folder: "/img/paper"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "First Author", name: "firstAuthor", widget: "string" }
@@ -74,7 +74,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title}} ({{date}})"
     media_folder: "/static/img/project"
-    public_folder: ""
+    public_folder: "/img/project"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
@@ -94,7 +94,7 @@ collections:
     slug: "{{slug}}"
     summary: "{{title}} ({{degree}})"
     media_folder: "/static/img/people"
-    public_folder: ""
+    public_folder: "/img/people"
     fields:
       - { label: "Name (English)", name: "title", widget: "string" }
       - { label: "Name (Korean)", name: "korName", widget: "string", required: false }
@@ -121,7 +121,7 @@ collections:
     slug: "{{slug}}"
     summary: "{{title}} ({{degree}})"
     media_folder: "/static/img/people"
-    public_folder: ""
+    public_folder: "/img/people"
     fields:
       - { label: "Name (English)", name: "title", widget: "string" }
       - { label: "Name (Korean)", name: "korName", widget: "string", required: false }
@@ -142,7 +142,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title}} ({{date}})"
     media_folder: "/static/img/gallery"
-    public_folder: ""
+    public_folder: "/img/gallery"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date (시작일)", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
@@ -161,7 +161,7 @@ collections:
     slug: "{{slug}}"
     summary: "[{{status}}] {{title}}"
     media_folder: "/static/img/other-logos"
-    public_folder: ""
+    public_folder: "/img/other-logos"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Title (Korean)", name: "title_small", widget: "string", required: false }

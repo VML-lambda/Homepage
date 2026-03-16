@@ -1,7 +1,7 @@
 <div class="col-lg-3 col-md-4 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
   <div class="team-item rounded overflow-hidden text-center p-4">
     <img class="img-fluid rounded-circle mb-3"
-         src="/img/people/{{ .Params.image | default "profile.png" }}"
+         src="{{ .Params.image | default "/img/people/profile.png" }}"
          alt="{{ .Title }}"
          style="width:120px;height:120px;object-fit:cover;"
          onerror="this.src='/img/people/profile.png'">

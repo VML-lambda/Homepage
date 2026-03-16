@@ -6,6 +6,6 @@ venue: "2024 IEEE Conference Virtual Reality and 3D User Interfaces (VR)"
 year: 2024
 yearMonth: "2024.04"
 type: "International"
-image: "NHVC.png"
+image: "/img/paper/NHVC.png"
 doi: "https://doi.org/10.1109/VR58804.2024.00116"
 ---

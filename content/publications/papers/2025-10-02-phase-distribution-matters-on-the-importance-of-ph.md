@@ -6,6 +6,6 @@ venue: "Proceedings of the 33rd ACM International Conference on Multimedia. 2025
 year: 2025
 yearMonth: "2025.10"
 type: "International"
-image: "PDA.png"
+image: "/img/paper/PDA.png"
 doi: "https://dl.acm.org/doi/10.1145/3746027.3755797"
 ---

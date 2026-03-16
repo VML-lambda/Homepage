@@ -6,6 +6,6 @@ venue: "IEEE Transactions on Circuits and Systems for Video Technology (Early Ac
 year: 2023
 yearMonth: "2023.08"
 type: "International"
-image: "ieee-cass.png"
+image: "/img/paper/ieee-cass.png"
 doi: "https://doi.org/10.1109/TCSVT.2023.3310522"
 ---

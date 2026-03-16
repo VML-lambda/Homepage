@@ -5,7 +5,7 @@ degree: MS
 position: Hologram / 3DV
 department: Artificial Intelligence
 email: bloodtype0@khu.ac.kr
-image: Suhyun.jpg
+image: /img/people/Suhyun.jpg
 weight: 12
 researchInterests:
   - Video Coding

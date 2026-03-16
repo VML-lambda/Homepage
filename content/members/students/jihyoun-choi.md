@@ -5,7 +5,7 @@ degree: "MS"
 position: "UVC / 3DV"
 department: "Artificial Intelligence"
 email: "jihyoun0403@khu.ac.kr"
-image: "Jihyoun.jpg"
+image: "/img/people/Jihyoun.jpg"
 github: "https://github.com/jihyounchoi"
 linkedin: "https://www.linkedin.com/in/ji-hyoun-choi-113115292/"
 weight: 10

@@ -16,6 +16,16 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+# TODO: Node.js 20 deprecation (2026-06-02 이후 Node 24 강제 전환 예정)
+# 안정화되면 아래 주석 해제
+# env:
+#   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+#
+# 현재 peaceiris/actions-hugo@v3가 node20 런타임을 사용 중 (확인됨).
+# 메인테이너가 Node 24 대응 버전을 아직 릴리스하지 않아,
+# FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true 설정 시 Hugo 설치 단계가 실패할 수 있음.
+# peaceiris/actions-hugo에 Node 24 대응 릴리스가 나오면 버전 업그레이드로 해결 권장.
+
 jobs:
   build:
     runs-on: ubuntu-latest

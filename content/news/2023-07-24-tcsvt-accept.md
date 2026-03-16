@@ -3,7 +3,7 @@ title: "Yeongwoong Kim, Accepted to IEEE TCSVT"
 date: 2023-07-24
 category: accept
 label: "IEEE TCSVT"
-image: "TCSVT_L-MSFC.png"
+image: "/img/project/TCSVT_L-MSFC.png"
 image_style: "height:200px"
 showhome: true
 ---

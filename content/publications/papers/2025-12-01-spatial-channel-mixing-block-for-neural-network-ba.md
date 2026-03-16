@@ -6,6 +6,6 @@ venue: "IEEE International Conference on Visual Communications and Image Process
 year: 2025
 yearMonth: "2025.12"
 type: "International"
-image: "vcip_2025_SCM.png"
+image: "/img/paper/vcip_2025_SCM.png"
 doi: ""
 ---

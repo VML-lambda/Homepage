@@ -26,8 +26,8 @@
         <div class="row g-3">
           {{ range .Params.images }}
           <div class="col-6 col-md-4 col-lg-3">
-            <a href="/img/gallery/{{ . }}" data-lightbox="{{ $.Title }}" data-title="{{ $.Title }}">
-              <img src="/img/gallery/{{ . }}" class="img-fluid rounded" style="width:100%; height:200px; object-fit:cover;" alt="{{ $.Title }}" />
+            <a href="{{ . }}" data-lightbox="{{ $.Title }}" data-title="{{ $.Title }}">
+              <img src="{{ . }}" class="img-fluid rounded" style="width:100%; height:200px; object-fit:cover;" alt="{{ $.Title }}" />
             </a>
           </div>
           {{ end }}

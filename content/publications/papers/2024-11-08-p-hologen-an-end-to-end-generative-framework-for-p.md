@@ -6,6 +6,6 @@ venue: "Pacific Conference on Computer Graphics and Applications (Pacific Graphi
 year: 2024
 yearMonth: "2024.11"
 type: "International"
-image: "P_hologen.png"
+image: "/img/paper/P_hologen.png"
 doi: "https://doi.org/10.1111/cgf.15244"
 ---

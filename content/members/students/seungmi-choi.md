@@ -5,7 +5,7 @@ degree: PhD
 position: Lab Leader / 3DV
 department: Computer Science and Engineering
 email: 2018102242@khu.ac.kr
-image: Seungmi.jpg
+image: /img/people/Seungmi.jpg
 weight: 1
 researchInterests:
   - Hologram

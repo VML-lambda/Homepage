@@ -6,6 +6,6 @@ venue: "Access"
 year: 2023
 yearMonth: "2023.03"
 type: "International"
-image: "Super_Kang.png"
+image: "/img/paper/Super_Kang.png"
 doi: "https://doi.org/10.1109/access.2023.3260223"
 ---

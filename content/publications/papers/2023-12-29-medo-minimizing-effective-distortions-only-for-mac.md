@@ -6,6 +6,6 @@ venue: "IEEE International Conference on Visual Communications and Image Process
 year: 2023
 yearMonth: "2023.12"
 type: "International"
-image: "MEDO.png"
+image: "/img/paper/MEDO.png"
 doi: ""
 ---

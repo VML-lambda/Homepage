@@ -6,6 +6,6 @@ venue: "제30회 신호처리 합동학술대회"
 year: 2020
 yearMonth: "2020.09"
 type: "Domestic"
-image: "ieie.png"
+image: "/img/paper/ieie.png"
 doi: ""
 ---

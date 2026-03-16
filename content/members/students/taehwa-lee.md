@@ -5,7 +5,7 @@ degree: MS
 position: Hologram (member) / NVC (member)
 department: Computer Science and Engineering
 email: worrospeed@khu.ac.kr
-image: Taehwa.jpg
+image: /img/people/Taehwa.jpg
 weight: 11
 researchInterests:
   - Neural Image/Video Compression
