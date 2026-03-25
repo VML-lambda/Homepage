@@ -15,6 +15,8 @@ education:
   - M.S. in Artificial Intelligence, Kyung Hee University, 2025
   - B.S. in Computer Engineering, Kyung Hee University, 2023
 github: https://github.com/studyingeugene
+linkedin: ''
 homepage: https://studyingeugene.github.io
-orcid: 0009-0006-3829-160X
+orcid: https://orcid.org/0009-0006-3829-160X
+cv: ''
 ---
