@@ -17,6 +17,6 @@ education:
 github: ''
 linkedin: https://www.linkedin.com/in/hyundong-cho-b50130278/
 homepage: ''
-orcid: ''
+orcid: https://orcid.org/0009-0002-8939-7624
 cv: ''
 ---
