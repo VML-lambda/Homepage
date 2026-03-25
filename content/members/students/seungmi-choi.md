@@ -17,6 +17,8 @@ education:
   - <b>M.S.</b> Computer Science and Engineering, KHU
   - <b>B.S.</b> Computer Science and Engineering, KHU
 github: https://github.com/choiseungmi
-homepage: ''
 linkedin: https://www.linkedin.com/in/seungmi-choi-5b91152a4/
+homepage: ''
+orcid: https://orcid.org/0000-0002-6402-7785
+cv: ''
 ---

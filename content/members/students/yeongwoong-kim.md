@@ -16,6 +16,8 @@ education:
   - <b>M.S.</b> Computer Science and Engineering, KHU (2022 - 2024)
   - <b>B.S.</b> Applied Mathematics, KHU (2016 - 2022)
 github: ''
+linkedin: ''
 homepage: ''
-orcid: ''
+orcid: https://orcid.org/0000-0001-7378-7367
+cv: ''
 ---
