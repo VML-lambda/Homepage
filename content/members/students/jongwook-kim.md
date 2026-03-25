@@ -13,6 +13,8 @@ education:
   - <b>M.S.</b> Computer Science and Engineering, KHU (2026-Present)
   - <b>B.S.</b> Computer Science and Engineering, KHU (2020-2026)
 github: https://github.com/mx34kryce
+linkedin: ''
 homepage: ''
-orcid: ''
+orcid: https://orcid.org/0009-0002-3244-0679
+cv: ''
 ---
