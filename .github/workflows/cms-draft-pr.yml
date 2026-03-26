@@ -24,7 +24,7 @@ jobs:
               --base master \
               --head cms-draft \
               --title "merge: CMS updates" \
-              --body "CMS changes ready for review. Please merge after review. (DO NOT DELETE cms-draft branch after merge)" \
+              --body "CMS changes ready for review. Please squash-merge after review and delete the branch." \
               --label cms-draft)
             gh pr edit "$PR_URL" --add-reviewer rollingman1 || echo "Warning: could not add reviewer rollingman1"
             gh pr edit "$PR_URL" --add-reviewer jsk0910 || echo "Warning: could not add reviewer jsk0910"
