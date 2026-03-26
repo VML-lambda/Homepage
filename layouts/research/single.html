@@ -21,7 +21,7 @@
       <div class="row g-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
         <div class="col-lg-7">
           <div class="section-title text-start">
-            <h6 class="text-primary mb-2">Research Focus {{ .Params.focusNumber }}</h6>
+            <h6 class="text-primary mb-2">Research Focus</h6>
             <h2 class="mb-4">{{ .Title }}</h2>
           </div>
           <div class="research-overview">
@@ -53,6 +53,31 @@
     </div>
   </div>
   <!-- Overview End -->
+
+  <!-- Media Section (YouTube / PDF) -->
+  {{ if or .Params.youtubeId .Params.pdfFile }}
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-4 justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+        {{ with .Params.youtubeId }}
+        <div class="col-lg-8">
+          <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+            <iframe src="https://www.youtube.com/embed/{{ . }}" title="YouTube video" allowfullscreen></iframe>
+          </div>
+        </div>
+        {{ end }}
+        {{ with .Params.pdfFile }}
+        <div class="col-lg-10">
+          <div class="rounded overflow-hidden shadow-sm" style="height: 600px;">
+            <iframe src="{{ . }}" width="100%" height="100%" style="border: none;"></iframe>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+  <!-- Media End -->
 
   <!-- Research Highlights -->
   {{ if .Params.highlights }}
@@ -116,7 +141,8 @@
 
   <!-- Related Publications -->
   {{ $shortName := .Params.shortName }}
-  {{ $papers := where (where site.RegularPages "Section" "publications") "Params.researchArea" "intersect" (slice $shortName) }}
+  {{ $allPubs := where site.RegularPages "Section" "publications" }}
+  {{ $papers := where $allPubs "Params.researchArea" "intersect" (slice $shortName) }}
   {{ if $papers }}
   <div class="container-xxl py-5">
     <div class="container">
@@ -136,7 +162,7 @@
               </tr>
             </thead>
             <tbody>
-              {{ range $papers.ByParam "year" | .Reverse }}
+              {{ range sort $papers "Params.year" "desc" }}
               <tr>
                 <td>{{ .Title }}</td>
                 <td>{{ with .Params.venue }}{{ . }}{{ end }}{{ with .Params.orgName }}{{ . }}{{ end }}</td>
@@ -158,7 +184,8 @@
   <!-- Publications End -->
 
   <!-- Related Grants -->
-  {{ $grants := where (where site.RegularPages "Section" "grants") "Params.researchArea" "intersect" (slice $shortName) }}
+  {{ $allGrants := where site.RegularPages "Section" "grants" }}
+  {{ $grants := where $allGrants "Params.researchArea" "intersect" (slice $shortName) }}
   {{ if $grants }}
   <div class="container-fluid bg-light py-5">
     <div class="container">
@@ -168,7 +195,7 @@
           <h2 class="mb-4">Related Grants</h2>
         </div>
         <div class="row g-4">
-          {{ range $grants.ByParam "weight" }}
+          {{ range sort $grants "Params.weight" }}
           <div class="col-lg-6">
             <div class="bg-white p-4 rounded shadow-sm h-100">
               <div class="d-flex align-items-center mb-3">

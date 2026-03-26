@@ -15,92 +15,11 @@
   <!-- Page Header End -->
 
   <!-- About Start -->
-  <!-- Section 1: Introduction -->
-  <div class="container-xxl py-5">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <!-- Text Part -->
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="section-title text-start">
-            <h6 class="text-primary mb-2">Introduction</h6>
-            <h2 class="mb-4">Visual Media란?</h2>
-          </div>
-          <p class="mb-4">
-            영상미디어란 시각적으로 소비 및 활용하는 디지털 영상을 말하며, TV, 휴대폰, 인터넷 등을 통해 소비되는 2D 영상뿐만 아니라 VR/AR 영상, 입체공간 영상을 포함합니다.
-          </p>
-          <ul class="mb-4">
-            <li><i class="fa fa-check text-primary me-2"></i>UHD/8K/16K 고화질 2D 영상</li>
-            <li><i class="fa fa-check text-primary me-2"></i>HMD 등을 활용한 VR/AR 영상</li>
-            <li><i class="fa fa-check text-primary me-2"></i>멀티뷰 3D, 라이트필드, 홀로그램 등 입체공간 영상</li>
-          </ul>
-          <p>
-            최근 들어 디지털 영상미디어가 질적/양적으로 팽창하고 있으며, <strong>인공지능 기술과 접목되어 지능화/고도화 되면서</strong> 자율주행/국방/의료/교육 등 <strong>타 산업으로도
-              기술/서비스가 확산</strong> 되고 있습니다.
-          </p>
-          <p>
-            따라서 영상미디어 분야의 중요성과 파급력은 앞으로도 점점 커질 것으로 전망됩니다.
-          </p>
-          <div class="bg-light p-4 mt-4 border-start border-5 border-primary">
-            영상미디어 연구를 위한 핵심 기술로는 <strong>"영상처리", "머신러닝", "컴퓨터비전"</strong> 등이 있으며, 우리 연구실은 개발된 기술의 <strong>국제표준화</strong>를
-            통해 실감나는 디지털 세상을 만드는 데 기여하는 것을 지향합니다.
-          </div>
-        </div>
-
-        <!-- Image Part -->
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="img-wrapper intro-img-container d-flex flex-row flex-lg-column gap-3 justify-content-center h-100">
-            <img class="img-fluid flex-fill rounded shadow-sm" src="/img/about/Intro_example.png" alt="Visual Media의 예시"
-              style="object-fit: cover;">
-            <img class="img-fluid flex-fill rounded shadow-sm" src="/img/about/Intro_standard.png" alt="표준화 회의"
-              style="object-fit: cover;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Section 1 End -->
-
-  <!-- Section 2: Research Goal -->
-  <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-    <div class="container py-5">
-      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-        <h6 class="text-primary">Our Vision</h6>
-        <h1 class="mb-4">Research Goal</h1>
-        <p class="fs-5 text-dark">
-          "Human & Machine Vision 모두를 위한<br><span class="text-primary fw-bold">영상미디어 처리 기술</span>을 개발합니다."
-        </p>
-      </div>
-
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-5 wow slideInLeft" data-wow-delay="0.1s">
-          <div class="img-wrapper p-5">
-            <img class="img-fluid w-100" src="/img/about/human-machine.png" alt="연구 목표 다이어그램">
-          </div>
-        </div>
-        <div class="col-lg-7 wow slideInRight" data-wow-delay="0.1s">
-          <div class="row g-4">
-            <div class="col-12">
-              <div class="research-goal">
-                <h5>핵심 목표</h5>
-                <p class="mb-0">최소한의 데이터량으로 인간의 시각적 품질(Visual Quality)과 기계의 지능형 비전(Machine Vision Intelligence) 성능을
-                  <strong>동시에</strong>
-                  극대화하며, 이를 <strong>국제 표준(International Standards)</strong>에 기여합니다.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Section 2 End -->
-
-  <!-- Section 3: Research Teams Grid -->
+  <!-- Section 1: Research Teams Grid -->
   <div class="container-xxl py-5">
     <div class="container">
       <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-        <h6 class="text-primary">Our Teams</h6>
-        <h1 class="mb-4">Research Focus Areas</h1>
+        <h2 class="mb-4">{{ .Params.researchHeading }}</h2>
       </div>
       <div class="row g-4">
         {{ $research := site.GetPage "research" }}
@@ -124,7 +43,52 @@
       </div>
     </div>
   </div>
-  <!-- Section 3 End -->
+  <!-- Section 1 End -->
+
+  <!-- Section 2: Introduction -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <!-- Text Part -->
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="section-title text-start">
+            <h2 class="mb-4">{{ .Params.introHeading }}</h2>
+          </div>
+          <div class="mb-4">
+            {{ .Params.introBody | markdownify }}
+          </div>
+          {{ with .Params.introChecklist }}
+          <ul class="mb-4">
+            {{ range . }}
+            <li><i class="fa fa-check text-primary me-2"></i>{{ . }}</li>
+            {{ end }}
+          </ul>
+          {{ end }}
+          <div class="mb-4">
+            {{ .Params.introBody2 | markdownify }}
+          </div>
+          {{ with .Params.introHighlight }}
+          <div class="bg-light p-4 mt-4 border-start border-5 border-primary">
+            {{ . | markdownify }}
+          </div>
+          {{ end }}
+        </div>
+
+        <!-- Image Part -->
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="img-wrapper intro-img-container d-flex flex-row flex-lg-column gap-3 justify-content-center h-100">
+            {{ with .Params.introImage1 }}
+            <img class="img-fluid flex-fill rounded shadow-sm" src="{{ . }}" alt="Visual Media" style="object-fit: cover;">
+            {{ end }}
+            {{ with .Params.introImage2 }}
+            <img class="img-fluid flex-fill rounded shadow-sm" src="{{ . }}" alt="Visual Media" style="object-fit: cover;">
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Section 2 End -->
   <!-- About End -->
 
 {{ end }}

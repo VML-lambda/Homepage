@@ -156,6 +156,29 @@ collections:
         widget: "list"
         field: { label: "Image", name: "image", widget: "image" }
 
+  # ========== About ==========
+  - name: "about"
+    label: "About"
+    files:
+      - name: "about-page"
+        label: "About Page"
+        file: "content/about/_index.md"
+        media_folder: "/static/img/about"
+        public_folder: "/img/about"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Research Section Heading", name: "researchHeading", widget: "string" }
+          - { label: "Introduction Heading", name: "introHeading", widget: "string" }
+          - { label: "Introduction Body", name: "introBody", widget: "markdown" }
+          - label: "Checklist Items"
+            name: "introChecklist"
+            widget: "list"
+            field: { label: "Item", name: "item", widget: "string" }
+          - { label: "Introduction Body 2", name: "introBody2", widget: "markdown" }
+          - { label: "Highlight Box", name: "introHighlight", widget: "markdown" }
+          - { label: "Image 1", name: "introImage1", widget: "image" }
+          - { label: "Image 2", name: "introImage2", widget: "image" }
+
   # ========== Professor ==========
   - name: "professor"
     label: "Professor"
@@ -201,6 +224,8 @@ collections:
       - { label: "Subtitle", name: "subtitle", widget: "string", hint: "한 줄 설명" }
       - { label: "Focus Number", name: "focusNumber", widget: "string", hint: "e.g. 01" }
       - { label: "Cover Image", name: "image", widget: "image", required: false }
+      - { label: "YouTube Video ID", name: "youtubeId", widget: "string", required: false, hint: "e.g. dQw4w9WgXcQ (URL의 v= 뒤 부분)" }
+      - { label: "PDF File", name: "pdfFile", widget: "file", required: false, hint: "팀 소개 PDF 파일" }
       - { label: "Display Order", name: "weight", widget: "number", value_type: "int" }
       - { label: "Overview (본문)", name: "body", widget: "markdown", hint: "연구 목적, 중요성, 활용 분야 소개" }
       - { label: "Team Lead", name: "teamLead", widget: "string", required: false }
