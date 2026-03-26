@@ -8,4 +8,6 @@ yearMonth: "2024.04"
 type: "International"
 image: "/img/paper/PaD.png"
 doi: "https://doi.org/10.1109/VRW62533.2024.00200"
+researchArea:
+  - "3DV"
 ---

@@ -8,4 +8,6 @@ yearMonth: "2024.04"
 type: "International"
 image: "/img/paper/NHVC.png"
 doi: "https://doi.org/10.1109/VR58804.2024.00116"
+researchArea:
+  - "3DV"
 ---

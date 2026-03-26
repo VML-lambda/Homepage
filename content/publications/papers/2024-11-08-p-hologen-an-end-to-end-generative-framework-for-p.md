@@ -8,4 +8,6 @@ yearMonth: "2024.11"
 type: "International"
 image: "/img/paper/P_hologen.png"
 doi: "https://doi.org/10.1111/cgf.15244"
+researchArea:
+  - "3DV"
 ---

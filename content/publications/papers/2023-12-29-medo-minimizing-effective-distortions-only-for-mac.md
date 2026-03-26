@@ -8,4 +8,6 @@ yearMonth: "2023.12"
 type: "International"
 image: "/img/paper/MEDO.png"
 doi: ""
+researchArea:
+  - "VCM"
 ---

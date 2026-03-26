@@ -8,4 +8,6 @@ yearMonth: '2026.06'
 type: International
 image: /img/paper/blockcomp.png
 doi: ''
+researchArea:
+  - "NVC"
 ---

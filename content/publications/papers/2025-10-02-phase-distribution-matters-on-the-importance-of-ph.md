@@ -8,4 +8,6 @@ yearMonth: "2025.10"
 type: "International"
 image: "/img/paper/PDA.png"
 doi: "https://dl.acm.org/doi/10.1145/3746027.3755797"
+researchArea:
+  - "3DV"
 ---

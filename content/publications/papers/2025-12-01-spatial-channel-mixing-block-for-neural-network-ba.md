@@ -8,4 +8,6 @@ yearMonth: "2025.12"
 type: "International"
 image: "/img/paper/vcip_2025_SCM.png"
 doi: ""
+researchArea:
+  - "NVC"
 ---

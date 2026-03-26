@@ -8,4 +8,6 @@ yearMonth: "2021.12"
 type: "Domestic"
 image: "/img/paper/kibme.png"
 doi: "https://doi.org/10.5909/JBE.2020.26.7.868"
+researchArea:
+  - "VCM"
 ---

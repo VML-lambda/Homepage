@@ -1,3 +1,5 @@
+researchArea:
+  - "NVC"
 ---
 title: "EE1-5.1: NNSR with new backbone block based on Spatial-Channel Mixing (SCM)"
 firstAuthor: "조현동"
@@ -8,4 +10,6 @@ year: 2026
 yearMonth: "2026.01"
 doi: ""
 type: "JVET"
+researchArea:
+  - "NVC"
 ---
