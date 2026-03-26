@@ -1,0 +1,245 @@
+{{ define "main" }}
+
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-5 mb-5">
+    <div class="container py-5">
+      <h1 class="display-3 text-white mb-3 animated slideInDown">{{ .Params.shortName }}</h1>
+      <nav aria-label="breadcrumb animated slideInDown">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
+          <li class="breadcrumb-item"><a class="text-white" href="/about/">About</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">{{ .Params.shortName }}</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Page Header End -->
+
+  <!-- Overview Section -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-lg-7">
+          <div class="section-title text-start">
+            <h6 class="text-primary mb-2">Research Focus</h6>
+            <h2 class="mb-4">{{ .Title }}</h2>
+          </div>
+          <div class="research-overview">
+            {{ .Content }}
+          </div>
+
+          <!-- Team Members -->
+          {{ if or .Params.teamLead .Params.teamMembers }}
+          <div class="mt-4 pt-3 border-top">
+            <h6 class="text-muted mb-3"><i class="fa fa-users me-2"></i>Team</h6>
+            {{ with .Params.teamLead }}
+              {{ $member := site.GetPage (printf "/members/students/%s" .) }}
+              {{ if $member }}
+              <span class="team-member-badge"><i class="fa fa-star text-primary me-1"></i>{{ $member.Title }}</span>
+              {{ else }}
+              <span class="team-member-badge"><i class="fa fa-star text-primary me-1"></i>{{ . }}</span>
+              {{ end }}
+            {{ end }}
+            {{ range .Params.teamMembers }}
+              {{ $member := site.GetPage (printf "/members/students/%s" .) }}
+              {{ if $member }}
+              <span class="team-member-badge">{{ $member.Title }}</span>
+              {{ else }}
+              <span class="team-member-badge">{{ . }}</span>
+              {{ end }}
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+
+        {{ with .Params.image }}
+        <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="img-wrapper">
+            <img src="{{ . }}" class="img-fluid rounded shadow-sm" alt="{{ $.Title }}">
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <!-- Overview End -->
+
+  <!-- Media Section (YouTube / PDF) -->
+  {{ if or .Params.youtubeId .Params.pdfFile }}
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-4 justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+        {{ with .Params.youtubeId }}
+        <div class="col-lg-8">
+          <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+            <iframe src="https://www.youtube.com/embed/{{ . }}" title="YouTube video" allowfullscreen></iframe>
+          </div>
+        </div>
+        {{ end }}
+        {{ with .Params.pdfFile }}
+        <div class="col-lg-10">
+          <div class="rounded overflow-hidden shadow-sm" style="height: 600px;">
+            <iframe src="{{ . }}" width="100%" height="100%" style="border: none;"></iframe>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+  <!-- Media End -->
+
+  <!-- Research Highlights -->
+  {{ if .Params.highlights }}
+  <div class="container-fluid bg-light py-5">
+    <div class="container">
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+        <h6 class="text-primary">Research Timeline</h6>
+        <h1 class="mb-4">Research Highlights</h1>
+      </div>
+
+      {{ range $i, $h := .Params.highlights }}
+      <div class="research-highlight wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row g-4 align-items-start">
+          <div class="{{ if $h.keyFigure }}col-lg-7{{ else }}col-12{{ end }}">
+            <div class="d-flex align-items-center flex-wrap gap-2 mb-3">
+              <h5 class="mb-0">{{ $h.title }}</h5>
+              {{ with $h.period }}
+              <span class="highlight-period">{{ . }}</span>
+              {{ end }}
+              {{ with $h.keyResult }}
+              <span class="highlight-key-result">{{ . }}</span>
+              {{ end }}
+            </div>
+
+            <div class="mb-3">
+              {{ $h.description | markdownify }}
+            </div>
+
+            {{ with $h.participants }}
+            <div class="mb-3">
+              <small class="text-muted"><i class="fa fa-user me-1"></i>{{ . }}</small>
+            </div>
+            {{ end }}
+
+            {{ with $h.relatedLinks }}
+            <div class="d-flex flex-wrap gap-2">
+              {{ range . }}
+              <a href="{{ .url }}" class="btn btn-sm btn-outline-secondary related-link" target="_blank">
+                <i class="fa fa-link me-1"></i>{{ .label }}: {{ .title }}
+              </a>
+              {{ end }}
+            </div>
+            {{ end }}
+          </div>
+
+          {{ with $h.keyFigure }}
+          <div class="col-lg-5">
+            <div class="img-wrapper">
+              <img src="{{ . }}" class="img-fluid rounded shadow-sm" alt="{{ $h.title }}">
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+  {{ end }}
+  <!-- Highlights End -->
+
+  <!-- Related Publications -->
+  {{ $shortName := .Params.shortName }}
+  {{ $allPubs := where site.RegularPages "Section" "publications" }}
+  {{ $papers := where $allPubs "Params.researchArea" "intersect" (slice $shortName) }}
+  {{ if $papers }}
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="wow fadeInUp" data-wow-delay="0.1s">
+        <div class="section-title text-start">
+          <h6 class="text-primary mb-2">Publications</h6>
+          <h2 class="mb-4">Related Papers & Contributions</h2>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead class="table-light">
+              <tr>
+                <th>Title</th>
+                <th>Venue</th>
+                <th>Year</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ range sort $papers "Params.year" "desc" }}
+              <tr>
+                <td>{{ .Title }}</td>
+                <td>{{ with .Params.venue }}{{ . }}{{ end }}{{ with .Params.orgName }}{{ . }}{{ end }}</td>
+                <td>{{ .Params.year }}</td>
+                <td>
+                  {{ with .Params.doi }}
+                  <a href="{{ . }}" target="_blank" class="btn btn-sm btn-outline-primary">DOI</a>
+                  {{ end }}
+                </td>
+              </tr>
+              {{ end }}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+  <!-- Publications End -->
+
+  <!-- Related Grants -->
+  {{ $allGrants := where site.RegularPages "Section" "grants" }}
+  {{ $grants := where $allGrants "Params.researchArea" "intersect" (slice $shortName) }}
+  {{ if $grants }}
+  <div class="container-fluid bg-light py-5">
+    <div class="container">
+      <div class="wow fadeInUp" data-wow-delay="0.1s">
+        <div class="section-title text-start">
+          <h6 class="text-primary mb-2">Funding</h6>
+          <h2 class="mb-4">Related Grants</h2>
+        </div>
+        <div class="row g-4">
+          {{ range sort $grants "Params.weight" }}
+          <div class="col-lg-6">
+            <div class="bg-white p-4 rounded shadow-sm h-100">
+              <div class="d-flex align-items-center mb-3">
+                {{ with .Params.img_url }}
+                <img src="{{ . }}" alt="" style="height: 40px; width: auto;" class="me-3">
+                {{ end }}
+                <div>
+                  <h6 class="mb-0">{{ .Title }}</h6>
+                  {{ with .Params.title_small }}
+                  <small class="text-muted">{{ . }}</small>
+                  {{ end }}
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">{{ .Params.organization }} &middot; {{ .Params.date_range }}</small>
+                <span class="badge {{ if eq .Params.status "Ongoing" }}bg-success{{ else }}bg-secondary{{ end }}">{{ .Params.status }}</span>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+  <!-- Grants End -->
+
+  <!-- Back Navigation -->
+  <div class="container-xxl py-4">
+    <div class="container">
+      <a href="/about/" class="btn btn-outline-primary">
+        <i class="fa fa-arrow-left me-2"></i>Back to About
+      </a>
+    </div>
+  </div>
+
+{{ end }}

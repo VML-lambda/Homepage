@@ -8,4 +8,6 @@ yearMonth: "2020.09"
 type: "Domestic"
 image: "/img/paper/ieie.png"
 doi: ""
+researchArea:
+  - "VCM"
 ---

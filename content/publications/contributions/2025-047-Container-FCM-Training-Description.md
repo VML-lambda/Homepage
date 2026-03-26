@@ -8,4 +8,6 @@ year: 2025
 yearMonth: "2025.04"
 doi: ""
 type: "MPEG"
+researchArea:
+  - "VCM"
 ---

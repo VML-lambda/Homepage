@@ -8,4 +8,6 @@ year: 2025
 yearMonth: "2025.07"
 doi: ""
 type: "JVET"
+researchArea:
+  - "NVC"
 ---

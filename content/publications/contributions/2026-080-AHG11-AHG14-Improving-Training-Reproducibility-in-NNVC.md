@@ -1,3 +1,5 @@
+researchArea:
+  - "NVC"
 ---
 title: "AHG11/AHG14: Improving Training Reproducibility in NNVC"
 firstAuthor: "조현동"
@@ -8,4 +10,6 @@ year: 2026
 yearMonth: "2026.01"
 doi: ""
 type: "JVET"
+researchArea:
+  - "NVC"
 ---

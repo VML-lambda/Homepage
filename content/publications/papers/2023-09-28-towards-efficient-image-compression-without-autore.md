@@ -8,4 +8,6 @@ yearMonth: "2023.09"
 type: "International"
 image: "/img/paper/Towards_salman.png"
 doi: ""
+researchArea:
+  - "NVC"
 ---

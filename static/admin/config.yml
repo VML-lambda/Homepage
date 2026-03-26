@@ -32,6 +32,8 @@ collections:
       - { label: "Type", name: "type", widget: "select", options: ["International", "Domestic"] }
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "DOI", name: "doi", widget: "string", required: false }
+      - { label: "Research Area", name: "researchArea", widget: "select", multiple: true, options: ["NVC", "VCM", "3DV"], required: false }
+      - { label: "Grant", name: "grant", widget: "string", required: false, hint: "관련 과제명" }
 
   # ========== Standard Contributions ==========
   - name: "contributions"
@@ -51,6 +53,8 @@ collections:
       - { label: "Year.Month", name: "yearMonth", widget: "string", hint: "e.g. 2024" }
       - { label: "DOI", name: "doi", widget: "string", required: false }
       - { label: "Type", name: "type", widget: "select", options: ["MPEG", "JVET", "JPEG"] }
+      - { label: "Research Area", name: "researchArea", widget: "select", multiple: true, options: ["NVC", "VCM", "3DV"], required: false }
+      - { label: "Grant", name: "grant", widget: "string", required: false }
 
   # ========== Notices ==========
   - name: "notices"
@@ -152,6 +156,115 @@ collections:
         widget: "list"
         field: { label: "Image", name: "image", widget: "image" }
 
+  # ========== About ==========
+  - name: "about"
+    label: "About"
+    files:
+      - name: "about-page"
+        label: "About Page"
+        file: "content/about/_index.md"
+        media_folder: "/static/img/about"
+        public_folder: "/img/about"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Research Section Heading", name: "researchHeading", widget: "string" }
+          - { label: "Introduction Heading", name: "introHeading", widget: "string" }
+          - { label: "Introduction Body", name: "introBody", widget: "markdown" }
+          - label: "Checklist Items"
+            name: "introChecklist"
+            widget: "list"
+            field: { label: "Item", name: "item", widget: "string" }
+          - { label: "Introduction Body 2", name: "introBody2", widget: "markdown" }
+          - { label: "Highlight Box", name: "introHighlight", widget: "markdown" }
+          - { label: "Image 1", name: "introImage1", widget: "image" }
+          - { label: "Image 2", name: "introImage2", widget: "image" }
+
+  # ========== Professor ==========
+  - name: "professor"
+    label: "Professor"
+    files:
+      - name: "professor-profile"
+        label: "Professor Profile"
+        file: "content/members/professor/_index.md"
+        media_folder: "/static/img/people"
+        public_folder: "/img/people"
+        fields:
+          - { label: "Name (English)", name: "title", widget: "string" }
+          - { label: "Name (Korean)", name: "korName", widget: "string" }
+          - { label: "Name (Hanja)", name: "hanjaName", widget: "string", required: false }
+          - { label: "Position", name: "position", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Room", name: "room", widget: "string" }
+          - { label: "Photo", name: "image", widget: "image" }
+          - { label: "Bio (English)", name: "body", widget: "markdown" }
+          - { label: "Lectures (담당 교과)", name: "lectures", widget: "markdown" }
+          - { label: "Education (학력)", name: "education", widget: "markdown" }
+          - { label: "Work Experience (경력)", name: "experience", widget: "markdown" }
+          - { label: "Community Service (대외 활동)", name: "service", widget: "markdown" }
+          - { label: "Awards (수상)", name: "awards", widget: "markdown" }
+          - { label: "On the Media (언론 기사)", name: "media_links", widget: "markdown" }
+          - { label: "Standard Patents & Tech Transfer", name: "patents_std", widget: "markdown" }
+          - { label: "International Patents (국제특허)", name: "patents_intl", widget: "markdown" }
+          - { label: "Domestic Patents (국내특허)", name: "patents_domestic", widget: "markdown" }
+
+  # ========== Research ==========
+  - name: "research"
+    label: "Research"
+    label_singular: "Research Category"
+    folder: "content/research"
+    create: true
+    slug: "{{slug}}"
+    summary: "[{{focusNumber}}] {{title}}"
+    media_folder: "/static/img/about"
+    public_folder: "/img/about"
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "e.g. Neural Image & Video Coding" }
+      - { label: "Short Name", name: "shortName", widget: "string", hint: "e.g. NVC" }
+      - { label: "Subtitle", name: "subtitle", widget: "string", hint: "한 줄 설명" }
+      - { label: "Focus Number", name: "focusNumber", widget: "string", hint: "e.g. 01" }
+      - { label: "Cover Image", name: "image", widget: "image", required: false }
+      - { label: "YouTube Video ID", name: "youtubeId", widget: "string", required: false, hint: "e.g. dQw4w9WgXcQ (URL의 v= 뒤 부분)" }
+      - { label: "PDF File", name: "pdfFile", widget: "file", required: false, hint: "팀 소개 PDF 파일" }
+      - { label: "Display Order", name: "weight", widget: "number", value_type: "int" }
+      - { label: "Overview (본문)", name: "body", widget: "markdown", hint: "연구 목적, 중요성, 활용 분야 소개" }
+      - label: "Team Lead"
+        name: "teamLead"
+        widget: "relation"
+        collection: "members-students"
+        search_fields: ["title", "korName"]
+        value_field: "{{slug}}"
+        display_fields: ["title", "({{degree}})"]
+        required: false
+      - label: "Team Members"
+        name: "teamMembers"
+        widget: "relation"
+        collection: "members-students"
+        search_fields: ["title", "korName"]
+        value_field: "{{slug}}"
+        display_fields: ["title", "({{degree}})"]
+        multiple: true
+        required: false
+      - label: "Research Highlights"
+        name: "highlights"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Period", name: "period", widget: "string", hint: "e.g. 2023-2025", required: false }
+          - { label: "Description", name: "description", widget: "markdown", hint: "핵심 아이디어, 목표, 결과를 홍보 스타일로 작성" }
+          - { label: "Key Figure", name: "keyFigure", widget: "image", required: false }
+          - { label: "Key Result", name: "keyResult", widget: "string", required: false, hint: "e.g. CVPR 2026 발표, MPEG 표준 채택" }
+          - { label: "Participants", name: "participants", widget: "string", required: false }
+          - label: "Related Links"
+            name: "relatedLinks"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Label", name: "label", widget: "string", hint: "e.g. Paper, Grant, Standard" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "URL", name: "url", widget: "string", required: false }
+
   # ========== Grants ==========
   - name: "grants"
     label: "Grants"
@@ -171,3 +284,4 @@ collections:
       - { label: "Date Range", name: "date_range", widget: "string", hint: "e.g. Jun. 2025 - May 2028" }
       - { label: "Status", name: "status", widget: "select", options: ["Ongoing", "Completed"] }
       - { label: "Display Order", name: "weight", widget: "number", value_type: "int" }
+      - { label: "Research Area", name: "researchArea", widget: "select", multiple: true, options: ["NVC", "VCM", "3DV"], required: false }
