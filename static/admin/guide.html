@@ -89,6 +89,8 @@
         <p>왼쪽 사이드바에서 카테고리를 선택합니다.</p>
         <table>
           <tr><th>카테고리</th><th>내용</th></tr>
+          <tr><td>About</td><td>About 페이지 텍스트·이미지 수정</td></tr>
+          <tr><td>Research</td><td>연구 팀별 상세 페이지 (NVC, VCM, 3DV)</td></tr>
           <tr><td>Papers</td><td>논문 목록 (국제/국내 학술지·학술대회)</td></tr>
           <tr><td>Standard Contributions</td><td>MPEG·JVET·JPEG 표준 기여 목록</td></tr>
           <tr><td>News</td><td>연구실 소식 (논문 accept, 수상, 행사 등)</td></tr>
@@ -129,12 +131,47 @@
 
     <h2>각 항목 작성 요령</h2>
 
+    <h3>About 페이지</h3>
+    <p>About 페이지의 모든 텍스트와 이미지를 CMS에서 수정할 수 있습니다.</p>
+    <ul>
+      <li><strong>Research Section Heading</strong>: 연구 팀 그리드 제목</li>
+      <li><strong>Introduction Heading / Body</strong>: Visual Media 소개 섹션 제목·본문 (마크다운 지원)</li>
+      <li><strong>Checklist Items</strong>: 체크 리스트 항목 (추가/삭제/순서 변경 가능)</li>
+      <li><strong>Highlight Box</strong>: 왼쪽 파란 바 강조 박스 내용</li>
+      <li><strong>Image 1, 2</strong>: 오른쪽 이미지 2장</li>
+    </ul>
+    <div class="callout callout-blue">
+      연구 팀 카드(NVC, VCM, 3DV)는 Research 컬렉션에서 자동으로 가져옵니다. About 페이지에서 직접 수정하지 않습니다.
+    </div>
+
+    <h3>Research (연구 팀 페이지)</h3>
+    <p>각 연구 팀(NVC, VCM, 3DV) 상세 페이지를 관리합니다. About 페이지의 카드를 클릭하면 이동하는 페이지입니다.</p>
+    <ul>
+      <li><strong>Title / Short Name / Subtitle</strong>: 팀 이름, 약칭, 한 줄 설명</li>
+      <li><strong>Cover Image</strong>: 대표 이미지 (About 카드 + 상세 페이지에 표시)</li>
+      <li><strong>YouTube Video ID</strong>: 유튜브 영상 ID (URL의 <code>v=</code> 뒤 부분, 예: <code>dQw4w9WgXcQ</code>)</li>
+      <li><strong>PDF File</strong>: 팀 소개 PDF 파일 업로드 (페이지에 임베딩 표시)</li>
+      <li><strong>Overview</strong>: 연구 목적·중요성·활용 분야 소개 (마크다운, 영문 권장)</li>
+      <li><strong>Team Lead / Members</strong>: Students 목록에서 검색·선택 (드롭다운)</li>
+      <li><strong>Research Highlights</strong>: 시간순 연구 성과 목록
+        <ul>
+          <li>Title, Period(선택), Description(마크다운), Key Figure(이미지), Key Result, Participants</li>
+          <li>Related Links: 관련 논문·과제·표준 링크 추가 가능</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="callout callout-blue">
+      <strong>자동 연결 기능</strong>: Papers, Contributions, Grants에 <code>Research Area</code> 태그(NVC/VCM/3DV)를 지정하면, 해당 연구 팀 페이지 하단에 자동으로 표시됩니다. 수동 링크 불필요.
+    </div>
+
     <h3>Papers (논문)</h3>
     <ul>
       <li><strong>Year.Month</strong>: <code>2025.03</code> 형식으로 입력 (점 구분)</li>
       <li><strong>Type</strong>: International (국제) / Domestic (국내) 중 선택</li>
       <li><strong>Co-authors</strong>: 쉼표로 구분, 교신저자는 이름 뒤에 <code>&lt;sup&gt;†&lt;/sup&gt;</code>로 위첨자 십자 표시</li>
       <li><strong>Image</strong>: 논문 대표 이미지 (없어도 무방)</li>
+      <li><strong>Research Area</strong>: NVC / VCM / 3DV 중 선택 (복수 선택 가능, 선택 시 해당 연구 팀 페이지에 자동 표시)</li>
+      <li><strong>Grant</strong>: 관련 과제명 (선택)</li>
     </ul>
 
     <h3>Standard Contributions (표준 기여)</h3>
@@ -143,6 +180,8 @@
       <li><strong>Org Name</strong>: 예) <code>SC29/WG4 (MPEG)</code></li>
       <li><strong>Meeting Name</strong>: 예) <code>MPEG 149th Meeting</code></li>
       <li><strong>Type</strong>: MPEG / JVET / JPEG 중 선택</li>
+      <li><strong>Research Area</strong>: NVC / VCM / 3DV 중 선택 (복수 선택 가능)</li>
+      <li><strong>Grant</strong>: 관련 과제명 (선택)</li>
     </ul>
 
     <h3>News (소식)</h3>
