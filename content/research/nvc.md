@@ -1,4 +1,5 @@
 ---
+url: /about/nvc/
 title: Neural Image & Video Coding
 shortName: NVC
 subtitle: Next-generation neural network-based visual data compression
