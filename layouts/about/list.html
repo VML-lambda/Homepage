@@ -88,25 +88,6 @@
               </div>
             </div>
 
-            <div class="col-12 mt-4">
-              <h5 class="mb-3">Research Focus</h5>
-            </div>
-
-            {{ $research := site.GetPage "research" }}
-            {{ range $research.Pages.ByParam "weight" }}
-            <div class="col-md-6 {{ if eq .Params.focusNumber "03" }}col-12{{ end }}">
-              <a href="{{ .RelPermalink }}" class="text-decoration-none">
-                <div class="research-card">
-                  <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h5 class="mb-0 text-primary">{{ .Params.focusNumber }}</h5>
-                    <i class="fa fa-arrow-right text-primary small"></i>
-                  </div>
-                  <h6 class="mb-2">{{ .Title }}</h6>
-                  <p class="small text-muted mb-0">{{ .Params.subtitle }}</p>
-                </div>
-              </a>
-            </div>
-            {{ end }}
           </div>
         </div>
       </div>
