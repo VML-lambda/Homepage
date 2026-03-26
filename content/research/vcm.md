@@ -1,4 +1,5 @@
 ---
+url: /about/vcm/
 title: Video Coding for Machines
 shortName: VCM
 subtitle: Optimized visual compression for machine vision tasks

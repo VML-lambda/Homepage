@@ -1,4 +1,5 @@
 ---
+url: /about/3dv/
 title: Neural Holography & 3D Vision
 shortName: 3DV
 subtitle: Neural network-based hologram generation, compression, and 3D vision
