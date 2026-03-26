@@ -92,39 +92,21 @@
               <h5 class="mb-3">Research Focus</h5>
             </div>
 
-            <div class="col-md-6">
-              <div class="research-card"
-                onclick="document.getElementById('focus-1').scrollIntoView({behavior: 'smooth'})">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h5 class="mb-0 text-primary">01</h5>
-                  <i class="fa fa-arrow-down text-primary small"></i>
+            {{ $research := site.GetPage "research" }}
+            {{ range $research.Pages.ByParam "weight" }}
+            <div class="col-md-6 {{ if eq .Params.focusNumber "03" }}col-12{{ end }}">
+              <a href="{{ .RelPermalink }}" class="text-decoration-none">
+                <div class="research-card">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="mb-0 text-primary">{{ .Params.focusNumber }}</h5>
+                    <i class="fa fa-arrow-right text-primary small"></i>
+                  </div>
+                  <h6 class="mb-2">{{ .Title }}</h6>
+                  <p class="small text-muted mb-0">{{ .Params.subtitle }}</p>
                 </div>
-                <h6 class="mb-2">Neural Image & Video Coding</h6>
-                <p class="small text-muted mb-0">딥러닝 기반 차세대 영상 압축 기술</p>
-              </div>
+              </a>
             </div>
-            <div class="col-md-6">
-              <div class="research-card"
-                onclick="document.getElementById('focus-2').scrollIntoView({behavior: 'smooth'})">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h5 class="mb-0 text-primary">02</h5>
-                  <i class="fa fa-arrow-down text-primary small"></i>
-                </div>
-                <h6 class="mb-2">Video Coding for Machines</h6>
-                <p class="small text-muted mb-0">머신 비전을 위한 영상 압축</p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="research-card"
-                onclick="document.getElementById('focus-3').scrollIntoView({behavior: 'smooth'})">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h5 class="mb-0 text-primary">03</h5>
-                  <i class="fa fa-arrow-down text-primary small"></i>
-                </div>
-                <h6 class="mb-2">Neural Holography</h6>
-                <p class="small text-muted mb-0">신경망 기반의 홀로그램 생성/압축 및 복원 기술</p>
-              </div>
-            </div>
+            {{ end }}
           </div>
         </div>
       </div>
@@ -132,111 +114,36 @@
   </div>
   <!-- Section 2 End -->
 
-  <!-- Section 3: Focus 1 - NVC -->
-  <div class="container-xxl py-5" id="focus-1">
+  <!-- Section 3: Research Teams Grid -->
+  <div class="container-xxl py-5">
     <div class="container">
-      <div class="row g-5">
-        <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="section-title text-center mx-auto" style="max-width: 800px;">
-            <h6 class="text-primary mb-2">Research Focus 01</h6>
-            <h2 class="mb-4">Neural Image & Video Coding (NVC)</h2>
-          </div>
-          <p class="mb-4">
-            전통적인 Hand-crafted 코덱(AVC, HEVC, VVC 등)을 넘어, <strong>End-to-End 최적화된 신경망 기반 영상 압축</strong> 기술을 연구합니다.
-            Learned Image Coding을 활용하여 기존의 Hand-crafted 방법론을 대체하고, 시각 데이터를 훨씬 더 효율적으로 압축하는 차세대 기술입니다.
-          </p>
-          <div class="row g-3 wow fadeInUp">
-            <div class="col-md-6">
-              <div class="bg-light p-3 rounded h-100">
-                <h6 class="mb-1">Tool-based Approach</h6>
-                <small class="text-muted">Easy adaptation to existing architecture & extension to inter-coding</small>
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+        <h6 class="text-primary">Our Teams</h6>
+        <h1 class="mb-4">Research Focus Areas</h1>
+      </div>
+      <div class="row g-4">
+        {{ $research := site.GetPage "research" }}
+        {{ range $i, $page := $research.Pages.ByParam "weight" }}
+        <div class="col-lg-4 wow fadeInUp" data-wow-delay="{{ mul $i 2 | add 1 }}00ms">
+          <a href="{{ $page.RelPermalink }}" class="text-decoration-none">
+            <div class="research-team-card text-center h-100">
+              {{ with $page.Params.image }}
+              <div class="research-team-img mb-3">
+                <img src="{{ . }}" class="img-fluid rounded" alt="{{ $page.Title }}">
               </div>
+              {{ end }}
+              <h4 class="text-primary mb-1">{{ $page.Params.shortName }}</h4>
+              <h6 class="mb-2 text-dark">{{ $page.Title }}</h6>
+              <p class="small text-muted">{{ $page.Params.subtitle }}</p>
+              <span class="btn btn-outline-primary btn-sm mt-2">Learn More <i class="fa fa-arrow-right ms-1"></i></span>
             </div>
-            <div class="col-md-6">
-              <div class="bg-light p-3 rounded h-100">
-                <h6 class="mb-1">End-to-End Approach</h6>
-                <small class="text-muted">Totally new design, works fine for image. (Researching video extension)</small>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
-
-        <div class="col-12 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="img-wrapper d-flex flex-row justify-content-center gap-4 flex-wrap">
-            <img class="img-fluid rounded" src="/img/about/NVC_tool-based.png" alt="tool-based"
-              style="max-height: 400px; width: auto; max-width: 48%;">
-            <img class="img-fluid rounded" src="/img/about/NVC_E2E-based.png" alt="E2E-based"
-              style="max-height: 400px; width: auto; max-width: 48%;">
-          </div>
-        </div>
+        {{ end }}
       </div>
     </div>
   </div>
   <!-- Section 3 End -->
-
-  <!-- Section 4: Focus 2 - VCM -->
-  <div class="container-fluid bg-light py-5" id="focus-2">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="section-title text-center mx-auto" style="max-width: 800px;">
-            <h6 class="text-primary mb-2">Research Focus 02</h6>
-            <h2 class="mb-4">Video Coding for Machines (VCM)</h2>
-            <p class="mb-4 text-start">
-              저희 연구실은 인간 시각 뿐만 아니라 <strong>Machine Vision Model</strong>(분류, 탐지, 분할 등)을 위한 최적화된 영상 압축 기술을 개발합니다.
-              화소(Pixel) 자체를 압축하는 대신, 신경망의 <strong>"중간 특징맵(Intermediate Features)"</strong>을 압축하여 데이터 크기를 획기적으로 줄이면서도 머신 비전
-              태스크의 성능 저하를 최소화하는 <strong>FCM</strong> 기술을 연구합니다.
-            </p>
-            <div class="d-inline-flex align-items-center justify-content-center bg-white p-3 rounded shadow-sm">
-              <i class="fa fa-robot text-primary fa-2x me-3"></i>
-              <div class="text-start">
-                <h6 class="mb-0">Joint Optimization</h6>
-                <small>Bitrate (bpp) vs Machine Performance (mAP)</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="img-wrapper">
-            <img class="img-fluid w-75 rounded" src="/img/about/FCM.png" alt="FCTM 파이프라인">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Section 4 End -->
-
-  <!-- Section 5: Focus 3 - Holography -->
-  <div class="container-xxl py-5" id="focus-3">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="section-title text-center mx-auto" style="max-width: 800px;">
-            <h6 class="text-primary mb-2">Research Focus 03</h6>
-            <h2 class="mb-4">Neural Holography</h2>
-            <p class="mb-4 text-start">
-              홀로그래피는 물체의 빛을 공간상에 그대로 재현하여 기존 3D 디스플레이의 문제인 수렴-초점 불일치가 없는 이상적인 기술입니다. 하지만 방대한 데이터량과 높은 해상도를 요구합니다.
-            </p>
-            <p class="mb-4 text-start">
-              저희는 방대한 홀로그램 데이터를 효율적으로 처리하는 <strong>신경망 기반 홀로그램 압축 및 생성 기술</strong>을 연구합니다.
-            </p>
-            <div class="bg-light p-3 rounded d-inline-block">
-              <h6 class="mb-1">NHVC (Neural Hologram Video Coding)</h6>
-              <small>Phase Hologram Image/Video Compressor & Generator</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="img-wrapper">
-            <img class="img-fluid w-75 rounded" src="/img/about/Hologram.png" alt="Neural Holography 파이프라인">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Section 5 End -->
   <!-- About End -->
 
 {{ end }}
