@@ -1,11 +1,11 @@
 ---
 title: Ji Hyoun Choi
 korName: 최지현
-degree: MS
+degree: PhD
 position: UVC / 3DV
 department: Artificial Intelligence
 email: jihyoun0403@khu.ac.kr
-image: /img/people/Jihyoun.jpg
+image: /img/people/IMG_4017.JPG
 weight: 10
 researchInterests:
   - Neural Video Coding

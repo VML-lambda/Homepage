@@ -2,40 +2,40 @@
 title: Hui Yong Kim
 korName: 김휘용
 hanjaName: 金暉容
-position: 경희대학교 컴퓨터공학과 교수
+position: School of Computing, Kyung Hee University
 email: hykim.v@khu.ac.kr
-phone: "031-201-3760"
-room: 국제캠퍼스 전자정보대학관 311호
+phone: 031-201-3760
+room: 311-ho, Electronic Information College building, Global Campus (KHU)
 image: /img/people/professor.jpg
-lectures: |
+lectures: |-
   **[Undergraduate Courses]**
 
   - **Discrete Structure** (이산구조)
   - **Machine Learning** (기계학습)
   - **Digital Image Processing** (영상처리)
-  - *Statistical Learning Theory (통계적학습이론)*
-  - *Seminar on KHU CSE Research Fields & Entrepreneurship (전공탐색 및 기업가정신 세미나)*
-  - *Capstone Design (캡스톤디자인)*
-  - *Graduation Project & Thesis (졸업프로젝트 & 졸업논문)*
+  - _Statistical Learning Theory (통계적학습이론)_
+  - _Seminar on KHU CSE Research Fields & Entrepreneurship (전공탐색 및 기업가정신 세미나)_
+  - _Capstone Design (캡스톤디자인)_
+  - _Graduation Project & Thesis (졸업프로젝트 & 졸업논문)_
 
   **[Graduate Courses]**
 
   - **Intelligent Media & Standards** (지능미디어와 표준)
-  - *Advanced Probability & Statistics (확률및통계 특론)*
-  - *AI Creative Research Project II (AI창의연구프로젝트 II)*
-education: |
+  - _Advanced Probability & Statistics (확률및통계 특론)_
+  - _AI Creative Research Project II (AI창의연구프로젝트 II)_
+education: |-
   - 1998.03.01. ~ 2004.02.20. [KAIST 전기및전자공학과](https://ee.kaist.ac.kr/) (공학박사)
   - 1996.03.01. ~ 1998.02.20. [KAIST 전기및전자공학과](https://ee.kaist.ac.kr/) (공학석사)
   - 1990.03.01. ~ 1994.08.19. [KAIST 전기및전자공학과](https://ee.kaist.ac.kr/) (공학사)
   - 1988.03.01. ~ 1990.02.20. [대전과학고등학교](https://djshs.djsch.kr/main.do)
-experience: |
+experience: |-
   - 2020.03.01.~ [경희대학교 컴퓨터공학과](https://ce.khu.ac.kr/ce/user/main/view.do) (교수)
   - 2019.09.01. ~ 2020.02.29. [숙명여자대학교](https://www.sookmyung.ac.kr/kr/index.do) [ICT융합공학부 전자공학전공](https://electro.sookmyung.ac.kr/ee/index.do) (부교수)
   - 2005.11.01. ~ 2019.08.31. [한국전자통신연구원(ETRI)](https://www.etri.re.kr/intro.html) 실감AV연구그룹 (그룹장/책임연구원)
   - 2013.09.01. ~ 2014.08.31. [Univ. of Southern California 미디어통신연구소](https://mcl.usc.edu/) (Visiting Scholar)
   - 2006.09.01. ~ 2010.08.31. [과학기술연합대학원대학교(UST)](https://www.ust.ac.kr/kor/) 이동통신및디지털방송공학과 (겸임교수)
   - 2003.08.01. ~ 2005.10.26. [(주)애드팍테크놀러지](https://www.addpac.com/addpac_kor2015/main.php) 기술연구소 (멀티미디어팀장)
-service: |
+service: |-
   아래는 ETRI(한국전자통신연구원)에서 근무할 때 달성한 실적입니다.
 
   **[International Service]**
@@ -56,7 +56,7 @@ service: |
   - 2016~현재 [한국방송미디어공학회](https://www.kibme.org/) 상임이사, 평의원, 논문지 부편집위원장
   - 2013~현재 [대한전자공학회](https://www.theieie.org/) (신호처리소사이이티) 이사, 감사, 평의원, 논문심사위원
   - 2008~2010 [한국정보통신기술협회(TTA)](https://www.tta.or.kr/tta/index.do) DMB PG 위원
-awards: |
+awards: |-
   - 2017.09.20. 과학기술정보통신부 "2017 **국가연구개발 우수성과** (초고품질 콘텐츠 지원 UHD 실감방송 기술)
   - 2017.06.22. 특허청 2017년 상반기 **특허기술상 "세종대왕상"**
   - 2017.04.05. 한국전자통신연구원 창립기념식 포상 **"올해의 ETRI 연구자상"**
@@ -68,12 +68,12 @@ awards: |
   - 2009.04.03. 한국전자통신연구원 창립기념식 포상 **"표준화상"**
   - 2006.12.27. 제2회 **정보통신표준화 우수논문공모전 "최우수상"**
   - 2004.02.20. 제10회 **삼성 휴먼테크 논문상 "동상"**
-media_links: |
+media_links: |-
   - [머니투데이 (2022.05.03)](https://news.mt.co.kr/mtview.php?no=2022050311297431126)
   - [전자신문 기사 (2016.09.19)](https://www.etnews.com/20160911000123)
   - [YTN 뉴스 보도 (2016.08.23)](https://n.news.naver.com/mnews/article/052/0000892446)
   - [ETRI 웹진 기사 (2017.05.26)](https://www.etri.re.kr/webzine/20170526/sub07.html)
-patents_std: |
+patents_std: |-
   아래는 ETRI(한국전자통신연구원)에 근무할 때 달성한 실적입니다.
 
   **[표준특허 등록]**
@@ -85,15 +85,16 @@ patents_std: |
 
   - **국제표준 특허기술료(HEVC/VVC): 600억원 이상** (2014~2024 @ETRI,KHU)
   - **중소기업 기술이전료: 5억원 이상** (2014~2019 @ETRI)
-patents_intl: |
+patents_intl: |-
   국제 특허 목록은 아래의 링크 참고 바랍니다.
 
   [Google Patents - International](https://patents.google.com/?inventor=Hui+Yong+KIM&sort=new)
-patents_domestic: |
+patents_domestic: |-
   국내 특허 목록은 아래의 링크 참고 바랍니다.
 
   [Google Patents - Domestic](https://patents.google.com/?inventor=%EA%B9%80%ED%9C%98%EC%9A%A9&sort=new)
 ---
+
 Hui Yong Kim is a Professor in the School of Computing (Dept. of Computer Science and Engineering and Dept. of Artificial Intelligence) in Kyung Hee University, Yongin, Korea since Mar. 2020. He was also an Associate Professor in the Dept. of Electronics Engineering in Sookmyung Women's University, Seoul, Korea. Prior to joining universities, he served as the Managing Director of Realistic Audio & Video Research Group of Electronics and Telecommunications Research Institute (ETRI), Daejeon, Korea from 2005 to 2019. From 2003 to 2005, he worked for AddPac Technology Co. Ltd. as the Multimedia Research Team Leader.
 
 He received his BS, MS, and Ph.D degrees from Korea Advanced Institute of Science and Technology (KAIST) in 1994, 1998, and 2004, respectively. He was also an affiliate professor in University of Science and Technology (UST) and was a visiting scholar in the Media Communications Lab. at University of Southern California (USC), USA.
