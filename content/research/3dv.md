@@ -19,7 +19,6 @@ highlights:
       We introduced two foundational operations and integrated them into HEVC's RDO, residual computation, and sample reconstruction processes:
 
       - **Shorter Circular Difference**: Resolves the distance ambiguity between two phase values by always selecting the shorter arc on the phase circle.
-
       - **Circular Clipping**: Wraps out-of-range values back onto the valid phase interval instead of hard-clipping to the boundary.
 
        Applied across seven holographic test sequences, the proposed method achieves **–63.3% BD-Rate (phase domain) and –65.5% BD-Rate (NR domain)** compared to standard HEVC. VVC extensions with SAO and deblocking filters are submitted.
@@ -38,12 +37,10 @@ highlights:
        Key design choices:
 
       - **Deformable convolution** for large receptive fields and implicit temporal motion handling.
-
       - **Strong band-limiting** to suppress high-order diffraction noise.
-
       - **Scalable architecture**: a single model supports image/video generation and compression, switchable at inference time.
 
-      NHVC achieves >33 dB NR-PSNR quality, outperforming cascaded baselines by **–75.8% BD-Rate (image)**\*\* and **–75.6% BD-Rate (video)**.
+      NHVC achieves >33 dB NR-PSNR quality, outperforming cascaded baselines by \*\*–75.8% BD-Rate (image)\*\*\*\* and **–75.6% BD-Rate (video)**.
     keyFigure: ''
     keyResult: IEEE VR 2024 (Oral)
     participants: ''
@@ -61,7 +58,6 @@ highlights:
       Two parameters control the output:
 
       - **α**— randomness (uniform vs. concentrated distribution)
-
       - **β** — slope and distribution shape
 
       Simply replacing the activation function in existing models (HoloNet, DPRC, NHVC) with FlexMU yields a consistent **average +1.49 dB PSNR** improvement with no other changes required.
@@ -79,9 +75,7 @@ highlights:
       PDA has three demonstrated applications:
 
       - **Quality evaluation**: reliable phase-domain quality assessment without computationally expensive numerical reconstruction.
-
       - **Pre-processing for conventional codecs**: –14% BD-Rate with HEVC, –25.41% BD-Rate with VVC phase hologram extension.
-
       - **Training loss for neural models:** +0.37 dB generation quality and –11% BD-Rate vs. NHVC, with faster training convergence.
     keyFigure: ''
     keyResult: ACM MM 2025 (Oral)
@@ -90,6 +84,23 @@ highlights:
       - label: Paper
         title: 'Phase Distribution Matters: On the Importance of PDA in Holographic Applications'
         url: https://dl.acm.org/doi/10.1145/3746027.3755797
+  - title: 'PaD: Propagation as Data'
+    period: ''
+    description: |-
+      Existing neural hologram generators are optimized for a **fixed propagation distance**.
+
+      Changing the distance, wavelength, or pixel pitch requires full retraining — impractical for real deployments where hardware specifications vary.
+
+      **PaD (Propagation as Data)** treats the propagation kernel as **input data** rather  than a fixed physical operation baked into the architecture. A dedicated Kernel Encoder ingests the propagation kernel at inference time, enabling a **single trained model to generalize to arbitrary propagation conditions without retraining**.
+
+      Architecture highlights: pre-trained LDM image encoder for stable feature extraction; FFC (Fast Fourier Convolution) for feature–kernel fusion; enlarged receptive field for global scene structure modeling.
+    keyFigure: ''
+    keyResult: IEEE VR Workshop 2024
+    participants: ''
+    relatedLinks:
+      - label: Paper
+        title: 'PaD: Neural Phase Hologram Generation with Variable Distance Support'
+        url: https://doi.org/10.1109/VRW62533.2024.00200
 url: /about/3dv/
 ---
 
