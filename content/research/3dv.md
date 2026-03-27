@@ -87,7 +87,7 @@ highlights:
 url: /about/3dv/
 ---
 
-The 3D Video Coding (3DV) team conducts research across two major frontiers of next-generation 3D media: **phase-aware hologram compression (Learned-based/hand-crafted based)** and **feed-forward 3D Gaussian Splatting (3DGS)**
+The 3D Video Coding (3DV) team conducts research across two major frontiers of next-generation 3D media: **phase-aware hologram compression (Learned-based/hand-crafted based)** and **3D Gaussian Splatting (3DGS)**
 
 ### Holography
 
