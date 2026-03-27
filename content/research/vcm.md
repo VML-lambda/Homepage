@@ -10,7 +10,7 @@ teamLead: ''
 teamMembers: []
 highlights:
   - title: 'MPEG-FCM: Feature Coding for Machines — International Standard'
-    period: 2024-
+    period: 2024–Present
     description: |-
       We are core contributors to **ISO/IEC 23088-2 (MPEG Feature Coding for Machines)**,  the international standard for compressing neural network feature maps in split inference pipelines.
 
@@ -20,7 +20,7 @@ highlights:
     participants: ''
     relatedLinks: []
   - title: 'Hybrid Vision Coding: A Unified Bitstream for Humans and Machines'
-    period: 2025–
+    period: 2025–Present
     description: |-
       We are pioneering **hybrid vision coding** — a compression framework that delivers both human-viewable reconstruction and machine task performance from a single bitstream, without the overhead of simulcast (compressing twice for two pipelines).
 
