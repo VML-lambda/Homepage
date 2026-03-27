@@ -1,16 +1,21 @@
 ---
-url: /about/vcm/
 title: Video Coding for Machines
 shortName: VCM
 subtitle: Optimized visual compression for machine vision tasks
-focusNumber: "02"
+focusNumber: '02'
 image: /img/about/FCM.png
+youtubeId: ''
 weight: 2
-teamLead: ""
+teamLead: ''
 teamMembers: []
 highlights: []
+url: /about/vcm/
 ---
-We develop optimized video compression technologies not only for human perception but also for **Machine Vision Models** (classification, detection, segmentation, etc.). Instead of compressing pixels directly, we research **FCM (Feature Coding for Machines)** technology that compresses **intermediate feature maps** from neural networks, dramatically reducing data size while minimizing performance degradation in machine vision tasks.
+
+We develops compression technologies optimized
+not for human perception, but for **machine vision models** (detection, segmentation, classification, etc.) — and for frameworks that serve \*both\* simultaneously.
+
+ Instead of compressing pixels directly, we research **FCM (Feature Coding for Machines)** technology that compresses **intermediate feature maps** from neural networks, dramatically reducing data size while minimizing performance degradation in machine vision tasks.
 
 ### Core Objective
 
