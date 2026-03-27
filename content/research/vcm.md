@@ -25,8 +25,10 @@ highlights:
       We are pioneering **hybrid vision coding** — a compression framework that delivers both human-viewable reconstruction and machine task performance from a single bitstream, without the overhead of simulcast (compressing twice for two pipelines).
 
       Two interface paradigms are under investigation:
-          - **Feature-Input (FCM extension)**: Machine vision uses decoded features directly; a lightweight human decoder reconstructs a viewable image from the same features.
-          - **Image-Input**: Shared information is disentangled and recombined to serve both vision and reconstruction paths with high efficiency.
+
+      **Feature-Input (FCM extension)**: Machine vision uses decoded features directly; a lightweight human decoder reconstructs a viewable image from the same features.
+
+      **Image-Input**: Shared information is disentangled and recombined to serve both vision and reconstruction paths with high efficiency.
 
       We are coordinating a **joint contribution to MPEG WG2** (October 2026) with international partners (KHU, ZJU, SFU) to formally define use cases, requirements, and common test conditions — and to propose an official Exploration Experiment, the first formal step toward a new international standard for hybrid vision coding.
     keyFigure: ''
@@ -41,7 +43,7 @@ not for human perception, but for **machine vision models** (detection, segmenta
 
 #### FCM: Feature Coding for Machines (MPEG-FCM)
 
-Rather than compressing pixels, FCM compresses **intermediate feature maps** extracted by neural networks. In a _split inference_ pipeline, an edge device runs the front-end layers of a vision model, compresses the resulting features, and transmits them to a server that completes the task. 
+Rather than compressing pixels, FCM compresses **intermediate feature maps** extracted by neural networks. In a _split inference_ pipeline, an edge device runs the front-end layers of a vision model, compresses the resulting features, and transmits them to a server that completes the task.
 
 Our team has been a core contributor to the **MPEG-FCM international standard (MPEG-AI)** since its inception, attending every MPEG plenary and submitting proposals that have been adopted across ten successive Feature Coding Test Model (FCTM) versions. The standard is on track for DIS in April 2026.
 
