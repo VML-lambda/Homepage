@@ -10,7 +10,7 @@ teamLead: ''
 teamMembers: []
 highlights:
   - title: HEVC/VVC Extension for Phase Holograms
-    period: 2022–2030
+    period: 2022–Present
     description: |-
       Standard video codecs treat all signals as living on a linear number line.
 
