@@ -48,23 +48,6 @@ highlights:
       - label: Paper
         title: 'NHVC: Neural Holographic Video Compression with Scalable Architecture'
         url: https://doi.org/10.1109/VR58804.2024.00116
-  - title: 'FlexMU: Phase-Aware Activation Function'
-    period: ''
-    description: |-
-      TanH and HardTanH clip outputs at the phase boundary (±π), creating an **Edge Stuck** problem: the optimizer has no continuous path to reach targets on the other side of the period — causing output distributions to pathologically concentrate near ±π rather than approximating the desired uniform distribution.
-
-       **FlexMU (Flexible Modulo Unit)** embeds a modulo operation into the activation function, enabling gradients to flow seamlessly across phase cycle boundaries.
-
-      Two parameters control the output:
-
-      - **α**— randomness (uniform vs. concentrated distribution)
-      - **β** — slope and distribution shape
-
-      Simply replacing the activation function in existing models (HoloNet, DPRC, NHVC) with FlexMU yields a consistent **average +1.49 dB PSNR** improvement with no other changes required.
-    keyFigure: ''
-    keyResult: ''
-    participants: ''
-    relatedLinks: []
   - title: 'PDA: Phase Distribution Alignment'
     period: ''
     description: |-
@@ -117,4 +100,4 @@ Holography reproduces the full light field of objects in space, eliminating the 
 
 ### 3D Gaussian Splatting
 
-3DGS represents 3D scenes as millions of learnable Gaussian ellipsoids, enabling **real-time novel-view synthesis at >100 fps** — far exceeding NeRF in speed. We research **feed-forward joint generation and compression**: a trained network produces and compresses a complete 3DGS representation from multi-view images in a single forward pass, achieving state-of-the-art rate-distortion performance without per-scene fine-tuning.
+3DGS represents 3D scenes as millions of learnable Gaussian ellipsoids, enabling **real-time novel-view synthesis at >100 fps** — far exceeding NeRF in speed.
