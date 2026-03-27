@@ -40,7 +40,7 @@ highlights:
       - **Strong band-limiting** to suppress high-order diffraction noise.
       - **Scalable architecture**: a single model supports image/video generation and compression, switchable at inference time.
 
-      NHVC achieves >33 dB NR-PSNR quality, outperforming cascaded baselines by \*\*–75.8% BD-Rate (image)\*\*\*\* and **–75.6% BD-Rate (video)**.
+      NHVC achieves >33 dB NR-PSNR quality, outperforming cascaded baselines by **–75.8% BD-Rate (image)** and **–75.6% BD-Rate (video)**.
     keyFigure: ''
     keyResult: IEEE VR 2024 (Oral)
     participants: ''
