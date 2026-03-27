@@ -45,8 +45,8 @@ not for human perception, but for **machine vision models** (detection, segmenta
 
 Rather than compressing pixels, FCM compresses **intermediate feature maps** extracted by neural networks. In a _split inference_ pipeline, an edge device runs the front-end layers of a vision model, compresses the resulting features, and transmits them to a server that completes the task.
 
-Our team has been a core contributor to the **MPEG-FCM international standard (MPEG-AI)** since its inception, attending every MPEG plenary and submitting proposals that have been adopted across ten successive Feature Coding Test Model (FCTM) versions. The standard is on track for DIS in April 2026.
+Our team has been a core contributor to the **MPEG-FCM international standard (MPEG-AI)** since its inception, attending every MPEG plenary and submitting proposals that have been adopted across ten successive Feature Coding Test Model (FCTM) versions.
 
 #### Hybrid Vision Coding (Human & Machine)
 
-A single bitstream that serves both human viewers and machine vision pipelines. Rather than compressing twice (simulcast), a unified codec delivers visual quality for human consumption while preserving task-critical information for AI models. We are coordinating a joint MPEG WG2 contribution (Oct. 2026) with international partners to drive this toward a new international standard.
+A single bitstream that serves both human viewers and machine vision pipelines. Rather than compressing twice (simulcast), a unified codec delivers visual quality for human consumption while preserving task-critical information for AI models. We are coordinating a joint MPEG WG2 contribution with international partners to drive this toward a new international standard.
