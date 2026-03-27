@@ -10,7 +10,7 @@ teamLead: ''
 teamMembers: []
 highlights:
   - title: Block-based Learned Image Compression
-    period: 2024–
+    period: 2024–Present
     description: |-
       State-of-the-art LIC models process entire feature maps as network inputs, making peak memory a hard bottleneck for high-resolution content. Block-based processing mitigates this but triggers blocking artifacts.
 
@@ -18,14 +18,14 @@ highlights:
 
       **The result**: artifact-free reconstruction with **zero BD-rate loss** compared to Full-image inference, while **significantly reducing peak memory** and peak MACs across 2K and 4K resolutions.
     keyFigure: ''
-    keyResult: CVPR 2026 accepted — 'Block-based Learned Image Compression without Blocking Artifacts'
+    keyResult: CVPR 2026 accepted
     participants: ''
     relatedLinks:
       - label: Paper
         title: Block-based Learned Image Compression without Blocking Artifacts
         url: ''
   - title: Lightweight Building Blocks (SCM & SC-Gate)
-    period: 2024–
+    period: 2024–Present
     description: |-
       We design lightweight backbone blocks deployable in two separate contexts.
 
@@ -36,7 +36,7 @@ highlights:
     keyResult: –15.84% BD-rate vs. VTM 9.1 and NNVC SR tool adoption
     participants: ''
     relatedLinks:
-      - label: '- label: "Standard"'
+      - label: Standard
         title: NNVC Super-resolution — JVET codec adoption
         url: ''
   - title: Generative Compression
