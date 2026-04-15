@@ -212,7 +212,8 @@ collections:
   - name: "research"
     label: "Research"
     label_singular: "Research Category"
-    folder: "content/research"
+    folder: "content/about"
+    path: "{{slug}}/index"
     create: true
     slug: "{{slug}}"
     summary: "[{{focusNumber}}] {{title}}"

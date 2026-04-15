@@ -22,8 +22,7 @@
         <h2 class="mb-4">{{ .Params.researchHeading }}</h2>
       </div>
       <div class="row g-4">
-        {{ $research := site.GetPage "research" }}
-        {{ range $i, $page := $research.Pages.ByParam "weight" }}
+        {{ range $i, $page := .Pages.ByParam "weight" }}
         <div class="col-lg-4 wow fadeInUp" data-wow-delay="{{ mul $i 2 | add 1 }}00ms">
           <a href="{{ $page.RelPermalink }}" class="text-decoration-none">
             <div class="research-team-card text-center h-100">

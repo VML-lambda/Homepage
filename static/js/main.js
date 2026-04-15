@@ -116,9 +116,7 @@ $(document).ready(function () {
       $("#loading").fadeOut(500);
     });
 
-    if (filename == "research") {
-      $("#nav-research").addClass("active");
-    } else if (filename == "professor") {
+    if (filename == "professor") {
       $("#nav-professor").addClass("active");
       $("#nav-people").addClass("active");
     } else if (filename == "students") {

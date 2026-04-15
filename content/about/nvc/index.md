@@ -1,5 +1,4 @@
 ---
-url: /about/nvc/
 title: Neural Image & Video Coding
 shortName: NVC
 subtitle: Next-generation neural network-based visual data compression
@@ -50,7 +49,6 @@ highlights:
     keyResult: ''
     participants: ''
     relatedLinks: []
-url: /about/nvc/
 ---
 
 We research **end-to-end optimized neural network-based image and video compression** technologies that go beyond traditional hand-crafted codecs (AVC, HEVC, VVC, etc.).  Beyond compression gains, we directly confront the core barrier to practical deployment -- **computational complexity**.

@@ -14,8 +14,10 @@
 | `content/alumni/*.md` | 졸업생 | 가끔 |
 | `content/publications/*.md` | 논문 목록 | 가끔 |
 | `content/grants/*.md` | 연구 과제 | 드물게 |
-| `content/_index.md` | 홈 페이지 텍스트 (About, FAQ) | 드물게 |
+| `content/about/_index.md` | About 오버뷰 페이지 텍스트·이미지 | 드물게 |
+| `content/about/{slug}/index.md` | 연구 팀별 상세 페이지 (NVC/VCM/3DV 등) | 가끔 |
 | `layouts/` | HTML 템플릿 | 거의 수정 안 함 |
+| `layouts/partials/navbar.html` | **상단 네비 바 (About 드롭다운 하드코딩 — 팀 추가/삭제 시 수동 수정 필요)** | 연구 팀 변경 시 |
 | `static/` | CSS/JS/이미지 | 거의 수정 안 함 |
 | `public/` | Hugo 빌드 결과물 **(직접 수정 금지)** | - |
 
