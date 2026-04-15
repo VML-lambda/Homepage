@@ -1,14 +1,66 @@
-/********** Template CSS **********/
+/**
+ * VML Homepage — Revolut-inspired visual refresh
+ * Design reference: https://getdesign.md/revolut/design-md
+ */
 :root {
-  --primary: #0f607b;
-  --secondary: #6c757d;
+  /* Palette — near-black + white binary */
+  --primary: #191c1f;
+  --secondary: #8d969e;
   --light: #ffffff;
-  --dark: #1a2a36;
+  --dark: #191c1f;
+  --surface: #f4f4f4;
+  --border: #e1e4e8;
+  --text-muted: #505a63;
+
+  /* Typography */
+  --font-display: 'Inter', 'Pretendard Variable', Pretendard, 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', 'Pretendard Variable', Pretendard, 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Radii (prepared for later phases) */
+  --radius-sm: 12px;
+  --radius-card: 20px;
+  --radius-pill: 9999px;
+
+  /* Section rhythm (prepared for later phases) */
+  --section-y: clamp(64px, 10vw, 120px);
 }
 
-.soft-shadow {
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+/* Global typography */
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  color: var(--primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--primary);
+}
+
+h1 { font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em; }
+h2 { font-size: clamp(28px, 3.2vw, 40px); line-height: 1.15; letter-spacing: -0.015em; }
+h3 { font-size: clamp(22px, 2.4vw, 32px); line-height: 1.2; }
+h4 { font-size: clamp(18px, 1.8vw, 24px); line-height: 1.3; }
+
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: var(--font-display);
+  font-weight: 500 !important;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+}
+.display-1 { font-size: clamp(56px, 9vw, 136px); }
+.display-2 { font-size: clamp(48px, 7vw, 96px); }
+.display-3 { font-size: clamp(40px, 6vw, 80px); }
+.display-4 { font-size: clamp(36px, 5vw, 64px); }
+
+p { letter-spacing: 0.16px; line-height: 1.56; }
+.lead, .lh-lg { letter-spacing: 0.16px; }
 
 .fw-medium {
   font-weight: 500 !important;
@@ -44,32 +96,45 @@
   opacity: 1;
 }
 
-/*** Button ***/
+/*** Button — Revolut pill system ***/
 .btn {
   font-weight: 500;
-  transition: 0.5s;
+  font-family: var(--font-display);
+  letter-spacing: 0.16px;
+  border-radius: var(--radius-pill);
+  padding: 14px 32px;
+  transition: opacity 0.15s, background-color 0.15s, color 0.15s, border-color 0.15s;
 }
+.btn:hover { opacity: 0.85; }
 
-.btn.btn-primary,
-.btn.btn-outline-primary:hover {
+.btn-sm { padding: 8px 18px; font-size: 14px; }
+.btn-lg { padding: 16px 36px; font-size: 18px; }
+
+.btn.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
   color: #ffffff;
 }
-
-.btn-square {
-  width: 38px;
-  height: 38px;
+.btn.btn-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  opacity: 0.85;
 }
 
-.btn-sm-square {
-  width: 32px;
-  height: 32px;
+.btn.btn-outline-primary {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+.btn.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  opacity: 1;
 }
 
-.btn-lg-square {
-  width: 48px;
-  height: 48px;
-}
-
+/* Icon buttons stay circular (pill on square = circle) */
 .btn-square,
 .btn-sm-square,
 .btn-lg-square {
@@ -78,7 +143,18 @@
   align-items: center;
   justify-content: center;
   font-weight: normal;
+  border-radius: var(--radius-pill);
 }
+.btn-square { width: 38px; height: 38px; }
+.btn-sm-square { width: 32px; height: 32px; }
+.btn-lg-square { width: 48px; height: 48px; }
+
+/*** Bootstrap primary overrides — force near-black everywhere ***/
+.text-primary { color: var(--primary) !important; }
+.bg-primary { background-color: var(--primary) !important; }
+.border-primary { border-color: var(--primary) !important; }
+a { color: var(--primary); }
+a:hover { color: var(--primary); opacity: 0.7; }
 
 /*** Navbar ***/
 .navbar.sticky-top {
@@ -92,18 +168,21 @@
 }
 
 .navbar .navbar-nav .nav-link {
-  margin-right: 30px;
+  margin-right: 28px;
   padding: 25px 0;
-  color: var(--dark);
+  color: var(--primary);
+  font-family: var(--font-display);
   font-size: 15px;
   font-weight: 500;
-  text-transform: uppercase;
+  letter-spacing: 0.16px;
+  text-transform: none;
   outline: none;
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
   color: var(--primary);
+  opacity: 0.6;
 }
 
 .navbar .dropdown-toggle::after {
@@ -172,7 +251,6 @@
 }
 
 .overlay {
-  /* color: rgba(0, 0, 0, .1); */
   position: absolute;
   z-index: 12;
   top: 15%;
@@ -187,20 +265,36 @@
   align-items: center;
 }
 
+/* Hero headline legibility — dark gradient over carousel (depth via color contrast, not shadow) */
+.header-carousel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 11;
+  background: linear-gradient(115deg, rgba(25, 28, 31, 0.1) 0%, rgba(25, 28, 31, 0.1) 40%, rgba(25, 28, 31, 0) 75%);
+  pointer-events: none;
+}
+
+.header-carousel {
+  height: 800px;
+  overflow: hidden;
+}
+
+.header-carousel .owl-carousel-item {
+  position: relative;
+  min-height: 800px;
+  overflow: hidden;
+}
+
+.header-carousel .owl-carousel-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (max-height: 1080px) {
-  .header-carousel .owl-carousel-item {
-    position: relative;
-    min-height: 800px;
-    overflow: hidden;
-  }
-
-  /* .header-carousel .owl-carousel-item img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
-
   .header-carousel .owl-carousel-item p {
     font-size: 16px !important;
   }
@@ -245,10 +339,9 @@
 }
 
 .page-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+  background: linear-gradient(rgba(25, 28, 31, 0.1), rgba(25, 28, 31, 0.1)),
     url(../img/KHU_crop.jpg) center center no-repeat;
   background-size: cover;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -621,27 +714,30 @@
 }
 
 .accordion-button {
-  font-family: var(--heading-font);
-  font-weight: var(--heading-font-weight);
-  /* color: var(--heading-color); */
-  color: rgb(1, 46, 67);
-  background-color: rgba(236, 238, 244, 0.587);
-  line-height: var(--heading-line-height);
-  letter-spacing: 0.065rem;
-  text-transform: uppercase;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.08);
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--primary);
+  background-color: var(--surface);
+  letter-spacing: 0.16px;
+  text-transform: none;
+  box-shadow: none;
+  border-radius: var(--radius-sm) !important;
 }
 
 .accordion-button:focus {
-  box-shadow: none;
+  box-shadow: 0 0 0 0.125rem rgba(25, 28, 31, 0.2);
 }
 
 .accordion-button:not(.collapsed) {
-  /* color: var(--heading-color); */
-  /* background-color: var(--bs-light); */
-  color:  rgba(0, 0, 0, 0.08);
-  background-color:  rgba(236, 238, 244, 0.587);
+  color: var(--primary);
+  background-color: var(--surface);
   box-shadow: none;
+}
+
+.accordion-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm) !important;
+  overflow: hidden;
 }
 
 
@@ -824,13 +920,6 @@ html {
   font-size: 16px;
 }
 
-body {
-  font-family: 'Noto Sans KR', Arial, sans-serif;
-  /* line-height: 1.6; */
-  /* margin: 30px; */
-  /* color: #222; */
-}
-
 h2 {
   margin-top: 30px;
 }
@@ -856,69 +945,64 @@ li {
   margin-top: 30px;
 }
 
-/* Publications Tabs (scoped) */
+/* Publications Tabs — Revolut pill system */
 .pub-tabs {
-  --pub-text: #555;
-  --pub-text-active: #fff;
+  border-bottom: none;
+  gap: 8px;
 }
 
 .pub-tabs .nav-link {
-  font-size: 1.25rem;         /* 크고 */
-  font-weight: 700;           /* 굵게 */
-  color: var(--pub-text);
-  padding: 0.75rem 1.5rem;
-  border: none;               /* 기본 탭 보더 제거 */
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  color: var(--text-muted);
+  padding: 10px 24px;
+  border: 2px solid transparent;
   background: transparent;
-  transition: background-color .2s ease, color .2s ease, transform .1s ease;
-  border-radius: .5rem;       /* pill 느낌 */
+  border-radius: var(--radius-pill);
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s, opacity 0.15s;
   outline: none;
 }
 
 .pub-tabs .nav-link:hover {
-  color: #000;
+  color: var(--primary);
+  background: var(--surface);
 }
 
 .pub-tabs .nav-link.active {
-  color: var(--pub-text-active);
-  background-color: var(--secondary); /* 확실한 highlight */
-  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  color: #ffffff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: none;
 }
 
 .pub-tabs .nav-link:focus-visible {
-  outline: 2px solid rgba(13,110,253,.4); /* 접근성 포커스 링 */
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: 0 0 0 0.125rem rgba(25, 28, 31, 0.25);
 }
 
-/* 탭 하단 기본 보더 라인 제거(원하면 유지 가능) */
-.pub-tabs {
-  border-bottom: none;
-}
-
-/* 모바일 간격 조정 */
 @media (max-width: 576px) {
   .pub-tabs .nav-link {
-    font-size: 1.1rem;
-    padding: 0.6rem 1rem;
+    font-size: 14px;
+    padding: 8px 18px;
   }
 }
 
 /* Research Card Styling & Interaction */
 .research-card {
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid #eee;
+  transition: transform 0.2s, border-color 0.2s;
+  border: 1px solid var(--border);
   height: 100%;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: var(--radius-card);
   background: #fff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   cursor: pointer;
 }
 
 .research-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(13, 110, 253, 0.15);
-  /* Primary Color Shadow */
-  border-color: #0d6efd;
+  transform: translateY(-4px);
+  border-color: var(--primary);
 }
 
 /* Image Wrapper Styling */
@@ -943,18 +1027,16 @@ li {
 
 /* Research Team Card (About page grid) */
 .research-team-card {
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid #eee;
-  padding: 30px 20px;
-  border-radius: 15px;
+  transition: transform 0.2s, border-color 0.2s;
+  border: 1px solid var(--border);
+  padding: 32px 24px;
+  border-radius: var(--radius-card);
   background: #fff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .research-team-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(13, 110, 253, 0.15);
-  border-color: #0d6efd;
+  transform: translateY(-4px);
+  border-color: var(--primary);
 }
 
 .research-team-img {
@@ -1050,4 +1132,74 @@ li {
 #recruit-fab:hover {
   opacity: 0.10;
   /* hover 시 투명 */
+}
+
+/* ============================================================
+ * Phase 5 — Section rhythm (80–120px vertical)
+ * ============================================================ */
+.container-xxl.py-5,
+section.py-5 {
+  padding-top: var(--section-y) !important;
+  padding-bottom: var(--section-y) !important;
+}
+
+/* ============================================================
+ * Phase 3 — Flat design overrides (Revolut "zero shadows")
+ * Depth via color contrast & border, not shadow.
+ * ============================================================ */
+.shadow, .shadow-sm, .shadow-lg, .shadow-none { box-shadow: none !important; }
+
+.service-item,
+.service-icon,
+.jarallax-img,
+.professor-item,
+.publication-item,
+.team-item,
+.testimonial-carousel .owl-item .testimonial-text,
+.pub-tabs .nav-link.active,
+.highlight-period,
+.highlight-key-result,
+.team-member-badge {
+  box-shadow: none !important;
+}
+
+/* Cards get a consistent border + 20px radius */
+.service-item,
+.professor-item,
+.publication-item,
+.team-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card) !important;
+}
+
+/* Highlight pill badges use near-black + surface */
+.highlight-period {
+  background: var(--surface) !important;
+  color: var(--primary) !important;
+  border-radius: var(--radius-pill) !important;
+  padding: 2px 12px !important;
+}
+.highlight-key-result {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-radius: var(--radius-pill) !important;
+  padding: 2px 12px !important;
+}
+.team-member-badge {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+  color: var(--primary) !important;
+  border-radius: var(--radius-pill) !important;
+}
+
+/* Research detail page — flatten */
+.research-highlight {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card) !important;
+  box-shadow: none !important;
+}
+
+/* Neutralize old text-shadow on page headers (Revolut has none) */
+.page-header {
+  text-shadow: none !important;
 }

@@ -55,7 +55,7 @@
         {{ with .Params.image }}
         <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
           <div class="img-wrapper">
-            <img src="{{ . }}" class="img-fluid rounded shadow-sm" alt="{{ $.Title }}">
+            <img src="{{ . }}" class="img-fluid rounded" alt="{{ $.Title }}">
           </div>
         </div>
         {{ end }}
@@ -136,7 +136,7 @@
           {{ with $h.keyFigure }}
           <div class="col-lg-5">
             <div class="img-wrapper">
-              <img src="{{ . }}" class="img-fluid rounded shadow-sm" alt="{{ $h.title }}">
+              <img src="{{ . }}" class="img-fluid rounded" alt="{{ $h.title }}">
             </div>
           </div>
           {{ end }}
@@ -207,7 +207,7 @@
         <div class="row g-4">
           {{ range sort $grants "Params.weight" }}
           <div class="col-lg-6">
-            <div class="bg-white p-4 rounded shadow-sm h-100">
+            <div class="bg-white p-4 rounded h-100 border">
               <div class="d-flex align-items-center mb-3">
                 {{ with .Params.img_url }}
                 <img src="{{ . }}" alt="" style="height: 40px; width: auto;" class="me-3">
