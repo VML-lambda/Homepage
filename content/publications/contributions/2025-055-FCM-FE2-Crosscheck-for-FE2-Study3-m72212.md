@@ -1,6 +1,6 @@
 ---
 title: "[FCM][FE2] Crosscheck for FE2 Study3 m72212"
-firstAuthor: "임달홍"
+firstAuthor: "Dalhong Lim"
 organization: "ISO/IEC JTC 1"
 orgName: "150th ISO/IEC JTC 1/SC 29 MPEG"
 meetingName: "19th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 150)"

@@ -1,6 +1,6 @@
 ---
 title: "[FCVCM] Pareto-fronting with Multiple Inter-Layer Feature Resizing Modes"
-firstAuthor: "정혜원"
+firstAuthor: "Hyewon Jeong"
 organization: "ISO/IEC JTC 1"
 orgName: "143th ISO/IEC JTC 1/SC 29 MPEG"
 meetingName: "12th ISO/IEC JTC1/SC 29/WG2 meeting (MPEG 143)"

@@ -1,6 +1,6 @@
 ---
 title: "[FCM] Crosscheck of m69985 (CE 3.2: Machine Saliency Compression Based on Temporal Single Input for Multiple Output Architecture)"
-firstAuthor: "유장현"
+firstAuthor: "Janghyun Yu"
 organization: "ISO/IEC JTC 1"
 orgName: "148th ISO/IEC JTC 1/SC 29 MPEG"
 meetingName: "17th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 148)"

@@ -1,6 +1,6 @@
 ---
 title: "[FCM] CE 3.1: Anchor Generation"
-firstAuthor: "유장현"
+firstAuthor: "Janghyun Yu"
 organization: "ISO/IEC JTC 1"
 orgName: "151th ISO/IEC JTC 1/SC 29 MPEG"
 meetingName: "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)"

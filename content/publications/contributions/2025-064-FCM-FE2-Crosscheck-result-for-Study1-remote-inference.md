@@ -1,6 +1,6 @@
 ---
 title: "[FCM][FE2] Crosscheck result for Study1 remote inference"
-firstAuthor: "정혜원"
+firstAuthor: "Hyewon Jeong"
 organization: "ISO/IEC JTC 1"
 orgName: "151th ISO/IEC JTC 1/SC 29 MPEG"
 meetingName: "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)"

@@ -1,6 +1,6 @@
 ---
 title: "[FCM][CTTC/FE2] Removing Kimono and Cactus sequence as mandatory test conditions"
-firstAuthor: "임달홍"
+firstAuthor: "Dalhong Lim"
 organization: "ISO/IEC JTC 1"
 orgName: "151th ISO/IEC JTC 1/SC 29 MPEG"
 meetingName: "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)"
