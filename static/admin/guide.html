@@ -124,8 +124,8 @@
 </div>
 
 <div class="nav-tabs">
-  <button class="active" onclick="showTab('user')">일반 사용자 가이드</button>
-  <button onclick="showTab('admin')">관리자 가이드</button>
+  <button class="active" data-tab="member" onclick="location.hash='member'">일반 사용자 가이드</button>
+  <button data-tab="admin" onclick="location.hash='admin'">관리자 가이드</button>
 </div>
 
 <aside class="toc-sidebar" id="toc-sidebar" aria-label="Table of contents">
@@ -136,7 +136,7 @@
 <div class="content">
 
   <!-- ========== 일반 사용자 가이드 ========== -->
-  <div id="tab-user" class="tab-pane active">
+  <div id="tab-member" class="tab-pane active">
 
     <h2>콘텐츠 수정 방법</h2>
     <p>연구실 구성원은 GitHub 계정이 있으면 홈페이지 콘텐츠를 직접 수정할 수 있습니다. 별도 설치 없이 웹 브라우저에서만 작업합니다.</p>
@@ -658,13 +658,25 @@ git push origin master</div>
 </div>
 
 <script>
-  function showTab(name) {
-    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-tabs button').forEach(b => b.classList.remove('active'));
-    document.getElementById('tab-' + name).classList.add('active');
-    event.target.classList.add('active');
+  function render() {
+    const hash = location.hash.slice(1);
+    const isTabHash = hash === 'member' || hash === 'admin';
+    const currentPane = document.querySelector('.tab-pane.active');
+    const current = currentPane ? currentPane.id.replace('tab-', '') : 'member';
+    const name = isTabHash ? hash : current;
+
+    document.querySelectorAll('.tab-pane').forEach(p => {
+      p.classList.toggle('active', p.id === 'tab-' + name);
+    });
+    document.querySelectorAll('.nav-tabs button').forEach(b => {
+      b.classList.toggle('active', b.dataset.tab === name);
+    });
+
     buildToc(name);
-    window.scrollTo({ top: 0, behavior: 'auto' });
+
+    if (isTabHash && current !== name) {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
   }
 
   // ---------- Floating Table of Contents ----------
@@ -748,14 +760,8 @@ git push origin master</div>
     targets.forEach((t) => tocObserver.observe(t));
   }
 
-  // Initial build on first render
-  document.addEventListener('DOMContentLoaded', () => {
-    const activeTab = document.querySelector('.tab-pane.active');
-    if (activeTab) {
-      const name = activeTab.id.replace('tab-', '');
-      buildToc(name);
-    }
-  });
+  document.addEventListener('DOMContentLoaded', render);
+  window.addEventListener('hashchange', render);
 </script>
 
 </body>
