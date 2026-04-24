@@ -1,8 +1,7 @@
-baseURL = "/"
+baseURL = "https://vmlab.khu.ac.kr/"
 languageCode = "ko-kr"
 title = "Visual Media Lab"
 enableRobotsTXT = true
-relativeURLs = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
