@@ -1,5 +1,5 @@
 ---
-title: '[FCM][CE1] Crosscheck of CE1.1 (from KHU)'
+title: '[FCM][FE2] Crosscheck of FE2-Study1.1 from Canon'
 firstAuthor: Sangkyun Jeon, Hui Yong Kim (KHU)
 organization: ISO/IEC JTC 1
 orgName: 154th ISO/IEC JTC 1/SC 29 MPEG
