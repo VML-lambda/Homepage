@@ -1,0 +1,20 @@
+{{/*
+  리다이렉트 어댑터.
+  data/redirects.yaml 을 읽어 각 `from` 경로에 리다이렉트 페이지를 생성한다.
+  렌더링은 layouts/redirect/single.html 이 담당.
+  리다이렉트 규칙은 data/redirects.yaml 에서만 관리하면 된다 — 이 파일은 수정 불필요.
+*/}}
+{{ range $.Site.Data.redirects }}
+  {{ if and .from .to }}
+    {{ $.AddPage (dict
+      "kind"   "page"
+      "path"   .from
+      "title"  (printf "Redirecting to %s" .to)
+      "type"   "redirect"
+      "params" (dict "redirectTo" .to)
+      "build"  (dict "list" "never" "render" "always")
+    ) }}
+  {{ else }}
+    {{ errorf "data/redirects.yaml: 각 항목에는 'from' 과 'to' 가 모두 필요합니다 (문제 항목: %v)" . }}
+  {{ end }}
+{{ end }}
