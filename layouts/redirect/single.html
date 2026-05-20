@@ -1,0 +1,16 @@
+{{- /* 리다이렉트 페이지 템플릿. data/redirects.yaml + content/_content.gotmpl 로 생성됨.
+       define 블록이 없으므로 baseof 를 거치지 않고 단독 렌더링된다. */ -}}
+{{- $url := .Params.redirectTo | absURL -}}
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ $url }}</title>
+  <link rel="canonical" href="{{ $url }}">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url={{ $url }}">
+</head>
+<body>
+  <p>Redirecting to <a href="{{ $url }}">{{ $url }}</a>&hellip;</p>
+</body>
+</html>
