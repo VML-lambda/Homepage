@@ -3,7 +3,7 @@ title: Neural Holography & 3D Vision
 shortName: 3DV
 subtitle: Phase-aware holographic processing and compression, and feed-forward 3D GS compression
 focusNumber: '03'
-image: /img/about/Hologram.png
+image: /img/about/3DV.png
 youtubeId: ''
 weight: 3
 teamLead: ''
