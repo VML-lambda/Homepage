@@ -6,7 +6,7 @@ venue: ACM MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil
 year: 2026
 yearMonth: '2026.11'
 type: International
-image: ''
+image: /img/paper/flexmu.png
 doi: https://doi.org/10.1145/3767308.3836473
 researchArea:
   - 3DV
