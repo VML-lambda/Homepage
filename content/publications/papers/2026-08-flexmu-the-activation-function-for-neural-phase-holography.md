@@ -2,7 +2,7 @@
 title: 'FlexMU: The Activation Function for Neural Phase Holography'
 firstAuthor: TaeHwa Lee
 coauthors: Seungmi Choi Suhyun Jo, Kwan-Jung Oh, and Hui Yong Kim<sup>†</sup>
-venue: ACM MM ’26, November 10–14, 2026, Rio de Janeiro, Brazil
+venue: "MM '26: Proceedings of the 34th ACM International Conference on Multimedia"
 year: 2026
 yearMonth: '2026.11'
 type: International
