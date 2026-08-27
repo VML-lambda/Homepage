@@ -1,5 +1,5 @@
 ---
-title: Khreative U+ PULP Happy&Smart Lab Certificate 1.0
+title: 2026 Khreative U+ BK21 Research Achievement Forum
 date: 2026-08-27
 date_end: ''
 images:
