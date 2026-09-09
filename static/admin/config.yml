@@ -7,7 +7,7 @@ backend:
 media_folder: "static/img"
 public_folder: "/img"
 media_library:
-  name: ""
+  name: default
   folder_support: true
 
 collections:
