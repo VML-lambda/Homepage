@@ -8,7 +8,7 @@
         {{ with .Params.orgName }}{{ if ne . "" }}<small class="text-muted">{{ . }}</small><br />{{ end }}{{ end }}
         {{ with .Params.meetingName }}{{ if ne . "" }}<small class="text-muted">{{ . }}</small>{{ end }}{{ end }}
       </h6>
-      {{ with .Params.firstAuthor }}{{ if ne . "" }}<p class="card-subtitle text-muted mb-1 small">{{ . }}</p>{{ end }}{{ end }}
+      {{ partial "author-line.html" . }}
       <p class="card-text text-muted mb-0 small"><strong>{{ .Params.yearMonth }}</strong></p>
     </div>
   </div>

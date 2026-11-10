@@ -1,6 +1,6 @@
 ---
 title: "Non-CE3: Modification of MPM derivation"
-firstAuthor: "J. Lee, H. Lee, S.-C. Lim, J. Kang, H. Y. Kim"
+coauthors: "J. Lee, H. Lee, S.-C. Lim, J. Kang, H. Y. Kim"
 organization: "ITU-T/ISO/IEC JVET"
 orgName: "VVC (Versatile Video Coding) Standardization"
 meetingName: "JVET-M0239 (January 2019)"

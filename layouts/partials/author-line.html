@@ -1,0 +1,16 @@
+{{- /*
+  저자 줄 (Papers / Standard Contributions 공통)
+    <strong>First Author</strong>, Co-authors
+  - First Author가 비어 있으면 Co-authors만 표시 (앞 쉼표 없음)
+  - Co-authors는 HTML 허용 (교신저자 <sup>†</sup> 등)
+  - 둘 다 비어 있으면 아무것도 출력하지 않음
+*/ -}}
+{{- $first := .Params.firstAuthor | default "" -}}
+{{- $co := .Params.coauthors | default "" -}}
+{{- if or $first $co -}}
+<p class="card-subtitle text-muted mb-1 small">
+  {{- with $first }}<strong>{{ . }}</strong>{{ end -}}
+  {{- if and $first $co }}, {{ end -}}
+  {{- with $co }}{{ . | safeHTML }}{{ end -}}
+</p>
+{{- end -}}

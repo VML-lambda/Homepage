@@ -1,6 +1,6 @@
 ---
 title: "[FCM] Proposal on CTTC and Anchor for NN-based Coding Mode"
-firstAuthor: "Janghyun Yu"
+coauthors: "Janghyun Yu"
 organization: "ISO/IEC JTC 1"
 orgName: "149th ISO/IEC JTC 1/SC 29 MPEG"
 meetingName: "18th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 149)"

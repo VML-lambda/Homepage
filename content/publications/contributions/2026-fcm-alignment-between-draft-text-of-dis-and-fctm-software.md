@@ -1,6 +1,6 @@
 ---
 title: '[FCM] Alignment between Draft text of DIS and FCTM software'
-firstAuthor: Sangkyun Jeon, Hyewon Jeong, Janghyun Yu, Hui Yong Kim (KHU) Se Yoon Jeong, Younhee Kim (ETRI)
+coauthors: Sangkyun Jeon, Hyewon Jeong, Janghyun Yu, Hui Yong Kim (KHU) Se Yoon Jeong, Younhee Kim (ETRI)
 organization: ISO/IEC JTC 1
 orgName: 155th ISO/IEC JTC 1/SC 29 MPEG
 meetingName: 25th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 156)
@@ -10,5 +10,5 @@ doi: ''
 type: MPEG
 researchArea:
   - VCM
-grant: ''
+acknowledgment: ''
 ---

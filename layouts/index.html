@@ -1,5 +1,8 @@
 {{ define "main" }}
 
+  {{/* CMS 편집 화면용 멤버 목록(/admin/members.json) 생성 — 화면에는 아무것도 출력하지 않음 */}}
+  {{ partial "cms-members-json.html" . }}
+
   <!-- Carousel Start -->
   <div class="container-fluid p-0 pb-5 wow fadeIn position-relative" data-wow-delay="0.5s">
     <div class="overlay">

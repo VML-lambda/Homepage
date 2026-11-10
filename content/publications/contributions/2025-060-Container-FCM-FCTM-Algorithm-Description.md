@@ -1,6 +1,6 @@
 ---
 title: "[Container] [FCM] FCTM Algorithm Description"
-firstAuthor: ""
+coauthors: ""
 organization: "ISO/IEC JTC 1"
 orgName: "151th ISO/IEC JTC 1/SC 29 MPEG"
 meetingName: "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)"

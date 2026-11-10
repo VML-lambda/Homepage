@@ -29,8 +29,8 @@ collections:
         - { name: "type", label: "Type", field: "type" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "First Author", name: "firstAuthor", widget: "string" }
-      - { label: "Co-authors", name: "coauthors", widget: "string", required: false, hint: "Comma separated. Use &lt;sup&gt;†&lt;/sup&gt; for corresponding author." }
+      - { label: "First Author", name: "firstAuthor", widget: "string", required: false, hint: "Optional (shown in bold). For lab member name spelling, see the member list at the top of the Preview panel." }
+      - { label: "Co-authors", name: "coauthors", widget: "string", required: false, hint: "Comma separated. Use &lt;sup&gt;†&lt;/sup&gt; for corresponding author. For lab member name spelling, see the member list at the top of the Preview panel." }
       - { label: "Venue", name: "venue", widget: "string" }
       - { label: "Year", name: "year", widget: "number", value_type: "int" }
       - { label: "Year.Month", name: "yearMonth", widget: "string", hint: "e.g. 2025.03" }
@@ -38,7 +38,7 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "DOI", name: "doi", widget: "string", required: false }
       - { label: "Research Area", name: "researchArea", widget: "select", multiple: true, options: ["NVC", "VCM", "3DV"], required: false }
-      - { label: "Grant", name: "grant", widget: "string", required: false, hint: "관련 과제명" }
+      - { label: "Acknowledgment (사사문구)", name: "acknowledgment", widget: "text", required: false, hint: "e.g. This work was supported by ..." }
 
   # ========== Standard Contributions ==========
   - name: "contributions"
@@ -56,7 +56,8 @@ collections:
         - { name: "researchArea", label: "Research Area", field: "researchArea" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "First Author", name: "firstAuthor", widget: "string", required: false }
+      - { label: "First Author", name: "firstAuthor", widget: "string", required: false, hint: "Optional (shown in bold). For lab member name spelling, see the member list at the top of the Preview panel." }
+      - { label: "Co-authors", name: "coauthors", widget: "string", required: false, hint: "Comma separated. Use &lt;sup&gt;†&lt;/sup&gt; for corresponding author. For lab member name spelling, see the member list at the top of the Preview panel." }
       - { label: "Organization", name: "organization", widget: "string", default: "ISO/IEC JTC 1" }
       - { label: "Org Name", name: "orgName", widget: "string" }
       - { label: "Meeting Name", name: "meetingName", widget: "string" }
@@ -65,7 +66,7 @@ collections:
       - { label: "DOI", name: "doi", widget: "string", required: false }
       - { label: "Type", name: "type", widget: "select", options: ["MPEG", "JVET", "JPEG"] }
       - { label: "Research Area", name: "researchArea", widget: "select", multiple: true, options: ["NVC", "VCM", "3DV"], required: false }
-      - { label: "Grant", name: "grant", widget: "string", required: false }
+      - { label: "Acknowledgment (사사문구)", name: "acknowledgment", widget: "text", required: false, hint: "e.g. This work was supported by ..." }
 
   # ========== Notices ==========
   - name: "notices"
@@ -132,13 +133,13 @@ collections:
         widget: "list"
         required: false
         summary: "{{degree}} {{major}}, {{school}}"
-        hint: "홈페이지에는 'Ph.D. Computer Science and Engineering, KHU (2024–Present)' 형식으로 자동 표시됩니다 (학위는 굵게)."
+        hint: "Shown on the website as 'Ph.D. Computer Science and Engineering, KHU (2024–Present)' (degree in bold)."
         fields:
           - { label: "Degree (학위)", name: "degree", widget: "select", options: ["Integrated M.S./Ph.D.", "Ph.D.", "M.S.", "M.A.", "B.S.", "B.A."] }
           - { label: "Major (전공)", name: "major", widget: "string", hint: "e.g. Computer Science and Engineering" }
           - { label: "School (학교)", name: "school", widget: "string", default: "KHU", hint: "e.g. KHU" }
-          - { label: "Start Year (입학 연도)", name: "start_year", widget: "number", value_type: "int", required: false, hint: "e.g. 2024 (모르면 비워 두세요)" }
-          - { label: "End Year (졸업 연도)", name: "end_year", widget: "number", value_type: "int", required: false, hint: "e.g. 2026 · 비우면 Present로 표시됩니다 (재학 중, Start Year를 입력한 경우)" }
+          - { label: "Start Year (입학 연도)", name: "start_year", widget: "number", value_type: "int", required: false, hint: "e.g. 2024" }
+          - { label: "End Year (졸업 연도)", name: "end_year", widget: "number", value_type: "int", required: false, hint: "e.g. 2026 · Leave empty to show 'Present' (currently enrolled; requires Start Year)" }
       - { label: "GitHub", name: "github", widget: "string", required: false }
       - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
       - { label: "Homepage", name: "homepage", widget: "string", required: false }
@@ -330,14 +331,14 @@ collections:
       - { label: "Organization", name: "organization", widget: "string" }
       - { label: "Logo Image", name: "img_url", widget: "image", required: false }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Start Date (과제 시작일)", name: "start_date", widget: "datetime", type: "date", hint: "달력에서 선택. 홈페이지에는 월·연도만 표시됩니다 (예: Jan. 2017). 시작 월의 1일 선택을 권장합니다." }
-      - { label: "End Date (과제 종료일)", name: "end_date", widget: "datetime", type: "date", hint: "달력에서 선택. 홈페이지에는 월·연도만 표시됩니다 (예: Dec. 2028). 종료 월의 말일 선택을 권장합니다." }
+      - { label: "Start Date (과제 시작일)", name: "start_date", widget: "datetime", type: "date" }
+      - { label: "End Date (과제 종료일)", name: "end_date", widget: "datetime", type: "date" }
       - label: "Additional Periods (추가 기간)"
         name: "extra_periods"
         widget: "list"
         required: false
         summary: "{{start_date}} ~ {{end_date}}"
-        hint: "과제 기간이 중간에 끊겨 여러 구간인 경우에만 추가합니다. 위 Start/End Date에는 첫 구간을 입력하세요. 홈페이지에는 'May. 2022 - Nov. 2022 / May. 2023 - Dec. 2023'처럼 이어서 표시됩니다."
+        hint: "Add only if the grant period is split into multiple ranges."
         fields:
           - { label: "Start Date", name: "start_date", widget: "datetime", type: "date" }
           - { label: "End Date", name: "end_date", widget: "datetime", type: "date" }
