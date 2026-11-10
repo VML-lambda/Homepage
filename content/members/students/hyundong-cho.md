@@ -11,9 +11,15 @@ researchInterests:
   - Neural Network-based Video Coding
   - Conventional Video Coding
 education:
-  - <b>Ph.D.</b> Computer Science and Engineering, KHU
-  - <b>M.S.</b> Computer Science and Engineering, KHU
-  - <b>B.S.</b> Spanish Language and Literature/Software Convergence, KHU
+  - degree: Ph.D.
+    major: Computer Science and Engineering
+    school: KHU
+  - degree: M.S.
+    major: Computer Science and Engineering
+    school: KHU
+  - degree: B.S.
+    major: Spanish Language and Literature/Software Convergence
+    school: KHU
 github: ''
 linkedin: https://www.linkedin.com/in/hyundong-cho-b50130278/
 homepage: ''

@@ -120,6 +120,18 @@ var GalleryPreview = createClass({
   }
 });
 
+// ── Education line helper ────────────────────────────────────
+// layouts/partials/education-line.html 과 같은 규칙
+//   " Major, School (2024–Present)"  — end_year 비면 Present (start_year 있을 때)
+function educationRest(ed) {
+  var s = '';
+  if (ed.major) s += ' ' + ed.major;
+  if (ed.school) s += ', ' + ed.school;
+  if (ed.start_year) s += ' (' + ed.start_year + '–' + (ed.end_year || 'Present') + ')';
+  else if (ed.end_year) s += ' (' + ed.end_year + ')';
+  return s;
+}
+
 // ── Students / Alumni ────────────────────────────────────────
 // Exact same structure as layouts/partials/member-card-overlay.html
 // box-slide forced visible (transform:translateY(0)) since hover N/A in preview
@@ -170,11 +182,12 @@ var MemberPreview = createClass({
                   ),
                   educationList.length > 0 && h('p', {},
                     h('b', {}, 'Education'), h('br'),
-                    // education items contain HTML (<b> tags) — must use dangerouslySetInnerHTML
-                    h('span', {
-                      className: 'small-text',
-                      dangerouslySetInnerHTML: { __html: educationList.join('<br>') }
-                    })
+                    // same format as layouts/partials/education-line.html
+                    h('span', { className: 'small-text' },
+                      educationList.map(function (ed, i) {
+                        return h('span', { key: i }, h('b', {}, ed.degree || ''), educationRest(ed), h('br'));
+                      })
+                    )
                   ),
                   current && h('p', {},
                     h('b', {}, 'Current'), ' ',

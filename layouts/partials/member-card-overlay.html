@@ -18,7 +18,7 @@
             {{ end }}
             {{ with .Params.education }}
             <p><b>Education</b><br/>
-              <span class="small-text">{{ range . }}{{ . | safeHTML }}<br/>{{ end }}</span>
+              <span class="small-text">{{ range . }}{{ partial "education-line.html" . }}<br/>{{ end }}</span>
             </p>
             {{ end }}
             {{ with .Params.current }}

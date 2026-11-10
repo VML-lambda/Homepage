@@ -12,9 +12,20 @@ researchInterests:
   - Generative Models
   - Feature Coding for Machines
 education:
-  - <b>Ph.D.</b> Computer Science and Engineering, KHU (2024 - Present)
-  - <b>M.S.</b> Computer Science and Engineering, KHU (2022 - 2024)
-  - <b>B.S.</b> Applied Mathematics, KHU (2016 - 2022)
+  - degree: Ph.D.
+    major: Computer Science and Engineering
+    school: KHU
+    start_year: 2024
+  - degree: M.S.
+    major: Computer Science and Engineering
+    school: KHU
+    start_year: 2022
+    end_year: 2024
+  - degree: B.S.
+    major: Applied Mathematics
+    school: KHU
+    start_year: 2016
+    end_year: 2022
 github: ''
 linkedin: ''
 homepage: ''

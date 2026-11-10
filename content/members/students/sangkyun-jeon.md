@@ -11,8 +11,12 @@ researchInterests:
   - Computer Vision
   - Hybrid Vision
 education:
-  - <b>M.S.</b> Computer Science and Engineering, KHU
-  - <b>B.A.</b> Computer Engineering and Artificial Intelligence, DAU
+  - degree: M.S.
+    major: Computer Science and Engineering
+    school: KHU
+  - degree: B.S.
+    major: Computer Engineering and Artificial Intelligence
+    school: DAU
 github: https://www.github.com/jsk0910
 homepage: ''
 orcid: https://orcid.org/0009-0004-4287-6745

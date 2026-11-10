@@ -12,8 +12,12 @@ researchInterests:
   - Generative Video Coding
   - 3D Gaussian Splatting
 education:
-  - <b>Integrated M.S./Ph.D.</b> Artificial Intelligence, KHU
-  - <b>B.S.</b> Software Convergence, KHU
+  - degree: Integrated M.S./Ph.D.
+    major: Artificial Intelligence
+    school: KHU
+  - degree: B.S.
+    major: Software Convergence
+    school: KHU
 github: https://github.com/jihyounchoi
 linkedin: https://www.linkedin.com/in/ji-hyoun-choi-113115292/
 homepage: ''

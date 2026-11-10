@@ -127,7 +127,18 @@ collections:
       - { label: "Email", name: "email", widget: "string" }
       - { label: "Photo", name: "image", widget: "image", default: "profile.png" }
       - { label: "Research Interests", name: "researchInterests", widget: "list", required: false }
-      - { label: "Education", name: "education", widget: "list", required: false }
+      - label: "Education"
+        name: "education"
+        widget: "list"
+        required: false
+        summary: "{{degree}} {{major}}, {{school}}"
+        hint: "홈페이지에는 'Ph.D. Computer Science and Engineering, KHU (2024–Present)' 형식으로 자동 표시됩니다 (학위는 굵게)."
+        fields:
+          - { label: "Degree (학위)", name: "degree", widget: "select", options: ["Integrated M.S./Ph.D.", "Ph.D.", "M.S.", "M.A.", "B.S.", "B.A."] }
+          - { label: "Major (전공)", name: "major", widget: "string", hint: "e.g. Computer Science and Engineering" }
+          - { label: "School (학교)", name: "school", widget: "string", default: "KHU", hint: "e.g. KHU" }
+          - { label: "Start Year (입학 연도)", name: "start_year", widget: "number", value_type: "int", required: false, hint: "e.g. 2024 (모르면 비워 두세요)" }
+          - { label: "End Year (졸업 연도)", name: "end_year", widget: "number", value_type: "int", required: false, hint: "e.g. 2026 · 비우면 Present로 표시됩니다 (재학 중, Start Year를 입력한 경우)" }
       - { label: "GitHub", name: "github", widget: "string", required: false }
       - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
       - { label: "Homepage", name: "homepage", widget: "string", required: false }

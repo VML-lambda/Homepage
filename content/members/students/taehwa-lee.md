@@ -11,9 +11,18 @@ researchInterests:
   - Neural Image/Video Compression
   - Neural Holograpy
 education:
-  - Ph.D. in Computer Engineering, Kyung Hee University — In Progress
-  - M.S. in Artificial Intelligence, Kyung Hee University, 2025
-  - B.S. in Computer Engineering, Kyung Hee University, 2023
+  - degree: Ph.D.
+    major: Computer Engineering
+    school: KHU
+    start_year: 2026
+  - degree: M.S.
+    major: Artificial Intelligence
+    school: KHU
+    end_year: 2025
+  - degree: B.S.
+    major: Computer Engineering
+    school: KHU
+    end_year: 2023
 github: https://github.com/studyingeugene
 linkedin: ''
 homepage: https://studyingeugene.github.io
