@@ -1,0 +1,19 @@
+{{- /*
+  과제 기간 표시 문자열을 반환합니다.
+    입력: grant 페이지 (.)
+    출력: "Jan. 2017 - Dec. 2028"
+          추가 기간(extra_periods)이 있으면 " / " 로 이어 붙임
+          예) "May. 2022 - Nov. 2022 / May. 2023 - Dec. 2023"
+*/ -}}
+{{- $fmt := "Jan. 2006" -}}
+{{- $p := .Params -}}
+{{- $parts := slice -}}
+{{- if and $p.start_date $p.end_date -}}
+  {{- $parts = $parts | append (printf "%s - %s" (time.Format $fmt $p.start_date) (time.Format $fmt $p.end_date)) -}}
+{{- end -}}
+{{- range $p.extra_periods -}}
+  {{- if and .start_date .end_date -}}
+    {{- $parts = $parts | append (printf "%s - %s" (time.Format $fmt .start_date) (time.Format $fmt .end_date)) -}}
+  {{- end -}}
+{{- end -}}
+{{- return delimit $parts " / " -}}

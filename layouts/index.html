@@ -91,8 +91,8 @@
         <div class="col-md-5 col-lg-5 wow fadeIn" data-wow-delay="0.1s">
           <h5 class="mb-3"><i class="fa fa-th-list text-primary me-2"></i>Research Project (연구 과제)</h5>
           <ul class="ps-3 mb-0">
-            {{ $grants := where (where site.RegularPages "Type" "grants") "Params.status" "Ongoing" }}
-            {{ range $grants.ByParam "weight" }}
+            {{ $grants := where (partial "grants-sorted.html" (where site.RegularPages "Type" "grants")) "Params.status" "Ongoing" }}
+            {{ range $grants }}
             <li>{{ .Params.organization }}: {{ .Title }} {{ if .Params.title_small }}<small>{{ .Params.title_small }}</small>{{ end }}</li>
             {{ end }}
           </ul>

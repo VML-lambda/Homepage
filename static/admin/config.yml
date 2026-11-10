@@ -22,6 +22,11 @@ collections:
     summary: "[{{type}}] {{title}} ({{yearMonth}})"
     media_folder: "/static/img/paper"
     public_folder: "/img/paper"
+    # 목록을 Domestic / International 로 묶어서 표시 (목록 상단 Group 메뉴에서 해제 가능)
+    view_groups:
+      default: "type"
+      groups:
+        - { name: "type", label: "Type", field: "type" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "First Author", name: "firstAuthor", widget: "string" }
@@ -43,6 +48,12 @@ collections:
     create: true
     slug: "{{year}}-{{slug}}"
     summary: "[{{type}}] {{title}} ({{yearMonth}})"
+    # 목록 그룹 보기: 기본은 Research Area, 목록 상단 Group 메뉴에서 표준화 단체(MPEG/JVET/JPEG)로 전환 가능
+    view_groups:
+      default: "researchArea"
+      groups:
+        - { name: "type", label: "Standard Body (표준화 단체)", field: "type" }
+        - { name: "researchArea", label: "Research Area", field: "researchArea" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "First Author", name: "firstAuthor", widget: "string", required: false }
@@ -99,6 +110,14 @@ collections:
     summary: "{{title}} ({{degree}})"
     media_folder: "/static/img/people"
     public_folder: "/img/people"
+    # 표시 순서: 목록 상단 [Reorder] 버튼 → 드래그로 정렬 (weight 값은 CMS가 자동 저장)
+    reorder:
+      key: "weight"
+      group: "degree"
+    view_groups:
+      default: "degree"
+      groups:
+        - { name: "degree", label: "Degree", field: "degree" }
     fields:
       - { label: "Name (English)", name: "title", widget: "string" }
       - { label: "Name (Korean)", name: "korName", widget: "string", required: false }
@@ -107,7 +126,6 @@ collections:
       - { label: "Department", name: "department", widget: "string", default: "Computer Science and Engineering", required: false }
       - { label: "Email", name: "email", widget: "string" }
       - { label: "Photo", name: "image", widget: "image", default: "profile.png" }
-      - { label: "Display Order", name: "weight", widget: "number", value_type: "int", default: 99 }
       - { label: "Research Interests", name: "researchInterests", widget: "list", required: false }
       - { label: "Education", name: "education", widget: "list", required: false }
       - { label: "GitHub", name: "github", widget: "string", required: false }
@@ -126,6 +144,14 @@ collections:
     summary: "{{title}} ({{degree}})"
     media_folder: "/static/img/people"
     public_folder: "/img/people"
+    # 표시 순서: 목록 상단 [Reorder] 버튼 → 드래그로 정렬 (weight 값은 CMS가 자동 저장)
+    reorder:
+      key: "weight"
+      group: "degree"
+    view_groups:
+      default: "degree"
+      groups:
+        - { name: "degree", label: "Degree", field: "degree" }
     fields:
       - { label: "Name (English)", name: "title", widget: "string" }
       - { label: "Name (Korean)", name: "korName", widget: "string", required: false }
@@ -134,7 +160,6 @@ collections:
       - { label: "Department", name: "department", widget: "string", default: "Computer Science and Engineering", required: false }
       - { label: "Email", name: "email", widget: "string" }
       - { label: "Photo", name: "image", widget: "image", default: "profile.png" }
-      - { label: "Display Order", name: "weight", widget: "number", value_type: "int" }
       - { label: "Current (present job/school)", name: "current", widget: "string", required: false }
 
   # ========== Gallery ==========
@@ -219,6 +244,9 @@ collections:
     summary: "[{{focusNumber}}] {{title}}"
     media_folder: "/static/img/about"
     public_folder: "/img/about"
+    # 표시 순서: 목록 상단 [Reorder] 버튼 → 드래그로 정렬 (weight 값은 CMS가 자동 저장)
+    reorder:
+      key: "weight"
     fields:
       - { label: "Title", name: "title", widget: "string", hint: "e.g. Neural Image & Video Coding" }
       - { label: "Short Name", name: "shortName", widget: "string", hint: "e.g. NVC" }
@@ -227,7 +255,6 @@ collections:
       - { label: "Cover Image", name: "image", widget: "image", required: false }
       - { label: "YouTube Video ID", name: "youtubeId", widget: "string", required: false, hint: "e.g. dQw4w9WgXcQ (URL의 v= 뒤 부분)" }
       - { label: "PDF File", name: "pdfFile", widget: "file", required: false, hint: "팀 소개 PDF 파일" }
-      - { label: "Display Order", name: "weight", widget: "number", value_type: "int" }
       - { label: "Overview (본문)", name: "body", widget: "markdown", hint: "연구 목적, 중요성, 활용 분야 소개" }
       - label: "Team Lead"
         name: "teamLead"
@@ -273,16 +300,35 @@ collections:
     folder: "content/grants"
     create: true
     slug: "{{slug}}"
-    summary: "[{{status}}] {{title}}"
+    summary: "[{{status}}] {{title}} ({{start_date}} ~ {{end_date}})"
     media_folder: "/static/img/other-logos"
     public_folder: "/img/other-logos"
+    # 표시 순서는 홈페이지에서 자동 정렬 (layouts/partials/grants-sorted.html)
+    #   - Ongoing  : 과제 시작일 최신순
+    #   - Completed: 과제 종료일 최신순
+    sortable_fields:
+      fields: ["start_date", "end_date", "title"]
+      default: { field: "start_date", direction: "descending" }
+    view_groups:
+      default: "status"
+      groups:
+        - { name: "status", label: "Status", field: "status" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Title (Korean)", name: "title_small", widget: "string", required: false }
       - { label: "Organization", name: "organization", widget: "string" }
       - { label: "Logo Image", name: "img_url", widget: "image", required: false }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Date Range", name: "date_range", widget: "string", hint: "e.g. Jun. 2025 - May 2028" }
+      - { label: "Start Date (과제 시작일)", name: "start_date", widget: "datetime", type: "date", hint: "달력에서 선택. 홈페이지에는 월·연도만 표시됩니다 (예: Jan. 2017). 시작 월의 1일 선택을 권장합니다." }
+      - { label: "End Date (과제 종료일)", name: "end_date", widget: "datetime", type: "date", hint: "달력에서 선택. 홈페이지에는 월·연도만 표시됩니다 (예: Dec. 2028). 종료 월의 말일 선택을 권장합니다." }
+      - label: "Additional Periods (추가 기간)"
+        name: "extra_periods"
+        widget: "list"
+        required: false
+        summary: "{{start_date}} ~ {{end_date}}"
+        hint: "과제 기간이 중간에 끊겨 여러 구간인 경우에만 추가합니다. 위 Start/End Date에는 첫 구간을 입력하세요. 홈페이지에는 'May. 2022 - Nov. 2022 / May. 2023 - Dec. 2023'처럼 이어서 표시됩니다."
+        fields:
+          - { label: "Start Date", name: "start_date", widget: "datetime", type: "date" }
+          - { label: "End Date", name: "end_date", widget: "datetime", type: "date" }
       - { label: "Status", name: "status", widget: "select", options: ["Ongoing", "Completed"] }
-      - { label: "Display Order", name: "weight", widget: "number", value_type: "int" }
       - { label: "Research Area", name: "researchArea", widget: "select", multiple: true, options: ["NVC", "VCM", "3DV"], required: false }

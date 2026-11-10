@@ -4,7 +4,7 @@ title_small: "(순환 표현 및 무작위성 규제에 기반한 위상 홀로�
 organization: "Samsung (Future Technology)"
 img_url: "/img/other-logos/samsung-mirae.png"
 subtitle: "Samsung (삼성미래기술육성사업)"
-date_range: "Jun. 2022 - May. 2025"
+start_date: 2022-06-01
+end_date: 2025-05-31
 status: "Completed"
-weight: 11
 ---

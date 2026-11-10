@@ -198,6 +198,21 @@
 
     <h2>각 항목 작성 요령</h2>
 
+    <h3>표시 순서 바꾸기 (Students · Alumni · Research)</h3>
+    <p>홈페이지에 보이는 순서는 숫자를 입력하지 않고 <strong>드래그</strong>로 바꿉니다.</p>
+    <ol>
+      <li>왼쪽 사이드바에서 컬렉션(Students / Alumni / Research)을 선택합니다.</li>
+      <li>목록 상단 툴바(정렬·그룹 메뉴가 있는 줄)의 <strong>순서 변경(Reorder)</strong> 버튼을 누릅니다.</li>
+      <li>항목을 원하는 위치로 드래그합니다. 각 항목의 메뉴에서 <strong>위로 이동(Move Up) / 아래로 이동(Move Down) / Move to Top / Move to Bottom</strong>으로 옮길 수도 있습니다.</li>
+      <li><strong>완료(Done)</strong>를 누르면 순서가 저장됩니다. <strong>취소(Cancel)</strong>를 누르면 원래 순서로 돌아갑니다.</li>
+    </ol>
+    <div class="callout callout-blue">
+      Students·Alumni는 학위(PhD / MS / Intern)별로 묶여 있으며 <strong>같은 학위 안에서만</strong> 순서를 바꿀 수 있습니다. 새로 추가한 항목은 자동으로 목록 맨 뒤에 배치되므로, 필요하면 추가 후 순서 변경(Reorder)으로 위치만 옮기면 됩니다.
+    </div>
+    <div class="callout callout-yellow">
+      Grants(연구 과제)는 드래그 정렬이 없습니다. 날짜와 Status를 기준으로 <strong>자동 정렬</strong>됩니다. 아래 Grants 항목을 참고하세요.
+    </div>
+
     <h3>About 페이지</h3>
     <p>About 페이지의 모든 텍스트와 이미지를 CMS에서 수정할 수 있습니다.</p>
     <ul>
@@ -220,6 +235,7 @@
       <li><strong>PDF File</strong>: 팀 소개 PDF 파일 업로드 (페이지에 임베딩 표시)</li>
       <li><strong>Overview</strong>: 연구 목적·중요성·활용 분야 소개 (마크다운, 영문 권장)</li>
       <li><strong>Team Lead / Members</strong>: Students 목록에서 검색·선택 (드롭다운)</li>
+      <li><strong>표시 순서</strong>: 목록 상단 <strong>순서 변경(Reorder)</strong> 버튼으로 드래그 (위 "표시 순서 바꾸기" 참고)</li>
       <li><strong>Research Highlights</strong>: 시간순 연구 성과 목록
         <ul>
           <li>Title, Period(선택), Description(마크다운), Key Figure(이미지), Key Result, Participants</li>
@@ -237,7 +253,7 @@
     <h3>Papers (논문)</h3>
     <ul>
       <li><strong>Year.Month</strong>: <code>2025.03</code> 형식으로 입력 (점 구분)</li>
-      <li><strong>Type</strong>: International (국제) / Domestic (국내) 중 선택</li>
+      <li><strong>Type</strong>: International (국제) / Domestic (국내) 중 선택. CMS 목록은 이 값에 따라 <strong>Domestic / International 그룹으로 묶여</strong> 표시됩니다 (목록 상단 <strong>그룹(Group)</strong> 메뉴에서 해제 가능).</li>
       <li><strong>Co-authors</strong>: 쉼표로 구분, 교신저자는 이름 뒤에 <code>&lt;sup&gt;†&lt;/sup&gt;</code>로 위첨자 십자 표시</li>
       <li><strong>Image</strong>: 논문 대표 이미지 (없어도 무방)</li>
       <li><strong>Research Area</strong>: NVC / VCM / 3DV 중 선택 (복수 선택 가능, 선택 시 해당 연구 팀 페이지에 자동 표시)</li>
@@ -249,7 +265,7 @@
       <li><strong>Organization</strong>: 기본값 <code>ISO/IEC JTC 1</code></li>
       <li><strong>Org Name</strong>: 예) <code>SC29/WG4 (MPEG)</code></li>
       <li><strong>Meeting Name</strong>: 예) <code>MPEG 149th Meeting</code></li>
-      <li><strong>Type</strong>: MPEG / JVET / JPEG 중 선택</li>
+      <li><strong>Type</strong>: MPEG / JVET / JPEG 중 선택. CMS 목록은 기본적으로 <strong>Research Area</strong>별로 묶여 표시되며(비어 있는 항목은 <strong>기타(Other)</strong>), 목록 상단 <strong>그룹(Group)</strong> 메뉴에서 이 값(표준화 단체) 기준으로 바꿔 볼 수 있습니다.</li>
       <li><strong>Research Area</strong>: NVC / VCM / 3DV 중 선택 (복수 선택 가능)</li>
       <li><strong>Grant</strong>: 관련 과제명 (선택)</li>
     </ul>
@@ -263,9 +279,22 @@
 
     <h3>Students / Alumni (구성원)</h3>
     <ul>
-      <li><strong>Display Order</strong>: 숫자가 작을수록 먼저 표시</li>
+      <li><strong>표시 순서</strong>: 목록 상단 <strong>순서 변경(Reorder)</strong> 버튼으로 드래그 (위 "표시 순서 바꾸기" 참고). 숫자로 입력하는 Display Order 필드는 없어졌습니다.</li>
       <li><strong>Photo</strong>: Image 필드에서 <strong>Choose an image</strong>를 클릭하여 기존 이미지를 선택하거나 새 파일을 업로드합니다.</li>
     </ul>
+
+    <h3>Grants (연구 과제)</h3>
+    <ul>
+      <li><strong>Start Date (과제 시작일) / End Date (과제 종료일)</strong>: 달력에서 날짜를 선택합니다. 홈페이지에는 <code>Jan. 2017 - Dec. 2028</code>처럼 <strong>월·연도만</strong> 표시되므로, 시작일은 해당 월 1일, 종료일은 해당 월 말일을 선택하는 것을 권장합니다.</li>
+      <li><strong>Additional Periods (추가 기간)</strong>: 과제 기간이 중간에 끊겨 여러 구간인 경우에만 추가합니다. Start/End Date에는 첫 구간을, 여기에는 두 번째 구간부터 입력합니다. 예: <code>May. 2022 - Nov. 2022 / May. 2023 - Dec. 2023</code></li>
+      <li><strong>Status</strong>: Ongoing (진행 중) / Completed (종료). 과제가 끝나면 Status만 Completed로 바꾸면 됩니다.</li>
+      <li><strong>Research Area</strong>: NVC / VCM / 3DV 중 선택 (선택 시 해당 연구 팀 페이지에 자동 표시)</li>
+    </ul>
+    <div class="callout callout-blue">
+      <strong>자동 정렬</strong>: 순서를 따로 지정하지 않습니다. 홈페이지에서 다음 규칙으로 자동 정렬됩니다.<br>
+      · <strong>Ongoing</strong>: 과제 시작일이 최근인 과제가 위<br>
+      · <strong>Completed</strong>: 과제 종료일이 최근인 과제가 위 (추가 기간이 있으면 가장 마지막 종료일 기준)
+    </div>
 
   </div>
 
@@ -566,6 +595,32 @@ npx @sveltia/cms-proxy-server</div>
       <tr><td><code>layouts/partials/navbar.html</code></td><td>네비게이션 바</td></tr>
     </table>
 
+    <h2>콘텐츠 정렬 방식</h2>
+    <table>
+      <tr><th>컬렉션</th><th>정렬 방식</th><th>설정 위치</th></tr>
+      <tr><td>Students / Alumni</td><td>CMS 드래그 정렬 (학위별 그룹 안에서) → <code>weight</code> 값 자동 저장</td><td><code>config.yml</code>의 <code>reorder: { key: weight, group: degree }</code></td></tr>
+      <tr><td>Research</td><td>CMS 드래그 정렬 → <code>weight</code> 값 자동 저장</td><td><code>config.yml</code>의 <code>reorder: { key: weight }</code></td></tr>
+      <tr><td>Grants</td><td>날짜 기준 자동 정렬 (Ongoing: 시작일 최신순 / Completed: 종료일 최신순)</td><td><code>layouts/partials/grants-sorted.html</code></td></tr>
+    </table>
+    <div class="callout callout-blue">
+      <strong>드래그 정렬 동작</strong>: Sveltia CMS의 <code>reorder</code> 기능입니다. 순서 변경 후 완료(Done)를 누르면 전체 항목의 <code>weight</code>를 1부터 다시 매기고, 값이 바뀐 파일만 <code>cms-draft</code> 브랜치에 커밋합니다. 일반 저장과 같은 브랜치이므로 기존 PR 머지 절차는 그대로입니다. Hugo 템플릿은 기존처럼 <code>.ByParam "weight"</code>로 정렬하므로 템플릿을 고칠 필요가 없습니다.
+    </div>
+    <div class="callout callout-blue">
+      <strong>Grants 날짜 필드</strong>: front matter에 <code>start_date</code> / <code>end_date</code>(필요 시 <code>extra_periods</code> 목록)를 <code>YYYY-MM-DD</code> 형식으로 저장합니다. 홈페이지 표시 문자열(<code>Jan. 2017 - Dec. 2028</code>)은 <code>layouts/partials/grant-date-range.html</code>이 생성합니다. 예전의 <code>date_range</code> 문자열과 <code>weight</code>는 더 이상 쓰지 않습니다.
+    </div>
+    <div class="code">---
+title: "과제 제목"
+organization: "NRF"
+img_url: "/img/other-logos/NRF.png"
+subtitle: "지원기관 상세"
+start_date: 2022-05-01
+end_date: 2022-11-30
+extra_periods:          # 기간이 끊긴 경우에만
+  - start_date: 2023-05-01
+    end_date: 2023-12-31
+status: "Completed"     # Ongoing / Completed
+---</div>
+
     <h2>자주 있는 상황</h2>
 
     <div class="step">
@@ -628,6 +683,8 @@ npx @sveltia/cms-proxy-server</div>
       <tr><td>Students 페이지</td><td><code>layouts/members/students/list.html</code></td></tr>
       <tr><td>Alumni 페이지</td><td><code>layouts/members/alumni/list.html</code></td></tr>
       <tr><td>Grants 페이지</td><td><code>layouts/grants/list.html</code></td></tr>
+      <tr><td>Grants 정렬 규칙 (홈·연구 팀 페이지 공통)</td><td><code>layouts/partials/grants-sorted.html</code></td></tr>
+      <tr><td>Grants 기간 표시 형식</td><td><code>layouts/partials/grant-date-range.html</code></td></tr>
       <tr><td>Gallery 페이지</td><td><code>layouts/gallery/list.html</code></td></tr>
       <tr><td>논문 카드 디자인</td><td><code>layouts/partials/pub-card.html</code></td></tr>
       <tr><td>구성원 카드 디자인</td><td><code>layouts/partials/member-card-overlay.html</code></td></tr>

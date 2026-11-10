@@ -204,6 +204,20 @@ var MemberPreview = createClass({
 
 // ── Grants ───────────────────────────────────────────────────
 // layouts/grants/list.html — card with logo + info
+// 기간 표시는 layouts/partials/grant-date-range.html 과 같은 형식
+//   "2017-01-01" → "Jan. 2017",  여러 구간은 " / " 로 연결
+var MONTH_ABBR = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function monthYear(v) {
+  var m = /^(\d{4})-(\d{2})/.exec(String(v || ''));
+  return m ? MONTH_ABBR[parseInt(m[2], 10) - 1] + '. ' + m[1] : '';
+}
+function grantDateRange(start, end, extraPeriods) {
+  return [{ start_date: start, end_date: end }].concat(extraPeriods || [])
+    .filter(function (p) { return p && p.start_date && p.end_date; })
+    .map(function (p) { return monthYear(p.start_date) + ' - ' + monthYear(p.end_date); })
+    .join(' / ');
+}
+
 var GrantPreview = createClass({
   render: function () {
     var e  = this.props.entry;
@@ -212,7 +226,12 @@ var GrantPreview = createClass({
     var titleSmall = e.getIn(['data', 'title_small'], '');
     var org        = e.getIn(['data', 'organization'], '');
     var subtitle   = e.getIn(['data', 'subtitle'], '');
-    var dateRange  = e.getIn(['data', 'date_range'], '');
+    var extra      = e.getIn(['data', 'extra_periods']);
+    var dateRange  = grantDateRange(
+      e.getIn(['data', 'start_date'], ''),
+      e.getIn(['data', 'end_date'], ''),
+      extra && extra.toJS ? extra.toJS() : []
+    );
     var status     = e.getIn(['data', 'status'], '');
     var logo       = imgUrl(ga, e.getIn(['data', 'img_url']), '');
 

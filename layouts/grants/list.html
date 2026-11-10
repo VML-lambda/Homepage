@@ -14,8 +14,11 @@
   </div>
   <!-- Page Header End -->
 
+  {{/* 정렬 규칙: layouts/partials/grants-sorted.html (Ongoing: 시작일 최신순 / Completed: 종료일 최신순) */}}
+  {{ $sorted := partial "grants-sorted.html" .Pages }}
+
   <!-- Ongoing Start -->
-  {{ $ongoing := where .Pages "Params.status" "Ongoing" }}
+  {{ $ongoing := where $sorted "Params.status" "Ongoing" }}
   {{ if $ongoing }}
   <div class="container-xxl py-5">
     <div class="container">
@@ -23,7 +26,7 @@
         <h1 class="mb-4">Ongoing</h1>
       </div>
       <div class="wow fadeInUp" data-wow-delay="0.1s">
-        {{ range ($ongoing.ByParam "weight") }}
+        {{ range $ongoing }}
         <div class="card mb-3" style="width: 97%">
           <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
             {{ if .Params.img_url }}
@@ -36,7 +39,7 @@
                 {{ with .Params.title_small }}<br><small class="text-muted">{{ . }}</small>{{ end }}
               </h6>
               <p class="card-subtitle text-muted mb-1 small">{{ .Params.subtitle }}</p>
-              <p class="card-text text-muted mb-0 small"><strong>{{ .Params.date_range }}</strong></p>
+              <p class="card-text text-muted mb-0 small"><strong>{{ partial "grant-date-range.html" . }}</strong></p>
             </div>
           </div>
         </div>
@@ -48,7 +51,7 @@
   <!-- Ongoing End -->
 
   <!-- Completed Start -->
-  {{ $completed := where .Pages "Params.status" "Completed" }}
+  {{ $completed := where $sorted "Params.status" "Completed" }}
   {{ if $completed }}
   <div class="container-xxl py-5">
     <div class="container">
@@ -56,7 +59,7 @@
         <h1 class="mb-4">Completed</h1>
       </div>
       <div class="wow fadeInUp" data-wow-delay="0.1s">
-        {{ range ($completed.ByParam "weight") }}
+        {{ range $completed }}
         <div class="card mb-3" style="width: 97%">
           <div class="card-body" style="display: flex; align-items: center; gap: 1.5rem;">
             {{ if .Params.img_url }}
@@ -69,7 +72,7 @@
                 {{ with .Params.title_small }}<br><small class="text-muted">{{ . }}</small>{{ end }}
               </h6>
               <p class="card-subtitle text-muted mb-1 small">{{ .Params.subtitle }}</p>
-              <p class="card-text text-muted mb-0 small"><strong>{{ .Params.date_range }}</strong></p>
+              <p class="card-text text-muted mb-0 small"><strong>{{ partial "grant-date-range.html" . }}</strong></p>
             </div>
           </div>
         </div>

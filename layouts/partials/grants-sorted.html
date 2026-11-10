@@ -1,0 +1,37 @@
+{{- /*
+  과제 목록을 자동 정렬해서 반환합니다. (Display Order/weight 사용 안 함)
+    입력: grant 페이지 목록 (.)
+    출력: Ongoing → Completed → 기타 상태 순으로 이어 붙인 페이지 목록
+      - Ongoing  : 과제 시작일 최신순 (같으면 종료일 최신순)
+      - Completed: 과제 종료일 최신순 (같으면 시작일 최신순)
+                   종료일은 추가 기간(extra_periods)까지 포함한 가장 늦은 날짜 기준
+  사용 예:
+    {{ $sorted := partial "grants-sorted.html" .Pages }}
+    {{ range where $sorted "Params.status" "Ongoing" }} ... {{ end }}
+*/ -}}
+{{- $items := slice -}}
+{{- range . -}}
+  {{- $start := "" -}}
+  {{- $end := "" -}}
+  {{- with .Params.start_date }}{{ $start = time.Format "2006-01-02" . }}{{ end -}}
+  {{- with .Params.end_date }}{{ $end = time.Format "2006-01-02" . }}{{ end -}}
+  {{- range .Params.extra_periods -}}
+    {{- with .end_date -}}
+      {{- $e := time.Format "2006-01-02" . -}}
+      {{- if gt $e $end }}{{ $end = $e }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- /* 그룹 접두어(2: Ongoing, 1: Completed, 0: 기타) + 날짜 → 내림차순 한 번으로 정렬 */ -}}
+  {{- $key := printf "0|%s|%s" $end $start -}}
+  {{- if eq .Params.status "Ongoing" -}}
+    {{- $key = printf "2|%s|%s" $start $end -}}
+  {{- else if eq .Params.status "Completed" -}}
+    {{- $key = printf "1|%s|%s" $end $start -}}
+  {{- end -}}
+  {{- $items = $items | append (dict "key" $key "page" .) -}}
+{{- end -}}
+{{- $sorted := slice -}}
+{{- range sort $items "key" "desc" -}}
+  {{- $sorted = $sorted | append .page -}}
+{{- end -}}
+{{- return $sorted -}}
