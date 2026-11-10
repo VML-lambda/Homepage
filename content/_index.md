@@ -7,8 +7,6 @@ carousel:
   - /img/carousel/c-9.jpg
   - /img/carousel/c-2.jpg
   - /img/carousel/c-7.jpg
-  - /img/carousel/c-1.jpg
-  - /img/carousel/c-3.jpg
   - /img/carousel/c-4.jpg
   - /img/carousel/c-6.jpg
   - /img/carousel/c-5.jpg
