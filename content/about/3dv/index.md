@@ -1,11 +1,12 @@
 ---
+weight: 3
 title: Neural Holography & 3D Vision
 shortName: 3DV
 subtitle: Phase-aware holographic processing and compression, and feed-forward 3D GS compression
 focusNumber: '03'
 image: /img/about/3DV.png
 youtubeId: ''
-weight: 3
+pdfFile: ''
 teamLead: ''
 teamMembers: []
 highlights:
@@ -84,6 +85,24 @@ highlights:
       - label: Paper
         title: 'PaD: Neural Phase Hologram Generation with Variable Distance Support'
         url: https://doi.org/10.1109/VRW62533.2024.00200
+  - title: 'FlexMU: The Activation Function for Neural Phase Holography'
+    period: 2024–2025
+    description: |-
+      TanH and HardTanH clip outputs at the phase boundary (±π), creating an **Edge Stuck** problem: the optimizer has no continuous path to reach targets on the other side of the period — causing output distributions to pathologically concentrate near ±π rather than approximating the desired uniform distribution. **FlexMU (Flexible Modulo Unit)** embeds a modulo operation into the activation function, enabling gradients to flow seamlessly across phase cycle boundaries.
+
+       Two parameters control the output:
+
+      - **α** — randomness (uniform vs. concentrated distribution)
+      - **β** — slope and distribution shape
+
+      Simply replacing the activation function in existing models (HoloNet, DPRC, NHVC) with FlexMU yields a consistent **average +1.49 dB PSNR** improvement with no other changes required.
+    keyFigure: ''
+    keyResult: ACM MM 2026
+    participants: ''
+    relatedLinks:
+      - label: Paper
+        title: 'FlexMU: The Activation Function for Neural Phase Holography'
+        url: https://dl.acm.org/doi/10.1145/3767308.3836473
 ---
 
 The 3D Video Coding (3DV) team conducts research across two major frontiers of next-generation 3D media: **phase-aware hologram compression (Learned-based/hand-crafted based)** and **3D Gaussian Splatting (3DGS)**
