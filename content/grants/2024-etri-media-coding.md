@@ -10,5 +10,4 @@ extra_periods: []
 status: Ongoing
 researchArea:
   - NVC
-  - 3DV
 ---
