@@ -13,9 +13,15 @@ researchInterests:
   - Compression
   - Signal processing
 education:
-  - <b>Ph.D.</b> Computer Science and Engineering, KHU
-  - <b>M.S.</b> Computer Science and Engineering, KHU
-  - <b>B.S.</b> Computer Science and Engineering, KHU
+  - degree: Ph.D.
+    major: Computer Science and Engineering
+    school: KHU
+  - degree: M.S.
+    major: Computer Science and Engineering
+    school: KHU
+  - degree: B.S.
+    major: Computer Science and Engineering
+    school: KHU
 github: https://github.com/choiseungmi
 linkedin: https://www.linkedin.com/in/seungmi-choi-5b91152a4/
 homepage: ''

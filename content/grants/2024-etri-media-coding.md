@@ -4,7 +4,7 @@ title_small: "(초저비트율 비디오 부호화 환경에서의 원본충실�
 organization: "ETRI"
 img_url: "/img/other-logos/ETRI.png"
 subtitle: "한국전자통신연구원(ETRI) 국가연구개발사업 공동연구"
-date_range: "Apr. 2024 - Dec. 2026"
+start_date: 2024-04-01
+end_date: 2026-12-31
 status: "Ongoing"
-weight: 2
 ---

@@ -10,8 +10,15 @@ weight: 20
 researchInterests:
   - Deep Learning, Learned Image/Video Compression
 education:
-  - <b>M.S.</b> Computer Science and Engineering, KHU (2026-Present)
-  - <b>B.S.</b> Computer Science and Engineering, KHU (2020-2026)
+  - degree: M.S.
+    major: Computer Science and Engineering
+    school: KHU
+    start_year: 2026
+  - degree: B.S.
+    major: Computer Science and Engineering
+    school: KHU
+    start_year: 2020
+    end_year: 2026
 github: https://github.com/mx34kryce
 linkedin: ''
 homepage: ''

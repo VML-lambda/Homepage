@@ -22,10 +22,15 @@ collections:
     summary: "[{{type}}] {{title}} ({{yearMonth}})"
     media_folder: "/static/img/paper"
     public_folder: "/img/paper"
+    # 목록을 Domestic / International 로 묶어서 표시 (목록 상단 Group 메뉴에서 해제 가능)
+    view_groups:
+      default: "type"
+      groups:
+        - { name: "type", label: "Type", field: "type" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "First Author", name: "firstAuthor", widget: "string" }
-      - { label: "Co-authors", name: "coauthors", widget: "string", required: false, hint: "Comma separated. Use &lt;sup&gt;†&lt;/sup&gt; for corresponding author." }
+      - { label: "First Author", name: "firstAuthor", widget: "string", required: false, hint: "Optional (shown in bold). For lab member name spelling, see the member list at the top of the Preview panel." }
+      - { label: "Co-authors", name: "coauthors", widget: "string", required: false, hint: "Comma separated. Use &lt;sup&gt;†&lt;/sup&gt; for corresponding author. For lab member name spelling, see the member list at the top of the Preview panel." }
       - { label: "Venue", name: "venue", widget: "string" }
       - { label: "Year", name: "year", widget: "number", value_type: "int" }
       - { label: "Year.Month", name: "yearMonth", widget: "string", hint: "e.g. 2025.03" }
@@ -33,7 +38,7 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "DOI", name: "doi", widget: "string", required: false }
       - { label: "Research Area", name: "researchArea", widget: "select", multiple: true, options: ["NVC", "VCM", "3DV"], required: false }
-      - { label: "Grant", name: "grant", widget: "string", required: false, hint: "관련 과제명" }
+      - { label: "Acknowledgment (사사문구)", name: "acknowledgment", widget: "text", required: false, hint: "e.g. This work was supported by ..." }
 
   # ========== Standard Contributions ==========
   - name: "contributions"
@@ -43,9 +48,16 @@ collections:
     create: true
     slug: "{{year}}-{{slug}}"
     summary: "[{{type}}] {{title}} ({{yearMonth}})"
+    # 목록 그룹 보기: 기본은 Research Area, 목록 상단 Group 메뉴에서 표준화 단체(MPEG/JVET/JPEG)로 전환 가능
+    view_groups:
+      default: "researchArea"
+      groups:
+        - { name: "type", label: "Standard Body (표준화 단체)", field: "type" }
+        - { name: "researchArea", label: "Research Area", field: "researchArea" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "First Author", name: "firstAuthor", widget: "string", required: false }
+      - { label: "First Author", name: "firstAuthor", widget: "string", required: false, hint: "Optional (shown in bold). For lab member name spelling, see the member list at the top of the Preview panel." }
+      - { label: "Co-authors", name: "coauthors", widget: "string", required: false, hint: "Comma separated. Use &lt;sup&gt;†&lt;/sup&gt; for corresponding author. For lab member name spelling, see the member list at the top of the Preview panel." }
       - { label: "Organization", name: "organization", widget: "string", default: "ISO/IEC JTC 1" }
       - { label: "Org Name", name: "orgName", widget: "string" }
       - { label: "Meeting Name", name: "meetingName", widget: "string" }
@@ -54,7 +66,7 @@ collections:
       - { label: "DOI", name: "doi", widget: "string", required: false }
       - { label: "Type", name: "type", widget: "select", options: ["MPEG", "JVET", "JPEG"] }
       - { label: "Research Area", name: "researchArea", widget: "select", multiple: true, options: ["NVC", "VCM", "3DV"], required: false }
-      - { label: "Grant", name: "grant", widget: "string", required: false }
+      - { label: "Acknowledgment (사사문구)", name: "acknowledgment", widget: "text", required: false, hint: "e.g. This work was supported by ..." }
 
   # ========== Notices ==========
   - name: "notices"
@@ -99,6 +111,14 @@ collections:
     summary: "{{title}} ({{degree}})"
     media_folder: "/static/img/people"
     public_folder: "/img/people"
+    # 표시 순서: 목록 상단 [Reorder] 버튼 → 드래그로 정렬 (weight 값은 CMS가 자동 저장)
+    reorder:
+      key: "weight"
+      group: "degree"
+    view_groups:
+      default: "degree"
+      groups:
+        - { name: "degree", label: "Degree", field: "degree" }
     fields:
       - { label: "Name (English)", name: "title", widget: "string" }
       - { label: "Name (Korean)", name: "korName", widget: "string", required: false }
@@ -107,9 +127,19 @@ collections:
       - { label: "Department", name: "department", widget: "string", default: "Computer Science and Engineering", required: false }
       - { label: "Email", name: "email", widget: "string" }
       - { label: "Photo", name: "image", widget: "image", default: "profile.png" }
-      - { label: "Display Order", name: "weight", widget: "number", value_type: "int", default: 99 }
       - { label: "Research Interests", name: "researchInterests", widget: "list", required: false }
-      - { label: "Education", name: "education", widget: "list", required: false }
+      - label: "Education"
+        name: "education"
+        widget: "list"
+        required: false
+        summary: "{{degree}} {{major}}, {{school}}"
+        hint: "Shown on the website as 'Ph.D. Computer Science and Engineering, KHU (2024–Present)' (degree in bold)."
+        fields:
+          - { label: "Degree (학위)", name: "degree", widget: "select", options: ["Integrated M.S./Ph.D.", "Ph.D.", "M.S.", "M.A.", "B.S.", "B.A."] }
+          - { label: "Major (전공)", name: "major", widget: "string", hint: "e.g. Computer Science and Engineering" }
+          - { label: "School (학교)", name: "school", widget: "string", default: "KHU", hint: "e.g. KHU" }
+          - { label: "Start Year (입학 연도)", name: "start_year", widget: "number", value_type: "int", required: false, hint: "e.g. 2024" }
+          - { label: "End Year (졸업 연도)", name: "end_year", widget: "number", value_type: "int", required: false, hint: "e.g. 2026 · Leave empty to show 'Present' (currently enrolled; requires Start Year)" }
       - { label: "GitHub", name: "github", widget: "string", required: false }
       - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
       - { label: "Homepage", name: "homepage", widget: "string", required: false }
@@ -126,6 +156,14 @@ collections:
     summary: "{{title}} ({{degree}})"
     media_folder: "/static/img/people"
     public_folder: "/img/people"
+    # 표시 순서: 목록 상단 [Reorder] 버튼 → 드래그로 정렬 (weight 값은 CMS가 자동 저장)
+    reorder:
+      key: "weight"
+      group: "degree"
+    view_groups:
+      default: "degree"
+      groups:
+        - { name: "degree", label: "Degree", field: "degree" }
     fields:
       - { label: "Name (English)", name: "title", widget: "string" }
       - { label: "Name (Korean)", name: "korName", widget: "string", required: false }
@@ -134,7 +172,6 @@ collections:
       - { label: "Department", name: "department", widget: "string", default: "Computer Science and Engineering", required: false }
       - { label: "Email", name: "email", widget: "string" }
       - { label: "Photo", name: "image", widget: "image", default: "profile.png" }
-      - { label: "Display Order", name: "weight", widget: "number", value_type: "int" }
       - { label: "Current (present job/school)", name: "current", widget: "string", required: false }
 
   # ========== Gallery ==========
@@ -219,6 +256,9 @@ collections:
     summary: "[{{focusNumber}}] {{title}}"
     media_folder: "/static/img/about"
     public_folder: "/img/about"
+    # 표시 순서: 목록 상단 [Reorder] 버튼 → 드래그로 정렬 (weight 값은 CMS가 자동 저장)
+    reorder:
+      key: "weight"
     fields:
       - { label: "Title", name: "title", widget: "string", hint: "e.g. Neural Image & Video Coding" }
       - { label: "Short Name", name: "shortName", widget: "string", hint: "e.g. NVC" }
@@ -227,7 +267,6 @@ collections:
       - { label: "Cover Image", name: "image", widget: "image", required: false }
       - { label: "YouTube Video ID", name: "youtubeId", widget: "string", required: false, hint: "e.g. dQw4w9WgXcQ (URL의 v= 뒤 부분)" }
       - { label: "PDF File", name: "pdfFile", widget: "file", required: false, hint: "팀 소개 PDF 파일" }
-      - { label: "Display Order", name: "weight", widget: "number", value_type: "int" }
       - { label: "Overview (본문)", name: "body", widget: "markdown", hint: "연구 목적, 중요성, 활용 분야 소개" }
       - label: "Team Lead"
         name: "teamLead"
@@ -273,16 +312,35 @@ collections:
     folder: "content/grants"
     create: true
     slug: "{{slug}}"
-    summary: "[{{status}}] {{title}}"
+    summary: "[{{status}}] {{title}} ({{start_date}} ~ {{end_date}})"
     media_folder: "/static/img/other-logos"
     public_folder: "/img/other-logos"
+    # 표시 순서는 홈페이지에서 자동 정렬 (layouts/partials/grants-sorted.html)
+    #   - Ongoing  : 과제 시작일 최신순
+    #   - Completed: 과제 종료일 최신순
+    sortable_fields:
+      fields: ["start_date", "end_date", "title"]
+      default: { field: "start_date", direction: "descending" }
+    view_groups:
+      default: "status"
+      groups:
+        - { name: "status", label: "Status", field: "status" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Title (Korean)", name: "title_small", widget: "string", required: false }
       - { label: "Organization", name: "organization", widget: "string" }
       - { label: "Logo Image", name: "img_url", widget: "image", required: false }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Date Range", name: "date_range", widget: "string", hint: "e.g. Jun. 2025 - May 2028" }
+      - { label: "Start Date (과제 시작일)", name: "start_date", widget: "datetime", type: "date" }
+      - { label: "End Date (과제 종료일)", name: "end_date", widget: "datetime", type: "date" }
+      - label: "Additional Periods (추가 기간)"
+        name: "extra_periods"
+        widget: "list"
+        required: false
+        summary: "{{start_date}} ~ {{end_date}}"
+        hint: "Add only if the grant period is split into multiple ranges."
+        fields:
+          - { label: "Start Date", name: "start_date", widget: "datetime", type: "date" }
+          - { label: "End Date", name: "end_date", widget: "datetime", type: "date" }
       - { label: "Status", name: "status", widget: "select", options: ["Ongoing", "Completed"] }
-      - { label: "Display Order", name: "weight", widget: "number", value_type: "int" }
       - { label: "Research Area", name: "researchArea", widget: "select", multiple: true, options: ["NVC", "VCM", "3DV"], required: false }

@@ -1,6 +1,6 @@
 ---
 title: "Crosscheck of JVET-AN0238 (EE1-4.2: Cross-component enhanced NNSR)"
-firstAuthor: "HyunDong Cho"
+coauthors: "HyunDong Cho"
 organization: "ISO/IEC JTC 1"
 orgName: "40th JVET of ITU-T SG21 WP3/21 and ISO/IEC JTC 1/SC 29"
 meetingName: "40th JVET of ITU-T SG21 WP3/21 and ISO/IEC JTC 1/SC 29"

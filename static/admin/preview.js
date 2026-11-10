@@ -30,6 +30,57 @@ function previewBanner() {
   }, '⚠ 실제 보여지는 레이아웃과 다를 수 있습니다.');
 }
 
+// ── Lab members reference box (Papers / Contributions) ────────
+// /admin/members.json 은 Hugo 빌드 때 layouts/partials/cms-members-json.html 이 생성합니다.
+// 저자 이름 표기를 통일할 수 있도록 미리보기 상단에 현재 멤버 목록을 보여 줍니다.
+var labMembersCache = null;
+var labMembersPromise = null;
+function loadLabMembers() {
+  if (!labMembersPromise) {
+    labMembersPromise = fetch('/admin/members.json', { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; })
+      .then(function (data) {
+        labMembersCache = (data && data.groups) ? data : { groups: [] };
+        return labMembersCache;
+      });
+  }
+  return labMembersPromise;
+}
+
+// create-react-class mixin: 목록을 한 번 불러온 뒤 state 로 넣어 다시 그림
+var LabMembersMixin = {
+  getInitialState: function () { return { labMembers: labMembersCache }; },
+  componentDidMount: function () {
+    var self = this;
+    self._labMembersAlive = true;
+    if (!labMembersCache) {
+      loadLabMembers().then(function (data) {
+        if (self._labMembersAlive) self.setState({ labMembers: data });
+      });
+    }
+  },
+  componentWillUnmount: function () { this._labMembersAlive = false; },
+};
+
+function labMembersBox(data) {
+  var boxStyle = {
+    background: '#f1f8ff', border: '1px solid #c8e1ff', borderRadius: '4px',
+    padding: '8px 12px', marginBottom: '12px', fontSize: '0.8rem', color: '#24292e', lineHeight: 1.6,
+  };
+  if (!data) return h('div', { style: boxStyle }, '연구실 멤버 목록을 불러오는 중…');
+  if (!data.groups.length) return h('div', { style: boxStyle }, '연구실 멤버 목록을 불러오지 못했습니다.');
+  return h('div', { style: boxStyle },
+    h('div', { style: { fontWeight: 600, marginBottom: '4px' } }, '연구실 멤버 (저자 이름 표기 참고용)'),
+    data.groups.map(function (g, i) {
+      return h('div', { key: i },
+        h('strong', {}, g.label + ': '),
+        g.members.map(function (m) { return m.korName ? m.name + ' (' + m.korName + ')' : m.name; }).join(', ')
+      );
+    })
+  );
+}
+
 // ── Accordion-item helper (content always visible in preview) ─
 function accordionItem(titleEl, bodyEl) {
   return h('div', { className: 'accordion-item mt-3' },
@@ -120,6 +171,18 @@ var GalleryPreview = createClass({
   }
 });
 
+// ── Education line helper ────────────────────────────────────
+// layouts/partials/education-line.html 과 같은 규칙
+//   " Major, School (2024–Present)"  — end_year 비면 Present (start_year 있을 때)
+function educationRest(ed) {
+  var s = '';
+  if (ed.major) s += ' ' + ed.major;
+  if (ed.school) s += ', ' + ed.school;
+  if (ed.start_year) s += ' (' + ed.start_year + '–' + (ed.end_year || 'Present') + ')';
+  else if (ed.end_year) s += ' (' + ed.end_year + ')';
+  return s;
+}
+
 // ── Students / Alumni ────────────────────────────────────────
 // Exact same structure as layouts/partials/member-card-overlay.html
 // box-slide forced visible (transform:translateY(0)) since hover N/A in preview
@@ -170,11 +233,12 @@ var MemberPreview = createClass({
                   ),
                   educationList.length > 0 && h('p', {},
                     h('b', {}, 'Education'), h('br'),
-                    // education items contain HTML (<b> tags) — must use dangerouslySetInnerHTML
-                    h('span', {
-                      className: 'small-text',
-                      dangerouslySetInnerHTML: { __html: educationList.join('<br>') }
-                    })
+                    // same format as layouts/partials/education-line.html
+                    h('span', { className: 'small-text' },
+                      educationList.map(function (ed, i) {
+                        return h('span', { key: i }, h('b', {}, ed.degree || ''), educationRest(ed), h('br'));
+                      })
+                    )
                   ),
                   current && h('p', {},
                     h('b', {}, 'Current'), ' ',
@@ -204,6 +268,20 @@ var MemberPreview = createClass({
 
 // ── Grants ───────────────────────────────────────────────────
 // layouts/grants/list.html — card with logo + info
+// 기간 표시는 layouts/partials/grant-date-range.html 과 같은 형식
+//   "2017-01-01" → "Jan. 2017",  여러 구간은 " / " 로 연결
+var MONTH_ABBR = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function monthYear(v) {
+  var m = /^(\d{4})-(\d{2})/.exec(String(v || ''));
+  return m ? MONTH_ABBR[parseInt(m[2], 10) - 1] + '. ' + m[1] : '';
+}
+function grantDateRange(start, end, extraPeriods) {
+  return [{ start_date: start, end_date: end }].concat(extraPeriods || [])
+    .filter(function (p) { return p && p.start_date && p.end_date; })
+    .map(function (p) { return monthYear(p.start_date) + ' - ' + monthYear(p.end_date); })
+    .join(' / ');
+}
+
 var GrantPreview = createClass({
   render: function () {
     var e  = this.props.entry;
@@ -212,7 +290,12 @@ var GrantPreview = createClass({
     var titleSmall = e.getIn(['data', 'title_small'], '');
     var org        = e.getIn(['data', 'organization'], '');
     var subtitle   = e.getIn(['data', 'subtitle'], '');
-    var dateRange  = e.getIn(['data', 'date_range'], '');
+    var extra      = e.getIn(['data', 'extra_periods']);
+    var dateRange  = grantDateRange(
+      e.getIn(['data', 'start_date'], ''),
+      e.getIn(['data', 'end_date'], ''),
+      extra && extra.toJS ? extra.toJS() : []
+    );
     var status     = e.getIn(['data', 'status'], '');
     var logo       = imgUrl(ga, e.getIn(['data', 'img_url']), '');
 
@@ -240,9 +323,22 @@ var GrantPreview = createClass({
   }
 });
 
+// ── Author line (Papers / Contributions) ─────────────────────
+// layouts/partials/author-line.html 과 같은 규칙
+//   <strong>First Author</strong>, Co-authors  — First Author가 없으면 Co-authors만 (앞 쉼표 없음)
+function authorLine(first, co) {
+  if (!first && !co) return null;
+  return h('p', { className: 'card-subtitle text-muted mb-1 small' },
+    first ? h('strong', {}, first) : null,
+    // coauthors may contain HTML (<sup>†</sup>) — use dangerouslySetInnerHTML
+    co ? h('span', { dangerouslySetInnerHTML: { __html: (first ? ', ' : '') + co } }) : null
+  );
+}
+
 // ── Papers ───────────────────────────────────────────────────
 // Exact structure of layouts/partials/pub-card.html
 var PaperPreview = createClass({
+  mixins: [LabMembersMixin],
   render: function () {
     var e  = this.props.entry;
     var ga = this.props.getAsset;
@@ -255,6 +351,7 @@ var PaperPreview = createClass({
     var photo     = imgUrl(ga, e.getIn(['data', 'image']), '');
 
     return h('div', { style: { padding: '24px' } },
+      labMembersBox(this.state.labMembers),
       previewBanner(),
       h('div', { className: 'card mb-3', style: { width: '97%' } },
         h('div', { className: 'card-body d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3' },
@@ -274,11 +371,7 @@ var PaperPreview = createClass({
               title,
               venue && h('span', {}, h('br'), h('small', { className: 'text-muted' }, venue))
             ),
-            h('p', { className: 'card-subtitle text-muted mb-1 small' },
-              h('strong', {}, first),
-              // coauthors may contain HTML (<sup>†</sup>) — use dangerouslySetInnerHTML
-              co && h('span', { dangerouslySetInnerHTML: { __html: ', ' + co } })
-            ),
+            authorLine(first, co),
             h('p', { className: 'card-text text-muted mb-0 small' }, h('strong', {}, yearMonth)),
             (doi || null) && h('a', {
               href: doi, className: 'href-black card-text text-muted mb-0 small', target: '_blank',
@@ -294,6 +387,7 @@ var PaperPreview = createClass({
 // ── Standard Contributions ───────────────────────────────────
 // layouts/partials/contrib-card-page.html
 var ContributionPreview = createClass({
+  mixins: [LabMembersMixin],
   render: function () {
     var e = this.props.entry;
     var title       = e.getIn(['data', 'title'], '(제목)');
@@ -301,10 +395,12 @@ var ContributionPreview = createClass({
     var orgName     = e.getIn(['data', 'orgName'], '');
     var meetingName = e.getIn(['data', 'meetingName'], '');
     var firstAuthor = e.getIn(['data', 'firstAuthor'], '');
+    var coauthors   = e.getIn(['data', 'coauthors'], '');
     var yearMonth   = e.getIn(['data', 'yearMonth'], '');
     var type        = e.getIn(['data', 'type'], '');
 
     return h('div', { style: { padding: '24px' } },
+      labMembersBox(this.state.labMembers),
       previewBanner(),
       h('p', { style: { marginBottom: '8px' } },
         h('span', { className: 'badge bg-secondary me-2', style: { fontSize: '0.72rem' } }, type)
@@ -318,7 +414,7 @@ var ContributionPreview = createClass({
               orgName     && h('span', {}, h('br'), h('small', { className: 'text-muted' }, orgName)),
               meetingName && h('span', {}, h('br'), h('small', { className: 'text-muted' }, meetingName))
             ),
-            firstAuthor && h('p', { className: 'card-subtitle text-muted mb-1 small' }, firstAuthor),
+            authorLine(firstAuthor, coauthors),
             h('p', { className: 'card-text text-muted mb-0 small' }, h('strong', {}, yearMonth))
           )
         )

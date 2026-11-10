@@ -56,7 +56,7 @@ department: "Computer Science and Engineering"
 email: "gildong@khu.ac.kr"
 image: "gildong.jpg"    # static/img/people/ 에 이미지 추가
 github: "https://github.com/..."
-weight: 7               # 숫자가 작을수록 먼저 표시
+weight: 7               # 표시 순서. CMS의 Reorder(드래그)로 자동 관리되므로 직접 수정 불필요
 ---
 ```
 
@@ -88,11 +88,15 @@ title: "과제 제목"
 organization: "NRF"
 img_url: "NRF.png"
 subtitle: "지원기관 상세"
-date_range: "Jan. 2026 - Dec. 2028"
+start_date: 2026-01-01  # 과제 시작일 (월 1일 권장)
+end_date: 2028-12-31    # 과제 종료일 (월 말일 권장)
 status: "Ongoing"       # Ongoing / Completed
-weight: 1
 ---
 ```
+
+- 홈페이지에는 `Jan. 2026 - Dec. 2028`처럼 월·연도로 표시됩니다 (`layouts/partials/grant-date-range.html`).
+- 기간이 끊긴 과제는 `extra_periods` 목록에 추가 구간을 넣습니다 (예: `content/grants/2022-etri-hologram.md`).
+- 순서는 자동 정렬됩니다 — Ongoing은 시작일 최신순, Completed는 종료일 최신순 (`layouts/partials/grants-sorted.html`).
 
 ---
 

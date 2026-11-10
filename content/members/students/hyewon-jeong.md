@@ -10,9 +10,20 @@ weight: 2
 researchInterests:
   - Computer Vision, Image Processing, Video Compression, Standardization (MPEG), Video Coding for Machines (VCM)
 education:
-  - <b>Ph.D.</b> Computer Science and Engineering, KHU (2024–Present)
-  - <b>M.S.</b> Computer Science and Engineering, KHU (2022–2024)
-  - <b>B.S.</b> Software Convergence, KHU (2017–2022)
+  - degree: Ph.D.
+    major: Computer Science and Engineering
+    school: KHU
+    start_year: 2024
+  - degree: M.S.
+    major: Computer Science and Engineering
+    school: KHU
+    start_year: 2022
+    end_year: 2024
+  - degree: B.S.
+    major: Software Convergence
+    school: KHU
+    start_year: 2017
+    end_year: 2022
 github: ''
 linkedin: https://www.linkedin.com/in/hyewon-jeong-a89430296/
 homepage: ''

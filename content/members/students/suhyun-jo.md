@@ -12,8 +12,12 @@ researchInterests:
   - 3D Gaussian Splatting
   - Hologram
 education:
-  - <b>M.S.</b> Artificial Intelligence, KHU
-  - <b>B.S.</b> Software Convergence, KHU
+  - degree: M.S.
+    major: Artificial Intelligence
+    school: KHU
+  - degree: B.S.
+    major: Software Convergence
+    school: KHU
 github: https://github.com/rollingman1
 linkedin: https://www.linkedin.com/in/suhyun-jo-1b2097172/
 homepage: ''

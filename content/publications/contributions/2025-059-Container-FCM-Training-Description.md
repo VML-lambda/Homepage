@@ -1,6 +1,6 @@
 ---
 title: "[Container][FCM] Training Description"
-firstAuthor: "Hyewon Jeong"
+coauthors: "Hyewon Jeong"
 organization: "ISO/IEC JTC 1"
 orgName: "151th ISO/IEC JTC 1/SC 29 MPEG"
 meetingName: "20th ISO/IEC JTC1/SC 29/WG4 meeting (MPEG 151)"

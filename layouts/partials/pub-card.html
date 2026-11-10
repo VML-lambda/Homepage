@@ -13,9 +13,7 @@
         {{ .Title }}
         {{ with .Params.venue }}<br><small class="text-muted">{{ . }}</small>{{ end }}
       </h6>
-      <p class="card-subtitle text-muted mb-1 small">
-        <strong>{{ .Params.firstAuthor }}</strong>{{ with .Params.coauthors }}, {{ . | safeHTML }}{{ end }}
-      </p>
+      {{ partial "author-line.html" . }}
       <p class="card-text text-muted mb-0 small"><strong>{{ .Params.yearMonth }}</strong></p>
       {{ with .Params.doi }}
       {{ if ne . "" }}
