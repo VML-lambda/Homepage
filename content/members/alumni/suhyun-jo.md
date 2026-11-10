@@ -2,11 +2,12 @@
 title: Suhyun Jo
 korName: 조수현
 degree: MS
-position: Hologram / 3DV
+position: M.S / Hologram / 3DV
 department: Artificial Intelligence
 email: bloodtype0@khu.ac.kr
 image: /img/people/Suhyun.jpg
-weight: 12
+weight: 5
+current: Researcher, Visual Media Lab, KHU
 researchInterests:
   - Video Coding
   - 3D Gaussian Splatting
